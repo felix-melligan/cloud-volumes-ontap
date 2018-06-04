@@ -1,0 +1,29 @@
+entries:
+  - title: ONTAP Cloud Release Notes
+    url: /index.html
+  - title: 9.4 Release Notes
+    entries:
+      - title: What's new
+        url: /reference_new_94.html
+      - title: Supported configurations
+        url: /reference_supported_configs_94.html
+      - title: Storage limits
+        url: /reference_storage_limits_94.html
+      - title: Known issues
+        url: /reference_issues_94.html
+      - title: Known limitations
+        url: /reference_limitations_94.html
+  - title: 9.3 Release Notes
+    entries:
+      - title: What's new
+        url: /reference_new_93.html
+      - title: Supported configurations
+        url: /reference_supported_configs_93.html
+      - title: Storage limits
+        url: /reference_storage_limits_93.html
+      - title: Known issues
+        url: /reference_issues_93.html
+      - title: Known limitations
+        url: /reference_limitations_93.html
+  - title: Related links
+    url: /reference_additional_info.html

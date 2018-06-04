@@ -1,0 +1,86 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_93.html
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+toc::[]
+
+== Known limitations for ONTAP Cloud in AWS
+
+The following known limitations affect ONTAP Cloud in AWS.
+
+=== False alarms reported by Amazon CloudWatch
+
+ONTAP Cloud does not release CPUs when idle, so Amazon CloudWatch can report a high CPU warning for the EC2 instance because it sees 100% usage. You can ignore this alarm. The ONTAP statistics command displays the true usage of the CPUs.
+
+=== ONTAP Cloud HA pairs do not support immediate storage giveback
+
+After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.
+
+=== Limitations with the AWS GovCloud (US) region
+
+* Cloud Manager must be deployed in the AWS GovCloud (US) region if you want to launch ONTAP Cloud instances in the AWS GovCloud (US) region.
+* The ONTAP Cloud pay-as-you-go AMI is not supported in the AWS GovCloud (US) region.
+* When deployed in the AWS GovCloud (US) region, Cloud Manager cannot discover ONTAP clusters in a NetApp Private Storage for Microsoft Azure configuration or a NetApp Private Storage for SoftLayer configuration.
+
+=== Detaching and reattaching EBS volumes is not supported
+
+Detaching an EBS volume from an ONTAP Cloud instance and then reattaching it to another ONTAP Cloud instance is not supported. You should use Cloud Manager to replicate data between instances.
+
+=== Encryption limitations
+
+* LUN move is not supported on systems that have ONTAP Cloud encryption enabled.
+* ONTAP Cloud sends encryption keys to key managers even for aggregates that it failed to create.
++
+You must manually delete the keys from key managers.
+
+== Known limitations for ONTAP Cloud in Azure
+
+The following known limitations affect ONTAP Cloud in Azure.
+
+=== ONTAP Cloud pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy ONTAP Cloud Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy ONTAP Cloud BYOL.
+
+== General limitations
+
+The following limitations affect ONTAP Cloud in both AWS and Azure.
+
+=== SnapManager licensing limitation
+
+SnapManager per-server licenses are supported with ONTAP Cloud. Per-storage system (SnapManager suite) licenses are not supported.
+
+=== Unsupported ONTAP features
+
+The following features are not supported with ONTAP Cloud for AWS:
+
+* Aggregate-level inline deduplication
+* Disk maintenance center
+* Disk sanitization
+* Fibre Channel (FC)
+* Flash Pools
+* FlexCache
+* FlexGroup volumes
+* Infinite Volumes
+* Interface groups
+* Intranode LIF failover
+* MetroCluster
+* NetApp Volume Encryption
+* RAID-DP
+* Service Processor
+* SnapLock
+* VLANs

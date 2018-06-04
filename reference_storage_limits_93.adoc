@@ -1,0 +1,123 @@
+---
+sidebar: sidebar
+permalink: reference_storage_limits_93.html
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM
+summary: ONTAP Cloud has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+---
+
+= Storage limits
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+ONTAP Cloud has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+
+The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity for an ONTAP Cloud system is model specific. ONTAP Cloud configurations that support a lower raw capacity limit cannot reach some of the size and disk limits. All limits are per ONTAP Cloud node.
+
+toc::[]
+
+== Physical storage limits for ONTAP Cloud in AWS
+
+[cols=3*,options="header,autowidth"]
+|===
+| Physical storage
+| Parameter
+| Limit
+
+.5+| *Aggregates and disks*
+| Maximum number of aggregates | 35 for single-node configurations
+18 per node in an HA configuration ^1^
+| Maximum aggregate size |	96 TB of raw capacity ^2^
+| Minimum number of disks per aggregate	| 1
+| Maximum number of disks per aggregate	| 6
+| Maximum number of data disks across all aggregates ^3^ | 35 for single-node configurations
+32 per node in an HA configuration
+| *RAID groups*	| Maximum per aggregate	| 1
+|===
+
+Notes:
+
+. An HA node can contain up to 18 mirrored aggregates until the 32 data disk limit has been reached. It is not possible to create 18 aggregates on both nodes in an HA pair because it would exceed the 32 data disk limit. Remember that HA pairs use mirrored aggregates, which means Cloud Manager allocates the same number of disks to both nodes when additional capacity is required.
++
+For example, if you created 18 aggregates on node A that contained one disk each, 18 disks would be allocated to both nodes. In an active-active configuration, you could then create up to 14 aggregates on node B until the 32 data disk limit was reached.
+
+. The maximum usable capacity of a 96 TB aggregate is 85.05 TB.
+
+. The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
+
+== Physical storage limits for ONTAP Cloud in Azure
+
+[cols=3*,options="header,autowidth"]
+|===
+| Physical storage
+| Parameter
+| Limit
+
+.5+| *Aggregates and disks*
+| Maximum number of aggregates | 63
+| Maximum aggregate size |	48 TB of raw capacity ^1^
+| Minimum number of disks per aggregate	| 1
+| Maximum number of disks per aggregate	| 12
+| Maximum number of data disks across all aggregates ^2^ | 63
+| *RAID groups*	| Maximum per aggregate	| 1
+|===
+
+Notes:
+
+. The maximum usable capacity of a 48 TB aggregate is 42.52 TB.
+. The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
+
+== Logical storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
+| *Storage virtual machines (SVMs)*	| Maximum per node | One data-serving SVM and one or more SVMs used for disaster recovery ^1^
+.2+| *Files*	| Maximum size | Volume size dependent
+| Maximum per volume |	Volume size dependent, up to 2 billion
+| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+.3+| *FlexVol volumes*	| Maximum per node |	500
+| Minimum size |	20 MB
+| Maximum size |	76.55 TB of fully provisioned capacity ^3^
+| *Qtrees* |	Maximum per FlexVol volume |	4,995
+| *Snapshot copies* |	Maximum per FlexVol volume |	255
+
+|===
+
+Notes:
+
+. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
+
+. Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
+
+. The specified limit is based on the assumption that you use Cloud Manager to create a volume and that you keep the aggregate free space ratio at 10 percent, which Cloud Manager sets by default.
+
+== iSCSI storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| iSCSI storage
+| Parameter
+| Limit
+
+.4+| *LUNs*	| Maximum per node |	1,024
+| Maximum number of LUN maps |	1,024
+| Maximum size	| 16 TB
+| Maximum per volume	| 512
+| *igroups*	| Maximum per node | 256
+.2+| *Initiators*	| Maximum per node |	512
+| Maximum per igroup	| 128
+| *iSCSI sessions* |	Maximum per node | 1,024
+.2+| *LIFs*	| Maximum per port |	32
+| Maximum per portset	| 32
+| *Portsets* |	Maximum per node |	256
+
+|===

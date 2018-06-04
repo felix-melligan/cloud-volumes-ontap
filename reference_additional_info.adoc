@@ -1,0 +1,56 @@
+---
+sidebar: sidebar
+permalink: reference_additional_info.html
+keywords: community, forums, help, support, videos, policies, ontap, technical reports, performance, SVM disaster recovery
+summary: You can get help and find more information about ONTAP Cloud through various resources, including videos, forums, and support.
+---
+
+= Where to get help and find more information
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can get help and find more information about ONTAP Cloud through various resources, including videos, forums, and support.
+
+* https://docs.netapp.com/us-en/occm/[OnCommand Cloud Manager Documentation^]
++
+Access product documentation for Cloud Manager.
+
+* https://www.youtube.com/playlist?list=PLdXI3bZJEw7lnoRo8FBKsX1zHbK8AQOoT[Videos for Cloud Manager and ONTAP Cloud^]
++
+Watch videos that show you how to deploy and manage ONTAP Cloud in AWS and Azure and how to replicate data across your hybrid cloud.
+
+* http://docs.netapp.com/ontap-9/index.jsp[ONTAP 9 Documentation Center^]
++
+Access product documentation for ONTAP, which can help you as you use ONTAP Cloud.
+
+* Technical reports
+** https://www.netapp.com/us/media/tr-4383.pdf[NetApp Technical Report 4383: Performance Characterization of ONTAP Cloud in Amazon Web Services with Application Workloads^]
+** https://www.netapp.com/us/media/tr-4671.pdf[NetApp Technical Report 4671: Performance Characterization of ONTAP Cloud in Azure with Application Workloads^]
+
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[ONTAP Cloud 9 SVM Disaster Recovery Preparation Express Guide^]
++
+Describes how to quickly configure a destination SVM in preparation for disaster recovery.
+
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[ONTAP Cloud 9 SVM Disaster Recovery Express Guide^]
++
+Describes how to quickly activate a destination SVM after a disaster, and then reactivate the source SVM.
+
+* http://community.netapp.com/hybrid-cloud[NetApp Community: Hybrid Cloud^]
++
+Connect with peers, ask questions, exchange ideas, find resources, and share best practices.
+
+* https://mysupport.netapp.com/cloudontap[NetApp ONTAP Cloud Support^]
++
+Access support resources to get help and troubleshoot issues with ONTAP Cloud.
+
+* http://cloud.netapp.com/[NetApp Cloud Central^]
++
+Find information about additional NetApp products and solutions for the cloud.
+
+* http://docs.netapp.com[NetApp Product Documentation]
++
+Search NetApp product documentation for instructions, resources, and answers.
