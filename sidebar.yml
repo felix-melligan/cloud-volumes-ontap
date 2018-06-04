@@ -25,5 +25,7 @@ entries:
         url: /reference_issues_93.html
       - title: Known limitations
         url: /reference_limitations_93.html
+  - title: Cloud Manager documentation
+    url: https://docs.netapp.com/us-en/occm/index.html
   - title: Related links
     url: /reference_additional_info.html
