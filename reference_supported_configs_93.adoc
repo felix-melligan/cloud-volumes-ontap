@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference_supported_configs_93.html
-keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, limit, maximum, virtual machine, ontap cloud, supported, configurations
+keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, ontap cloud, supported, configurations
 summary: ONTAP Cloud is available in several configurations in AWS and Azure.
 ---
 
-= Supported configurations
+= Supported configurations for ONTAP Cloud 9.3
 :toc: macro
 :hardbreaks:
 :toclevels: 1
