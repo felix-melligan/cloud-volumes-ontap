@@ -5,7 +5,7 @@ keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, 
 summary: ONTAP Cloud has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 ---
 
-= Storage limits
+= Storage limits for ONTAP Cloud 9.3
 :toc: macro
 :hardbreaks:
 :toclevels: 1
