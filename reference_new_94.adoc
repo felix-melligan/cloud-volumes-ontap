@@ -31,7 +31,7 @@ You can choose the tiering policy when you create or edit a volume in Cloud Mana
 
 == Data tiering in Microsoft Azure
 
-You can now reduce your Azure storage costs by combining a performance tier for hot data (Premium or Standard storage) with a capacity tier for cold data (Azure Blob storage). The same tiering policies that are supported in AWS are also supported in Azure: auto, Snapshot only, and backup.
+You can now reduce your Azure storage costs by combining a performance tier for hot data (Premium or Standard managed disks) with a capacity tier for cold data (Azure Blob storage). The same tiering policies that are supported in AWS are also supported in Azure: auto, Snapshot only, and backup.
 
 NOTE: Data tiering is not supported with the DS3_v2 virtual machine type.
 
