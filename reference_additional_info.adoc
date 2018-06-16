@@ -51,6 +51,10 @@ Access support resources to get help and troubleshoot issues with ONTAP Cloud.
 +
 Find information about additional NetApp products and solutions for the cloud.
 
-* http://docs.netapp.com[NetApp Product Documentation]
+* http://docs.netapp.com[NetApp Product Documentation^]
 +
 Search NetApp product documentation for instructions, resources, and answers.
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2846508[Notice for Cloud Volumes ONTAP 9.4^]
++
+Provides information about third-party copyright and licenses.
