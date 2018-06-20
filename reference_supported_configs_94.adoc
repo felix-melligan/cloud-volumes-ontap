@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference_supported_configs_94.html
-keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, ontap cloud, supported, configurations
-summary: ONTAP Cloud is available in several configurations in AWS and Azure.
+keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations
+summary: Cloud Volumes ONTAP is available in several configurations in AWS and Azure.
 ---
 
-= Supported configurations for ONTAP Cloud 9.4
+= Supported configurations for Cloud Volumes ONTAP 9.4
 :toc: macro
 :hardbreaks:
 :toclevels: 1
@@ -15,13 +15,13 @@ summary: ONTAP Cloud is available in several configurations in AWS and Azure.
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Cloud is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
+Cloud Volumes ONTAP is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
 
 toc::[]
 
-== ONTAP Cloud for AWS
+== Cloud Volumes ONTAP for AWS
 
-In AWS, you can deploy ONTAP Cloud as a single system or an HA pair.
+In AWS, you can deploy Cloud Volumes ONTAP as a single system or an HA pair.
 
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
@@ -67,15 +67,15 @@ Notes:
 
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
-. Enhanced write performance is supported when using EBS SSDs with ONTAP Cloud Standard, Premium, and BYOL.
+. Enhanced write performance is supported when using EBS SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. Data tiering is supported with ONTAP Cloud Standard, Premium, and BYOL.
+. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
 . For AWS region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-aws-regions[Supported AWS regions].
 
-== ONTAP Cloud for Azure
+== Cloud Volumes ONTAP for Azure
 
-In Azure, you can deploy ONTAP Cloud as a single node system.
+In Azure, you can deploy Cloud Volumes ONTAP as a single node system.
 
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
@@ -112,8 +112,8 @@ Notes:
 
 . The actual maximum capacity may be less because of virtual machine limits: 60 TB for DS3, 124 TB for DS4 and DS13, and 252 TB for DS5 and DS14.
 
-. Enhanced write performance is supported when using Azure Premium Storage disks with ONTAP Cloud Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+. Enhanced write performance is supported when using Azure Premium Storage disks with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
 
-. Data tiering is supported with ONTAP Cloud Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
 
 . For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
