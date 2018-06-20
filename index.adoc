@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: index.html
-keywords: release notes, ontap cloud, limits, known issues, support, configurations, features, limitations, what's new
-summary: Welcome to the release notes for ONTAP Cloud.
+keywords: release notes, Cloud Volumes ONTAP, limits, known issues, support, configurations, features, limitations, what's new
+summary: Welcome to the release notes for Cloud Volumes ONTAP.
 ---
 
-= ONTAP Cloud Release Notes
+= NetApp Cloud Volumes ONTAP Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,11 @@ summary: Welcome to the release notes for ONTAP Cloud.
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Cloud Release Notes provide release-specific information about ONTAP Cloud: what is new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
+The Release Notes for Cloud Volumes ONTAP (formerly ONTAP Cloud) provide release-specific information: what is new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
 
-These release notes are specific to ONTAP Cloud. You should view the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] to identify new features, known problems, and limitations for ONTAP software in general.
+These release notes are specific to Cloud Volumes ONTAP. You should view the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] to identify new features, known problems, and limitations for ONTAP software in general.
 
-If you need documentation that describes how to deploy and manage ONTAP Cloud, then you should refer to link:https://docs.netapp.com/us-en/occm/[Cloud Manager documentation^].
+If you need documentation that describes how to deploy and manage Cloud Volumes ONTAP, then you should refer to link:https://docs.netapp.com/us-en/occm/[Cloud Manager documentation^].
 
-* link:reference_new_94.html[ONTAP Cloud 9.4 Release Notes]
-* link:reference_new_93.html[ONTAP Cloud 9.3 Release Notes]
+* link:reference_new_94.html[9.4 Release Notes]
+* link:reference_new_93.html[9.3 Release Notes]

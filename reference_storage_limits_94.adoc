@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: reference_storage_limits_94.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM
-summary: ONTAP Cloud has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+summary: Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 ---
 
-= Storage limits for ONTAP Cloud 9.4
+= Storage limits for Cloud Volumes ONTAP 9.4
 :toc: macro
 :hardbreaks:
 :toclevels: 1
@@ -15,13 +15,13 @@ summary: ONTAP Cloud has storage configuration limits to provide reliable operat
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Cloud has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 
-The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity for an ONTAP Cloud system is model specific. ONTAP Cloud configurations that support a lower raw capacity limit cannot reach some of the size and disk limits. All limits are per ONTAP Cloud node.
+The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity is model specific. Cloud Volumes ONTAP configurations that support a lower raw capacity limit cannot reach some of the size and disk limits. All limits are per Cloud Volumes ONTAP node.
 
 toc::[]
 
-== Physical storage limits for ONTAP Cloud in AWS
+== Physical storage limits for Cloud Volumes ONTAP in AWS
 
 [cols=3*,options="header,autowidth"]
 |===
@@ -50,7 +50,7 @@ For example, if you created 18 aggregates on node A that contained one disk each
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
-== Physical storage limits for ONTAP Cloud in Azure
+== Physical storage limits for Cloud Volumes ONTAP in Azure
 
 [cols=3*,options="header,autowidth"]
 |===
