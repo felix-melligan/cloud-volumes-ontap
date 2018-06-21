@@ -85,6 +85,7 @@ The following features are not supported with ONTAP Cloud for AWS:
 * Interface groups
 * Intranode LIF failover
 * MetroCluster
+* Multi-tenancy (only one data-serving SVM is supported, as noted in the SVM limitation above)
 * NetApp Volume Encryption
 * RAID-DP
 * Service Processor
