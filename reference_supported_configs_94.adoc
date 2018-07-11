@@ -63,8 +63,6 @@ a|
 
 Notes:
 
-. Pay-as-you-go configurations are not supported in GovCloud (US).
-
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
 . Enhanced write performance is supported when using EBS SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.

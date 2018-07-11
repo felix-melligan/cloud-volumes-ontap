@@ -17,7 +17,15 @@ summary: New releases of Cloud Volumes ONTAP introduce new features, enhancement
 [.lead]
 Cloud Volumes ONTAP 9.4 includes several new features and enhancements.
 
+NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+
 toc::[]
+
+=== Support for pay-as-you-go in the AWS GovCloud (US) region
+
+The pay-as-you-go version of Cloud Volumes ONTAP is now supported in the AWS GovCloud (US) region. This is in addition to supporting Cloud Volumes ONTAP BYOL in the GovCloud (US) region.
+
+You can deploy Cloud Volumes ONTAP in the GovCloud (US) region just like any other region. Go to NetApp Cloud Central and launch Cloud Manager in GovCloud (US). Then launch Cloud Volumes ONTAP PAYGO or BYOL by creating a new working environment in Cloud Manager.
 
 == Tiering cold data with Cloud Volumes ONTAP Premium and BYOL
 
