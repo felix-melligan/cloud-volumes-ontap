@@ -21,7 +21,29 @@ The following sections list limits for aggregates, volumes, LUNs, and related st
 
 toc::[]
 
-== Physical storage limits for Cloud Volumes ONTAP in AWS
+== System capacity limit
+
+A system's capacity limit depends on the Cloud Volumes ONTAP license that you choose for the system:
+
+[cols="40,60",width=65%,options="header"]
+|===
+| License
+| Capacity limit
+
+| Explore	| 2 TB
+| Standard | 10 TB
+| Premium .2+a|
+* AWS:
+** 368 TB for single node systems
+** 360 TB per node in an HA pair
+* Azure: 252 TB
+| BYOL |
+
+|===
+
+If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+
+== Aggregate and disk limits for Cloud Volumes ONTAP in AWS
 
 [cols=3*,options="header,autowidth"]
 |===
@@ -50,7 +72,7 @@ For example, if you created 18 aggregates on node A that contained one disk each
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
-== Physical storage limits for Cloud Volumes ONTAP in Azure
+== Aggregate and disk limits for Cloud Volumes ONTAP in Azure
 
 [cols=3*,options="header,autowidth"]
 |===
