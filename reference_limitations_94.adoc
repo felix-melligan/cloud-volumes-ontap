@@ -80,7 +80,6 @@ The following features are not supported with Cloud Volumes ONTAP for AWS:
 * Fibre Channel (FC)
 * Flash Pools
 * FlexCache
-* FlexGroup volumes
 * Infinite Volumes
 * Interface groups
 * Intranode LIF failover
@@ -89,5 +88,5 @@ The following features are not supported with Cloud Volumes ONTAP for AWS:
 * NetApp Volume Encryption
 * RAID-DP
 * Service Processor
-* SnapLock
+* SnapLock Compliance mode (Enterprise mode is supported)
 * VLANs
