@@ -108,7 +108,8 @@ Notes:
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
-| Maximum size |	76.55 TB of fully provisioned capacity ^3^
+| Maximum size |	AWS: 76.55 TB of fully provisioned capacity ^3^
+Azure: 38.27 TB of fully provisioned capacity ^3^
 | *Qtrees* |	Maximum per FlexVol volume |	4,995
 | *Snapshot copies* |	Maximum per FlexVol volume |	1,023
 
