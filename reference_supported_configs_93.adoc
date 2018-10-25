@@ -54,8 +54,7 @@ a|
 
 | Capacity limit | 2 TB | 10 TB
 2+<a|
-* 368 TB for single node systems
-* 360 TB per node in an HA pair
+368 TB (360 TB for HA)
 
 | Term 3+| Hourly | 6 or 12 months
 
