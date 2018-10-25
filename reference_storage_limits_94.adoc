@@ -33,9 +33,7 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 | Explore	| 2 TB
 | Standard | 10 TB
 | Premium .2+a|
-* AWS:
-** 368 TB for single node systems
-** 360 TB per node in an HA pair
+* AWS: 368 TB (360 TB for HA)
 * Azure: 252 TB
 | BYOL |
 
@@ -64,9 +62,9 @@ If you enable data tiering, a system's capacity limit stays the same. The limit 
 
 Notes:
 
-. An HA node can contain up to 18 mirrored aggregates until the 32 data disk limit has been reached. It is not possible to create 18 aggregates on both nodes in an HA pair because it would exceed the 32 data disk limit. Remember that HA pairs use mirrored aggregates, which means Cloud Manager allocates the same number of disks to both nodes when additional capacity is required.
+. An HA node can contain up to 18 mirrored aggregates until the 32 data disk limit has been reached. It is not possible to create 18 aggregates on both nodes in an HA pair because it would exceed the 32 data disk limit. Remember that Cloud Manager allocates the same number of disks to both nodes when additional capacity is required.
 +
-For example, if you created 18 aggregates on node A that contained one disk each, 18 disks would be allocated to both nodes. In an active-active configuration, you could then create up to 14 aggregates on node B until the 32 data disk limit was reached.
+For example, if you created 18 aggregates on node A that contained one disk each, 18 disks would be allocated to both nodes. In an active-active configuration, you could then add up to 14 disks on node B until the 32 data disk limit was reached.
 
 . The maximum usable capacity of a 96 TB aggregate is 85.05 TB.
 

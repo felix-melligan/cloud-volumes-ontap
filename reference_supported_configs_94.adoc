@@ -54,8 +54,7 @@ a|
 
 | Capacity limit | 2 TB | 10 TB
 2+<a|
-* 368 TB for single node systems
-* 360 TB per node in an HA pair
+368 TB (360 TB for HA)
 
 | Term 3+| Hourly | 6 or 12 months
 
@@ -116,6 +115,6 @@ Notes:
 
 . Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
 
-. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier. 
+. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
 
 . For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
