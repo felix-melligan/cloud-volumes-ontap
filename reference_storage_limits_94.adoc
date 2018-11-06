@@ -39,7 +39,17 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 
 |===
 
-If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+Notes:
+
+. If you enable data tiering, a system's capacity limit stays the same. The capacity limit includes both disks and object storage.
+
+. In AWS, an HA pair's mirrored data does not count against the system capacity limit.
++
+Data in an HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. If you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+
+. In AWS, both nodes in an HA pair cannot reach the system capacity limit due to the AWS disk limit.
++
+For example, if you allocated 23 disks to node A for a total of 360 TB, 23 mirrored disks would also be allocated to node B. That would leave room for 9 disks on node B before reaching the disk limit.
 
 == Aggregate and disk limits for Cloud Volumes ONTAP in AWS
 
@@ -52,21 +62,21 @@ If you enable data tiering, a system's capacity limit stays the same. The limit 
 .5+| *Aggregates and disks*
 | Maximum number of aggregates | 35 for single-node configurations
 18 per node in an HA configuration ^1^
-| Maximum aggregate size |	96 TB of raw capacity ^2^
+| Maximum aggregate size |	96 TB of raw capacity ^2^^,^ ^3^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 6
-| Maximum number of data disks across all aggregates ^3^ | 35 for single-node configurations
+| Maximum number of data disks across all aggregates ^4^ | 35 for single-node configurations
 32 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
 Notes:
 
-. An HA node can contain up to 18 mirrored aggregates until the 32 data disk limit has been reached. It is not possible to create 18 aggregates on both nodes in an HA pair because it would exceed the 32 data disk limit. Remember that Cloud Manager allocates the same number of disks to both nodes when additional capacity is required.
-+
-For example, if you created 18 aggregates on node A that contained one disk each, 18 disks would be allocated to both nodes. In an active-active configuration, you could then add up to 14 disks on node B until the 32 data disk limit was reached.
+. It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
 
 . The maximum usable capacity of a 96 TB aggregate is 85.05 TB.
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
@@ -80,16 +90,19 @@ For example, if you created 18 aggregates on node A that contained one disk each
 
 .5+| *Aggregates and disks*
 | Maximum number of aggregates | 63
-| Maximum aggregate size |	48 TB of raw capacity ^1^
+| Maximum aggregate size |	48 TB of raw capacity ^1^^,^ ^2^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 12
-| Maximum number of data disks across all aggregates ^2^ | 63
+| Maximum number of data disks across all aggregates ^3^ | 63
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
 Notes:
 
 . The maximum usable capacity of a 48 TB aggregate is 42.52 TB.
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
 == Logical storage limits
