@@ -47,10 +47,6 @@ Notes:
 +
 Data in an HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. If you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
 
-. In AWS, both nodes in an HA pair cannot reach the system capacity limit due to the AWS disk limit.
-+
-For example, if you allocated 23 disks to node A for a total of 360 TB, 23 mirrored disks would also be allocated to node B. That would leave room for 9 disks on node B before reaching the disk limit.
-
 == Aggregate and disk limits for Cloud Volumes ONTAP in AWS
 
 [cols=3*,options="header,autowidth"]
