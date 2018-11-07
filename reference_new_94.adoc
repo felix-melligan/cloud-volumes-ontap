@@ -21,7 +21,7 @@ NOTE: Additional features and enhancements are also introduced in the latest ver
 
 toc::[]
 
-=== Support for pay-as-you-go in the AWS GovCloud (US) region
+== Support for pay-as-you-go in the AWS GovCloud (US) region
 
 The pay-as-you-go version of Cloud Volumes ONTAP is now supported in the AWS GovCloud (US) region. This is in addition to supporting Cloud Volumes ONTAP BYOL in the GovCloud (US) region.
 
