@@ -1,0 +1,120 @@
+---
+sidebar: sidebar
+permalink: reference_supported_configs_95.html
+keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations
+summary: Cloud Volumes ONTAP is available in several configurations in AWS and Azure.
+---
+
+= Supported configurations for Cloud Volumes ONTAP 9.5
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
+
+toc::[]
+
+== Cloud Volumes ONTAP for AWS
+
+In AWS, you can deploy Cloud Volumes ONTAP as a single system or an HA pair.
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| EC2 instance types  | m4.xlarge
+
+a|
+* m4.2xlarge
+* r4.xlarge
+
+a|
+* c4.4xlarge
+* c4.8xlarge
+* m4.4xlarge
+* r4.2xlarge
+
+a|
+* c4.4xlarge
+* c4.8xlarge
+* m4.xlarge
+* m4.2xlarge
+* m4.4xlarge
+* r4.xlarge
+* r4.2xlarge
+
+| Capacity limit | 2 TB | 10 TB
+2+<a|
+368 TB (360 TB for HA)
+
+| Term 3+| Hourly | 6 or 12 months
+
+|===
+
+Notes:
+
+. When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
+
+. Enhanced write performance is supported when using EBS SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+
+. For AWS region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-aws-regions[Supported AWS regions].
+
+== Cloud Volumes ONTAP for Azure
+
+In Azure, you can deploy Cloud Volumes ONTAP as a single node system.
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Virtual machine types | DS3_v2
+
+a|
+* DS4_v2
+* DS13_v2
+
+a|
+* DS5_v2
+* DS14_v2
+
+a|
+* DS3_v2
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+
+| Capacity limit | 2 TB | 10 TB 2+| 252 TB
+
+| Term 3+| Hourly | 12 months
+
+|===
+
+Notes:
+
+. The actual maximum capacity may be less because of virtual machine limits: 60 TB for DS3, 124 TB for DS4 and DS13, and 252 TB for DS5 and DS14.
+
+. Enhanced write performance is supported when using Azure Premium Storage disks with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+
+. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+
+. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+
+. For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].

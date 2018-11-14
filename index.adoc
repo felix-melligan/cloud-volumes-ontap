@@ -19,5 +19,6 @@ These release notes are specific to Cloud Volumes ONTAP. You should view the htt
 
 If you need documentation that describes how to deploy and manage Cloud Volumes ONTAP, then you should refer to link:https://docs.netapp.com/us-en/occm/[Cloud Manager documentation^].
 
+* link:reference_new_95.html[9.5 Release Notes]
 * link:reference_new_94.html[9.4 Release Notes]
 * link:reference_new_93.html[9.3 Release Notes]

@@ -1,6 +1,18 @@
 entries:
   - title: Cloud Volumes ONTAP Release Notes
     url: /index.html
+  - title: 9.5 Release Notes
+    entries:
+      - title: What's new
+        url: /reference_new_95.html
+      - title: Supported configurations
+        url: /reference_supported_configs_95.html
+      - title: Storage limits
+        url: /reference_storage_limits_95.html
+      - title: Known issues
+        url: /reference_issues_95.html
+      - title: Known limitations
+        url: /reference_limitations_95.html
   - title: 9.4 Release Notes
     entries:
       - title: What's new
@@ -29,3 +41,5 @@ entries:
     url: https://docs.netapp.com/us-en/occm/index.html
   - title: Related links
     url: /reference_additional_info.html
+  - title: Legal notices
+    url: /reference_legal_notices.html

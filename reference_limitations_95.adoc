@@ -1,0 +1,96 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_95.html
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations for Cloud Volumes ONTAP 9.5
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+toc::[]
+
+== General limitations
+
+The following limitations apply to Cloud Volumes ONTAP in AWS and in Azure.
+
+=== Disks and aggregates must be managed from Cloud Manager
+
+All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+
+=== Storage Virtual Machine (SVM) limitation
+
+Cloud Volumes ONTAP supports one data-serving SVM and one or more SVMs used for disaster recovery.
+
+Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
+
+=== SnapManager licensing limitation
+
+SnapManager per-server licenses are supported with Cloud Volumes ONTAP. Per-storage system (SnapManager suite) licenses are not supported.
+
+=== Unsupported ONTAP features
+
+The following features are not supported with Cloud Volumes ONTAP for AWS:
+
+* Aggregate-level inline deduplication
+* Disk maintenance center
+* Disk sanitization
+* Fibre Channel (FC)
+* Flash Pools
+* FlexCache
+* Infinite Volumes
+* Interface groups
+* Intranode LIF failover
+* MetroCluster
+* Multi-tenancy (only one data-serving SVM is supported, as noted in the SVM limitation above)
+* NetApp Volume Encryption
+* RAID-DP
+* Service Processor
+* SnapLock Compliance mode (Enterprise mode is supported)
+* VLANs
+
+== Known limitations in AWS
+
+The following known limitations affect Cloud Volumes ONTAP in AWS.
+
+=== False alarms reported by Amazon CloudWatch
+
+Cloud Volumes ONTAP does not release CPUs when idle, so Amazon CloudWatch can report a high CPU warning for the EC2 instance because it sees 100% usage. You can ignore this alarm. The ONTAP statistics command displays the true usage of the CPUs.
+
+=== Cloud Volumes ONTAP HA pairs do not support immediate storage giveback
+
+After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.
+
+=== Limitations with the AWS GovCloud (US) region
+
+* Cloud Manager must be deployed in the AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in the AWS GovCloud (US) region.
+
+* When deployed in the AWS GovCloud (US) region, Cloud Manager cannot discover ONTAP clusters in a NetApp Private Storage for Microsoft Azure configuration or a NetApp Private Storage for SoftLayer configuration.
+
+=== Detaching and reattaching EBS volumes is not supported
+
+Detaching an EBS volume from a Cloud Volumes ONTAP instance and then reattaching it to another Cloud Volumes ONTAP instance is not supported. You should use Cloud Manager to replicate data between instances.
+
+=== Encryption limitations
+
+* LUN move is not supported on systems that have Cloud Volumes ONTAP encryption enabled.
+* Cloud Volumes ONTAP sends encryption keys to key managers even for aggregates that it failed to create.
++
+You must manually delete the keys from key managers.
+
+== Known limitations in Microsoft Azure
+
+The following known limitations affect Cloud Volumes ONTAP in Azure.
+
+=== Pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.

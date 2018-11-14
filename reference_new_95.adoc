@@ -1,0 +1,80 @@
+---
+sidebar: sidebar
+permalink: reference_new_95.html
+keywords: what's new, new, features, release notes, enhancements
+summary: New releases of Cloud Volumes ONTAP introduce new features, enhancements, and bug fixes.
+---
+
+= What's new in Cloud Volumes ONTAP 9.5
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
+
+NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+
+toc::[]
+
+== High-availability (HA) pairs in Microsoft Azure
+
+You can now deploy a Cloud Volumes ONTAP HA pair in Microsoft Azure. An HA pair provides enterprise reliability and continuous operations in case of failures in your cloud environment. Similar to a physical ONTAP cluster, storage in an Azure HA pair is shared between the two nodes.
+
+https://docs.netapp.com/us-en/occm/concept_ha_azure.html[Learn more about HA pairs in Azure^].
+
+== Improved networking performance in Azure
+
+Cloud Volumes ONTAP systems are now enabled with https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli[Accelerated Networking^] in Azure. Cloud Manager enables Accelerated Networking when you upgrade to 9.5 and when you deploy new 9.5 systems.
+
+== Support for NetApp Volume Encryption
+
+https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
+
+At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported.
+
+You can enable NetApp Volume Encryption by using System Manager or the CLI. Cloud Manager does not support NetApp Volume Encryption at this time.
+
+== Support for M5 instances in AWS
+
+****
+This will be hidden when we release 9.5 RC1. I will publish it at a later date. Please review it now so we can finalize the text.
+****
+
+Cloud Volumes ONTAP now supports the following M5 instances:
+
+* m5.xlarge (Explore)
+* m5.2xlarge (Standard)
+* m5.4xlarge (Premium)
+
+These instances use a hypervisor that is based on KVM technology. They support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA configurations.
+
+https://aws.amazon.com/ec2/instance-types/m5/[Learn about the benefits and review product details^].
+
+== Deprecated features
+
+Two features are no longer supported in this release.
+
+=== Cloud Volumes ONTAP encryption is no longer supported in AWS
+
+Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate the data].
+
+You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS).
+
+=== c4.2xlarge is no longer supported
+
+The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using that instance type, you must first https://docs.netapp.com/us-en/occm/task_modifying_ontap_cloud.html#changing-the-instance-or-virtual-machine-type-for-cloud-volumes-ontap[change to a new instance type] before you upgrade to the 9.5 release.
+
+== Upgrade notes
+
+* You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 or 9.3 release. You can perform the upgrade directly from Cloud Manager.
++
+To understand version requirements, refer to http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[ONTAP 9 Documentation: Cluster update requirements^].
+
+* When you use Cloud Manager to upgrade a single-node system, the upgrade process takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrades of HA pairs in AWS are nondisruptive. A nondisruptive upgrade upgrades both nodes in an HA pair concurrently while maintaining service to clients.
