@@ -47,9 +47,9 @@ This will be hidden when we release 9.5 RC1. I will publish it at a later date. 
 
 Cloud Volumes ONTAP now supports the following M5 instances:
 
-* m5.xlarge (Explore)
-* m5.2xlarge (Standard)
-* m5.4xlarge (Premium)
+* m5.xlarge with Explore and BYOL
+* m5.2xlarge with Standard and BYOL
+* m5.4xlarge with Premium and BYOL
 
 These instances use a hypervisor that is based on KVM technology. They support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA configurations.
 
@@ -61,13 +61,13 @@ Two features are no longer supported in this release.
 
 === Cloud Volumes ONTAP encryption is no longer supported in AWS
 
-Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate the data].
+Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate data] to that system.
 
 You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS).
 
 === c4.2xlarge is no longer supported
 
-The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using that instance type, you must first https://docs.netapp.com/us-en/occm/task_modifying_ontap_cloud.html#changing-the-instance-or-virtual-machine-type-for-cloud-volumes-ontap[change to a new instance type] before you upgrade to the 9.5 release.
+The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/occm/task_modifying_ontap_cloud.html#changing-the-instance-or-virtual-machine-type-for-cloud-volumes-ontap[change to a new instance type] before you upgrade to the 9.5 release.
 
 == Upgrade notes
 
