@@ -13,7 +13,7 @@ summary: Welcome to the release notes for Cloud Volumes ONTAP.
 :imagesdir: ./media/
 
 [.lead]
-The Release Notes for Cloud Volumes ONTAP (formerly ONTAP Cloud) provide release-specific information: what is new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
+The Release Notes for Cloud Volumes ONTAP provide release-specific information: what is new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
 
 These release notes are specific to Cloud Volumes ONTAP. You should view the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] to identify new features, known problems, and limitations for ONTAP software in general.
 
