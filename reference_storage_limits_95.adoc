@@ -33,7 +33,9 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 | Explore	| 2 TB
 | Standard | 10 TB
 | Premium .2+a|
+ifdef::95-aws[]
 * AWS: 368 TB (360 TB for HA)
+endif::[]
 * Azure: 252 TB
 | BYOL |
 
@@ -42,7 +44,7 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 Notes:
 
 . If you enable data tiering, a system's capacity limit stays the same. The capacity limit includes both disks and object storage.
-
+ifdef::95-aws[]
 . In AWS, an HA pair's mirrored data does not count against the system capacity limit.
 +
 Data in an HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. If you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
@@ -75,7 +77,7 @@ Notes:
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
-
+endif::[]
 == Aggregate and disk limits for Cloud Volumes ONTAP in Azure
 
 [cols=3*,options="header,autowidth"]

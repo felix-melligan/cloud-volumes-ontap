@@ -17,11 +17,12 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 [.lead]
 Cloud Volumes ONTAP is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
 
+ifdef::95-aws[]
 toc::[]
 
 == Cloud Volumes ONTAP for AWS
 
-In AWS, you can deploy Cloud Volumes ONTAP as a single system or an HA pair.
+In AWS, you can deploy Cloud Volumes ONTAP as a single system or as an HA pair.
 
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
@@ -71,10 +72,10 @@ Notes:
 . If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
 
 . For AWS region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-aws-regions[Supported AWS regions].
-
+endif::[]
 == Cloud Volumes ONTAP for Azure
 
-In Azure, you can deploy Cloud Volumes ONTAP as a single node system.
+In Azure, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
 
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
@@ -111,9 +112,9 @@ Notes:
 
 . The actual maximum capacity may be less because of virtual machine limits: 60 TB for DS3, 124 TB for DS4 and DS13, and 252 TB for DS5 and DS14.
 
-. Enhanced write performance is supported when using Azure Premium Storage disks with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+. The following features are not supported with the DS3_v2 virtual machine type: HA pairs, data tiering, and enhanced write performance.
 
-. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+. Enhanced write performance is supported when using Azure Premium Storage disks, but not when using the DS3_v2 virtual machine type.
 
 . If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
 
