@@ -23,7 +23,7 @@ toc::[]
 
 == Features released on 4 Dec 2018
 
-Cloud Volumes ONTAP 9.5 RC1 is available in Microsoft Azure. The 9.5 release will be available in AWS at a later date.
+Cloud Volumes ONTAP 9.5 RC1 is now available in Microsoft Azure. The 9.5 release will be available in AWS at a later date.
 
 === High-availability (HA) pairs in Microsoft Azure (Preview)
 
@@ -43,8 +43,8 @@ You can now deploy Cloud Volumes ONTAP in the following Azure regions:
 
 * Australia Central
 * Australia Central 2
-* France South
 * France Central
+* France South
 
 === Support for NetApp Volume Encryption
 
@@ -52,7 +52,7 @@ https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is 
 
 At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported.
 
-You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption.
+You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption at this time.
 
 https://docs.netapp.com/us-en/occm/task_encrypting_volumes.html[Learn how to set up NetApp Volume Encryption^]
 ifdef::95-aws[]
