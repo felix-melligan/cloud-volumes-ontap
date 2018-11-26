@@ -37,6 +37,15 @@ https://docs.netapp.com/us-en/occm/concept_ha_azure.html[Learn more about HA pai
 
 Cloud Volumes ONTAP systems are now enabled with https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli[Accelerated Networking^] in Azure. Cloud Manager enables Accelerated Networking when you upgrade to 9.5 and when you deploy new 9.5 systems.
 
+=== Support for new Azure regions
+
+You can now deploy Cloud Volumes ONTAP in the following Azure regions:
+
+* Australia Central
+* Australia Central 2
+* France South
+* France Central
+
 === Support for NetApp Volume Encryption
 
 https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
