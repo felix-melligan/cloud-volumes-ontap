@@ -43,7 +43,9 @@ https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is 
 
 At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported.
 
-You can enable NetApp Volume Encryption by using System Manager or the CLI. Cloud Manager does not support NetApp Volume Encryption at this time.
+You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption.
+
+https://docs.netapp.com/us-en/occm/task_encrypting_volumes.html[Learn how to set up NetApp Volume Encryption^]
 ifdef::95-aws[]
 NOTE: NetApp Volume Encryption is a different encryption technology than Cloud Volumes ONTAP encryption, which encrypted data at the aggregate level and is now deprecated. An upgrade between these two encryption technologies is not possible. See <<Deprecated features>> for more information.
 
