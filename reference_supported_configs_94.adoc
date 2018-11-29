@@ -6,9 +6,7 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.4
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -16,8 +14,6 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 
 [.lead]
 Cloud Volumes ONTAP is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
-
-toc::[]
 
 == Cloud Volumes ONTAP for AWS
 

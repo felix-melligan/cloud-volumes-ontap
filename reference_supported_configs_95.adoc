@@ -6,9 +6,7 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.5
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -18,8 +16,6 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 Cloud Volumes ONTAP is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
 
 ifdef::95-aws[]
-toc::[]
-
 == Cloud Volumes ONTAP for AWS
 
 In AWS, you can deploy Cloud Volumes ONTAP as a single system or as an HA pair.
@@ -110,7 +106,7 @@ a|
 
 Notes:
 
-. The maximum capacity may be less because of virtual machine disk limits: 
+. The maximum capacity may be less because of virtual machine disk limits:
 * DS3: 60 TB for single node and 120 TB for HA pairs
 * DS4 and DS13: 124 TB for single node and 248 TB for HA pairs
 

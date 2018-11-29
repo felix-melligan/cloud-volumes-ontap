@@ -6,9 +6,7 @@ summary: New releases of Cloud Volumes ONTAP introduce new features, enhancement
 ---
 
 = What's new in Cloud Volumes ONTAP 9.5
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -18,8 +16,6 @@ summary: New releases of Cloud Volumes ONTAP introduce new features, enhancement
 Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
-
-toc::[]
 
 == Features released on 4 Dec 2018
 

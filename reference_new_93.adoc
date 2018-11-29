@@ -6,9 +6,7 @@ summary: New releases of ONTAP Cloud introduce new features, enhancements, and b
 ---
 
 = What's new in ONTAP Cloud 9.3
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -16,8 +14,6 @@ summary: New releases of ONTAP Cloud introduce new features, enhancements, and b
 
 [.lead]
 ONTAP Cloud 9.3 includes several new features and enhancements.
-
-toc::[]
 
 == ONTAP Cloud HA enhancements in AWS
 

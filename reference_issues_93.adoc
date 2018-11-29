@@ -6,9 +6,7 @@ summary: Known issues identify problems that might prevent you from using this r
 ---
 
 = Known issues for ONTAP Cloud 9.3
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:

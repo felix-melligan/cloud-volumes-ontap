@@ -6,9 +6,7 @@ summary: ONTAP Cloud has storage configuration limits to provide reliable operat
 ---
 
 = Storage limits for ONTAP Cloud 9.3
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -18,8 +16,6 @@ summary: ONTAP Cloud has storage configuration limits to provide reliable operat
 ONTAP Cloud has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 
 The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity for an ONTAP Cloud system is model specific. ONTAP Cloud configurations that support a lower raw capacity limit cannot reach some of the size and disk limits.
-
-toc::[]
 
 == Physical storage limits for ONTAP Cloud in AWS
 

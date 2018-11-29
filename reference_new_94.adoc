@@ -6,9 +6,7 @@ summary: New releases of Cloud Volumes ONTAP introduce new features, enhancement
 ---
 
 = What's new in Cloud Volumes ONTAP 9.4
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -19,9 +17,7 @@ Cloud Volumes ONTAP 9.4 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
-toc::[]
-
-=== Support for pay-as-you-go in the AWS GovCloud (US) region
+== Support for pay-as-you-go in the AWS GovCloud (US) region
 
 The pay-as-you-go version of Cloud Volumes ONTAP is now supported in the AWS GovCloud (US) region. This is in addition to supporting Cloud Volumes ONTAP BYOL in the GovCloud (US) region.
 

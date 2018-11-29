@@ -6,9 +6,7 @@ summary: Known limitations identify platforms, devices, or functions that are no
 ---
 
 = Known limitations for Cloud Volumes ONTAP 9.5
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -16,8 +14,6 @@ summary: Known limitations identify platforms, devices, or functions that are no
 
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
-
-toc::[]
 
 == Disks and aggregates must be managed from Cloud Manager
 
