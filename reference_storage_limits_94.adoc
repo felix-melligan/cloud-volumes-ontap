@@ -17,7 +17,7 @@ summary: Cloud Volumes ONTAP has storage configuration limits to provide reliabl
 [.lead]
 Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 
-The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity is model specific. Cloud Volumes ONTAP configurations that support a lower raw capacity limit cannot reach some of the size and disk limits. All limits are per Cloud Volumes ONTAP node.
+The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity is model specific. Cloud Volumes ONTAP configurations that support a lower raw capacity limit cannot reach some of the size and disk limits.
 
 toc::[]
 
