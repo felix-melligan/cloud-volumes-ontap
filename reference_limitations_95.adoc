@@ -15,6 +15,17 @@ summary: Known limitations identify platforms, devices, or functions that are no
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
+== High availability (HA) pairs not supported in certain Azure regions
+
+Cloud Volumes ONTAP HA pairs are not supported in the following Azure regions:
+
+* All US Gov regions
+* All Germany regions
+
+== Pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.
+
 == Disks and aggregates must be managed from Cloud Manager
 
 All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
@@ -76,6 +87,3 @@ Detaching an EBS volume from a Cloud Volumes ONTAP instance and then reattaching
 
 The following known limitations affect Cloud Volumes ONTAP in Azure.
 endif::[]
-== Pay-as-you-go not available for CSP partners
-
-If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.
