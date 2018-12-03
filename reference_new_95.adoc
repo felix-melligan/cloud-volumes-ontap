@@ -21,11 +21,11 @@ NOTE: Additional features and enhancements are also introduced in the latest ver
 
 Cloud Volumes ONTAP 9.5 RC1 is now available in Microsoft Azure. The 9.5 release will be available in AWS at a later date.
 
-=== High-availability (HA) pairs in Microsoft Azure (Preview)
+=== Public preview of high-availability (HA) pairs in Microsoft Azure
 
 Cloud Volumes ONTAP is now available as an HA pair in Microsoft Azure. An HA pair provides enterprise reliability and continuous operations in case of failures in your cloud environment. Similar to a physical ONTAP cluster, storage in an Azure HA pair is shared between the two nodes.
 
-HA pairs in Azure are available as a Preview only. You can request a preview license by contacting us at ng-Cloud-Volume-ONTAP-preview@netapp.com.
+HA pairs in Azure are available as a public preview. You can request a preview license by contacting us at ng-Cloud-Volume-ONTAP-preview@netapp.com.
 
 https://docs.netapp.com/us-en/occm/concept_ha_azure.html[Learn more about HA pairs in Azure^].
 
