@@ -35,12 +35,14 @@ Cloud Volumes ONTAP systems are now enabled with https://docs.microsoft.com/en-u
 
 === Support for new Azure regions
 
-You can now deploy Cloud Volumes ONTAP in the following Azure regions:
+You can now deploy Cloud Volumes ONTAP in the France Central region.
 
-* Australia Central
-* Australia Central 2
-* France Central
-* France South
+//You can now deploy Cloud Volumes ONTAP in the following Azure regions:
+
+//* Australia Central
+//* Australia Central 2
+//* France Central
+//* France South
 
 === Support for NetApp Volume Encryption
 
