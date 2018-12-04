@@ -15,7 +15,7 @@ summary: Cloud Volumes ONTAP has storage configuration limits to provide reliabl
 [.lead]
 Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 
-The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity is model specific. Cloud Volumes ONTAP configurations that support a lower raw capacity limit cannot reach some of the size and disk limits.
+The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity is model specific. Cloud Volumes ONTAP configurations that support a lower capacity limit cannot reach some of the size and disk limits.
 
 == System capacity limit
 
@@ -39,8 +39,8 @@ Azure: 252 TB for single node, 368 TB for an HA pair
 
 Notes:
 
-. The maximum capacity may be less in Azure because of virtual machine disk limits:
-* DS3: 60 TB for single node and 120 TB for HA pairs
+. The capacity limit may be less in Azure because of virtual machine disk limits:
+* DS3: 60 TB for single node
 * DS4 and DS13: 124 TB for single node and 248 TB for HA pairs
 . If you enable data tiering, a system's capacity limit stays the same. The capacity limit includes both disks and object storage.
 ifdef::95-aws[]
