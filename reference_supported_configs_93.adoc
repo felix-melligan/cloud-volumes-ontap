@@ -6,9 +6,7 @@ summary: ONTAP Cloud is available in several configurations in AWS and Azure.
 ---
 
 = Supported configurations for ONTAP Cloud 9.3
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:
@@ -16,8 +14,6 @@ summary: ONTAP Cloud is available in several configurations in AWS and Azure.
 
 [.lead]
 ONTAP Cloud is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
-
-toc::[]
 
 == ONTAP Cloud for AWS
 
