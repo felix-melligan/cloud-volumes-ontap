@@ -64,7 +64,7 @@ Notes:
 
 . Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+. If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
 
 . For AWS region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-aws-regions[Supported AWS regions].
 
@@ -111,6 +111,6 @@ Notes:
 
 . Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
 
-. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+. If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
 
 . For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
