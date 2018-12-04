@@ -13,7 +13,7 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 :imagesdir: ./media/
 
 [.lead]
-Cloud Volumes ONTAP is available in AWS and Azure in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
+Cloud Volumes ONTAP is available in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
 
 ifdef::95-aws[]
 == Cloud Volumes ONTAP for AWS
@@ -73,6 +73,10 @@ endif::[]
 
 In Azure, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
 
+=== Single node systems
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in Azure:
+
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
 |
@@ -98,7 +102,9 @@ a|
 * DS13_v2
 * DS14_v2
 
-| Capacity limit | 2 TB | 10 TB 2+| 252 TB for single node, 368 TB for an HA pair
+| Underlying storage 4+| Standard HDD Managed Disks or Premium SSD Managed Disks, up to 4 TB per disk
+
+| Capacity limit | 2 TB | 10 TB 2+| 252 TB
 
 | Term 3+| Hourly | 12 months
 
@@ -106,14 +112,58 @@ a|
 
 Notes:
 
-. The maximum capacity may be less because of virtual machine disk limits:
-* DS3: 60 TB for single node and 120 TB for HA pairs
-* DS4 and DS13: 124 TB for single node and 248 TB for HA pairs
+. The capacity limit is less for the following VM types because of virtual machine disk limits:
+* DS3: 60 TB
+* DS4 and DS13: 124 TB
 
-. The following features are not supported with the DS3_v2 virtual machine type: HA pairs, data tiering, and enhanced write performance.
+. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+
+. Data tiering is not supported with the DS3_v2 virtual machine type.
 
 . Enhanced write performance is supported when using Azure Premium Storage disks, but not when using the DS3_v2 virtual machine type.
 
-. If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
+. For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
+
+=== HA pairs
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure:
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Virtual machine types | Not supported
+
+a|
+* DS4_v2
+* DS13_v2
+
+a|
+* DS5_v2
+* DS14_v2
+
+a|
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+
+| Underlying storage | Not supported 3+| Premium page blobs, up to 8 TB per disk
+
+| Capacity limit | Not supported | 10 TB 2+| 368 TB
+
+| Term | Not supported 2+| Hourly | 12 months
+
+|===
+
+Notes:
+
+. The capacity limit for DS4 and DS13 systems is less (248 TB) because of virtual machine disk limits.
+
+. Data tiering is not supported with HA pairs.
 
 . For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
