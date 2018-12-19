@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_limitations_95.html
-keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates
 summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
@@ -15,33 +15,25 @@ summary: Known limitations identify platforms, devices, or functions that are no
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
-== HA limitations in Azure
+== General limitations
 
-The following limitations affect Cloud Volumes ONTAP HA pairs in Microsoft Azure:
+The following limitations apply to Cloud Volumes ONTAP in AWS and in Azure.
 
-* Data tiering is not supported.
-* NFSv4 is not supported. NFSv3 is supported.
-* HA pairs are not supported in US Gov regions and in Germany regions.
-
-== Pay-as-you-go not available for CSP partners
-
-If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.
-
-== Disks and aggregates must be managed from Cloud Manager
+=== Disks and aggregates must be managed from Cloud Manager
 
 All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
 
-== Storage Virtual Machine (SVM) limitation
+=== Storage Virtual Machine (SVM) limitation
 
 Cloud Volumes ONTAP supports one data-serving SVM and one or more SVMs used for disaster recovery.
 
 Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
 
-== SnapManager licensing limitation
+=== SnapManager licensing limitation
 
 SnapManager per-server licenses are supported with Cloud Volumes ONTAP. Per-storage system (SnapManager suite) licenses are not supported.
 
-== Unsupported ONTAP features
+=== Unsupported ONTAP features
 
 The following features are not supported with Cloud Volumes ONTAP for AWS:
 
@@ -60,7 +52,7 @@ The following features are not supported with Cloud Volumes ONTAP for AWS:
 * Service Processor
 * SnapLock Compliance mode (Enterprise mode is supported)
 * VLANs
-ifdef::95-aws[]
+
 == Known limitations in AWS
 
 The following known limitations affect Cloud Volumes ONTAP in AWS.
@@ -73,11 +65,11 @@ Cloud Volumes ONTAP does not release CPUs when idle, so Amazon CloudWatch can re
 
 After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.
 
-=== Limitations with the AWS GovCloud (US) region
+=== Limitations in AWS GovCloud (US) regions
 
-* Cloud Manager must be deployed in the AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in the AWS GovCloud (US) region.
+* Cloud Manager must be deployed in an AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in the same AWS GovCloud (US) region.
 
-* When deployed in the AWS GovCloud (US) region, Cloud Manager cannot discover ONTAP clusters in a NetApp Private Storage for Microsoft Azure configuration or a NetApp Private Storage for SoftLayer configuration.
+* When deployed in an AWS GovCloud (US) region, Cloud Manager cannot discover ONTAP clusters in a NetApp Private Storage for Microsoft Azure configuration or a NetApp Private Storage for SoftLayer configuration.
 
 === Detaching and reattaching EBS volumes is not supported
 
@@ -86,4 +78,15 @@ Detaching an EBS volume from a Cloud Volumes ONTAP instance and then reattaching
 == Known limitations in Microsoft Azure
 
 The following known limitations affect Cloud Volumes ONTAP in Azure.
-endif::[]
+
+=== HA limitations
+
+The following limitations affect Cloud Volumes ONTAP HA pairs in Microsoft Azure:
+
+* Data tiering is not supported.
+* NFSv4 is not supported. NFSv3 is supported.
+* HA pairs are not supported in US Gov regions and in Germany regions.
+
+=== Pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.
