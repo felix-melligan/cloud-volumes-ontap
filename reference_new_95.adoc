@@ -17,7 +17,68 @@ Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
-== Features released on 4 Dec 2018
+== 9.5 GA in AWS and Azure (24 Jan 2019)
+
+The General Availability (GA) release of Cloud Volumes ONTAP 9.5 is now available in AWS and in Microsoft Azure (for single node systems only in Azure). The GA release includes stability fixes and new and deprecated features in AWS.
+
+=== Support for M5 and R5 instances in AWS
+
+Cloud Volumes ONTAP now supports several instance types in the M5 and R5 families:
+
+[cols=4*,options="header"]
+|===
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| m5.xlarge
+a|
+* m5.2xlarge
+* r5.xlarge
+a|
+* m5.4xlarge
+* r5.2xlarge
+a|
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* r5.xlarge
+* r5.2xlarge
+
+|===
+
+These instances use a hypervisor that is based on KVM technology. As a result, the instances support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA pairs. link:reference_storage_limits_95.html[Learn about storage limits].
+
+Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5 instances^] and https://aws.amazon.com/ec2/instance-types/r5/[R5 instances^].
+
+=== Support for NetApp Volume Encryption in AWS
+
+https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
+
+At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
+
+You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption at this time.
+
+https://docs.netapp.com/us-en/occm/task_encrypting_volumes.html[Learn how to set up NetApp Volume Encryption^]
+
+NOTE: NetApp Volume Encryption is a different encryption technology than Cloud Volumes ONTAP encryption, which encrypted data at the aggregate level and is now deprecated. An upgrade between these two encryption technologies is not possible. See <<Deprecated features in AWS>> for more information.
+
+=== Deprecated features in AWS
+
+Two features are no longer supported in the 9.5 release.
+
+==== Cloud Volumes ONTAP encryption is no longer supported in AWS
+
+Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate data] to that system.
+
+You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS).
+
+==== c4.2xlarge is no longer supported
+
+The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/occm/task_modifying_ontap_cloud.html#changing-the-instance-or-virtual-machine-type-for-cloud-volumes-ontap[change to a new instance type] before you upgrade to the 9.5 release.
+
+== 9.5 RC1 in Azure (4 Dec 2018)
 
 Cloud Volumes ONTAP 9.5 RC1 is now available in Microsoft Azure. The 9.5 release will be available in AWS at a later date.
 
@@ -44,44 +105,16 @@ You can now deploy Cloud Volumes ONTAP in the France Central region.
 //* France Central
 //* France South
 
-=== Support for NetApp Volume Encryption
+=== Support for NetApp Volume Encryption in Azure
 
 https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is a software-based technology for encrypting data at rest one volume at a time. Data, Snapshot copies, and metadata are encrypted. Access to the data is given by a unique XTS-AES-256 key, one per volume.
 
-At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported.
+At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
 
 You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption at this time.
 
 https://docs.netapp.com/us-en/occm/task_encrypting_volumes.html[Learn how to set up NetApp Volume Encryption^]
-ifdef::95-aws[]
-NOTE: NetApp Volume Encryption is a different encryption technology than Cloud Volumes ONTAP encryption, which encrypted data at the aggregate level and is now deprecated. An upgrade between these two encryption technologies is not possible. See <<Deprecated features>> for more information.
 
-== Support for M5 instances in AWS
-
-Cloud Volumes ONTAP now supports the following M5 instances:
-
-* m5.xlarge with Explore and BYOL
-* m5.2xlarge with Standard and BYOL
-* m5.4xlarge with Premium and BYOL
-
-These instances use a hypervisor that is based on KVM technology. They support a smaller number of data disks than other instance types: up to 24 data disks for single-node systems and 21 data disks for HA configurations.
-
-https://aws.amazon.com/ec2/instance-types/m5/[Learn about the benefits and review product details^].
-
-== Deprecated features
-
-Two features are no longer supported in this release.
-
-=== Cloud Volumes ONTAP encryption is no longer supported in AWS
-
-Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate data] to that system.
-
-You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS).
-
-=== c4.2xlarge is no longer supported
-
-The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/occm/task_modifying_ontap_cloud.html#changing-the-instance-or-virtual-machine-type-for-cloud-volumes-ontap[change to a new instance type] before you upgrade to the 9.5 release.
-endif::[]
 == Upgrade notes
 
 * You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 or 9.3 release. You can perform the upgrade directly from Cloud Manager.
@@ -89,6 +122,5 @@ endif::[]
 To understand version requirements, refer to http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[ONTAP 9 Documentation: Cluster update requirements^].
 
 * When you use Cloud Manager to upgrade a single-node system, the upgrade process takes the system offline for up to 25 minutes, during which I/O is interrupted.
-ifdef::95-aws[]
-* Upgrades of HA pairs in AWS are nondisruptive. A nondisruptive upgrade upgrades both nodes in an HA pair concurrently while maintaining service to clients.
-endif::[]
+
+* Upgrades of HA pairs are nondisruptive. A nondisruptive upgrade upgrades both nodes in an HA pair concurrently while maintaining service to clients.
