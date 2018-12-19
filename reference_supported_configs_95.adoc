@@ -15,10 +15,9 @@ summary: Cloud Volumes ONTAP is available in several configurations in AWS and A
 [.lead]
 Cloud Volumes ONTAP is available in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
 
-ifdef::95-aws[]
 == Cloud Volumes ONTAP for AWS
 
-In AWS, you can deploy Cloud Volumes ONTAP as a single system or as an HA pair.
+In AWS, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
 
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
@@ -28,17 +27,24 @@ In AWS, you can deploy Cloud Volumes ONTAP as a single system or as an HA pair.
 | Premium
 | BYOL
 
-| EC2 instance types  | m4.xlarge
+| EC2 instance types
+a|
+* m4.xlarge
+* m5.xlarge
 
 a|
 * m4.2xlarge
+* m5.2xlarge
 * r4.xlarge
+* r5.xlarge
 
 a|
 * c4.4xlarge
 * c4.8xlarge
 * m4.4xlarge
+* m5.4xlarge
 * r4.2xlarge
+* r5.2xlarge
 
 a|
 * c4.4xlarge
@@ -46,12 +52,20 @@ a|
 * m4.xlarge
 * m4.2xlarge
 * m4.4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
 * r4.xlarge
 * r4.2xlarge
+* r5.xlarge
+* r5.2xlarge
+
+| Underlying storage 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, or Cold HDDs, up to 16 TB per disk
 
 | Capacity limit | 2 TB | 10 TB
 2+<a|
-368 TB (360 TB for HA)
+* Single node: 368 TB
+* HA pairs: 336 TB or 360 TB
 
 | Term 3+| Hourly | 6 or 12 months
 
@@ -61,14 +75,18 @@ Notes:
 
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
-. Enhanced write performance is supported when using EBS SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+. Cold HDDs are not supported with HA pairs.
+
+. For an HA pair, the system capacity limit is 336 TB when using M5 or R5 instances. It is 360 TB for all other instance types.
+
+. Enhanced write performance is enabled when using EBS SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
 . Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
 . If you enable data tiering, a system's capacity limit stays the same. The limit is spread across the performance tier and the capacity tier.
 
-. For AWS region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-aws-regions[Supported AWS regions].
-endif::[]
+. For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
 == Cloud Volumes ONTAP for Azure
 
 In Azure, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
@@ -120,9 +138,9 @@ Notes:
 
 . Data tiering is not supported with the DS3_v2 virtual machine type.
 
-. Enhanced write performance is supported when using Azure Premium Storage disks, but not when using the DS3_v2 virtual machine type.
+. Enhanced write performance is enabled when using Azure Premium Storage disks, but not when using the DS3_v2 virtual machine type.
 
-. For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
 === HA pairs
 
@@ -166,4 +184,4 @@ Notes:
 
 . Data tiering is not supported with HA pairs.
 
-. For Azure region support, see https://docs.netapp.com/us-en/occm/reference_regions.html#supported-azure-regions[Supported Azure regions].
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
