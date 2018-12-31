@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_new_95.html
 keywords: what's new, new, features, release notes, enhancements
-summary: New releases of Cloud Volumes ONTAP introduce new features, enhancements, and bug fixes.
+summary: Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 ---
 
 = What's new in Cloud Volumes ONTAP 9.5
