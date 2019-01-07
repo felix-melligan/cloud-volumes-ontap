@@ -17,7 +17,7 @@ Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
-== 9.5 GA in AWS and Azure (24 Jan 2019)
+== 9.5 GA for AWS and Azure (24 Jan 2019)
 
 The General Availability (GA) release of Cloud Volumes ONTAP 9.5 is now available in AWS and in Microsoft Azure (for single node systems only in Azure). The GA release includes stability fixes and new and deprecated features in AWS.
 
@@ -78,7 +78,7 @@ You can encrypt data by using NetApp Volume Encryption or by using the AWS Key M
 
 The c4.2xlarge instance type is not supported with the 9.5 release. If you are currently using this instance type, you must first https://docs.netapp.com/us-en/occm/task_modifying_ontap_cloud.html#changing-the-instance-or-virtual-machine-type-for-cloud-volumes-ontap[change to a new instance type] before you upgrade to the 9.5 release.
 
-== 9.5 RC1 in Azure (4 Dec 2018)
+== 9.5 RC1 for Azure (4 Dec 2018)
 
 Cloud Volumes ONTAP 9.5 RC1 is now available in Microsoft Azure. The 9.5 release will be available in AWS at a later date.
 
