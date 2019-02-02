@@ -48,9 +48,7 @@ a|
 * r4.xlarge
 * r4.2xlarge
 
-| Capacity limit | 2 TB | 10 TB
-2+<a|
-368 TB (360 TB for HA)
+| Capacity limit | 2 TB | 10 TB 2+| 368 TB
 
 | Term 3+| Hourly | 6 or 12 months
 
@@ -58,15 +56,15 @@ a|
 
 Notes:
 
+. If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
+
+. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
 . Enhanced write performance is supported when using EBS SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL.
-
-. If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
-
-. For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions].
+. For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
 == Cloud Volumes ONTAP for Azure
 
@@ -97,7 +95,7 @@ a|
 * DS13_v2
 * DS14_v2
 
-| Capacity limit | 2 TB | 10 TB 2+| 252 TB
+| Capacity limit | 2 TB | 10 TB 2+| 368 TB
 
 | Term 3+| Hourly | 12 months
 
@@ -105,12 +103,12 @@ a|
 
 Notes:
 
-. The actual maximum capacity may be less because of virtual machine limits: 60 TB for DS3, 124 TB for DS4 and DS13, and 252 TB for DS5 and DS14.
-
-. Enhanced write performance is supported when using Azure Premium Storage disks with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
-
-. Data tiering is supported with Cloud Volumes ONTAP Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
+. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering cold data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_94.html[storage limits].
 
 . If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
 
-. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions].
+. Data tiering is not supported with the DS3_v2 virtual machine type.
+
+. Enhanced write performance is enabled when using Azure Premium Storage disks, but not when using the DS3_v2 virtual machine type.
+
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].

@@ -28,14 +28,14 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 
 | Explore	| 2 TB
 | Standard | 10 TB
-| Premium .2+a|
-* AWS: 368 TB (360 TB for HA)
-* Azure: 252 TB
-| BYOL |
+| Premium | 368 TB
+| BYOL | 368 TB
 
 |===
 
 Notes:
+
+. In Azure, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering cold data to object storage^]. Refer to disk limits below for more details.
 
 . If you enable data tiering, a system's capacity limit stays the same. The capacity limit includes both disks and object storage.
 
@@ -51,12 +51,13 @@ Data in an HA pair is synchronously mirrored between the nodes so that the data 
 | Parameter
 | Limit
 
-.5+| *Aggregates and disks*
+.6+| *Aggregates and disks*
 | Maximum number of aggregates | 35 for single-node configurations
 18 per node in an HA configuration ^1^
 | Maximum aggregate size |	96 TB of raw capacity ^2^^,^ ^3^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 6
+| Maximum disk size | 16 TB
 | Maximum number of data disks across all aggregates ^4^ | 35 for single-node configurations
 32 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
@@ -80,11 +81,12 @@ Notes:
 | Parameter
 | Limit
 
-.5+| *Aggregates and disks*
+.6+| *Aggregates and disks*
 | Maximum number of aggregates | 63
 | Maximum aggregate size |	48 TB of raw capacity ^1^^,^ ^2^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 12
+| Maximum disk size | 4 TB
 | Maximum number of data disks across all aggregates ^3^ | 63
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
