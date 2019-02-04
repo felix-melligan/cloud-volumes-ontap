@@ -35,7 +35,7 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 
 Notes:
 
-. In Azure, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering cold data to object storage^]. Refer to disk limits below for more details.
+. In Azure, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to disk limits below for more details.
 
 . If you enable data tiering, a system's capacity limit stays the same. The capacity limit includes both disks and object storage.
 

@@ -103,7 +103,7 @@ a|
 
 Notes:
 
-. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering cold data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_94.html[storage limits].
+. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_94.html[storage limits].
 
 . If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
 
