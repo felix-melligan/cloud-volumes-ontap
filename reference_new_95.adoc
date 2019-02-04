@@ -25,7 +25,7 @@ The General Availability (GA) release of Cloud Volumes ONTAP 9.5 is now availabl
 
 The system capacity limit for Cloud Volumes ONTAP Premium and BYOL is now 368 TB across all configurations: single node and HA in both AWS and Azure.
 
-For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering cold data to object storage^]. For example, a single node system in Azure could have 252 TB of disk-based capacity, which would allow up to 116 TB of cold data in Azure Blob storage.
+For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For example, a single node system in Azure could have 252 TB of disk-based capacity, which would allow up to 116 TB of inactive data in Azure Blob storage.
 
 For information about disk limits, refer to link:reference_storage_limits_95.html[storage limits].
 
