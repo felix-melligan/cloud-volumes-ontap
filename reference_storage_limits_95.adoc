@@ -15,11 +15,9 @@ summary: Cloud Volumes ONTAP has storage configuration limits to provide reliabl
 [.lead]
 Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 
-The following sections list limits for aggregates, volumes, LUNs, and related storage objects. Note that the maximum capacity is model specific. Cloud Volumes ONTAP configurations that support a lower capacity limit cannot reach some of the size and disk limits.
-
 == System capacity limit
 
-A system's capacity limit depends on the Cloud Volumes ONTAP license that you choose for the system:
+A system's capacity limit depends on the Cloud Volumes ONTAP license that you choose for the system.
 
 [cols="40,60",width=65%,options="header"]
 |===
@@ -28,44 +26,38 @@ A system's capacity limit depends on the Cloud Volumes ONTAP license that you ch
 
 | Explore	| 2 TB
 | Standard | 10 TB
-| Premium .2+a|
-ifdef::95-aws[]
-* AWS: 368 TB for single node, 360 TB for an HA pair
-endif::[]
-Azure: 252 TB for single node, 368 TB for an HA pair
-| BYOL |
+| Premium | 368 TB
+| BYOL | 368 TB
 
 |===
 
 Notes:
 
-. The capacity limit may be less in Azure because of virtual machine disk limits:
-* DS3: 60 TB for single node
-* DS4 and DS13: 124 TB for single node and 248 TB for HA pairs
+. For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to disk limits below for more details.
+
 . If you enable data tiering, a system's capacity limit stays the same. The capacity limit includes both disks and object storage.
-ifdef::95-aws[]
+
 . In AWS, an HA pair's mirrored data does not count against the system capacity limit.
 +
-Data in an HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. If you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. If you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
 
-== Aggregate and disk limits for Cloud Volumes ONTAP in AWS
+== Aggregate and disk limits in AWS
 
-[cols=3*,options="header,autowidth"]
+Cloud Volumes ONTAP uses AWS volumes as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+=== Aggregate limits in AWS
+
+[cols=2*,options="header,autowidth"]
 |===
-| Physical storage
 | Parameter
 | Limit
 
-.6+| *Aggregates and disks*
-| Maximum number of aggregates | 35 for single-node configurations
-18 per node in an HA configuration ^1^
+| Maximum number of aggregates |
+Single node: Same as the disk limit
+HA pairs: 18 in a node ^1^
 | Maximum aggregate size |	96 TB of raw capacity ^2^^,^ ^3^
-| Minimum number of disks per aggregate	| 1
-| Maximum number of disks per aggregate	| 6
-| Maximum disk size | 16 TB
-| Maximum number of data disks across all aggregates ^4^ | 35 for single-node configurations
-32 per node in an HA configuration
-| *RAID groups*	| Maximum per aggregate	| 1
+| Disks per aggregate	| 1-6
+| Maximum number of RAID groups per aggregate	| 1
 |===
 
 Notes:
@@ -76,31 +68,79 @@ Notes:
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
-. The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
-endif::[]
-== Aggregate and disk limits for Cloud Volumes ONTAP in Azure
+=== Data disk limits in AWS
+
+The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit. Remember the following:
+
+* Cloud Volumes ONTAP Explore and Standard support a lower capacity limit, so they cannot reach the maximum values.
+
+* These numbers show just the _disk-based_ capacity. You can also tier inactive data to S3 object storage until you reach the system capacity limit for your license.
+
+==== Single node disk limit by EC2 instance type
+
+The maximum disk size is 16 TB. The number of supported disks varies by instance type:
 
 [cols=3*,options="header,autowidth"]
 |===
-| Physical storage
+| Instance type
+| Max data disks per node
+| Max disk-based capacity
+
+| c4.4xlarge | 34 | 368 TB
+| c4.8xlarge | 34 | 368 TB
+| m4.xlarge | 34 | 368 TB
+| m4.2xlarge | 34 | 368 TB
+| m4.4xlarge | 34 | 368 TB
+| m5.xlarge | 23 | 368 TB
+| m5.2xlarge | 23 | 368 TB
+| m5.4xlarge | 23 | 368 TB
+| r4.xlarge | 34 | 368 TB
+| r4.2xlarge | 34 | 368 TB
+| r5.xlarge | 23 | 368 TB
+| r5.2xlarge | 23 | 368 TB
+|===
+
+==== HA disk limit by EC2 instance type
+
+The maximum disk size is 16 TB. The number of supported disks varies by instance type:
+
+[cols=3*,options="header,autowidth"]
+|===
+| Instance type
+| Max data disks per node
+| Max disk-based capacity
+
+| c4.4xlarge | 31 | 368 TB
+| c4.8xlarge | 31 | 368 TB
+| m4.xlarge | 31 | 368 TB
+| m4.2xlarge | 31 | 368 TB
+| m4.4xlarge | 31 | 368 TB
+| m5.xlarge | 20 | 320 TB
+| m5.2xlarge | 20 | 320 TB
+| m5.4xlarge | 20 | 320 TB
+| r4.xlarge | 31 | 368 TB
+| r4.2xlarge | 31 | 368 TB
+| r5.xlarge | 20 | 320 TB
+| r5.2xlarge | 20 | 320 TB
+|===
+
+== Aggregate and disk limits in Azure
+
+Cloud Volumes ONTAP uses Azure volumes as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+=== Aggregate limits in Azure
+
+[cols=2*,options="header,autowidth"]
+|===
 | Parameter
 | Limit
 
-.6+| *Aggregates and disks*
-| Maximum number of aggregates | 63
+| Maximum number of aggregates | Same as the disk limit
 | Maximum aggregate size |
 48 TB of raw capacity for single node ^1^^,^ ^2^
 96 TB of raw capacity for HA pairs ^1^^,^ ^2^
-| Minimum number of disks per aggregate	| 1
-| Maximum number of disks per aggregate	| 12
-| Maximum disk size |
-4 TB for single node
-8 TB for HA pairs
-| Maximum number of data disks across all aggregates in a node ^3^ a|
-* 15 for DS3_v2
-* 31 for DS4_v2 and DS13_v2
-* 63 for DS5_v2 and DS14_v2
-| *RAID groups*	| Maximum per aggregate	| 1
+| Number of disks per aggregate	| 1-12
+| Maximum number of RAID groups per aggregate	| 1
 |===
 
 Notes:
@@ -109,7 +149,46 @@ Notes:
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
-. The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
+=== Data disk limits in Azure
+
+The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit. Remember the following:
+
+* Cloud Volumes ONTAP Explore and Standard support a lower capacity limit, so they cannot reach the maximum values.
+
+* These numbers show just the _disk-based_ capacity. With single node systems, you can also tier inactive data to Azure Blob object storage until you reach the system capacity limit for your license.
+
+==== Single node disk limit by VM size
+
+The maximum disk size for single node systems is 4 TB. The number of supported disks varies by VM size:
+
+[cols=3*,options="header,autowidth"]
+|===
+| VM size
+| Max data disks per node
+| Max disk-based capacity
+
+| DS3_v2 | 15 | 60 TB
+| DS4_v2 | 31 | 124 TB
+| DS5_v2 | 31 | 124 TB
+| DS13_v2 | 63 | 252 TB
+| DS14_v2 | 63 | 252 TB
+|===
+
+==== HA disk limit by VM size
+
+The maximum disk size for HA pairs is 8 TB. The number of supported disks varies by VM size:
+
+[cols=3*,options="header,autowidth"]
+|===
+| VM size
+| Max data disks per node
+| Max disk-based capacity
+
+| DS4_v2 | 31 | 368 TB
+| DS5_v2 | 31 | 368 TB
+| DS13_v2 | 63 | 368 TB
+| DS14_v2 | 63 | 368 TB
+|===
 
 == Logical storage limits
 
