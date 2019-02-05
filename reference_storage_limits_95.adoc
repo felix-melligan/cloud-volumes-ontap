@@ -169,8 +169,8 @@ The maximum disk size for single node systems is 4 TB. The number of supported d
 
 | DS3_v2 | 15 | 60 TB
 | DS4_v2 | 31 | 124 TB
-| DS5_v2 | 31 | 124 TB
-| DS13_v2 | 63 | 252 TB
+| DS5_v2 | 63 | 252 TB
+| DS13_v2 | 31 | 124 TB
 | DS14_v2 | 63 | 252 TB
 |===
 
@@ -185,8 +185,8 @@ The maximum disk size for HA pairs is 8 TB. The number of supported disks varies
 | Max disk-based capacity
 
 | DS4_v2 | 31 | 368 TB
-| DS5_v2 | 31 | 368 TB
-| DS13_v2 | 63 | 368 TB
+| DS5_v2 | 63 | 368 TB
+| DS13_v2 | 31 | 368 TB
 | DS14_v2 | 63 | 368 TB
 |===
 
