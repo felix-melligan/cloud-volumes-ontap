@@ -21,20 +21,25 @@ The capacity limit for a Cloud Volumes ONTAP license includes disk-based storage
 
 For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
 
-[cols="30,70",width=40%,options="header"]
+[cols="30,70",width=50%,options="header"]
 |===
 | License
 | Capacity limit with disks and data tiering
 
-| Explore	| 2 TB
+| Explore	| 2 TB (data tiering is not supported with Explore)
 | Standard | 10 TB
 | Premium | 368 TB
 | BYOL | 368 TB
 
 |===
 
-NOTE: In AWS, an HA pair's mirrored data does not count against the system capacity limit.
-Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. If you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+===== For HA, is the license capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+===== For an HA system in AWS, does mirrored data count against the capacity limit?
+
+No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. For example, if you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
 
 == Capacity and disk limits by AWS EC2 instance
 
@@ -50,8 +55,8 @@ The table below shows the maximum capacity by instance type with just EBS disks,
 |===
 | Instance type
 | Max EBS disks per node
-| Max capacity: EBS
-| Max capacity: EBS + S3
+| Max capacity with EBS
+| Max capacity with EBS + S3
 
 | c4.4xlarge | 34 | 368 TB | 368 TB
 | c4.8xlarge | 34 | 368 TB | 368 TB
@@ -77,8 +82,8 @@ The table below shows the maximum capacity by instance type with just EBS disks,
 |===
 | Instance type
 | Max EBS disks per node
-| Max capacity: EBS
-| Max capacity: EBS + S3
+| Max capacity with EBS
+| Max capacity with EBS + S3
 
 | c4.4xlarge | 31 | 368 TB | 368 TB
 | c4.8xlarge | 31 | 368 TB | 368 TB
@@ -106,8 +111,8 @@ Single node systems use Standard HDD Managed Disks or Premium SSD Managed Disks,
 |===
 | VM size
 | Max managed disks per node
-| Max capacity: managed disks
-| Max capacity: managed disks + Blob storage
+| Max capacity with managed disks
+| Max capacity with managed disks + Blob storage
 
 | DS3_v2 | 15 | 60 TB | Tiering not supported
 | DS4_v2 | 31 | 124 TB | 368 TB
@@ -124,8 +129,8 @@ HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The n
 |===
 | VM size
 | Max page blobs per node
-| Max capacity: page blobs
-| Max capacity: page blobs + Blob storage
+| Max capacity with page blobs
+| Max capacity with page blobs + Blob storage
 
 | DS4_v2 | 31 | 368 TB | Tiering not supported
 | DS5_v2 | 63 | 368 TB | Tiering not supported
