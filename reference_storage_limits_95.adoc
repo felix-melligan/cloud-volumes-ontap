@@ -21,7 +21,7 @@ The capacity limit for a Cloud Volumes ONTAP license includes disk-based storage
 
 For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
 
-[cols="30,70",width=50%,options="header"]
+[cols="30,70",width=60%,options="header"]
 |===
 | License
 | Capacity limit with disks and data tiering
