@@ -26,13 +26,13 @@ The following sections list limits for aggregates, volumes, LUNs, and related st
 | Limit
 
 .5+| *Aggregates and disks*
-| Maximum number of aggregates | 35 for single-node configurations
+| Maximum number of aggregates | 34 for single-node configurations
 18 per node in an HA configuration ^1^
 | Maximum aggregate size |	96 TB of raw capacity ^2^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 6
-| Maximum number of data disks across all aggregates ^3^ | 35 for single-node configurations
-32 per node in an HA configuration
+| Maximum number of data disks across all aggregates ^3^ | 34 for single-node configurations
+31 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
