@@ -52,14 +52,14 @@ In Cloud Volumes ONTAP 9.4, all EC2 instance types can reach the 368 TB capacity
 | Limit
 
 .6+| *Aggregates and disks*
-| Maximum number of aggregates | 35 for single-node configurations
+| Maximum number of aggregates | 34 for single-node configurations
 18 per node in an HA configuration ^1^
 | Maximum aggregate size |	96 TB of raw capacity ^2^^,^ ^3^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 6
 | Maximum disk size | 16 TB
-| Maximum number of data disks across all aggregates ^4^ | 35 for single-node configurations
-32 per node in an HA configuration
+| Maximum number of data disks across all aggregates ^4^ | 34 for single-node configurations
+31 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
