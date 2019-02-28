@@ -19,6 +19,10 @@ Known limitations identify platforms, devices, or functions that are not support
 
 The following limitations apply to Cloud Volumes ONTAP in AWS and in Azure.
 
+=== Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
+
+Changes to a Cloud Volumes ONTAP configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
+
 === Disks and aggregates must be managed from Cloud Manager
 
 All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
