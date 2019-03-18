@@ -33,6 +33,7 @@ The GA release is available in 19 Azure regions with the exception of the follow
 
 * Central US
 * North Central US
+* US Gov regions
 * West US
 * West Central US
 
