@@ -17,6 +17,29 @@ Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
+== 9.5 P1 patch (18 Mar 2019)
+
+The 9.5 P1 patch release for Cloud Volumes ONTAP is now available for all configurations. Cloud Manager will prompt you to upgrade your existing systems to this patch release.
+
+If you have an existing HA pair in Azure, NetApp will contact you to help you apply the P1 patch release.
+
+https://mysupport.netapp.com/products/cloud_ontap/9.5P1/index.html[Click here to see the bugs fixed in the P1 patch^].
+
+== Cloud Volumes ONTAP HA is now GA in Azure (18 Mar 2019)
+
+With the release of the 9.5 P1 patch, HA pairs in Azure are now Generally Available (GA). A Preview license is no longer required.
+
+The GA release is available in 19 Azure regions with the exception of the following regions:
+
+* Central US
+* North Central US
+* West US
+* West Central US
+
+Maintenance in these regions can prevent the creation of Cloud Volumes ONTAP and prevent failover from taking place. We plan to support these regions as soon as the maintenance is completed.
+
+https://cloud.netapp.com/cloud-volumes-global-regions[See a full list of supported Azure regions^].
+
 == 9.5 GA for AWS and Azure (4 Feb 2019)
 
 The General Availability (GA) release of Cloud Volumes ONTAP 9.5 is now available in AWS and in Microsoft Azure (for single node systems only in Azure). The GA release includes stability fixes, new and deprecated features in AWS, and a change to system capacity limits.
