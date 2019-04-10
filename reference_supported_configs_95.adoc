@@ -41,14 +41,19 @@ a|
 a|
 * c4.4xlarge
 * c4.8xlarge
+* c5d.4xlarge*
+* c5d.9xlarge*
 * m4.4xlarge
 * m5.4xlarge
 * r4.2xlarge
 * r5.2xlarge
+* r5d.2xlarge*
 
 a|
 * c4.4xlarge
 * c4.8xlarge
+* c5d.4xlarge*
+* c5d.9xlarge*
 * m4.xlarge
 * m4.2xlarge
 * m4.4xlarge
@@ -59,6 +64,7 @@ a|
 * r4.2xlarge
 * r5.xlarge
 * r5.2xlarge
+* r5d.2xlarge*
 
 | Underlying storage 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, or Cold HDDs, up to 16 TB per disk
 
@@ -69,6 +75,8 @@ a|
 |===
 
 Notes:
+
+. The instance types denoted with a * include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. link:reference_limitations_95.html#flash-cache-limitations[Learn more].
 
 . For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_95.html[storage limits].
 
