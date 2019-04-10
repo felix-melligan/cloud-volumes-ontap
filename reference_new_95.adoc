@@ -17,7 +17,7 @@ Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
-== 9.5 P2 patch (4 Apr 2019)
+== 9.5 P2 patch (10 Apr 2019)
 
 The 9.5 P2 patch release for Cloud Volumes ONTAP is now available. This patch includes bug fixes, as well as support for Flash Cache with new AWS EC2 instance types. Cloud Manager will prompt you to upgrade your existing systems to this patch release.
 
