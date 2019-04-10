@@ -17,6 +17,26 @@ Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
+== 9.5 P2 patch (4 Apr 2019)
+
+The 9.5 P2 patch release for Cloud Volumes ONTAP is now available. This patch includes bug fixes, as well as support for Flash Cache with new AWS EC2 instance types. Cloud Manager will prompt you to upgrade your existing systems to this patch release.
+
+https://mysupport.netapp.com/products/cloud_ontap/9.5P2/index.html[Click here to see the bugs fixed in the P2 patch^].
+
+=== Flash Cache support with new EC2 instance types
+
+The following EC2 instance types are now supported with the Premium and BYOL licenses:
+
+* c5d.4xlarge
+* c5d.9xlarge
+* r5d.2xlarge
+
+These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services.
+
+Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. You can choose no storage efficiency when creating a volume from Cloud Manager, or you can create a volume and then http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html[disable data compression by using the CLI^].
+
+NOTE: Cache rewarming after a reboot is not supported with Cloud Volumes ONTAP.
+
 == HA support in the Azure Central US region (25 Mar 2019)
 
 HA pairs are now supported in the Central US region in Azure.
