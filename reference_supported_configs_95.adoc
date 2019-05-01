@@ -66,9 +66,9 @@ a|
 * r5.2xlarge
 * r5d.2xlarge*
 
-| Underlying storage 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, or Cold HDDs, up to 16 TB per disk
+| Underlying storage 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs, up to 16 TB per disk
 
-| Capacity limit | 2 TB | 10 TB 2+| 368 TB
+| License capacity limit | 2 TB | 10 TB 2+| 368 TB
 
 | Term 3+| Hourly | 6 or 12 months
 
@@ -125,17 +125,15 @@ a|
 * DS13_v2
 * DS14_v2
 
-| Underlying storage 4+| Standard HDD Managed Disks or Premium SSD Managed Disks, up to 4 TB per disk
+| Underlying storage 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, up to 32 TB per disk
 
-| Capacity limit | 2 TB | 10 TB 2+| 368 TB
+| License capacity limit | 2 TB | 10 TB 2+| 368 TB
 
 | Term 3+| Hourly | 12 months
 
 |===
 
 Notes:
-
-. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_95.html[storage limits].
 
 . If you enable data tiering, a system’s capacity limit stays the same. The capacity limit includes both disks and object storage.
 
@@ -175,7 +173,7 @@ a|
 
 | Underlying storage | Not supported 3+| Premium page blobs, up to 8 TB per disk
 
-| Capacity limit | Not supported | 10 TB 2+| 368 TB
+| License capacity limit | Not supported | 10 TB 2+| 368 TB
 
 | Term | Not supported 2+| Hourly | 12 months
 

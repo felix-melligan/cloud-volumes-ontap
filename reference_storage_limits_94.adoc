@@ -54,11 +54,11 @@ In Cloud Volumes ONTAP 9.4, all EC2 instance types can reach the 368 TB capacity
 .6+| *Aggregates and disks*
 | Maximum number of aggregates | 34 for single-node configurations
 18 per node in an HA configuration ^1^
-| Maximum aggregate size |	96 TB of raw capacity ^2^^,^ ^3^
+| Maximum aggregate size |	96 TB of raw capacity ^2^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 6
 | Maximum disk size | 16 TB
-| Maximum number of data disks across all aggregates ^4^ | 34 for single-node configurations
+| Maximum number of data disks across all aggregates ^3^ | 34 for single-node configurations
 31 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
@@ -66,8 +66,6 @@ In Cloud Volumes ONTAP 9.4, all EC2 instance types can reach the 368 TB capacity
 Notes:
 
 . It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
-
-. The maximum usable capacity of a 96 TB aggregate is 85.05 TB.
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
@@ -83,17 +81,15 @@ Notes:
 
 .6+| *Aggregates and disks*
 | Maximum number of aggregates | Same as the disk limit
-| Maximum aggregate size |	48 TB of raw capacity ^1^^,^ ^2^
+| Maximum aggregate size |	352 TB of raw capacity ^1^
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 12
-| Maximum disk size | 4 TB
-| Maximum number of data disks across all aggregates ^3^ | Depends on VM size. <<Capacity and disk limits by Azure VM size,See below>>.
+| Maximum disk size | 32 TB
+| Maximum number of data disks across all aggregates ^2^ | Depends on VM size. <<Capacity and disk limits by Azure VM size,See below>>.
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
 Notes:
-
-. The maximum usable capacity of a 48 TB aggregate is 42.52 TB.
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
@@ -101,7 +97,7 @@ Notes:
 
 === Capacity and disk limits by Azure VM size
 
-In Azure, single node systems use Standard HDD Managed Disks or Premium SSD Managed Disks, with up to 4 TB per disk. The number of supported disks varies by VM size. The table below shows the maximum capacity by VM size with managed disks alone, and with disks and tiering to object storage.
+In Azure, single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size. The table below shows the maximum capacity by VM size with managed disks alone, and with disks and tiering to object storage.
 
 [cols=4*,options="header,autowidth"]
 |===
@@ -110,11 +106,11 @@ In Azure, single node systems use Standard HDD Managed Disks or Premium SSD Mana
 | Max capacity with managed disks
 | Max capacity with managed disks + Blob storage
 
-| DS3_v2 | 15 | 60 TB | Tiering not supported
-| DS4_v2 | 31 | 124 TB | 368 TB
-| DS5_v2 | 63 | 252 TB | 368 TB
-| DS13_v2 | 31 | 124 TB | 368 TB
-| DS14_v2 | 63 | 252 TB | 368 TB
+| DS3_v2 | 15 | 368 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB
+| DS5_v2 | 63 | 368 TB | 368 TB
+| DS13_v2 | 31 | 368 TB | 368 TB
+| DS14_v2 | 63 | 368 TB | 368 TB
 |===
 
 == Logical storage limits
@@ -132,7 +128,7 @@ In Azure, single node systems use Standard HDD Managed Disks or Premium SSD Mana
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
 | Maximum size |	AWS: 76.55 TB of fully provisioned capacity ^3^
-Azure: 38.27 TB of fully provisioned capacity ^3^
+Azure: 100 TB
 | *Qtrees* |	Maximum per FlexVol volume |	4,995
 | *Snapshot copies* |	Maximum per FlexVol volume |	1,023
 
@@ -144,7 +140,7 @@ Notes:
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 
-. The specified limit is based on the assumption that you use Cloud Manager to create a volume and that you keep the aggregate free space ratio at 10 percent, which Cloud Manager sets by default.
+. Less than 100 TB is supported for this configuration because aggregates are limited to 96 TB of _raw_ capacity. The specified limit is based on the assumption that you use Cloud Manager to create a volume and that you keep the default aggregate free space ratio.
 
 == iSCSI storage limits
 
