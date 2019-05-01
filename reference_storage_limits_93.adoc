@@ -25,13 +25,14 @@ The following sections list limits for aggregates, volumes, LUNs, and related st
 | Parameter
 | Limit
 
-.5+| *Aggregates and disks*
+.6+| *Aggregates and disks*
 | Maximum number of aggregates | 34 for single-node configurations
 18 per node in an HA configuration ^1^
-| Maximum aggregate size |	96 TB of raw capacity ^2^
+| Maximum aggregate size |	96 TB of raw capacity
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 6
-| Maximum number of data disks across all aggregates ^3^ | 34 for single-node configurations
+| Maximum disk size | 16 TB
+| Maximum number of data disks across all aggregates ^2^ | 34 for single-node configurations
 31 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
@@ -39,8 +40,6 @@ The following sections list limits for aggregates, volumes, LUNs, and related st
 Notes:
 
 . It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
-
-. The maximum usable capacity of a 96 TB aggregate is 85.05 TB.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
@@ -52,18 +51,23 @@ Notes:
 | Parameter
 | Limit
 
-.5+| *Aggregates and disks*
+.6+| *Aggregates and disks*
 | Maximum number of aggregates | 63
-| Maximum aggregate size |	48 TB of raw capacity ^1^
+| Maximum aggregate size |	352 TB of raw capacity
 | Minimum number of disks per aggregate	| 1
 | Maximum number of disks per aggregate	| 12
-| Maximum number of data disks across all aggregates ^2^ | 63
+| Maximum disk size | 32 TB
+| Maximum number of data disks across all aggregates ^1^ a|
+* DS3_v2: 15
+* DS4_v2: 31
+* DS5_v2: 63
+* DS13_v2: 31
+* DS14_v2: 63
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
 Notes:
 
-. The maximum usable capacity of a 48 TB aggregate is 42.52 TB.
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
 == Logical storage limits
@@ -81,7 +85,7 @@ Notes:
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
 | Maximum size |	AWS: 76.55 TB of fully provisioned capacity ^3^
-Azure: 38.27 TB of fully provisioned capacity ^3^
+Azure: 100 TB
 | *Qtrees* |	Maximum per FlexVol volume |	4,995
 | *Snapshot copies* |	Maximum per FlexVol volume |	255
 
@@ -93,7 +97,7 @@ Notes:
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 
-. The specified limit is based on the assumption that you use Cloud Manager to create a volume and that you keep the aggregate free space ratio at 10 percent, which Cloud Manager sets by default.
+. Less than 100 TB is supported for this configuration because aggregates are limited to 96 TB of _raw_ capacity. The specified limit is based on the assumption that you use Cloud Manager to create a volume and that you keep the default aggregate free space ratio.
 
 == iSCSI storage limits
 

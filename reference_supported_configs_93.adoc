@@ -48,8 +48,9 @@ a|
 * r4.xlarge
 * r4.2xlarge
 
-| Capacity limit | 2 TB | 10 TB
-2+| 368 TB
+| Underlying storage 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs, up to 16 TB per disk
+
+| License capacity limit | 2 TB | 10 TB 2+| 368 TB
 
 | Term 3+| Hourly | 6 or 12 months
 
@@ -98,15 +99,15 @@ a|
 * DS13_v2
 * DS14_v2
 
-| Capacity limit | 2 TB | 10 TB 2+| 252 TB
+| Underlying storage 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, up to 32 TB per disk
+
+| License capacity limit | 2 TB | 10 TB 2+| 368 TB
 
 | Term 3+| Hourly | 12 months
 
 |===
 
 Notes:
-
-. The actual maximum capacity may be less because of virtual machine limits: 60 TB for DS3, 124 TB for DS4 and DS13, and 252 TB for DS5 and DS14.
 
 . Enhanced write performance is supported when using Azure Premium Storage disks with ONTAP Cloud Standard, Premium, and BYOL, but not when using the DS3_v2 virtual machine type.
 
