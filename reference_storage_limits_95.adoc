@@ -157,7 +157,7 @@ Cloud Volumes ONTAP uses AWS volumes as disks and groups them into _aggregates_.
 Single node: Same as the disk limit
 HA pairs: 18 in a node ^1^
 | Maximum aggregate size | 96 TB of raw capacity ^2^
-| Disks per aggregate	| 1-6
+| Disks per aggregate	| 1-6 ^3^
 | Maximum number of RAID groups per aggregate	| 1
 |===
 
@@ -166,6 +166,8 @@ Notes:
 . It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
 
 == Aggregate limits in Azure
 
@@ -180,13 +182,15 @@ Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates
 | Maximum aggregate size |
 352 TB of raw capacity for single node ^1^
 96 TB of raw capacity for HA pairs ^1^
-| Number of disks per aggregate	| 1-12
+| Disks per aggregate	| 1-12 ^2^
 | Maximum number of RAID groups per aggregate	| 1
 |===
 
 Notes:
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
 
 == Logical storage limits
 
