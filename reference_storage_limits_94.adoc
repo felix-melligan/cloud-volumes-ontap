@@ -85,7 +85,7 @@ Notes:
 | Maximum aggregate size |	352 TB of raw capacity ^1^
 | Disks per aggregate	| 1-12 ^2^
 | Maximum disk size | 32 TB
-| Maximum number of data disks across all aggregates ^2^ | Depends on VM size. <<Capacity and disk limits by Azure VM size,See below>>.
+| Maximum number of data disks across all aggregates ^3^ | Depends on VM size. <<Capacity and disk limits by Azure VM size,See below>>.
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
 
