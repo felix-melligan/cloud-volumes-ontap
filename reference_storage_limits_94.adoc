@@ -51,14 +51,13 @@ In Cloud Volumes ONTAP 9.4, all EC2 instance types can reach the 368 TB capacity
 | Parameter
 | Limit
 
-.6+| *Aggregates and disks*
+.5+| *Aggregates and disks*
 | Maximum number of aggregates | 34 for single-node configurations
 18 per node in an HA configuration ^1^
 | Maximum aggregate size |	96 TB of raw capacity ^2^
-| Minimum number of disks per aggregate	| 1
-| Maximum number of disks per aggregate	| 6
+| Disks per aggregate	| 1-6 ^3^
 | Maximum disk size | 16 TB
-| Maximum number of data disks across all aggregates ^3^ | 34 for single-node configurations
+| Maximum number of data disks across all aggregates ^4^ | 34 for single-node configurations
 31 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
@@ -68,6 +67,8 @@ Notes:
 . It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
@@ -79,11 +80,10 @@ Notes:
 | Parameter
 | Limit
 
-.6+| *Aggregates and disks*
+.5+| *Aggregates and disks*
 | Maximum number of aggregates | Same as the disk limit
 | Maximum aggregate size |	352 TB of raw capacity ^1^
-| Minimum number of disks per aggregate	| 1
-| Maximum number of disks per aggregate	| 12
+| Disks per aggregate	| 1-12 ^2^
 | Maximum disk size | 32 TB
 | Maximum number of data disks across all aggregates ^2^ | Depends on VM size. <<Capacity and disk limits by Azure VM size,See below>>.
 | *RAID groups*	| Maximum per aggregate	| 1
@@ -92,6 +92,8 @@ Notes:
 Notes:
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 

@@ -25,14 +25,13 @@ The following sections list limits for aggregates, volumes, LUNs, and related st
 | Parameter
 | Limit
 
-.6+| *Aggregates and disks*
+.5+| *Aggregates and disks*
 | Maximum number of aggregates | 34 for single-node configurations
 18 per node in an HA configuration ^1^
 | Maximum aggregate size |	96 TB of raw capacity
-| Minimum number of disks per aggregate	| 1
-| Maximum number of disks per aggregate	| 6
+| Disks per aggregate	| 1-6 ^2^
 | Maximum disk size | 16 TB
-| Maximum number of data disks across all aggregates ^2^ | 34 for single-node configurations
+| Maximum number of data disks across all aggregates ^3^ | 34 for single-node configurations
 31 per node in an HA configuration
 | *RAID groups*	| Maximum per aggregate	| 1
 |===
@@ -40,6 +39,8 @@ The following sections list limits for aggregates, volumes, LUNs, and related st
 Notes:
 
 . It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
+
+. All disks in an aggregate must be the same size.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
@@ -51,13 +52,12 @@ Notes:
 | Parameter
 | Limit
 
-.6+| *Aggregates and disks*
+.5+| *Aggregates and disks*
 | Maximum number of aggregates | 63
 | Maximum aggregate size |	352 TB of raw capacity
-| Minimum number of disks per aggregate	| 1
-| Maximum number of disks per aggregate	| 12
+| Disks per aggregate	| 1-12 ^1^
 | Maximum disk size | 32 TB
-| Maximum number of data disks across all aggregates ^1^ a|
+| Maximum number of data disks across all aggregates ^2^ a|
 * DS3_v2: 15
 * DS4_v2: 31
 * DS5_v2: 63
@@ -67,6 +67,8 @@ Notes:
 |===
 
 Notes:
+
+. All disks in an aggregate must be the same size.
 
 . The data disk limit is specific to disks that contain user data. The boot disk and root disk for each node are not included in this limit.
 
