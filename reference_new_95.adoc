@@ -17,6 +17,12 @@ Cloud Volumes ONTAP 9.5 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
+== Support for the AWS C2S Environment (2 May 2019)
+
+Cloud Volumes ONTAP 9.5 and Cloud Manager 3.6.4 are now available to the U.S. Intelligence Community (IC) through the AWS Commercial Cloud Services (C2S) environment. You can deploy HA pairs and single node systems in C2S.
+
+https://docs.netapp.com/us-en/occm/media/c2s.pdf[Quick Start Guide for the AWS Commercial Cloud Services Environment^]
+
 == 9.5 P2 patch (10 Apr 2019)
 
 The 9.5 P2 patch release for Cloud Volumes ONTAP is now available. This patch includes bug fixes, as well as support for Flash Cache with new AWS EC2 instance types. Cloud Manager will prompt you to upgrade your existing systems to this patch release.
