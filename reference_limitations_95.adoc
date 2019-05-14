@@ -79,6 +79,10 @@ Cloud Volumes ONTAP does not release CPUs when idle, so Amazon CloudWatch can re
 
 After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.
 
+=== Limitations in the AWS C2S environment
+
+See the https://docs.netapp.com/us-en/occm/media/c2s.pdf[Quick Start Guide for the AWS Commercial Cloud Services Environment^].
+
 === Limitations in AWS GovCloud (US) regions
 
 * Cloud Manager must be deployed in an AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in the same AWS GovCloud (US) region.
