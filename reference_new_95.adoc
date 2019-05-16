@@ -122,7 +122,7 @@ https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE)^] is 
 
 At this time, Cloud Volumes ONTAP supports NetApp Volume Encryption with an external key management server. An Onboard Key Manager is not supported. You can find the supported key managers in the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] under the *Key Managers* solution.
 
-You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption at this time.
+You need to set up NetApp Volume Encryption from the CLI. You can then use either the CLI or System Manager to enable encryption on specific volumes. Cloud Manager does not support NetApp Volume Encryption from its user interface and from its APIs.
 
 https://docs.netapp.com/us-en/occm/task_encrypting_volumes.html[Learn how to set up NetApp Volume Encryption^]
 
@@ -136,7 +136,7 @@ Two features are no longer supported in the 9.5 release.
 
 Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate data] to that system.
 
-You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS).
+Data-at-rest encryption is still supported using other methods. You can encrypt data by using NetApp Volume Encryption or by using the AWS Key Management Service (KMS). https://docs.netapp.com/us-en/occm/concept_security.html[Learn more about encryption of data at rest^].
 
 ==== c4.2xlarge is no longer supported
 
