@@ -39,7 +39,7 @@ SnapManager per-server licenses are supported with ONTAP Cloud. Per-storage syst
 
 === Unsupported ONTAP features
 
-The following features are not supported with ONTAP Cloud for AWS:
+The following features are not supported with ONTAP Cloud:
 
 * Aggregate-level inline deduplication
 * Disk maintenance center
