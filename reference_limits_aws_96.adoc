@@ -1,0 +1,179 @@
+---
+sidebar: sidebar
+permalink: reference_limits_aws_96.html
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks
+summary: Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+---
+
+= Storage limits for Cloud Volumes ONTAP 9.6 in AWS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+
+== Capacity limit by license
+
+The capacity limit for a Cloud Volumes ONTAP license includes disk-based storage and object storage used for data tiering.
+
+For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
+
+[cols="30,70",width=60%,options="header"]
+|===
+| License
+| Capacity limit with disks and data tiering
+
+| Explore	| 2 TB (data tiering is not supported with Explore)
+| Standard | 10 TB
+| Premium | 368 TB
+| BYOL | 368 TB
+
+|===
+
+===== For HA, is the license capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+===== For an HA system in AWS, does mirrored data count against the capacity limit?
+
+No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. For example, if you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+
+== Capacity and disk limits by AWS EC2 instance
+
+Cloud Volumes ONTAP uses EBS volumes as disks. The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+
+=== Single node limits by EC2 instance type
+
+The maximum EBS disk size is 16 TB. The number of supported disks varies by instance type.
+
+The table below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
+
+[cols=4*,options="header,autowidth"]
+|===
+| Instance type
+| Max EBS disks per node
+| Max capacity with EBS
+| Max capacity with EBS + S3
+
+| c4.4xlarge | 34 | 368 TB | 368 TB
+| c4.8xlarge | 34 | 368 TB | 368 TB
+| c5d.4xlarge | 23 | 368 TB | 368 TB
+| c5d.9xlarge | 23 | 368 TB | 368 TB
+| m4.xlarge | 34 | 368 TB | 368 TB
+| m4.2xlarge | 34 | 368 TB | 368 TB
+| m4.4xlarge | 34 | 368 TB | 368 TB
+| m5.xlarge | 23 | 368 TB | 368 TB
+| m5.2xlarge | 23 | 368 TB | 368 TB
+| m5.4xlarge | 23 | 368 TB | 368 TB
+| r4.xlarge | 34 | 368 TB | 368 TB
+| r4.2xlarge | 34 | 368 TB | 368 TB
+| r5.xlarge | 23 | 368 TB | 368 TB
+| r5.2xlarge | 23 | 368 TB | 368 TB
+| r5d.2xlarge | 23 | 368 TB | 368 TB
+|===
+
+=== HA limits by EC2 instance type
+
+The maximum EBS disk size is 16 TB. The number of supported disks varies by instance type.
+
+The table below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
+
+[cols=4*,options="header,autowidth"]
+|===
+| Instance type
+| Max EBS disks per node
+| Max capacity with EBS
+| Max capacity with EBS + S3
+
+| c4.4xlarge | 31 | 368 TB | 368 TB
+| c4.8xlarge | 31 | 368 TB | 368 TB
+| c5d.4xlarge | 20 | 320 TB | 368 TB
+| c5d.9xlarge | 20 | 320 TB | 368 TB
+| m4.xlarge | 31 | 368 TB | 368 TB
+| m4.2xlarge | 31 | 368 TB | 368 TB
+| m4.4xlarge | 31 | 368 TB | 368 TB
+| m5.xlarge | 20 | 320 TB | 368 TB
+| m5.2xlarge | 20 | 320 TB | 368 TB
+| m5.4xlarge | 20 | 320 TB | 368 TB
+| r4.xlarge | 31 | 368 TB | 368 TB
+| r4.2xlarge | 31 | 368 TB | 368 TB
+| r5.xlarge | 20 | 320 TB | 368 TB
+| r5.2xlarge | 20 | 320 TB | 368 TB
+| r5d.2xlarge | 20 | 320 TB | 368 TB
+|===
+
+== Aggregate limits
+
+Cloud Volumes ONTAP uses AWS volumes as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+[cols=2*,options="header,autowidth"]
+|===
+| Parameter
+| Limit
+
+| Maximum number of aggregates |
+Single node: Same as the disk limit
+HA pairs: 18 in a node ^1^
+| Maximum aggregate size | 96 TB of raw capacity ^2^
+| Disks per aggregate	| 1-6 ^3^
+| Maximum number of RAID groups per aggregate	| 1
+|===
+
+Notes:
+
+. It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
+
+== Logical storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
+| *Storage virtual machines (SVMs)*	| Maximum per node | One data-serving SVM and one or more SVMs used for disaster recovery ^1^
+.2+| *Files*	| Maximum size | Volume size dependent
+| Maximum per volume |	Volume size dependent, up to 2 billion
+| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+.3+| *FlexVol volumes*	| Maximum per node |	500
+| Minimum size |	20 MB
+| Maximum size | Dependent on the size of the aggregate
+| *Qtrees* |	Maximum per FlexVol volume |	4,995
+| *Snapshot copies* |	Maximum per FlexVol volume |	1,023
+
+|===
+
+Notes:
+
+. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
+
+. Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
+
+== iSCSI storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| iSCSI storage
+| Parameter
+| Limit
+
+.4+| *LUNs*	| Maximum per node |	1,024
+| Maximum number of LUN maps |	1,024
+| Maximum size	| 16 TB
+| Maximum per volume	| 512
+| *igroups*	| Maximum per node | 256
+.2+| *Initiators*	| Maximum per node |	512
+| Maximum per igroup	| 128
+| *iSCSI sessions* |	Maximum per node | 1,024
+.2+| *LIFs*	| Maximum per port |	32
+| Maximum per portset	| 32
+| *Portsets* |	Maximum per node |	256
+
+|===

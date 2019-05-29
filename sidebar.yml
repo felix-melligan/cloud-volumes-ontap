@@ -1,6 +1,38 @@
 entries:
   - title: Cloud Volumes ONTAP Release Notes
     url: /index.html
+  - title: 9.6 Release Notes
+    entries:
+      - title: What's new
+        url: /reference_new_96.html
+      - title: Supported configurations
+        entries:
+          - title: AWS
+            url: /reference_configs_aws_96.html
+          - title: Azure
+            url: /reference_configs_azure_96.html
+          - title: GCP
+            url: /reference_configs_gcp_96.html
+      - title: Storage limits
+        entries:
+          - title: AWS
+            url: /reference_limits_aws_96.html
+          - title: Azure
+            url: /reference_limits_azure_96.html
+          - title: GCP
+            url: /reference_limits_gcp_96.html
+      - title: Known issues
+        url: /reference_issues_96.html
+      - title: Known limitations
+        entries:
+          - title: Common limitations
+            url: /reference_limitations_96.html
+          - title: Limitations in AWS
+            url: /reference_limitations_aws_96.html
+          - title: Limitations in Azure
+            url: /reference_limitations_azure_96.html
+          - title: Limitations in GCP
+            url: /reference_limitations_gcp_96.html
   - title: 9.5 Release Notes
     entries:
       - title: What's new

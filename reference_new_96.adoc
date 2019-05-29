@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: reference_new_96.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.6
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
+
+NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+
+== 9.6 RC1
+
+9.6 RC1 is now available in AWS, Azure, and now in Google Cloud Platform. It includes the following features.
+
+=== Private preview in Google Cloud Platform
+
+Description here.
+
+=== Data tiering with Azure HA
+
+Description here.
+
+=== FlexCache
+
+Description here.
+
+== Upgrade notes
+
+* You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 or 9.3 release. You can perform the upgrade directly from Cloud Manager.
++
+To understand version requirements, refer to http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[ONTAP 9 Documentation: Cluster update requirements^].
+
+* When you use Cloud Manager to upgrade a single-node system, the upgrade process takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrades of HA pairs are nondisruptive. A nondisruptive upgrade upgrades both nodes in an HA pair concurrently while maintaining service to clients.

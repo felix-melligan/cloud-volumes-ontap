@@ -1,0 +1,20 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_gcp_96.html
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations for Cloud Volumes ONTAP 9.6 in GCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The following known limitations affect Cloud Volumes ONTAP in Google Cloud Platform.
+
+== Limitation
+
+Description

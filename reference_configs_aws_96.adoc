@@ -1,0 +1,140 @@
+---
+sidebar: sidebar
+permalink: reference_configs_aws_96.html
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations
+summary: Cloud Volumes ONTAP is available in AWS in PAYGO and BYOL configurations. For PAYGO, you can choose from Explore, Standard, or Premium.
+---
+
+= Supported configurations for Cloud Volumes ONTAP 9.6 in AWS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP is available in AWS in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
+
+== Supported configurations by license
+
+In AWS, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Supported EC2 instance types ^1^
+a|
+* m4.xlarge
+* m5.xlarge
+
+a|
+* m4.2xlarge
+* m5.2xlarge
+* r4.xlarge
+* r5.xlarge
+
+a|
+* c4.4xlarge
+* c4.8xlarge
+* c5d.4xlarge ^2^
+* c5d.9xlarge ^2^
+* m4.4xlarge
+* m5.4xlarge
+* r4.2xlarge
+* r5.2xlarge
+* r5d.2xlarge ^2^
+
+a|
+* c4.4xlarge
+* c4.8xlarge
+* c5d.4xlarge ^2^
+* c5d.9xlarge ^2^
+* m4.xlarge
+* m4.2xlarge
+* m4.4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* r4.xlarge
+* r4.2xlarge
+* r5.xlarge
+* r5.2xlarge
+* r5d.2xlarge ^2^
+
+| Supported disk types ^3^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
+
+| Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
+
+| License capacity limit
+(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^4^
+
+| Term 3+| Hourly | 6 or 12 months
+
+|===
+
+Notes:
+
+. When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
+
+. These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. link:reference_limitations_95.html#flash-cache-limitations[Learn more].
+
+. Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_95.html[storage limits].
+
+. For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+== Supported disk sizes
+
+In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
+
+[cols=4*,options="header"]
+|===
+
+| General Purpose SSDs
+| Provisioned IOPS SSDs
+| Throughput Optimized HDDs
+| Cold HDDs (single node only)
+
+a|
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+a|
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+a|
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+a|
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+|===
