@@ -19,9 +19,9 @@ Cloud Volumes ONTAP has storage configuration limits to provide reliable operati
 
 The capacity limit for a Cloud Volumes ONTAP license includes disk-based storage and object storage used for data tiering.
 
-For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
+For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
 
-[cols="30,70",width=60%,options="header"]
+[cols="25,75",width=55%,options="header"]
 |===
 | License
 | Capacity limit with disks and data tiering
@@ -41,22 +41,20 @@ The capacity limit is for the entire HA pair. It is not per node. For example, i
 
 No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. For example, if you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
 
-== Capacity and disk limits by AWS EC2 instance
+== Disk and tiering limits by EC2 instance
 
-Cloud Volumes ONTAP uses EBS volumes as disks. The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB. The sections below show disk and tiering limits by EC2 instance type because many EC2 instance types have different disk limits. Disk limits are also different between single node systems and HA pairs.
 
-=== Single node limits by EC2 instance type
+The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-The maximum EBS disk size is 16 TB. The number of supported disks varies by instance type.
+=== Disk and tiering limits for single node systems
 
-The table below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
-
-[cols=4*,options="header,autowidth"]
+[cols="16,20,30,32",width=69%,options="header"]
 |===
 | Instance type
-| Max EBS disks per node
-| Max capacity with EBS
-| Max capacity with EBS + S3
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
 
 | c4.4xlarge | 34 | 368 TB | 368 TB
 | c4.8xlarge | 34 | 368 TB | 368 TB
@@ -75,18 +73,14 @@ The table below shows the maximum capacity by instance type with just EBS disks,
 | r5d.2xlarge | 23 | 368 TB | 368 TB
 |===
 
-=== HA limits by EC2 instance type
+=== Disk and tiering limits for HA pairs
 
-The maximum EBS disk size is 16 TB. The number of supported disks varies by instance type.
-
-The table below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
-
-[cols=4*,options="header,autowidth"]
+[cols="16,20,30,32",width=69%,options="header"]
 |===
 | Instance type
-| Max EBS disks per node
-| Max capacity with EBS
-| Max capacity with EBS + S3
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
 
 | c4.4xlarge | 31 | 368 TB | 368 TB
 | c4.8xlarge | 31 | 368 TB | 368 TB

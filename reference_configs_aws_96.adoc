@@ -17,7 +17,7 @@ Cloud Volumes ONTAP is available in AWS in two pricing options: pay-as-you-go an
 
 == Supported configurations by license
 
-In AWS, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
+Cloud Volumes ONTAP is available in AWS as a single node system and as an HA pair.
 
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
@@ -85,7 +85,7 @@ Notes:
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_storage_limits_95.html[storage limits].
+. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_96.html[storage limits].
 
 . For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 

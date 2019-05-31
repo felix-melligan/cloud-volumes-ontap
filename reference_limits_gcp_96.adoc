@@ -21,7 +21,7 @@ The capacity limit for a Cloud Volumes ONTAP license includes disk-based storage
 
 For the Premium and BYOL licenses, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to the disk limits below for more details.
 
-[cols="25,75",width=52%,options="header"]
+[cols="25,75",width=55%,options="header"]
 |===
 | License
 | Capacity limit with disks and data tiering
@@ -37,7 +37,7 @@ For the Premium and BYOL licenses, disk limits prevent you from reaching the 368
 
 The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-[cols="75,25",width=52%,options="header"]
+[cols="75,25",width=55%,options="header"]
 |===
 | Parameter
 | Limit
@@ -52,7 +52,7 @@ The table below shows the maximum system capacity with disks alone, and with dis
 
 Cloud Volumes ONTAP groups Google Cloud Platform disks into _aggregates_. Aggregates provide storage to volumes.
 
-[cols=2*,width=52%,options="header,autowidth"]
+[cols=2*,width=55%,options="header,autowidth"]
 |===
 | Parameter
 | Limit

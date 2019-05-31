@@ -17,17 +17,23 @@ Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
-== 9.6 RC1
+== 9.6 RC1 (11 June 2019)
 
-9.6 RC1 is now available in AWS, Azure, and now in Google Cloud Platform. It includes the following features.
+Cloud Volumes ONTAP 9.6 RC1 is available in AWS, Azure, and now in Google Cloud Platform. This release includes the following features.
 
-=== Private preview in Google Cloud Platform
+=== Private preview of Cloud Volumes ONTAP in Google Cloud Platform
 
-Description here.
+A private preview of Cloud Volumes ONTAP in Google Cloud Platform is now available. Similar to other cloud providers, Cloud Volumes ONTAP for Google Cloud Platform helps you reduce costs, improve performance, and increase availability.
 
-=== Data tiering with Azure HA
+Cloud Volumes ONTAP is available in GCP as a single node system.
 
-Description here.
+To join the private preview, send a request to ng-Cloud-Volume-ONTAP-preview@netapp.com.
+
+=== Data tiering with HA pairs in Azure
+
+Data tiering is now supported with Cloud Volumes ONTAP HA pairs in Microsoft Azure. Data tiering enables automated tiering of inactive data to low-cost Blob object storage.
+
+https://docs.netapp.com/us-en/occm/task_tiering.html[Learn how to set up data tiering in Cloud Manager^].
 
 === FlexCache
 
@@ -35,7 +41,7 @@ Description here.
 
 == Upgrade notes
 
-* You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 or 9.3 release. You can perform the upgrade directly from Cloud Manager.
+* You can upgrade to Cloud Volumes ONTAP 9.6 from the 9.5 release. You can perform the upgrade directly from Cloud Manager.
 +
 To understand version requirements, refer to http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[ONTAP 9 Documentation: Cluster update requirements^].
 

@@ -17,7 +17,7 @@ Cloud Volumes ONTAP is available in Azure in two pricing options: pay-as-you-go 
 
 == Supported configurations by license
 
-In Azure, you can deploy Cloud Volumes ONTAP as a single node system or as an HA pair.
+Cloud Volumes ONTAP is available in Azure as a single-node system and as an HA pair.
 
 === Single node systems
 
@@ -31,7 +31,7 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Premium
 | BYOL
 
-| Virtual machine types | DS3_v2
+| Supported virtual machine types | DS3_v2
 
 a|
 * DS4_v2
@@ -79,7 +79,7 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Premium
 | BYOL
 
-| Virtual machine types | Not supported
+| Supported virtual machine types | Not supported
 
 a|
 * DS4_v2
