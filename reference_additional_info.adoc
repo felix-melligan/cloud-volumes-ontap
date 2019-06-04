@@ -31,13 +31,19 @@ Access product documentation for ONTAP, which can help you as you use Cloud Volu
 ** https://www.netapp.com/us/media/tr-4383.pdf[NetApp Technical Report 4383: Performance Characterization of Cloud Volumes ONTAP in Amazon Web Services with Application Workloads^]
 ** https://www.netapp.com/us/media/tr-4671.pdf[NetApp Technical Report 4671: Performance Characterization of Cloud Volumes ONTAP in Azure with Application Workloads^]
 
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[Cloud Volumes ONTAP 9 SVM Disaster Recovery Preparation Express Guide^]
+* SVM disaster recovery
+
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[Cloud Volumes ONTAP 9 SVM Disaster Recovery Preparation Express Guide^]
 +
 Describes how to quickly configure a destination SVM in preparation for disaster recovery.
 
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[Cloud Volumes ONTAP 9 SVM Disaster Recovery Express Guide^]
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[Cloud Volumes ONTAP 9 SVM Disaster Recovery Express Guide^]
 +
 Describes how to quickly activate a destination SVM after a disaster, and then reactivate the source SVM.
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-fc-mgmt/home.html[FlexCache Volumes for Faster Data Access Power Guide^]
++
+Describes how to create and manage FlexCache volumes in the same cluster or different cluster as the origin volume for accelerating data access.
 
 * http://community.netapp.com/hybrid-cloud[NetApp Community: Hybrid Cloud^]
 +
@@ -54,7 +60,3 @@ Find information about additional NetApp products and solutions for the cloud.
 * http://docs.netapp.com[NetApp Product Documentation^]
 +
 Search NetApp product documentation for instructions, resources, and answers.
-
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2846508[Notice for Cloud Volumes ONTAP 9.4^]
-+
-Provides information about third-party copyright and licenses.
