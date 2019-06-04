@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_limitations_aws_96.html
-keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates
-summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s
+summary: These known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services.
 ---
 
 = Known limitations for Cloud Volumes ONTAP 9.6 in AWS
@@ -13,7 +13,7 @@ summary: Known limitations identify platforms, devices, or functions that are no
 :imagesdir: ./media/
 
 [.lead]
-The following known limitations affect Cloud Volumes ONTAP in Amazon Web Services.
+The following known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services. Be sure to also review link:reference_limitations_96.html[Limitations for Cloud Volumes ONTAP 9.6 in all cloud providers].
 
 == Flash Cache limitations
 

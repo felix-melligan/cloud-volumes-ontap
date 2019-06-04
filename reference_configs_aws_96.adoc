@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_configs_aws_96.html
-keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks
 summary: Cloud Volumes ONTAP is available in AWS in PAYGO and BYOL configurations. For PAYGO, you can choose from Explore, Standard, or Premium.
 ---
 
