@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_limitations_96.html
-keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates
+keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm
 summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
@@ -44,7 +44,6 @@ The following features are not supported with Cloud Volumes ONTAP:
 * Disk sanitization
 * Fibre Channel (FC)
 * Flash Pools
-* FlexCache
 * Infinite Volumes
 * Interface groups
 * Intranode LIF failover
