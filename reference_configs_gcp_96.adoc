@@ -15,6 +15,8 @@ summary: Cloud Volumes ONTAP is available in Google Cloud Platform in PAYGO and 
 [.lead]
 Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
 
+NOTE: Cloud Volumes ONTAP is available in Google Cloud Platform as a private preview. To join the private preview, send a request to ng-Cloud-Volume-ONTAP-preview@netapp.com. 
+
 == Supported configurations by license
 
 Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system.
