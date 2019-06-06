@@ -129,7 +129,7 @@ Notes:
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 
-. Less than 100 TB is supported for this configuration because aggregates on single node systems are limited to 96 TB of _raw_ capacity.
+. Less than 100 TB is supported for this configuration because aggregates on HA pairs are limited to 96 TB of _raw_ capacity.
 
 == iSCSI storage limits
 
