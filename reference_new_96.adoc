@@ -17,7 +17,7 @@ Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 
 NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
-== 9.6 RC1 (11 June 2019)
+== 9.6 RC1 (16 June 2019)
 
 Cloud Volumes ONTAP 9.6 RC1 is available in AWS, Azure, and now in Google Cloud Platform. This release includes the following features.
 
@@ -62,7 +62,7 @@ ONTAP 9.6 includes other changes that Cloud Volumes ONTAP users might be interes
 ** Volume move support without needing to re-tier cold data
 ** SVM disaster recovery support
 
-For more details about the 9.6 release, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^].
+For more details about the 9.6 release, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9 Release Notes^].
 
 == Upgrade notes
 
