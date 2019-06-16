@@ -1,0 +1,75 @@
+---
+sidebar: sidebar
+permalink: reference_new_96.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.6
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
+
+NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+
+== 9.6 RC1 (16 June 2019)
+
+Cloud Volumes ONTAP 9.6 RC1 is available in AWS, Azure, and now in Google Cloud Platform. This release includes the following features.
+
+* <<Private preview of Cloud Volumes ONTAP in Google Cloud Platform>>
+* <<Data tiering with HA pairs in Azure>>
+* <<Support for FlexCache volumes>>
+* <<Additional ONTAP changes>>
+
+=== Private preview of Cloud Volumes ONTAP in Google Cloud Platform
+
+A private preview of Cloud Volumes ONTAP in Google Cloud Platform is now available. Similar to other cloud providers, Cloud Volumes ONTAP for Google Cloud Platform helps you reduce costs, improve performance, and increase availability.
+
+Cloud Volumes ONTAP is available in GCP as a single node system and supports data tiering to object storage.
+
+To join the private preview, send a request to ng-Cloud-Volume-ONTAP-preview@netapp.com.
+
+=== Data tiering with HA pairs in Azure
+
+Data tiering is now supported with Cloud Volumes ONTAP HA pairs in Microsoft Azure. Data tiering enables automated tiering of inactive data to low-cost Blob storage.
+
+https://docs.netapp.com/us-en/occm/task_tiering.html[Learn how to set up data tiering in Cloud Manager^].
+
+=== Support for FlexCache volumes
+
+A FlexCache volume is a storage volume that caches NFS read data from an origin (or source) volume. Subsequent reads to the cached data result in faster access to that data.
+
+You can use FlexCache volumes to speed up access to data or to offload traffic from heavily accessed volumes. FlexCache volumes help improve performance, especially when clients need to access the same data repeatedly, because the data can be served directly without having to access the origin volume. FlexCache volumes work well for system workloads that are read-intensive.
+
+Cloud Manager does not provide management of FlexCache volumes at this time, but you can use the ONTAP CLI or ONTAP System Manager to create and manage FlexCache volumes:
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-fc-mgmt/home.html[FlexCache Volumes for Faster Data Access Power Guide^]
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-07F4C213-076D-4FE8-A8E3-410F49498D49.html[Creating FlexCache volumes in System Manager^]
+
+A FlexCache license is required.
+
+=== Additional ONTAP changes
+
+ONTAP 9.6 includes other changes that Cloud Volumes ONTAP users might be interested in:
+
+* SnapMirror replication now supports TLS 1.2 encryption for communication in-flight
+* Data tiering (FabricPool) enhancements include:
+** Volume move support without needing to re-tier cold data
+** SVM disaster recovery support
+
+For more details about the 9.6 release, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9 Release Notes^].
+
+== Upgrade notes
+
+* You can upgrade to Cloud Volumes ONTAP 9.6 from the 9.5 release. You can perform the upgrade directly from Cloud Manager.
++
+To understand version requirements, refer to http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[ONTAP 9 Documentation: Cluster update requirements^].
+
+* When you use Cloud Manager to upgrade a single-node system, the upgrade process takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrades of HA pairs are nondisruptive. A nondisruptive upgrade upgrades both nodes in an HA pair concurrently while maintaining service to clients.

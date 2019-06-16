@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: index.html
 keywords: release notes, Cloud Volumes ONTAP, limits, known issues, support, configurations, features, limitations, what's new
-summary: Welcome to the release notes for Cloud Volumes ONTAP.
+summary: The Release Notes for Cloud Volumes ONTAP provide release-specific information. What's new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
 ---
 
 = NetApp Cloud Volumes ONTAP Release Notes
@@ -13,12 +13,13 @@ summary: Welcome to the release notes for Cloud Volumes ONTAP.
 :imagesdir: ./media/
 
 [.lead]
-The Release Notes for Cloud Volumes ONTAP provide release-specific information: what is new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
+The Release Notes for Cloud Volumes ONTAP provide release-specific information: what's new in the release, supported configurations, storage limits, and any known limitations or issues that can affect product functionality.
 
-These release notes are specific to Cloud Volumes ONTAP. You should view the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] to identify new features, known problems, and limitations for ONTAP software in general.
+These release notes are specific to Cloud Volumes ONTAP. View the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] to identify new features, known problems, and limitations for ONTAP software in general.
 
 If you need documentation that describes how to deploy and manage Cloud Volumes ONTAP, then you should refer to link:https://docs.netapp.com/us-en/occm/[Cloud Manager documentation^].
 
+* link:reference_new_96.html[9.6 Release Notes]
 * link:reference_new_95.html[9.5 Release Notes]
 * link:reference_new_94.html[9.4 Release Notes]
 * link:reference_new_93.html[9.3 Release Notes]

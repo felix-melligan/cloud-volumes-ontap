@@ -86,7 +86,7 @@ Notes:
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
-| Maximum size |	AWS: 76.55 TB of fully provisioned capacity ^3^
+| Maximum size |	AWS: Dependent on the size of the aggregate ^3^
 Azure: 100 TB
 | *Qtrees* |	Maximum per FlexVol volume |	4,995
 | *Snapshot copies* |	Maximum per FlexVol volume |	255
@@ -99,7 +99,7 @@ Notes:
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 
-. Less than 100 TB is supported for this configuration because aggregates are limited to 96 TB of _raw_ capacity. The specified limit is based on the assumption that you use Cloud Manager to create a volume and that you keep the default aggregate free space ratio.
+. Less than 100 TB is supported because aggregates for this configuration are limited to 96 TB of _raw_ capacity.
 
 == iSCSI storage limits
 

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_azure_96.html
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3
+summary: These known limitations are specific to Cloud Volumes ONTAP in Microsoft Azure.
+---
+
+= Known limitations for Cloud Volumes ONTAP 9.6 in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The following known limitations are specific to Cloud Volumes ONTAP in Microsoft Azure. Be sure to also review link:reference_limitations_96.html[Limitations for Cloud Volumes ONTAP 9.6 in all cloud providers].
+
+== HA limitations
+
+The following limitations affect Cloud Volumes ONTAP HA pairs in Microsoft Azure:
+
+* NFSv4 is not supported. NFSv3 is supported.
+* HA pairs are not supported in some regions.
++
+https://cloud.netapp.com/cloud-volumes-global-regions[See the list of supported Azure regions^].
+
+== Pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.
