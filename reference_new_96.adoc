@@ -15,7 +15,13 @@ summary: Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 [.lead]
 Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 
-NOTE: Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+
+== 9.6 GA (15 July 2019)
+
+The General Availability (GA) release of Cloud Volumes ONTAP 9.6 is now available. The GA release includes bug fixes. Cloud Manager will prompt you to upgrade your existing systems to this release.
+
+NOTE: Cloud Volumes ONTAP remains in private preview in Google Cloud Platform.
 
 == 9.6 RC1 (16 June 2019)
 
