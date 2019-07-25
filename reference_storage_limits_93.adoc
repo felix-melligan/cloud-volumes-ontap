@@ -54,7 +54,7 @@ Notes:
 
 .5+| *Aggregates and disks*
 | Maximum number of aggregates | 63
-| Maximum aggregate size |	352 TB of raw capacity
+| Maximum aggregate size |	200 TB of raw capacity
 | Disks per aggregate	| 1-12 ^1^
 | Maximum disk size | 32 TB
 | Maximum number of data disks across all aggregates ^2^ a|

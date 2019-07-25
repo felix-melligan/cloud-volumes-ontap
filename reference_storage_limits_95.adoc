@@ -180,7 +180,7 @@ Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates
 
 | Maximum number of aggregates | Same as the disk limit
 | Maximum aggregate size |
-352 TB of raw capacity for single node ^1^
+200 TB of raw capacity for single node ^1^
 96 TB of raw capacity for HA pairs ^1^
 | Disks per aggregate	| 1-12 ^2^
 | Maximum number of RAID groups per aggregate	| 1
