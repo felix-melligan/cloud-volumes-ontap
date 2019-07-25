@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_limitations_96.html
-keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm
+keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm, boot, root, encryption
 summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
@@ -16,6 +16,10 @@ summary: Known limitations identify platforms, devices, or functions that are no
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
 The following limitations apply to Cloud Volumes ONTAP in all cloud providers: AWS, Azure, and GCP.
+
+== Encryption is not supported on boot and root disks
+
+If you enabled an option from your cloud provider that automatically encrypts all new volumes or disks, then you must temporarily disable that option when deploying Cloud Volumes ONTAP. If you don't, then deployment of Cloud Volumes ONTAP will fail. Encryption is not supported on the boot and root disks for the Cloud Volumes ONTAP system.
 
 == Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
 
