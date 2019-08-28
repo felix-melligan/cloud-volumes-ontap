@@ -13,9 +13,23 @@ summary: Cloud Volumes ONTAP is available in Google Cloud Platform in PAYGO and 
 :imagesdir: ./media/
 
 [.lead]
-Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
+Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options: pay-as-you-go and Bring Your Own License (BYOL).
 
-NOTE: Cloud Volumes ONTAP is available in Google Cloud Platform as a private preview. To join the private preview, send a request to ng-Cloud-Volume-ONTAP-preview@netapp.com. 
+== Pay-as-you-go overview
+
+* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* A pay-as-you-go promotion is currently available. The promotion offers free licenses for an unlimited number of systems and will expire at the end of September 2019.
++
+There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
+* Conversions from PAYGO to BYOL aren't currently supported, but are planned for a future release.
+* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
++
+http://localhost:4001/occm/us-en/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+
+== BYOL overview
+
+* Single node license at 2, 12, 24, and 36-month subscription options.
+* Support is included for the length of the subscription term.
 
 == Supported configurations by license
 
@@ -42,8 +56,6 @@ a|
 | License capacity limit
 (disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^3^
 
-| Term 3+| Hourly | 12 months
-
 |===
 
 Notes:
@@ -52,11 +64,9 @@ Notes:
 
 . Enhanced write performance is enabled when using SSDs.
 
-. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
-+
-link:reference_limits_gcp_96.html[Learn more about disk limits in GCP].
+. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. link:reference_limits_gcp_96.html[Learn more about disk limits in GCP].
 
-//. For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+. For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
 == Supported disk sizes
 
