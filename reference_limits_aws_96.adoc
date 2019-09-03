@@ -15,16 +15,16 @@ summary: Cloud Volumes ONTAP has storage configuration limits in AWS to provide 
 [.lead]
 Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
 
-== Capacity limit by license
+== Maximum system capacity by license
 
-The capacity limit for a Cloud Volumes ONTAP license includes disk-based storage and object storage used for data tiering.
+The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. A system can't exceed this limit.
 
 For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
 
 [cols="25,75",width=55%,options="header"]
 |===
 | License
-| Capacity limit with disks and data tiering
+| Maximum system capacity (disks + object storage)
 
 | Explore	| 2 TB (data tiering is not supported with Explore)
 | Standard | 10 TB
