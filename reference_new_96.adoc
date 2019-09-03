@@ -17,6 +17,17 @@ Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
 
+== General Availability of Cloud Volumes ONTAP in GCP (3 Sept 2019)
+
+Cloud Volumes ONTAP is now generally available in Google Cloud Platform (GCP) when you bring your own license (BYOL). A pay-as-you-go promotion is also available. The promotion offers free licenses for an unlimited number of systems and will expire at the end of September 2019.
+
+* https://docs.netapp.com/us-en/occm/task_getting_started_gcp.html[Learn how to get started in GCP^]
+* link:reference_configs_gcp_96.html[View supported configurations]
+
+== 9.6 P2 (29 Aug 2019)
+
+The 9.6 P2 patch release for Cloud Volumes ONTAP is now available through Cloud Manager. Cloud Manager will prompt you to upgrade your existing 9.5 and 9.6 systems to this patch release. https://mysupport.netapp.com/products/cloud_ontap/9.6P2/index.html[View the list of bugs fixed in the P2 patch^].
+
 == 9.6 GA (15 July 2019)
 
 The General Availability (GA) release of Cloud Volumes ONTAP 9.6 is now available. The GA release includes bug fixes. Cloud Manager will prompt you to upgrade your existing systems to this release.
