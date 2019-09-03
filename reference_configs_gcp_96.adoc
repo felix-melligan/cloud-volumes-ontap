@@ -24,7 +24,7 @@ There are no hourly software charges, but GCP infrastructure charges still apply
 * Conversions from PAYGO to BYOL aren't currently supported, but are planned for a future release.
 * Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
 +
-http://localhost:4001/occm/us-en/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
 
 == BYOL overview
 
