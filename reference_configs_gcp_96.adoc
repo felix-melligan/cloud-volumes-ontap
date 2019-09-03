@@ -64,7 +64,9 @@ Notes:
 
 . Enhanced write performance is enabled when using SSDs.
 
-. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. link:reference_limits_gcp_96.html[Learn more about disk limits in GCP].
+. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
++
+link:reference_limits_gcp_96.html[Learn more about disk limits in GCP].
 
 . For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
