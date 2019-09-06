@@ -70,7 +70,7 @@ a|
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
-| License capacity limit
+| Maximum system capacity
 (disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^4^
 
 | Term 3+| Hourly | 6 or 12 months
