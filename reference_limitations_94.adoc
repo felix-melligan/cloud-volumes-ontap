@@ -57,7 +57,7 @@ The following features are not supported with Cloud Volumes ONTAP:
 * MetroCluster
 * Multi-tenancy (only one data-serving SVM is supported, as noted in the SVM limitation above)
 * NetApp Volume Encryption
-* RAID-DP
+* RAID4, RAID-DP, RAID-TEC (RAID0 is supported)
 * Service Processor
 * SnapLock Compliance mode (Enterprise mode is supported)
 * VLANs
