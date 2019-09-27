@@ -71,13 +71,15 @@ Notes:
 
 == Logical storage limits
 
-[cols=3*,options="header,autowidth"]
+[cols="22,22,56",width=100%,options="header"]
 |===
 | Logical storage
 | Parameter
 | Limit
 
-| *Storage virtual machines (SVMs)*	| Maximum per node | One data-serving SVM and one or more SVMs used for disaster recovery ^1^
+| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP | One data-serving SVM and one or more SVMs used for disaster recovery. ^1^
+
+For an HA pair, the one data-serving SVM spans the two nodes. The SVM is at the cluster level and contains resources from both nodes.
 .2+| *Files*	| Maximum size | Volume size dependent
 | Maximum per volume |	Volume size dependent, up to 2 billion
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
