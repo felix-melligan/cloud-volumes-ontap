@@ -21,11 +21,11 @@ The following limitations apply to ONTAP Cloud in AWS and in Azure.
 
 == Encryption is not supported on boot and root disks
 
-If you enabled an option from your cloud provider that automatically encrypts all new volumes or disks, then you must temporarily disable that option when deploying Cloud Volumes ONTAP. If you don't, then deployment of Cloud Volumes ONTAP will fail. Encryption is not supported on the boot and root disks for the Cloud Volumes ONTAP system.
+If you enabled an option from your cloud provider that automatically encrypts all new volumes or disks, then you must temporarily disable that option when deploying ONTAP Cloud. If you don't, then deployment of ONTAP Cloud will fail. Encryption is not supported on the boot and root disks for the ONTAP Cloud system.
 
-=== Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
+=== ONTAP Cloud deployment must not be modified from your cloud provider’s console
 
-Changes to a Cloud Volumes ONTAP configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
+Changes to an ONTAP Cloud configuration from your cloud provider's console results in an unsupported configuration. Any changes to the ONTAP Cloud resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
 
 === Disks and aggregates must be managed from Cloud Manager
 
@@ -33,7 +33,7 @@ All disks and aggregates must be created and deleted directly from Cloud Manager
 
 === Storage Virtual Machine (SVM) limitation
 
-ONTAP Cloud Volumes supports one data-serving SVM and one or more SVMs used for disaster recovery.
+ONTAP Cloud supports one data-serving SVM and one or more SVMs used for disaster recovery. The one data-serving SVM spans the entire ONTAP Cloud system (HA pair or single node).
 
 Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
 
