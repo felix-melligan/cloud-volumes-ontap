@@ -80,9 +80,10 @@ Notes:
 | Parameter
 | Limit
 
-| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP | One data-serving SVM and one or more SVMs used for disaster recovery. ^1^
+| *Storage virtual machines (SVMs)*	| Maximum number for ONTAP Cloud
+(HA pair or single node) | One data-serving SVM and one or more SVMs used for disaster recovery. ^1^
 
-For an HA pair, the one data-serving SVM spans the two nodes. The SVM is at the cluster level and contains resources from both nodes.
+The one data-serving SVM spans the entire ONTAP Cloud system (HA pair or single node).
 .2+| *Files*	| Maximum size | Volume size dependent
 | Maximum per volume |	Volume size dependent, up to 2 billion
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
