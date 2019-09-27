@@ -32,6 +32,8 @@ Access product documentation for ONTAP, which can help you as you use Cloud Volu
 ** https://www.netapp.com/us/media/tr-4671.pdf[NetApp Technical Report 4671: Performance Characterization of Cloud Volumes ONTAP in Azure with Application Workloads^]
 
 * SVM disaster recovery
++
+SVM disaster recovery is the asynchronous mirroring of SVM data and configuration from a source SVM to a destination SVM. You can quickly activate a destination SVM for data access if the source SVM is no longer available.
 
 ** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[Cloud Volumes ONTAP 9 SVM Disaster Recovery Preparation Express Guide^]
 +
