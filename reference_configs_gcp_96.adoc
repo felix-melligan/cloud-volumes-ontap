@@ -18,7 +18,7 @@ Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options
 == Pay-as-you-go overview
 
 * Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
-* A pay-as-you-go promotion is currently available. The promotion offers free licenses for an unlimited number of systems and will expire at the end of September 2019.
+* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in GCP.
 +
 There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
 * Conversions from PAYGO to BYOL aren't currently supported, but are planned for a future release.
@@ -53,7 +53,7 @@ a|
 
 | Cold data tiering to object storage | Not supported 3+| Supported
 
-| Maximum system capacity 
+| Maximum system capacity
 (disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^3^
 
 |===
