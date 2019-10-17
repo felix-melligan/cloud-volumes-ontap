@@ -19,6 +19,10 @@ Known limitations identify platforms, devices, or functions that are not support
 
 The following limitations apply to Cloud Volumes ONTAP in AWS and in Azure.
 
+=== Software updates must be completed by Cloud Manager
+
+Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
 === Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
 
 Changes to a Cloud Volumes ONTAP configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
