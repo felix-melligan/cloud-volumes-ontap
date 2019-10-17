@@ -19,7 +19,11 @@ Known limitations identify platforms, devices, or functions that are not support
 
 The following limitations apply to Cloud Volumes ONTAP in AWS and in Azure.
 
-== Encryption is not supported on boot and root disks
+=== Software updates must be completed by Cloud Manager
+
+Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+=== Encryption is not supported on boot and root disks
 
 If you enabled an option from your cloud provider that automatically encrypts all new volumes or disks, then you must temporarily disable that option when deploying Cloud Volumes ONTAP. If you don't, then deployment of Cloud Volumes ONTAP will fail. Encryption is not supported on the boot and root disks for the Cloud Volumes ONTAP system.
 
