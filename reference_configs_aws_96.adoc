@@ -41,6 +41,7 @@ a|
 a|
 * c4.4xlarge
 * c4.8xlarge
+* c5.18xlarge
 * c5d.4xlarge ^2^
 * c5d.9xlarge ^2^
 * m4.4xlarge
@@ -52,6 +53,7 @@ a|
 a|
 * c4.4xlarge
 * c4.8xlarge
+* c5.18xlarge
 * c5d.4xlarge ^2^
 * c5d.9xlarge ^2^
 * m4.xlarge
