@@ -44,6 +44,7 @@ SnapManager per-server licenses are supported with Cloud Volumes ONTAP. Per-stor
 The following features are not supported with Cloud Volumes ONTAP:
 
 * Aggregate-level inline deduplication
+* Aggregate-level background deduplication
 * Disk maintenance center
 * Disk sanitization
 * Fibre Channel (FC)
