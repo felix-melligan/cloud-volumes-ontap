@@ -50,6 +50,7 @@ SnapManager per-server licenses are supported with ONTAP Cloud. Per-storage syst
 The following features are not supported with ONTAP Cloud:
 
 * Aggregate-level inline deduplication
+* Aggregate-level background deduplication
 * Disk maintenance center
 * Disk sanitization
 * Fibre Channel (FC)
