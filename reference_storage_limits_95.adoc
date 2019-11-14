@@ -206,7 +206,7 @@ Notes:
 (HA pair or single node) | One data-serving SVM and one or more SVMs used for disaster recovery. ^1^
 
 The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
-.2+| *Files*	| Maximum size | Volume size dependent
+.2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
