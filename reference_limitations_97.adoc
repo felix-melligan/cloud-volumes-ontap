@@ -1,0 +1,60 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_97.html
+keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Limitations for Cloud Volumes ONTAP 9.7 in all cloud providers
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+The following limitations apply to Cloud Volumes ONTAP in all cloud providers: AWS, Azure, and GCP.
+
+== Software updates must be completed by Cloud Manager
+
+Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+== Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
+
+Changes to a Cloud Volumes ONTAP configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
+
+== Disks and aggregates must be managed from Cloud Manager
+
+All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+
+== Storage Virtual Machine (SVM) limitation
+
+Cloud Volumes ONTAP supports one data-serving SVM and one or more SVMs used for disaster recovery. The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+
+Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
+
+== SnapManager licensing limitation
+
+SnapManager per-server licenses are supported with Cloud Volumes ONTAP. Per-storage system (SnapManager suite) licenses are not supported.
+
+== Unsupported ONTAP features
+
+The following features are not supported with Cloud Volumes ONTAP:
+
+* Aggregate-level inline deduplication
+* Aggregate-level background deduplication
+* Disk maintenance center
+* Disk sanitization
+* Fibre Channel (FC)
+* Flash Pools
+* Infinite Volumes
+* Interface groups
+* Intranode LIF failover
+* MetroCluster
+* Multi-tenancy (only one data-serving SVM is supported, as noted in the SVM limitation above)
+* RAID4, RAID-DP, RAID-TEC (RAID0 is supported)
+* Service Processor
+* SnapLock Compliance mode (Enterprise mode is supported)
+* VLANs

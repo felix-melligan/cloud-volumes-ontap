@@ -1,0 +1,39 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_azure_97.html
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3
+summary: These known limitations are specific to Cloud Volumes ONTAP in Microsoft Azure.
+---
+
+= Known limitations for Cloud Volumes ONTAP 9.7 in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The following known limitations are specific to Cloud Volumes ONTAP in Microsoft Azure. Be sure to also review link:reference_limitations_97.html[Limitations for Cloud Volumes ONTAP 9.7 in all cloud providers].
+
+== Flash Cache limitations
+
+The Standard_L8s_v2 VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Note the following limitations for Flash Cache:
+
+* Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements.
++
+You can choose no storage efficiency when creating a volume from Cloud Manager, or you can create a volume and then http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html[disable data compression by using the CLI^].
+
+* Cache rewarming after a reboot is not supported with Cloud Volumes ONTAP.
+
+== HA limitations
+
+The following limitations affect Cloud Volumes ONTAP HA pairs in Microsoft Azure:
+
+* NFSv4 isn't supported. NFSv3 is supported.
+* HA pairs aren't supported in some regions.
++
+https://cloud.netapp.com/cloud-volumes-global-regions[See the list of supported Azure regions^].
+
+== Pay-as-you-go not available for CSP partners
+
+If you are a Microsoft Cloud Solution Provider (CSP) partner, you cannot deploy Cloud Volumes ONTAP Explore, Standard, or Premium because pay-as-you-go subscriptions are not available for CSP partners. You must purchase a license and deploy Cloud Volumes ONTAP BYOL.

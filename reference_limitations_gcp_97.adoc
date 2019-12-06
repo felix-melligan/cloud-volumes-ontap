@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: reference_limitations_gcp_97.html
+keywords: limitations, google cloud platform, gcp
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations for Cloud Volumes ONTAP 9.7 in GCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are no known limitations specific to Cloud Volumes ONTAP in Google Cloud Platform. See the link:reference_limitations_97.html[Limitations for Cloud Volumes ONTAP 9.7 in all cloud providers].
