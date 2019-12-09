@@ -13,7 +13,7 @@ summary: Cloud Volumes ONTAP is available in Google Cloud Platform in PAYGO and 
 :imagesdir: ./media/
 
 [.lead]
-Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options: pay-as-you-go and Bring Your Own License (BYOL).
+Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system. Two pricing options are available: pay-as-you-go and Bring Your Own License (BYOL).
 
 == Pay-as-you-go overview
 
