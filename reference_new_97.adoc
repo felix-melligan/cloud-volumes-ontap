@@ -55,7 +55,7 @@ This release addresses an issue with Cloud Volumes ONTAP node reboots from Azure
 
 * Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.6 systems to the 9.7 release.
 +
-http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-to-the-latest-version[Learn how to upgrade when Cloud Manager notifies you^].
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
 
 * Another upgrade option is to use the software image from the NetApp Support Site.
 +
