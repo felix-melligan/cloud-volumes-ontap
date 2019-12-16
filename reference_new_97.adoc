@@ -23,7 +23,6 @@ Cloud Volumes ONTAP 9.7 RC1 is now available in AWS, Azure, and Google Cloud Pla
 
 * <<Flash Cache support in Azure>>
 * <<Fix for Azure NIC detach events>>
-//* <<Additional ONTAP changes>>
 
 === Flash Cache support in Azure
 
@@ -38,16 +37,6 @@ https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more abo
 === Fix for Azure NIC detach events
 
 This release addresses an issue with Cloud Volumes ONTAP node reboots from Azure NIC detach events. Cloud Volumes ONTAP will handle these events more gracefully and not disrupt service. Cloud Volumes ONTAP HA pairs will still perform a takeover/give back sequence from Azure freeze maintenance events, but there's no subsequent reboot from a NIC detach that might occur during this time.
-
-//=== Additional ONTAP changes
-
-//The ONTAP 9.7 release includes other changes that Cloud Volumes ONTAP users might be interested in:
-
-//* ???
-//* ???
-//* ???
-
-//For more details about the 9.7 release, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9 Release Notes^].
 
 == Upgrade notes
 
