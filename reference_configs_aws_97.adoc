@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference_configs_aws_96.html
+permalink: reference_configs_aws_97.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks
 summary: Cloud Volumes ONTAP is available in AWS in PAYGO and BYOL configurations. For PAYGO, you can choose from Explore, Standard, or Premium.
 ---
 
-= Supported configurations for Cloud Volumes ONTAP 9.6 in AWS
+= Supported configurations for Cloud Volumes ONTAP 9.7 in AWS
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -83,11 +83,11 @@ Notes:
 
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
-. These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. link:reference_limitations_aws_96.html#flash-cache-limitations[Learn more].
+. These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more].
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_96.html[storage limits].
+. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_97.html[storage limits].
 
 . For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 

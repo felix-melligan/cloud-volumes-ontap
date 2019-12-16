@@ -1,0 +1,160 @@
+---
+sidebar: sidebar
+permalink: reference_limits_azure_97.html
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks
+summary: Cloud Volumes ONTAP has storage configuration limits in Azure to provide reliable operations. For best performance, do not configure your system at the maximum values.
+---
+
+= Storage limits for Cloud Volumes ONTAP 9.7 in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+
+== Maximum system capacity by license
+
+The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn't support exceeding this limit.
+
+[cols="25,75",width=55%,options="header"]
+|===
+| License
+| Maximum system capacity (disks + object storage)
+
+| Explore	| 2 TB (data tiering is not supported with Explore)
+| Standard | 10 TB
+| Premium | 368 TB
+| BYOL | 368 TB
+
+|===
+
+===== For HA, is the license capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+== Disk and tiering limits by VM size
+
+The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+
+=== Disk and tiering limits for single node systems
+
+Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
+
+The table below shows the maximum system capacity by VM size with managed disks alone, and with disks and cold data tiering to object storage.
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS3_v2 | 15 | 368 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB
+| DS5_v2 | 63 | 368 TB | 368 TB
+| DS13_v2 | 31 | 368 TB | 368 TB
+| DS14_v2 | 63 | 368 TB | 368 TB
+| L8s_v2 | 15 | 368 TB | 368 TB
+|===
+
+=== Disk and tiering limits for HA pairs
+
+HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
+
+The table below shows the maximum system capacity by VM size with managed disks alone, and with disks and tiering to object storage.
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS4_v2 | 31 | 368 TB | 368 TB
+| DS5_v2 | 63 | 368 TB | 368 TB
+| DS13_v2 | 31 | 368 TB | 368 TB
+| DS14_v2 | 63 | 368 TB | 368 TB
+|===
+
+== Aggregate limits
+
+Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+[cols=2*,options="header,autowidth"]
+|===
+| Parameter
+| Limit
+
+| Maximum number of aggregates | Same as the disk limit
+| Maximum aggregate size |
+352 TB of raw capacity for single node ^1,^ ^2^
+96 TB of raw capacity for HA pairs ^1^
+| Disks per aggregate	| 1-12 ^3^
+| Maximum number of RAID groups per aggregate	| 1
+|===
+
+Notes:
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. The 352 TB limit is supported starting with 9.6 P3. Releases prior to 9.6 P3 support up to 200 TB of raw capacity in an aggregate on a single node system.
+
+. All disks in an aggregate must be the same size.
+
+== Logical storage limits
+
+[cols="22,22,56",width=100%,options="header"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
+| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP
+(HA pair or single node) | One data-serving SVM and one or more SVMs used for disaster recovery. ^1^
+
+The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+.2+| *Files*	| Maximum size | 16 TB
+| Maximum per volume |	Volume size dependent, up to 2 billion
+| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+.3+| *FlexVol volumes*	| Maximum per node |	500
+| Minimum size |	20 MB
+| Maximum size |
+Azure HA: Dependent on the size of the aggregate ^3^
+Azure single node: 100 TB
+| *Qtrees* |	Maximum per FlexVol volume |	4,995
+| *Snapshot copies* |	Maximum per FlexVol volume |	1,023
+
+|===
+
+Notes:
+
+. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
+
+. Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
+
+. Less than 100 TB is supported for this configuration because aggregates on HA pairs are limited to 96 TB of _raw_ capacity.
+
+== iSCSI storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| iSCSI storage
+| Parameter
+| Limit
+
+.4+| *LUNs*	| Maximum per node |	1,024
+| Maximum number of LUN maps |	1,024
+| Maximum size	| 16 TB
+| Maximum per volume	| 512
+| *igroups*	| Maximum per node | 256
+.2+| *Initiators*	| Maximum per node |	512
+| Maximum per igroup	| 128
+| *iSCSI sessions* |	Maximum per node | 1,024
+.2+| *LIFs*	| Maximum per port |	32
+| Maximum per portset	| 32
+| *Portsets* |	Maximum per node |	256
+
+|===

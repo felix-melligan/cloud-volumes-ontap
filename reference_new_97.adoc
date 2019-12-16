@@ -1,0 +1,57 @@
+---
+sidebar: sidebar
+permalink: reference_new_97.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.7
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
+
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
+
+== 9.7 RC1 (16 Dec 2019)
+
+Cloud Volumes ONTAP 9.7 RC1 is now available in AWS, Azure, and Google Cloud Platform. In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.7^], this release of Cloud Volumes ONTAP includes the following:
+
+* <<Flash Cache support in Azure>>
+* <<Fix for Azure NIC detach events>>
+
+=== Flash Cache support in Azure
+
+Cloud Volumes ONTAP now supports the Standard_L8s_v2 VM type with single node, BYOL systems in Azure. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_.
+
+Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It's effective for random read-intensive workloads, including databases, email, and file services.
+
+Deploy new systems using this VM type or modify existing systems to use this VM type and you'll automatically take advantage of Flash Cache.
+
+https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more about enabling Flash Cache on Cloud Volumes ONTAP, including a limitation with data compression^].
+
+=== Fix for Azure NIC detach events
+
+This release addresses an issue with Cloud Volumes ONTAP node reboots from Azure NIC detach events. Cloud Volumes ONTAP will handle these events more gracefully and not disrupt service. Cloud Volumes ONTAP HA pairs will still perform a takeover/give back sequence from Azure freeze maintenance events, but there's no subsequent reboot from a NIC detach that might occur during this time.
+
+== Upgrade notes
+
+* Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+* Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.6 systems to the 9.7 release.
++
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
+
+* Another upgrade option is to use the software image from the NetApp Support Site.
++
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-or-downgrading-cloud-volumes-ontap-by-using-an-http-or-ftp-server[Learn how to upgrade using the software image^].
++
+Before you use this option, http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[view the supported upgrade paths for ONTAP^]. The version of ONTAP that you can upgrade to varies based on the version of ONTAP currently running on your nodes.
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.

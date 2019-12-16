@@ -1,0 +1,83 @@
+---
+sidebar: sidebar
+permalink: reference_configs_gcp_97.html
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes
+summary: Cloud Volumes ONTAP is available in Google Cloud Platform in PAYGO and BYOL configurations. For PAYGO, you can choose from Explore, Standard, or Premium.
+---
+
+= Supported configurations for Cloud Volumes ONTAP 9.7 in GCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options: pay-as-you-go and Bring Your Own License (BYOL).
+
+== Pay-as-you-go overview
+
+* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in GCP.
++
+There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
+* Conversions from PAYGO to BYOL aren't currently supported, but are planned for a future release.
+* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
++
+https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+
+== BYOL overview
+
+* Single node license at 2, 12, 24, and 36-month subscription options.
+* Support is included for the length of the subscription term.
+
+== Supported configurations by license
+
+Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system.
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Supported machine types ^1^ | custom-4-16384 | n1-standard-8  | n1-standard-32
+a|
+* custom-4-16384
+* n1-standard-8
+* n1-standard-32
+
+| Supported disk types ^2^ 4+| Zonal persistent disks (SSD and standard)
+
+| Cold data tiering to object storage | Not supported 3+| Supported
+
+| Maximum system capacity
+(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^3^
+
+|===
+
+Notes:
+
+. The custom machine type has 4 vCPUs and 16 GB of memory. For details about standard machine types, refer to https://cloud.google.com/compute/docs/machine-types#standard_machine_types[Google Cloud Documentation: Machine Types^].
+
+. Enhanced write performance is enabled when using SSDs.
+
+. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
++
+link:reference_limits_gcp_97.html[Learn more about disk limits in GCP].
+
+. For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+== Supported disk sizes
+
+In GCP, an aggregate can contain up to 6 disks that are all the same type and size. The following disk sizes are supported:
+
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
