@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_configs_gcp_97.html
 keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes
-summary: Cloud Volumes ONTAP is available in Google Cloud Platform in PAYGO and BYOL configurations. For PAYGO, you can choose from Explore, Standard, or Premium.
+summary: Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.7 in GCP
@@ -13,22 +13,22 @@ summary: Cloud Volumes ONTAP is available in Google Cloud Platform in PAYGO and 
 :imagesdir: ./media/
 
 [.lead]
-Cloud Volumes ONTAP is available in Google Cloud Platform in two pricing options: pay-as-you-go and Bring Your Own License (BYOL).
+Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system. Two pricing options are available: pay as you go and Bring Your Own License (BYOL).
 
 == Pay-as-you-go overview
 
 * Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
 * A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in GCP.
-+
-There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
-* Conversions from PAYGO to BYOL aren't currently supported, but are planned for a future release.
+** There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
+** When the free trial ends, you'll be charged hourly according to the selected license, https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager[as long as you subscribed^]. If you haven't subscribed, the system shuts down.
+* Conversions from PAYGO to BYOL aren't currently supported.
 * Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
 +
 https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
 
 == BYOL overview
 
-* Single node license at 2, 12, 24, and 36-month subscription options.
+* Single node license at 12, 24, and 36-month subscription options.
 * Support is included for the length of the subscription term.
 
 == Supported configurations by license
