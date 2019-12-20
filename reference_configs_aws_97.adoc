@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_configs_aws_97.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks
-summary: Cloud Volumes ONTAP is available in AWS in PAYGO and BYOL configurations. For PAYGO, you can choose from Explore, Standard, or Premium.
+summary: Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.7 in AWS
@@ -13,7 +13,23 @@ summary: Cloud Volumes ONTAP is available in AWS in PAYGO and BYOL configuration
 :imagesdir: ./media/
 
 [.lead]
-Cloud Volumes ONTAP is available in AWS in two pricing options: pay-as-you-go and Bring Your Own License (BYOL). For pay-as-you-go, you can choose from three configurations: Explore, Standard, or Premium.
+Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available: pay as you go and Bring Your Own License (BYOL).
+
+== Pay-as-you-go overview
+
+* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in AWS.
+** There are no hourly software charges, but AWS infrastructure charges still apply (compute, storage, and networking).
+** When the free trial ends, you'll be charged hourly according to the selected license, https://aws.amazon.com/marketplace/pp/B07QX2QLXX[as long as you subscribed^]. If you haven't subscribed, the system shuts down.
+* Conversions from PAYGO to BYOL aren't currently supported.
+* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
++
+https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+
+== BYOL overview
+
+* Single node or HA license with 12, 24, and 36-month subscription options.
+* Support is included for the length of the subscription term.
 
 == Supported configurations by license
 
