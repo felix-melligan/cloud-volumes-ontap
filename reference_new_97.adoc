@@ -17,6 +17,16 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.7 D1 for Azure (29 Jan 2020)
+
+Cloud Volumes ONTAP 9.7 D1 is now available in Microsoft Azure.
+
+We discovered an issue with Cloud Volumes ONTAP 9.7 and earlier, where Cloud Volumes ONTAP may not start up successfully in situations where the Azure virtual machine is restarted.
+
+This issue is fixed in 9.7 D1 (and later). We highly recommend upgrading to the latest Cloud Volumes ONTAP version as soon as possible.
+
+If you have any questions, please contact us using the in-product chat or at https://www.netapp.com/us/contact-us/support.aspx.
+
 == 9.7 RC1 (16 Dec 2019)
 
 Cloud Volumes ONTAP 9.7 RC1 is now available in AWS, Azure, and Google Cloud Platform. In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.7^], this release of Cloud Volumes ONTAP includes the following:
