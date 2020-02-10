@@ -17,6 +17,10 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.7 GA (10 Feb 2020)
+
+The General Availability (GA) release of Cloud Volumes ONTAP 9.7 is now available in AWS and GCP. The GA release includes bug fixes. Cloud Manager will prompt you to upgrade your existing systems to this release.
+
 == 9.7 D1 for Azure (29 Jan 2020)
 
 Cloud Volumes ONTAP 9.7 D1 is now available in Microsoft Azure.
