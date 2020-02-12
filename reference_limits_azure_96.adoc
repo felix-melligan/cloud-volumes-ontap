@@ -57,6 +57,7 @@ The table below shows the maximum system capacity by VM size with managed disks 
 | DS5_v2 | 63 | 368 TB | 368 TB
 | DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
+| DS15_v2 | 63 | 368 TB | 368 TB
 |===
 
 === Disk and tiering limits for HA pairs
@@ -76,6 +77,7 @@ The table below shows the maximum system capacity by VM size with managed disks 
 | DS5_v2 | 63 | 368 TB | 368 TB
 | DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
+| DS15_v2 | 63 | 368 TB | 368 TB
 |===
 
 == Aggregate limits

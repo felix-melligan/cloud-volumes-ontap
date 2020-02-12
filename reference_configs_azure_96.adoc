@@ -40,6 +40,7 @@ a|
 a|
 * DS5_v2
 * DS14_v2
+* DS15_v2
 
 a|
 * DS3_v2
@@ -47,6 +48,7 @@ a|
 * DS5_v2
 * DS13_v2
 * DS14_v2
+* DS15_v2
 
 | Supported disk types ^1^ 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
@@ -88,12 +90,14 @@ a|
 a|
 * DS5_v2
 * DS14_v2
+* DS15_v2
 
 a|
 * DS4_v2
 * DS5_v2
 * DS13_v2
 * DS14_v2
+* DS15_v2
 
 | Supported disk types | Not supported 3+| Premium page blobs
 

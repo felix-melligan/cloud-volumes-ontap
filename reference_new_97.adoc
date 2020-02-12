@@ -17,6 +17,14 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Support for DS15_v2 in Azure (12 Feb 2020)
+
+Cloud Volumes ONTAP is now supported with the DS15_v2 virtual machine type in Azure, on both single node systems and HA pairs.
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15[Learn more about the DSv2 series^].
+
+link:reference_configs_azure_97.html[Learn more about supported 9.7 configurations in Azure].
+
 == 9.7 GA (10 Feb 2020)
 
 The General Availability (GA) release of Cloud Volumes ONTAP 9.7 is now available in AWS and GCP. The GA release includes bug fixes. Cloud Manager will prompt you to upgrade your existing systems to this release.
