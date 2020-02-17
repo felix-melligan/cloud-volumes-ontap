@@ -15,7 +15,33 @@ summary: Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 [.lead]
 Cloud Volumes ONTAP 9.6 includes several new features and enhancements.
 
-Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes] for details.
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
+
+== AWS updates (16 Feb 2020)
+
+We've introduced support for new EC2 instances and a change in the number of supported data disks.
+
+=== Support for new instances
+
+A few new EC2 instance types are now supported with Cloud Volumes ONTAP 9.6 when using a Premium or BYOL license:
+
+* c5.9xlarge
+* c5d.18xlarge ^1,2^
+* m5d.8xlarge ^1,2^
+
+^1^ These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more^].
+
+^2^ These instance types are supported with 9.6 P3 and later.
+
+https://aws.amazon.com/ec2/instance-types/[Learn more about these EC2 instance types^].
+
+link:reference_configs_aws_96.html[Learn more about supported 9.6 configurations in AWS].
+
+=== Supported data disks
+
+One less data disk is now supported for c5, m5, and r5 instances. For single node systems, 22 data disks are supported. For HA pairs, 19 data disks are supported per node.
+
+link:reference_limits_aws_96.html[Learn more about storage limits in AWS].
 
 == Support for DS15_v2 in Azure (12 Feb 2020)
 
