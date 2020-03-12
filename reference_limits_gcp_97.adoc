@@ -42,9 +42,9 @@ The table below shows the maximum system capacity with disks alone, and with dis
 | Parameter
 | Limit
 
-| Maximum disks per system | 16
+| Maximum disks per system | 124
 | Maximum disk size | 16 TB
-| Maximum system capacity with disks alone | 64 TB
+| Maximum system capacity with disks alone | 256 TB
 | Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket | 368 TB
 |===
 
@@ -57,8 +57,8 @@ Cloud Volumes ONTAP groups Google Cloud Platform disks into _aggregates_. Aggreg
 | Parameter
 | Limit
 
-| Maximum number of aggregates | 16
-| Maximum aggregate size | 64 TB of raw capacity ^1^
+| Maximum number of aggregates | Same as the disk limit
+| Maximum aggregate size | 256 TB of raw capacity ^1^
 | Disks per aggregate	| 1-6 ^2^
 | Maximum number of RAID groups per aggregate	| 1
 |===
