@@ -17,6 +17,17 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Increased disk capacity in GCP (13 Mar 2020)
+
+You can now attach up to 256 TB of persistent disks to Cloud Volumes ONTAP when using the Premium or BYOL licenses in Google Cloud. This is up from 64 TB.
+
+Just like before, you can reach the 368 TB maximum system capacity for Premium and BYOL by combining persistent disks with data tiering to object storage.
+
+The maximum number of data disks per system has also increased to 124 disks.
+
+*	link:reference_configs_gcp_97.html[Learn more about supported configurations for Cloud Volumes ONTAP in GCP]
+* link:reference_limits_gcp_97.html[Review storage limits in GCP]
+
 == 9.7 P1 (6 Mar 2020)
 
 The 9.7 P1 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/products/cloud_ontap/9.7P1/index.html[View the list of bugs fixed in the P1 patch^].
