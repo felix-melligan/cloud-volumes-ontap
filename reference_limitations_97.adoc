@@ -47,6 +47,7 @@ The following features are not supported with Cloud Volumes ONTAP:
 * Aggregate-level background deduplication
 * Disk maintenance center
 * Disk sanitization
+* FabricPool mirroring
 * Fibre Channel (FC)
 * Flash Pools
 * Infinite Volumes
