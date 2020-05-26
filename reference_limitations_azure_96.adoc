@@ -15,6 +15,10 @@ summary: These known limitations are specific to Cloud Volumes ONTAP in Microsof
 [.lead]
 The following known limitations are specific to Cloud Volumes ONTAP in Microsoft Azure. Be sure to also review link:reference_limitations_96.html[Limitations for Cloud Volumes ONTAP 9.6 in all cloud providers].
 
+== New deployments aren't supported
+
+New deployments of Cloud Volumes ONTAP 9.6 are no longer supported in Azure. You'll need to deploy Cloud Volumes ONTAP 9.7.
+
 == HA limitations
 
 The following limitations affect Cloud Volumes ONTAP HA pairs in Microsoft Azure:
