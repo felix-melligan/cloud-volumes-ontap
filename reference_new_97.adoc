@@ -19,15 +19,15 @@ Additional features and enhancements are also introduced in the latest versions 
 
 == 9.7 P4 (2 June 2020)
 
-The 9.7 P4 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/products/cloud_ontap/9.7P4/index.html[View the list of bugs fixed in the P4 patch^].
+The 9.7 P4 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P4[View the list of bugs fixed in the P4 patch^].
 
 == 9.7 P3 (2 May 2020)
 
-The 9.7 P3 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/products/cloud_ontap/9.7P3/index.html[View the list of bugs fixed in the P3 patch^].
+The 9.7 P3 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P3[View the list of bugs fixed in the P3 patch^].
 
 == 9.7 P2 (8 Apr 2020)
 
-The 9.7 P2 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/products/cloud_ontap/9.7P2/index.html[View the list of bugs fixed in the P2 patch^].
+The 9.7 P2 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P2[View the list of bugs fixed in the P2 patch^].
 
 == Increased disk capacity in GCP (13 Mar 2020)
 
@@ -42,7 +42,7 @@ The maximum number of data disks per system has also increased to 124 disks.
 
 == 9.7 P1 (6 Mar 2020)
 
-The 9.7 P1 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/products/cloud_ontap/9.7P1/index.html[View the list of bugs fixed in the P1 patch^].
+The 9.7 P1 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P1[View the list of bugs fixed in the P1 patch^].
 
 == AWS updates (16 Feb 2020)
 
