@@ -39,6 +39,6 @@ See the https://docs.netapp.com/us-en/occm/media/c2s.pdf[Quick Start Guide for t
 
 == Limitations in AWS GovCloud (US) regions
 
-* Cloud Manager must be deployed in an AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in the same AWS GovCloud (US) region.
+* Cloud Manager must be deployed in an AWS GovCloud (US) region if you want to launch Cloud Volumes ONTAP instances in any AWS GovCloud (US) region.
 
 * When deployed in an AWS GovCloud (US) region, Cloud Manager cannot discover ONTAP clusters in a NetApp Private Storage for Microsoft Azure configuration or a NetApp Private Storage for SoftLayer configuration.
