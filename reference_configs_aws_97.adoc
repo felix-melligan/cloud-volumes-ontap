@@ -98,12 +98,12 @@ a|
 * r5.12xlarge ^3^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^3^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
+| Supported disk types ^4^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^4^
+(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^5^
 
 | Term 3+| Hourly | 6 or 12 months
 
