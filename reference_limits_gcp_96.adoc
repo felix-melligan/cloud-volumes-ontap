@@ -78,7 +78,7 @@ Notes:
 | Limit
 
 | *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP
-(HA pair or single node) | One data-serving SVM and one or more SVMs used for disaster recovery. ^1^
+(HA pair or single node) | One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM. ^1^
 
 The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
 .2+| *Files*	| Maximum size | 16 TB
@@ -94,7 +94,10 @@ The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or
 
 Notes:
 
-. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on any additional SVMs. You must use System Manager or the CLI for SVM disaster recovery.
+. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on an additional SVM. You must use System Manager or the CLI for SVM disaster recovery.
++
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 

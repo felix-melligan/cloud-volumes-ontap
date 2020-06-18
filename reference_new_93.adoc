@@ -51,7 +51,7 @@ To deploy Cloud Manager in these regions, you must create a CentOS 7.3 virtual m
 
 == Support for SVM disaster recovery
 
-ONTAP Cloud supports one data-serving Storage Virtual Machine (SVM) and one or more SVMs used for disaster recovery.
+ONTAP Cloud supports one data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM.
 
 SVM disaster recovery is the asynchronous mirroring of SVM data and configuration from a source SVM to a destination SVM. You can quickly activate a destination SVM for data access if the source SVM is no longer available.
 
