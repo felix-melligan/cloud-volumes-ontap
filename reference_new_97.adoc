@@ -17,6 +17,20 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Germany Sovereign regions in Azure are no longer supported (26 June 2020)
+
+Cloud Volumes ONTAP is no longer supported in the following Azure regions:
+
+* Germany Central (Sovereign)
+* Germany Northeast (Sovereign)
+
+NetApp continues to support Cloud Volumes ONTAP in the public Germany regions:
+
+* Germany North (Public)
+* Germany West Central (Public)
+
+https://cloud.netapp.com/cloud-volumes-global-regions[See the full list of supported Azure regions^].
+
 == 9.7 P4 (2 June 2020)
 
 The 9.7 P4 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P4[View the list of bugs fixed in the P4 patch^].
