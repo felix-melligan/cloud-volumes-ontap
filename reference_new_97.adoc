@@ -17,6 +17,45 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Support for multiple storage VMs in AWS (16 July 2020)
+
+Cloud Volumes ONTAP 9.7 now supports multiple storage VMs (SVMs) in AWS with the C5, M5, and R5 instance types:
+
+* 12 SVMs are supported with single node systems
+* 8 SVMs are supported with HA pairs
+
+A license is required for each additional SVM beyond the first SVM that comes with Cloud Volumes ONTAP by default.
+
+<How do customers purchase licenses?>
+<Is there anything else that they need to know?>
+
+== 9.7 P5 (16 July 2020)
+
+Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes new features and enhancements:
+
+* <<Support for new VM types with Ultra SSD VNVRAM>>
+* <<Azure managed identity for data tiering>>
+* <<Big instance types>>
+
+=== Support for new VM types with Ultra SSD VNVRAM
+
+Cloud Volumes ONTAP now supports the following VM types with single node systems:
+
+* Standard_E32s_v3
+* Standard_E48s_v3
+
+These VM types use an Ultra SSD for VNVRAM, which provides better write performance.
+
+=== Azure managed identity for data tiering
+
+You can now set up data tiering to Azure Blob storage using a managed identity instead of storage account keys. A managed identity enables Cloud Volumes ONTAP to authenticate with Blob storage without providing credentials.
+
+<I need to add a link or screenshot that shows how to do this, but I have no information>
+
+=== Big instance types
+
+<I don't have any information about this feature.>
+
 == Germany Sovereign regions in Azure are no longer supported (26 June 2020)
 
 Cloud Volumes ONTAP is no longer supported in the following Azure regions:
