@@ -19,38 +19,37 @@ Additional features and enhancements are also introduced in the latest versions 
 
 == Support for multiple storage VMs in AWS (16 July 2020)
 
-Cloud Volumes ONTAP 9.7 now supports multiple storage VMs (SVMs) in AWS with the C5, M5, and R5 instance types:
+Cloud Volumes ONTAP 9.7 now supports multiple storage VMs (SVMs) in AWS.
 
-* 12 SVMs are supported with single node systems
-* 8 SVMs are supported with HA pairs
+Multiple SVMs are supported with the C5, M5, and R5 instance types when you bring your own license (BYOL).
 
-A license is required for each additional SVM beyond the first SVM that comes with Cloud Volumes ONTAP by default.
+The following number of SVMs are supported:
 
-<How do customers purchase licenses?>
-<Is there anything else that they need to know?>
+* 12 SVMs with single node systems
+* 8 SVMs with HA pairs
+
+An SVM add-on license is required for each additional _data-serving_ SVM beyond the first SVM that comes with Cloud Volumes ONTAP by default.
+
+SVMs that you configure for disaster recovery (DR) don't require an SVM add-on license (they are free of charge), but they do count against the SVM limit.
+
+For example, if you have 8 data-serving SVMs on an HA pair, then you've reached the limit and can't create any additional SVMs. The same is true for another HA pair that has 8 DR SVMs--you've reached the limit and can't create any additional SVMs.
+
+Note that the creation of new SVMs must be done through System Manager or the CLI.
+
+<comment about all other configurations>
 
 == 9.7 P5 (16 July 2020)
 
-Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes new features and enhancements:
-
-* <<Support for new VM types with Ultra SSD VNVRAM>>
-* <<Azure managed identity for data tiering>>
-* <<Big instance types>>
+Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes two enhancements.
 
 === Support for new VM types with Ultra SSD VNVRAM
 
-Cloud Volumes ONTAP now supports the following VM types with single node systems:
+Cloud Volumes ONTAP now supports the following VM types with single node systems and a Premium or BYOL license:
 
 * Standard_E32s_v3
 * Standard_E48s_v3
 
-These VM types use an Ultra SSD for VNVRAM, which provides better write performance.
-
-=== Azure managed identity for data tiering
-
-You can now set up data tiering to Azure Blob storage using a managed identity instead of storage account keys. A managed identity enables Cloud Volumes ONTAP to authenticate with Blob storage without providing credentials.
-
-<I need to add a link or screenshot that shows how to do this, but I have no information>
+These VM types use an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
 
 === Big instance types
 
