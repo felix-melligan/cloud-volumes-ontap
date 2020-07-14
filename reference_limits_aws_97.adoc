@@ -148,10 +148,25 @@ Notes:
 | Parameter
 | Limit
 
-| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP
-(HA pair or single node) | One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM. ^1^
+| *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
+(HA pair or single node) a|
+*C5, M5, and R5 instances with BYOL*
+The following number of SVMs are supported with C5, M5, and R5 instance types when you bring your own license (BYOL) and purchase SVM add-on licenses:
+
+* 12 SVMs with single node systems
+* 8 SVMs with HA pairs
+
+NOTE: An SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
+
+An SVM add-on license is required for each additional _data-serving_ SVM beyond the first SVM that comes with Cloud Volumes ONTAP by default.
+
+SVMs that you configure for disaster recovery (DR) don't require an SVM add-on license (they are free of charge), but they do count against the SVM limit. ^1,2^b
+
+*All other configurations*
+One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there's an outage on the source SVM. ^1^
 
 The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+
 .2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
@@ -165,7 +180,9 @@ The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or
 
 Notes:
 
-. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on an additional SVM. You must use System Manager or the CLI for SVM disaster recovery.
+. For example, if you have 8 data-serving SVMs on an HA pair, then you've reached the limit and can't create any additional SVMs. The same is true for another HA pair that has 8 disaster recovery SVMs--you've reached the limit and can't create any additional SVMs.
+
+. You can activate a destination SVM for data access if there’s an outage on the source SVM. Cloud Manager doesn't provide any setup or orchestration support for SVM disaster recovery. You must use System Manager or the CLI.
 +
 * https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
 * https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
