@@ -35,16 +35,6 @@ Changes to an ONTAP Cloud configuration from your cloud provider's console resul
 
 All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
 
-=== Storage Virtual Machine (SVM) limitation
-
-ONTAP Cloud supports one data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM. The one data-serving SVM spans the entire ONTAP Cloud system (HA pair or single node).
-
-Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on an additional SVM. You must use System Manager or the CLI for SVM disaster recovery.
-
-https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
-
-https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
-
 === SnapManager licensing limitation
 
 SnapManager per-server licenses are supported with ONTAP Cloud. Per-storage system (SnapManager suite) licenses are not supported.
