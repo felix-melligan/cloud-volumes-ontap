@@ -21,22 +21,18 @@ Additional features and enhancements are also introduced in the latest versions 
 
 Cloud Volumes ONTAP 9.7 now supports multiple storage VMs (SVMs) in AWS.
 
-Multiple SVMs are supported with the C5, M5, and R5 instance types when you bring your own license (BYOL).
+Multiple storage VMs are supported with the C5, M5, and R5 instance types when you bring your own license (BYOL). The following number of storage VMs are supported:
 
-The following number of SVMs are supported:
+* 12 storage VMs with single node systems
+* 8 storage VMs with HA pairs
 
-* 12 SVMs with single node systems
-* 8 SVMs with HA pairs
+An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that is configured with Cloud Volumes ONTAP by default.
 
-An SVM add-on license is required for each additional _data-serving_ SVM beyond the first SVM that comes with Cloud Volumes ONTAP by default.
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit.
 
-SVMs that you configure for disaster recovery (DR) don't require an SVM add-on license (they are free of charge), but they do count against the SVM limit.
+For example, if you have 8 data-serving storage VMs on an HA pair, then you've reached the limit and can't create any additional storage VMs. The same is true for another HA pair that has 8 storage VMs configured for disaster recovery--you've reached the limit and can't create any additional storage VMs.
 
-For example, if you have 8 data-serving SVMs on an HA pair, then you've reached the limit and can't create any additional SVMs. The same is true for another HA pair that has 8 DR SVMs--you've reached the limit and can't create any additional SVMs.
-
-Note that the creation of new SVMs must be done through System Manager or the CLI.
-
-<comment about all other configurations>
+Creating additional storage VMs must be done through System Manager or the CLI.
 
 == 9.7 P5 (16 July 2020)
 

@@ -151,25 +151,25 @@ Notes:
 | *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
 (HA pair or single node) a|
 *C5, M5, and R5 instances with BYOL*
-The following number of SVMs are supported with C5, M5, and R5 instance types when you bring your own license (BYOL) and purchase SVM add-on licenses:
+The following number of storage VMs are supported with C5, M5, and R5 instance types when you bring your own license (BYOL) and purchase add-on licenses:
 
-* 12 SVMs with single node systems
-* 8 SVMs with HA pairs
+* 12 storage VMs with single node systems
+* 8 storage VMs with HA pairs
 
-NOTE: An SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
+NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
 
-An SVM add-on license is required for each additional _data-serving_ SVM beyond the first SVM that comes with Cloud Volumes ONTAP by default.
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default.
 
-SVMs that you configure for disaster recovery (DR) don't require an SVM add-on license (they are free of charge), but they do count against the SVM limit. ^1,2^b
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the SVM limit. ^1,2^
 
 *All other configurations*
-One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there's an outage on the source SVM. ^1^
+One data-serving SVM and one destination SVM used for disaster recovery are supported. ^2^
 
 The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
 
 .2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
-| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+| *FlexClone volumes*	| Hierarchical clone depth ^3^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
 | Maximum size | Dependent on the size of the aggregate
