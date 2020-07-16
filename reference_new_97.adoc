@@ -26,30 +26,13 @@ Multiple storage VMs are supported with the C5, M5, and R5 instance types when y
 * 12 storage VMs with single node systems
 * 8 storage VMs with HA pairs
 
-An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that is configured with Cloud Volumes ONTAP by default.
+An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that is configured with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit.
 
 For example, if you have 8 data-serving storage VMs on an HA pair, then you've reached the limit and can't create any additional storage VMs. The same is true for another HA pair that has 8 storage VMs configured for disaster recovery--you've reached the limit and can't create any additional storage VMs.
 
 Creating additional storage VMs must be done through System Manager or the CLI.
-
-== 9.7 P5 (16 July 2020)
-
-Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes two enhancements.
-
-=== Support for new VM types with Ultra SSD VNVRAM
-
-Cloud Volumes ONTAP now supports the following VM types with single node systems and a Premium or BYOL license:
-
-* Standard_E32s_v3
-* Standard_E48s_v3
-
-These VM types use an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
-
-=== Big instance types
-
-<I don't have any information about this feature.>
 
 == Germany Sovereign regions in Azure are no longer supported (26 June 2020)
 
