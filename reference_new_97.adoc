@@ -17,6 +17,23 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Support for multiple storage VMs in AWS (16 July 2020)
+
+Cloud Volumes ONTAP 9.7 now supports multiple storage VMs (SVMs) in AWS.
+
+Multiple storage VMs are supported with the C5, M5, and R5 instance types when you bring your own license (BYOL). The following number of storage VMs are supported:
+
+* 12 storage VMs with single node systems
+* 8 storage VMs with HA pairs
+
+An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that is configured with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit.
+
+For example, if you have 8 data-serving storage VMs on an HA pair, then you've reached the limit and can't create any additional storage VMs. The same is true for another HA pair that has 8 storage VMs configured for disaster recovery--you've reached the limit and can't create any additional storage VMs.
+
+Creating additional storage VMs must be done through System Manager or the CLI.
+
 == Germany Sovereign regions in Azure are no longer supported (26 June 2020)
 
 Cloud Volumes ONTAP is no longer supported in the following Azure regions:
