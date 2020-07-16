@@ -158,7 +158,7 @@ The following number of storage VMs are supported with C5, M5, and R5 instance t
 
 NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
 
-An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default.
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
 
