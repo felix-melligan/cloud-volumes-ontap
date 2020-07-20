@@ -58,6 +58,8 @@ The table below shows the maximum system capacity by VM size with managed disks 
 | DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
 | DS15_v2 | 63 | 368 TB | 368 TB
+| E32s_v3 | 31 | 368 TB | 368 TB
+| E48s_v3 | 31 | 368 TB | 368 TB
 | L8s_v2 | 15 | 368 TB | 368 TB
 |===
 

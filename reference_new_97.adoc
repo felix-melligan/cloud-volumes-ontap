@@ -17,6 +17,23 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.7 P5 in Azure (20 July 2020)
+
+Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes bug fixes and support for new VM types.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5[View the list of bugs fixed in the P5 patch^].
+
+=== Support for new VM types with Ultra SSD VNVRAM
+
+Cloud Volumes ONTAP now supports the following VM types with single node systems that have a Premium or BYOL license:
+
+* Standard_E32s_v3
+* Standard_E48s_v3
+
+These VM types use an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
+
+Support for these VM types is currently available in the following regions: US Gov Virginia, South Central US, and West US.
+
 == Support for multiple storage VMs in AWS (16 July 2020)
 
 Cloud Volumes ONTAP 9.7 now supports multiple storage VMs (SVMs) in AWS.
