@@ -17,6 +17,19 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.7 P5 in AWS (27 July 2020)
+
+Cloud Volumes ONTAP 9.7 P5 is now available in AWS. This patch release includes bug fixes and support for new EC2 instance types.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5[View the list of bugs fixed in the P5 patch^].
+
+=== Support for new EC2 instance types
+
+Cloud Volumes ONTAP now supports the following EC2 instance types with the Premium and BYOL licenses:
+
+* c5n.9xlarge
+* c5n.18xlarge
+
 == 9.7 P5 in Azure (20 July 2020)
 
 Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes bug fixes and support for new VM types.

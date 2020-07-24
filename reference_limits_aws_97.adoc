@@ -63,6 +63,8 @@ The disk limits below are specific to disks that contain user data. The limits d
 | c5d.4xlarge | 22 | 352 TB | 368 TB
 | c5d.9xlarge | 22 | 352 TB | 368 TB
 | c5d.18xlarge | 22 | 352 TB | 368 TB
+| c5n.9xlarge | 22 | 352 TB | 368 TB
+| c5n.18xlarge | 22 | 352 TB | 368 TB
 | m4.xlarge | 34 | 368 TB | 368 TB
 | m4.2xlarge | 34 | 368 TB | 368 TB
 | m4.4xlarge | 34 | 368 TB | 368 TB
@@ -97,6 +99,8 @@ The disk limits below are specific to disks that contain user data. The limits d
 | c5d.4xlarge | 19 | 304 TB | 368 TB
 | c5d.9xlarge | 19 | 304 TB | 368 TB
 | c5d.18xlarge | 19 | 304 TB | 368 TB
+| c5n.9xlarge | 19 | 304 TB | 368 TB
+| c5n.18xlarge | 19 | 304 TB | 368 TBs
 | m4.xlarge | 31 | 368 TB | 368 TB
 | m4.2xlarge | 31 | 368 TB | 368 TB
 | m4.4xlarge | 31 | 368 TB | 368 TB
