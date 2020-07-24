@@ -105,8 +105,6 @@ a|
 | Maximum system capacity
 (disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^5^
 
-| Term 3+| Hourly | 6 or 12 months
-
 |===
 
 Notes:
