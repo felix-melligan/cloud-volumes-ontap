@@ -99,7 +99,7 @@ a|
 * r5.xlarge
 * r5.2xlarge
 * r5.8xlarge
-* r5.12xlarge ^3^
+* r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
 | Supported disk types ^5^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
