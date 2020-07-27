@@ -62,6 +62,8 @@ a|
 * c5d.4xlarge ^2^
 * c5d.9xlarge ^2^
 * c5d.18xlarge ^2^
+* c5n.9xlarge ^3^
+* c5n.18xlarge ^3^
 * m4.4xlarge
 * m5.4xlarge
 * m5.16xlarge
@@ -70,7 +72,7 @@ a|
 * r4.2xlarge
 * r5.2xlarge
 * r5.8xlarge
-* r5.12xlarge ^3^
+* r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
 a|
@@ -81,6 +83,8 @@ a|
 * c5d.4xlarge ^2^
 * c5d.9xlarge ^2^
 * c5d.18xlarge ^2^
+* c5n.9xlarge ^3^
+* c5n.18xlarge ^3^
 * m4.xlarge
 * m4.2xlarge
 * m4.4xlarge
@@ -95,15 +99,15 @@ a|
 * r5.xlarge
 * r5.2xlarge
 * r5.8xlarge
-* r5.12xlarge ^3^
+* r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^4^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
+| Supported disk types ^5^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^5^
+(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^6^
 
 |===
 
@@ -112,6 +116,8 @@ Notes:
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
 . These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more].
+
+. c5n.9xlarge and c5n.18xlarge are supported starting with 9.7 P5.
 
 . The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs.
 
