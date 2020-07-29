@@ -84,8 +84,7 @@ The disk limits below are specific to disks that contain user data. The limits d
 |===
 
 === Single node with BYOL licenses option 1
-
-[cols="16,20,30,32",width=69%,options="header"]
+[cols="12,20,34,34",width=100%,options="header"]
 |===
 | Instance type
 | Max disks per node
@@ -96,18 +95,18 @@ The disk limits below are specific to disks that contain user data. The limits d
 a|
 * One license: 368 TB
 * Multiple licenses: 544 TB
-a| 368 TB
+a|
 * One license: 368 TB
 * Multiple licenses: 368 TB x each license
 | c4.8xlarge | 34
 a|
 * One license: 368 TB
 * Multiple licenses: 544 TB
-a| 368 TB
+a|
 * One license: 368 TB
 * Multiple licenses: 368 TB x each license
 | c5.9xlarge | 22 | 352 TB
-a| 368 TB
+a|
 * One license: 368 TB
 * Multiple licenses: 368 TB x each license
 | c5.18xlarge | 22 | 352 TB | 368 TB
@@ -134,7 +133,7 @@ a| 368 TB
 | r5d.2xlarge | 22 | 352 TB | 368 TB
 |===
 
-=== Single node with BYOL licenses option 1
+=== Single node with BYOL licenses option 2
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
