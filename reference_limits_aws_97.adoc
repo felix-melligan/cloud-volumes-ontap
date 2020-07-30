@@ -47,7 +47,7 @@ Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB
 
 The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-Disk limits are shown by instance for Premium and BYOL licenses only because an Explore license supports only up to 2 TB and a Standard license supports only up to 10 TB.
+Disk limits are shown by instance for Premium and BYOL licenses only because disk limits can't be reached with Explore or Standard licenses.
 
 === Single node with a Premium license
 
