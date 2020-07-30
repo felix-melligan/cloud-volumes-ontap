@@ -29,7 +29,7 @@ For some HA configurations, disk limits prevent you from reaching the 368 TB cap
 | Explore	| 2 TB (data tiering is not supported with Explore)
 | Standard | 10 TB
 | Premium | 368 TB
-| BYOL | 368 TB
+| BYOL | 368 TB per each license
 
 |===
 
@@ -46,6 +46,8 @@ No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nod
 Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB. The sections below show disk and tiering limits by EC2 instance type because many EC2 instance types have different disk limits. Disk limits are also different between single node systems and HA pairs.
 
 The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+
+Disk limits are shown by instance for Premium and BYOL licenses only because an Explore license supports only up to 2 TB and a Standard license supports only up to 10 TB.
 
 === Single node with a Premium license
 
@@ -83,57 +85,7 @@ The disk limits below are specific to disks that contain user data. The limits d
 | r5d.2xlarge | 22 | 352 TB | 368 TB
 |===
 
-=== Single node with BYOL licenses option 1
-[cols="12,20,34,34",width=100%,options="header"]
-|===
-| Instance type
-| Max disks per node
-| Max system capacity with disks alone
-| Max system capacity with disks and data tiering
-
-| c4.4xlarge | 34
-a|
-* One license: 368 TB
-* Multiple licenses: 544 TB
-a|
-* One license: 368 TB
-* Multiple licenses: 368 TB x each license
-| c4.8xlarge | 34
-a|
-* One license: 368 TB
-* Multiple licenses: 544 TB
-a|
-* One license: 368 TB
-* Multiple licenses: 368 TB x each license
-| c5.9xlarge | 22 | 352 TB
-a|
-* One license: 368 TB
-* Multiple licenses: 368 TB x each license
-| c5.18xlarge | 22 | 352 TB | 368 TB
-| c5d.4xlarge | 22 | 352 TB | 368 TB
-| c5d.9xlarge | 22 | 352 TB | 368 TB
-| c5d.18xlarge | 22 | 352 TB | 368 TB
-| c5n.9xlarge | 22 | 352 TB | 368 TB
-| c5n.18xlarge | 22 | 352 TB | 368 TB
-| m4.xlarge | 34 | 368 TB | 368 TB
-| m4.2xlarge | 34 | 368 TB | 368 TB
-| m4.4xlarge | 34 | 368 TB | 368 TB
-| m5.xlarge | 22 | 352 TB | 368 TB
-| m5.2xlarge | 22 | 352 TB | 368 TB
-| m5.4xlarge | 22 | 352 TB | 368 TB
-| m5.16xlarge | 22 | 352 TB | 368 TB
-| m5d.8xlarge | 22 | 352 TB | 368 TB
-| m5d.12xlarge | 22 | 352 TB | 368 TB
-| r4.xlarge | 34 | 368 TB | 368 TB
-| r4.2xlarge | 34 | 368 TB | 368 TB
-| r5.xlarge | 22 | 352 TB | 368 TB
-| r5.2xlarge | 22 | 352 TB | 368 TB
-| r5.8xlarge | 22 | 352 TB | 368 TB
-| r5.12xlarge | 22 | 352 TB | 368 TB
-| r5d.2xlarge | 22 | 352 TB | 368 TB
-|===
-
-=== Single node with BYOL licenses option 2
+=== Single node with one or more BYOL licenses
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
@@ -204,48 +156,43 @@ a|
 | r5d.2xlarge | 19 | 304 TB | 368 TB
 |===
 
-=== HA pairs with BYOL licenses
+=== HA pairs with one or more BYOL licenses
 
-[cols="16,20,30,32",width=69%,options="header"]
+[cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
 | Instance type
 | Max disks per node
-| Max system capacity with disks alone
-| Max system capacity with disks and data tiering
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
 
-| c4.4xlarge | 31 | 368 TB | 368 TB
-| c4.8xlarge | 31 | 368 TB | 368 TB
-| c5.9xlarge | 19 | 304 TB | 368 TB
-| c5.18xlarge | 19 | 304 TB | 368 TB
-| c5d.4xlarge | 19 | 304 TB | 368 TB
-| c5d.9xlarge | 19 | 304 TB | 368 TB
-| c5d.18xlarge | 19 | 304 TB | 368 TB
-| c5n.9xlarge | 19 | 304 TB | 368 TB
-| c5n.18xlarge | 19 | 304 TB | 368 TB
-| m4.xlarge | 31 | 368 TB | 368 TB
-| m4.2xlarge | 31 | 368 TB | 368 TB
-| m4.4xlarge | 31 | 368 TB | 368 TB
-| m5.xlarge | 19 | 304 TB | 368 TB
-| m5.2xlarge | 19 | 304 TB | 368 TB
-| m5.4xlarge | 19 | 304 TB | 368 TB
-| m5.16xlarge | 19 | 304 TB | 368 TB
-| m5d.8xlarge | 19 | 304 TB | 368 TB
-| m5d.12xlarge | 19 | 304 TB | 368 TB
-| r4.xlarge | 31 | 368 TB | 368 TB
-| r4.2xlarge | 31 | 368 TB | 368 TB
-| r5.xlarge | 19 | 304 TB | 368 TB
-| r5.2xlarge | 19 | 304 TB | 368 TB
-| r5.8xlarge | 19 | 304 TB | 368 TB
-| r5.12xlarge | 19 | 304 TB | 368 TB
-| r5d.2xlarge | 19 | 304 TB | 368 TB
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| c4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c4.8xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c5.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5n.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5n.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.16xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5d.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5d.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| r4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| r5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5d.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 |===
-
-=== Disk and tiering limits for single node systems
-
-
-=== Disk and tiering limits for HA pairs
-
-
 
 == Aggregate limits
 
@@ -266,7 +213,7 @@ HA pairs: 18 in a node ^1^
 
 Notes:
 
-. It is not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
+. It is not possible to create 19 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
