@@ -29,7 +29,7 @@ For some HA configurations, disk limits prevent you from reaching the 368 TB cap
 | Explore	| 2 TB (data tiering is not supported with Explore)
 | Standard | 10 TB
 | Premium | 368 TB
-| BYOL | 368 TB per each license
+| BYOL | 368 TB per license
 
 |===
 

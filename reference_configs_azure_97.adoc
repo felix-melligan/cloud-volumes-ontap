@@ -76,7 +76,7 @@ a|
 | Cold data tiering to Blob storage ^4^ | Not supported 3+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB 2+| 368 TB
+(disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license
 
 |===
 

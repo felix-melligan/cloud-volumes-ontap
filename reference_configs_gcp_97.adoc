@@ -54,7 +54,7 @@ a|
 | Cold data tiering to object storage | Not supported 3+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB 2+| 368 TB ^3^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^
 
 |===
 
