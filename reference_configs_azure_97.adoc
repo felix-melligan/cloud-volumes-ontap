@@ -28,8 +28,11 @@ https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go 
 
 == BYOL overview
 
-* Single node or HA license with 12, 24, and 36-month subscription options.
+* Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
 * Support is included for the length of the subscription term.
+* You can purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity.
++
+For example, you might purchase two licenses to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase four licenses to get up to 1.4 PB.
 
 == Supported configurations by license
 
@@ -127,7 +130,7 @@ a|
 | Cold data tiering to Blob storage ^2^ | Not supported 3+| Supported
 
 | Maximum system capacity
-(disks + object storage) | Not supported | 10 TB 2+| 368 TB
+(disks + object storage) | Not supported | 368 TB | 368 TB per license
 
 |===
 

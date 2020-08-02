@@ -37,13 +37,13 @@ The capacity limit is for the entire HA pair. It is not per node. For example, i
 
 == Disk and tiering limits by VM size
 
-The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk. The tables below show the maximum system capacity by VM size with disks alone, and with disks and cold data tiering to object storage.
 
-=== Disk and tiering limits for single node systems
+Disk limits are shown by VM size for Premium and BYOL licenses only because disk limits can’t be reached with Explore or Standard licenses due to system capacity limits.
 
-Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
+* Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
 
-The table below shows the maximum system capacity by VM size with managed disks alone, and with disks and cold data tiering to object storage.
+* HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
 
 === Single node with a Premium license
 
@@ -88,12 +88,6 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | E48s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
 | L8s_v2 | 15 | 368 TB | 368 TB | 480 TB | 368 TB x each license
 |===
-
-=== Disk and tiering limits for HA pairs
-
-HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
-
-The table below shows the maximum system capacity by VM size with managed disks alone, and with disks and tiering to object storage.
 
 === HA pairs with a Premium license
 

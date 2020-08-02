@@ -99,14 +99,20 @@ Notes:
 
 === Capacity and disk limits by Azure VM size
 
-In Azure, single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size. The table below shows the maximum capacity by VM size with managed disks alone, and with disks and tiering to object storage.
+In Azure, single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
 
-[cols=4*,options="header,autowidth"]
+The tables below show the maximum system capacity by VM size with disks alone, and with disks and cold data tiering to object storage.
+
+Disk limits are shown by VM size for Premium and BYOL licenses only because disk limits can’t be reached with Explore or Standard licenses due to system capacity limits.
+
+==== Single node with a Premium license
+
+[cols="14,20,31,33",width=68%,options="header"]
 |===
 | VM size
-| Max managed disks per node
-| Max system capacity with managed disks
-| Max system capacity with managed disks + Blob storage
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
 
 | DS3_v2 | 15 | 368 TB | Tiering not supported
 | DS4_v2 | 31 | 368 TB | 368 TB
@@ -114,6 +120,27 @@ In Azure, single node systems can use Standard HDD Managed Disks, Standard SSD M
 | DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
 |===
+
+==== Single node with one or more BYOL licenses
+
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 2 PB with DS5_v2.
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| VM size
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| DS3_v2 | 15 | 368 TB | Tiering not supported | 480 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS5_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS13_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS14_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+|===
+
 
 == Logical storage limits
 

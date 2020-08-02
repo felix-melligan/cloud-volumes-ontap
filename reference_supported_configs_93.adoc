@@ -101,7 +101,7 @@ a|
 
 | Underlying storage 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, up to 32 TB per disk
 
-| License capacity limit | 2 TB | 10 TB 2+| 368 TB
+| License capacity limit | 2 TB | 10 TB | 368 TB | 368 TB per license
 
 | Term 3+| Hourly | 12 months
 

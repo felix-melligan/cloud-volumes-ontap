@@ -46,6 +46,8 @@ The table below shows the maximum system capacity with disks alone, and with dis
 | Maximum disk size | 16 TB
 | Maximum system capacity with disks alone | 64 TB
 | Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket a|
+* Explore: 2 TB (tiering not supported)
+* Standard: 10 TB
 * Premium: 368 TB
 * BYOL: 368 TB per license
 |===

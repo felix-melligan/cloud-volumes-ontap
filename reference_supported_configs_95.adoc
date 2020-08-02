@@ -129,9 +129,7 @@ a|
 | Underlying storage 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, up to 32 TB per disk
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB 2+| 368 TB
-
-| Term 3+| Hourly | 12 months
+(disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license
 
 |===
 
@@ -175,9 +173,7 @@ a|
 
 | Underlying storage | Not supported 3+| Premium page blobs, up to 8 TB per disk
 
-| Maximum system capacity | Not supported | 10 TB 2+| 368 TB
-
-| Term | Not supported 2+| Hourly | 12 months
+| Maximum system capacity | Not supported | 368 TB | 368 TB per license
 
 |===
 
