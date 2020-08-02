@@ -45,34 +45,55 @@ No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nod
 
 Cloud Volumes ONTAP uses EBS volumes as disks. The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-=== Single node limits by EC2 instance type
-
 The maximum EBS disk size is 16 TB. The number of supported disks varies by instance type.
 
-The table below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
+The tables below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
 
-[cols=4*,options="header,autowidth"]
+=== Single node with a Premium license
+
+[cols="16,20,30,32",width=69%,options="header"]
 |===
 | Instance type
-| Max EBS disks per node
-| Max system capacity with EBS
-| Max system capacity with EBS + S3
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
 
 | c4.4xlarge | 34 | 368 TB | 368 TB
 | c4.8xlarge | 34 | 368 TB | 368 TB
 | c5d.4xlarge | 23 | 368 TB | 368 TB
 | c5d.9xlarge | 23 | 368 TB | 368 TB
-| m4.xlarge | 34 | 368 TB | 368 TB
-| m4.2xlarge | 34 | 368 TB | 368 TB
 | m4.4xlarge | 34 | 368 TB | 368 TB
-| m5.xlarge | 23 | 368 TB | 368 TB
-| m5.2xlarge | 23 | 368 TB | 368 TB
 | m5.4xlarge | 23 | 368 TB | 368 TB
-| r4.xlarge | 34 | 368 TB | 368 TB
 | r4.2xlarge | 34 | 368 TB | 368 TB
-| r5.xlarge | 23 | 368 TB | 368 TB
 | r5.2xlarge | 23 | 368 TB | 368 TB
 | r5d.2xlarge | 23 | 368 TB | 368 TB
+|===
+
+=== Single node with one or more BYOL licenses
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| Instance type
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+| c4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c4.8xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c5d.4xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| c5d.9xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| m4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| m4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| m4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| m5.xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| m5.2xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| m5.4xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| r4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| r4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| r5.xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| r5.2xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
+| r5d.2xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
 |===
 
 === HA limits by EC2 instance type
@@ -103,6 +124,60 @@ The table below shows the maximum capacity by instance type with just EBS disks,
 | r5.xlarge | 20 | 320 TB | 368 TB
 | r5.2xlarge | 20 | 320 TB | 368 TB
 | r5d.2xlarge | 20 | 320 TB | 368 TB
+|===
+
+=== HA pairs with a Premium license
+
+[cols="16,20,30,32",width=69%,options="header"]
+|===
+| Instance type
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| c4.4xlarge | 31 | 368 TB | 368 TB
+| c4.8xlarge | 31 | 368 TB | 368 TB
+| c5d.4xlarge | 20 | 320 TB | 368 TB
+| c5d.9xlarge | 20 | 320 TB | 368 TB
+| m4.xlarge | 31 | 368 TB | 368 TB
+| m4.2xlarge | 31 | 368 TB | 368 TB
+| m4.4xlarge | 31 | 368 TB | 368 TB
+| m5.xlarge | 20 | 320 TB | 368 TB
+| m5.2xlarge | 20 | 320 TB | 368 TB
+| m5.4xlarge | 20 | 320 TB | 368 TB
+| r4.xlarge | 31 | 368 TB | 368 TB
+| r4.2xlarge | 31 | 368 TB | 368 TB
+| r5.xlarge | 20 | 320 TB | 368 TB
+| r5.2xlarge | 20 | 320 TB | 368 TB
+| r5d.2xlarge | 20 | 320 TB | 368 TB
+|===
+
+=== HA pairs with one or more BYOL licenses
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| Instance type
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| c4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c4.8xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c5d.4xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| c5d.9xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| m4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m5.xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| m5.2xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| m5.4xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| r4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| r4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| r5.xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| r5.2xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
+| r5d.2xlarge | 20 | 320 TB | 368 TB | 320 TB | 368 TB x each license
 |===
 
 == Disk and tiering limits by Azure VM size

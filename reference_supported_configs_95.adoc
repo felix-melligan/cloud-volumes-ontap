@@ -69,9 +69,7 @@ a|
 | Underlying storage 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs, up to 16 TB per disk
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB 2+| 368 TB
-
-| Term 3+| Hourly | 6 or 12 months
+(disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license
 
 |===
 
