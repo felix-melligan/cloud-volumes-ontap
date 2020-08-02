@@ -67,7 +67,7 @@ Disk limits are shown by VM size for Premium and BYOL licenses only because disk
 
 === Single node with one or more BYOL licenses
 
-NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 11 BYOL licenses to reach 4 PB with DS5_v2.
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 2 PB with DS5_v2.
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
@@ -78,15 +78,15 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| DS3_v2 | 15 | 368 TB | Tiering not supported | 960 TB | Tiering not supported
-| DS4_v2 | 31 | 368 TB | 368 TB | 1.98 PB | 368 TB x each license
-| DS5_v2 | 63 | 368 TB | 368 TB | 4.03 PB | 368 TB x each license
-| DS13_v2 | 31 | 368 TB | 368 TB | 1.98 PB | 368 TB x each license
-| DS14_v2 | 63 | 368 TB | 368 TB | 4.03 PB | 368 TB x each license
-| DS15_v2 | 63 | 368 TB | 368 TB | 4.03 PB | 368 TB x each license
-| E32s_v3 | 31 | 368 TB | 368 TB | 1.98 PB | 368 TB x each license
-| E48s_v3 | 31 | 368 TB | 368 TB | 1.98 PB | 368 TB x each license
-| L8s_v2 | 15 | 368 TB | 368 TB | 960 TB | 368 TB x each license
+| DS3_v2 | 15 | 368 TB | Tiering not supported | 480 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS5_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS13_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS14_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS15_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| E32s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| E48s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| L8s_v2 | 15 | 368 TB | 368 TB | 480 TB | 368 TB x each license
 |===
 
 === HA pairs with a Premium license
