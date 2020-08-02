@@ -173,7 +173,7 @@ a|
 
 | Underlying storage | Not supported 3+| Premium page blobs, up to 8 TB per disk
 
-| Maximum system capacity | Not supported | 368 TB | 368 TB per license
+| Maximum system capacity | Not supported | 10 TB | 368 TB | 368 TB per license
 
 |===
 

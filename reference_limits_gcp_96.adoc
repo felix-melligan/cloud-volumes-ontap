@@ -37,7 +37,7 @@ For the Premium and BYOL licenses, disk limits prevent you from reaching the 368
 
 The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-[cols="75,25",width=55%,options="header"]
+[cols="60,40",width=70%,options="header"]
 |===
 | Parameter
 | Limit
