@@ -96,6 +96,8 @@ Disk limits are shown by instance for Premium and BYOL licenses only because dis
 | c5d.4xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
 | c5d.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
 | c5d.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5n.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5n.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
 | m4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 | m4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 | m4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
@@ -159,8 +161,8 @@ Disk limits are shown by instance for Premium and BYOL licenses only because dis
 | c4.8xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 | c5.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 | c5.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 | c5d.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 | c5d.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 | c5n.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 | c5n.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license

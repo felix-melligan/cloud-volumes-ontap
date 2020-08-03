@@ -120,23 +120,12 @@ Disk limits are shown by instance for Premium and BYOL licenses only because dis
 | c5d.4xlarge | 19 | 304 TB | 368 TB
 | c5d.9xlarge | 19 | 304 TB | 368 TB
 | c5d.18xlarge | 19 | 304 TB | 368 TB
-| c5n.9xlarge | 19 | 304 TB | 368 TB
-| c5n.18xlarge | 19 | 304 TB | 368 TB
-| m4.xlarge | 31 | 368 TB | 368 TB
-| m4.2xlarge | 31 | 368 TB | 368 TB
 | m4.4xlarge | 31 | 368 TB | 368 TB
-| m5.xlarge | 19 | 304 TB | 368 TB
-| m5.2xlarge | 19 | 304 TB | 368 TB
 | m5.4xlarge | 19 | 304 TB | 368 TB
-| m5.16xlarge | 19 | 304 TB | 368 TB
 | m5d.8xlarge | 19 | 304 TB | 368 TB
 | m5d.12xlarge | 19 | 304 TB | 368 TB
-| r4.xlarge | 31 | 368 TB | 368 TB
 | r4.2xlarge | 31 | 368 TB | 368 TB
-| r5.xlarge | 19 | 304 TB | 368 TB
 | r5.2xlarge | 19 | 304 TB | 368 TB
-| r5.8xlarge | 19 | 304 TB | 368 TB
-| r5.12xlarge | 19 | 304 TB | 368 TB
 | r5d.2xlarge | 19 | 304 TB | 368 TB
 |===
 
