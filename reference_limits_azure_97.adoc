@@ -27,7 +27,7 @@ The maximum system capacity for a Cloud Volumes ONTAP system is determined by it
 | Explore	| 2 TB (data tiering is not supported with Explore)
 | Standard | 10 TB
 | Premium | 368 TB
-| BYOL | 368 TB
+| BYOL | 368 TB per license
 
 |===
 
@@ -37,13 +37,17 @@ The capacity limit is for the entire HA pair. It is not per node. For example, i
 
 == Disk and tiering limits by VM size
 
-The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk. The tables below show the maximum system capacity by VM size with disks alone, and with disks and cold data tiering to object storage.
 
-=== Disk and tiering limits for single node systems
+Disk limits are shown by VM size for Premium and BYOL licenses only because disk limits can’t be reached with Explore or Standard licenses due to system capacity limits.
 
-Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
+* Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
 
-The table below shows the maximum system capacity by VM size with managed disks alone, and with disks and cold data tiering to object storage.
+* HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
+
+NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^].
+
+=== Single node with a Premium license
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -63,11 +67,31 @@ The table below shows the maximum system capacity by VM size with managed disks 
 | L8s_v2 | 15 | 368 TB | 368 TB
 |===
 
-=== Disk and tiering limits for HA pairs
+=== Single node with one or more BYOL licenses
 
-HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 2 PB with DS5_v2.
 
-The table below shows the maximum system capacity by VM size with managed disks alone, and with disks and tiering to object storage.
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| VM size
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| DS3_v2 | 15 | 368 TB | Tiering not supported | 480 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS5_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS13_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS14_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS15_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| E32s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| E48s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| L8s_v2 | 15 | 368 TB | 368 TB | 480 TB | 368 TB x each license
+|===
+
+=== HA pairs with a Premium license
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -81,6 +105,26 @@ The table below shows the maximum system capacity by VM size with managed disks 
 | DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
 | DS15_v2 | 63 | 368 TB | 368 TB
+|===
+
+=== HA pairs with one or more BYOL licenses
+
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 3 BYOL licenses to reach 1 PB with DS5_v2.
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| VM size
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| DS4_v2 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| DS5_v2 | 63 | 368 TB | 368 TB | 1 PB | 368 TB x each license
+| DS13_v2 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| DS14_v2 | 63 | 368 TB | 368 TB | 1 PB | 368 TB x each license
+| DS15_v2 | 63 | 368 TB | 368 TB | 1 PB | 368 TB x each license
 |===
 
 == Aggregate limits

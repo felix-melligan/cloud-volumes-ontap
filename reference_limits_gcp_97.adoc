@@ -29,7 +29,7 @@ For the Premium and BYOL licenses, disk limits prevent you from reaching the 368
 | Explore	| 2 TB (data tiering is not supported with Explore)
 | Standard | 10 TB
 | Premium | 368 TB
-| BYOL | 368 TB
+| BYOL | 368 TB per license
 
 |===
 
@@ -37,7 +37,7 @@ For the Premium and BYOL licenses, disk limits prevent you from reaching the 368
 
 The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-[cols="75,25",width=55%,options="header"]
+[cols="60,40",width=70%,options="header"]
 |===
 | Parameter
 | Limit
@@ -45,7 +45,10 @@ The table below shows the maximum system capacity with disks alone, and with dis
 | Maximum disks per system | 124
 | Maximum disk size | 16 TB
 | Maximum system capacity with disks alone | 256 TB
-| Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket | 368 TB
+| Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket
+a|
+* Premium: 368 TB
+* BYOL: 368 TB per license
 |===
 
 == Aggregate limits
