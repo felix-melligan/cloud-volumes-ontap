@@ -101,8 +101,6 @@ a|
 
 | License capacity limit | 2 TB | 10 TB | 368 TB | 368 TB per license
 
-| Term 3+| Hourly | 12 months
-
 |===
 
 Notes:

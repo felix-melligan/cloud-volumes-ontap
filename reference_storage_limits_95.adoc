@@ -96,36 +96,6 @@ The tables below shows the maximum capacity by instance type with just EBS disks
 | r5d.2xlarge | 23 | 368 TB | 368 TB | 368 TB | 368 TB x each license
 |===
 
-=== HA limits by EC2 instance type
-
-The maximum EBS disk size is 16 TB. The number of supported disks varies by instance type.
-
-The table below shows the maximum capacity by instance type with just EBS disks, and with disks and tiering to object storage.
-
-[cols=4*,options="header,autowidth"]
-|===
-| Instance type
-| Max EBS disks per node
-| Max system capacity with EBS
-| Max system capacity with EBS + S3
-
-| c4.4xlarge | 31 | 368 TB | 368 TB
-| c4.8xlarge | 31 | 368 TB | 368 TB
-| c5d.4xlarge | 20 | 320 TB | 368 TB
-| c5d.9xlarge | 20 | 320 TB | 368 TB
-| m4.xlarge | 31 | 368 TB | 368 TB
-| m4.2xlarge | 31 | 368 TB | 368 TB
-| m4.4xlarge | 31 | 368 TB | 368 TB
-| m5.xlarge | 20 | 320 TB | 368 TB
-| m5.2xlarge | 20 | 320 TB | 368 TB
-| m5.4xlarge | 20 | 320 TB | 368 TB
-| r4.xlarge | 31 | 368 TB | 368 TB
-| r4.2xlarge | 31 | 368 TB | 368 TB
-| r5.xlarge | 20 | 320 TB | 368 TB
-| r5.2xlarge | 20 | 320 TB | 368 TB
-| r5d.2xlarge | 20 | 320 TB | 368 TB
-|===
-
 === HA pairs with a Premium license
 
 [cols="16,20,30,32",width=69%,options="header"]
