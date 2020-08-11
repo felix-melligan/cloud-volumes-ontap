@@ -48,8 +48,8 @@ The following features are not supported with Cloud Volumes ONTAP:
 * Interface groups
 * Intranode LIF failover
 * MetroCluster
-* Multi-tenancy (only one data-serving SVM is supported, as noted in the SVM limitation above)
 * RAID4, RAID-DP, RAID-TEC (RAID0 is supported)
 * Service Processor
 * SnapLock Compliance mode (Enterprise mode is supported)
+* SnapMirror Synchronous
 * VLANs
