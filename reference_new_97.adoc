@@ -17,6 +17,10 @@ Cloud Volumes ONTAP 9.7 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.7 P6 (15 Aug 2020)
+
+The 9.7 P6 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P6[View the list of bugs fixed in the P6 patch^] (NetApp Support Site login required).
+
 == Multiple BYOL licenses for additional capacity (3 Aug 2020)
 
 You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. For example, you might purchase two licenses to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase four licenses to get up to 1.4 PB.
@@ -29,7 +33,7 @@ Be aware that disk limits can prevent you from reaching the capacity limit by us
 
 Cloud Volumes ONTAP 9.7 P5 is now available in AWS. This patch release includes bug fixes and support for new EC2 instance types.
 
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5[View the list of bugs fixed in the P5 patch^].
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5[View the list of bugs fixed in the P5 patch^] (NetApp Support Site login required).
 
 === Support for new EC2 instance types
 
@@ -42,7 +46,7 @@ Cloud Volumes ONTAP now supports the following EC2 instance types with the Premi
 
 Cloud Volumes ONTAP 9.7 P5 is now available in Microsoft Azure. This patch release includes bug fixes and support for new VM types.
 
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5[View the list of bugs fixed in the P5 patch^].
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P5[View the list of bugs fixed in the P5 patch^] (NetApp Support Site login required).
 
 === Support for new VM types with Ultra SSD VNVRAM
 
@@ -88,15 +92,15 @@ https://cloud.netapp.com/cloud-volumes-global-regions[See the full list of suppo
 
 == 9.7 P4 (2 June 2020)
 
-The 9.7 P4 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P4[View the list of bugs fixed in the P4 patch^].
+The 9.7 P4 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P4[View the list of bugs fixed in the P4 patch^] (NetApp Support Site login required).
 
 == 9.7 P3 (2 May 2020)
 
-The 9.7 P3 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P3[View the list of bugs fixed in the P3 patch^].
+The 9.7 P3 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P3[View the list of bugs fixed in the P3 patch^] (NetApp Support Site login required).
 
 == 9.7 P2 (8 Apr 2020)
 
-The 9.7 P2 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P2[View the list of bugs fixed in the P2 patch^].
+The 9.7 P2 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P2[View the list of bugs fixed in the P2 patch^] (NetApp Support Site login required).
 
 == Increased disk capacity in GCP (13 Mar 2020)
 
@@ -111,7 +115,7 @@ The maximum number of data disks per system has also increased to 124 disks.
 
 == 9.7 P1 (6 Mar 2020)
 
-The 9.7 P1 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P1[View the list of bugs fixed in the P1 patch^].
+The 9.7 P1 patch release for Cloud Volumes ONTAP is now available through Cloud Manager 3.8 and later. Cloud Manager will prompt you to upgrade your existing systems to this patch release. https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.7P1[View the list of bugs fixed in the P1 patch^] (NetApp Support Site login required).
 
 == AWS updates (16 Feb 2020)
 
@@ -129,7 +133,7 @@ Several new EC2 instance types are now supported with Cloud Volumes ONTAP 9.7 wh
 * r5.8xlarge
 * r5.12xlarge ^2^
 
-^1^ These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more^].
+^1^ These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. https://docs.netapp.com/us-en/occm/concept_flash_cache.html[Learn more^].
 
 ^2^ The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs.
 
@@ -180,7 +184,7 @@ Flash Cache speeds access to data through real-time intelligent caching of recen
 
 Deploy new systems using this VM type or modify existing systems to use this VM type and you'll automatically take advantage of Flash Cache.
 
-https://docs.netapp.com/us-en/occm/task_enabling_flash_cache.html[Learn more about enabling Flash Cache on Cloud Volumes ONTAP, including a limitation with data compression^].
+https://docs.netapp.com/us-en/occm/concept_flash_cache.html[Learn more about enabling Flash Cache on Cloud Volumes ONTAP, including a limitation with data compression^].
 
 === Fix for Azure NIC detach events
 
