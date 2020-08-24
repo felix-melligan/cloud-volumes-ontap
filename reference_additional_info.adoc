@@ -51,7 +51,7 @@ Describes how to create and manage FlexCache volumes in the same cluster or diff
 +
 Connect with peers, ask questions, exchange ideas, find resources, and share best practices.
 
-* https://mysupport.netapp.com/cloudontap[NetApp Cloud Volumes ONTAP Support^]
+* https://mysupport.netapp.com/GPS/ECMLS2588181.html[NetApp Cloud Volumes ONTAP Support^]
 +
 Access support resources to get help and troubleshoot issues with Cloud Volumes ONTAP.
 
