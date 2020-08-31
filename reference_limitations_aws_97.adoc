@@ -15,6 +15,10 @@ summary: These known limitations are specific to Cloud Volumes ONTAP in Amazon W
 [.lead]
 The following known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services. Be sure to also review link:reference_limitations_97.html[Limitations for Cloud Volumes ONTAP 9.7 in all cloud providers].
 
+== HA pairs not supported with AWS Outposts
+
+Single node systems are supported with AWS Outposts but HA pairs aren't supported at this time. 
+
 == Flash Cache limitations
 
 C5D and R5D instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Note the following limitations:
