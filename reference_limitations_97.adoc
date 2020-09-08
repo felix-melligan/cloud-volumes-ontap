@@ -17,6 +17,10 @@ Known limitations identify platforms, devices, or functions that are not support
 
 The following limitations apply to Cloud Volumes ONTAP in all cloud providers: AWS, Azure, and GCP.
 
+== Cloud Volumes ONTAP supports Reserved and On-demand VM instances
+
+Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
 == Software updates must be completed by Cloud Manager
 
 Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.

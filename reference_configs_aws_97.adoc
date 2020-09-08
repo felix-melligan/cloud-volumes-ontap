@@ -130,6 +130,8 @@ Notes:
 
 . For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
 == Supported disk sizes
 
 In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
