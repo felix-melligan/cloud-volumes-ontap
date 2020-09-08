@@ -95,6 +95,8 @@ Notes:
 
 . For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
 === HA pairs
 
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure:
@@ -137,6 +139,8 @@ a|
 Notes:
 
 . For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
 == Supported disk sizes
 
