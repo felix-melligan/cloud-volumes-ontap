@@ -213,9 +213,7 @@ https://docs.netapp.com/us-en/occm/task_encrypting_volumes.html[Learn how to set
 
 * Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
 
-* You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 or 9.3 release.
-+
-To understand version requirements, refer to http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html[ONTAP 9 Documentation: Cluster update requirements^].
+* You can upgrade to Cloud Volumes ONTAP 9.5 from the 9.4 release.
 
 * The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
 
