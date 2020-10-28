@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: reference_issues_98.html
+keywords: issues, bugs, known issues
+summary: Known issues identify problems that might prevent you from using this release of the product successfully.
+---
+
+= Known issues for Cloud Volumes ONTAP 9.8
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known issues identify problems that might prevent you from using this release of the product successfully.
+
+You can find known issues for ONTAP software in the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^].
+
+== Node halt can fail on HA pairs with multiple SVMs
+
+If you plan to halt or reboot a Cloud Volumes ONTAP node in an HA pair that has multiple storage VMs (SVMs), we recommend that you pre-migrate all logical interfaces (LIFs) to the partner node before shutting down the node.
+
+The following example migrates all data LIFs from the current (local) node:
+
+`node1::> network interface migrate-all -node local`
+
+This action expediates the network transition to the partner node and avoids occasional known problems with stopping the node.
+
+If the node can't be stopped because it takes too much time to migrate the LIFs, a retry of the reboot or halt command should make it stop.

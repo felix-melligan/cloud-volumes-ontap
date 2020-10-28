@@ -1,0 +1,211 @@
+---
+sidebar: sidebar
+permalink: reference_limits_azure_98.html
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks
+summary: Cloud Volumes ONTAP has storage configuration limits in Azure to provide reliable operations. For best performance, do not configure your system at the maximum values.
+---
+
+= Storage limits for Cloud Volumes ONTAP 9.8 in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+
+== Maximum system capacity by license
+
+The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn't support exceeding this limit.
+
+[cols="25,75",width=55%,options="header"]
+|===
+| License
+| Maximum system capacity (disks + object storage)
+
+| Explore	| 2 TB (data tiering is not supported with Explore)
+| Standard | 10 TB
+| Premium | 368 TB
+| BYOL | 368 TB per license
+
+|===
+
+===== For HA, is the license capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+== Disk and tiering limits by VM size
+
+The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk. The tables below show the maximum system capacity by VM size with disks alone, and with disks and cold data tiering to object storage.
+
+Disk limits are shown by VM size for Premium and BYOL licenses only because disk limits can’t be reached with Explore or Standard licenses due to system capacity limits.
+
+* Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
+
+* HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
+
+NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+
+=== Single node with a Premium license
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS3_v2 | 15 | 368 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB
+| DS5_v2 | 63 | 368 TB | 368 TB
+| DS13_v2 | 31 | 368 TB | 368 TB
+| DS14_v2 | 63 | 368 TB | 368 TB
+| DS15_v2 | 63 | 368 TB | 368 TB
+| E32s_v3 | 31 | 368 TB | 368 TB
+| E48s_v3 | 31 | 368 TB | 368 TB
+| L8s_v2 | 15 | 368 TB | 368 TB
+|===
+
+=== Single node with one or more BYOL licenses
+
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 2 PB with DS5_v2.
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| VM size
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| DS3_v2 | 15 | 368 TB | Tiering not supported | 480 TB | Tiering not supported
+| DS4_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS5_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS13_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| DS14_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| DS15_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
+| E32s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| E48s_v3 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
+| L8s_v2 | 15 | 368 TB | 368 TB | 480 TB | 368 TB x each license
+|===
+
+=== HA pairs with a Premium license
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS4_v2 | 31 | 368 TB | 368 TB
+| DS5_v2 | 63 | 368 TB | 368 TB
+| DS13_v2 | 31 | 368 TB | 368 TB
+| DS14_v2 | 63 | 368 TB | 368 TB
+| DS15_v2 | 63 | 368 TB | 368 TB
+|===
+
+=== HA pairs with one or more BYOL licenses
+
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 3 BYOL licenses to reach 1 PB with DS5_v2.
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| VM size
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| DS4_v2 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| DS5_v2 | 63 | 368 TB | 368 TB | 1 PB | 368 TB x each license
+| DS13_v2 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| DS14_v2 | 63 | 368 TB | 368 TB | 1 PB | 368 TB x each license
+| DS15_v2 | 63 | 368 TB | 368 TB | 1 PB | 368 TB x each license
+|===
+
+== Aggregate limits
+
+Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+[cols=2*,options="header,autowidth"]
+|===
+| Parameter
+| Limit
+
+| Maximum number of aggregates | Same as the disk limit
+| Maximum aggregate size |
+352 TB of raw capacity for single node ^1,^ ^2^
+96 TB of raw capacity for HA pairs ^1^
+| Disks per aggregate	| 1-12 ^3^
+| Maximum number of RAID groups per aggregate	| 1
+|===
+
+Notes:
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. The 352 TB limit is supported starting with 9.6 P3. Releases prior to 9.6 P3 support up to 200 TB of raw capacity in an aggregate on a single node system.
+
+. All disks in an aggregate must be the same size.
+
+== Logical storage limits
+
+[cols="22,22,56",width=100%,options="header"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
+| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP
+(HA pair or single node) | One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM. ^1^
+
+The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+.2+| *Files*	| Maximum size | 16 TB
+| Maximum per volume |	Volume size dependent, up to 2 billion
+| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+.3+| *FlexVol volumes*	| Maximum per node |	500
+| Minimum size |	20 MB
+| Maximum size |
+Azure HA: Dependent on the size of the aggregate ^3^
+Azure single node: 100 TB
+| *Qtrees* |	Maximum per FlexVol volume |	4,995
+| *Snapshot copies* |	Maximum per FlexVol volume |	1,023
+
+|===
+
+Notes:
+
+. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on an additional SVM. You must use System Manager or the CLI for SVM disaster recovery.
++
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
+
+. Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
+
+. Less than 100 TB is supported for this configuration because aggregates on HA pairs are limited to 96 TB of _raw_ capacity.
+
+== iSCSI storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| iSCSI storage
+| Parameter
+| Limit
+
+.4+| *LUNs*	| Maximum per node |	1,024
+| Maximum number of LUN maps |	1,024
+| Maximum size	| 16 TB
+| Maximum per volume	| 512
+| *igroups*	| Maximum per node | 256
+.2+| *Initiators*	| Maximum per node |	512
+| Maximum per igroup	| 128
+| *iSCSI sessions* |	Maximum per node | 1,024
+.2+| *LIFs*	| Maximum per port |	32
+| Maximum per portset	| 32
+| *Portsets* |	Maximum per node |	256
+
+|===

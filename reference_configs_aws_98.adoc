@@ -1,0 +1,179 @@
+---
+sidebar: sidebar
+permalink: reference_configs_aws_98.html
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks
+summary: Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
+---
+
+= Supported configurations for Cloud Volumes ONTAP 9.8 in AWS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available: pay as you go and Bring Your Own License (BYOL).
+
+== Pay-as-you-go overview
+
+* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in AWS.
+** There are no hourly software charges, but AWS infrastructure charges still apply (compute, storage, and networking).
+** When the free trial ends, you'll be charged hourly according to the selected license, https://aws.amazon.com/marketplace/pp/B07QX2QLXX[as long as you subscribed^]. If you haven't subscribed, the system shuts down.
+* Conversions from PAYGO to BYOL aren't currently supported.
+* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
++
+https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+
+== BYOL overview
+
+* Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
+* Support is included for the length of the subscription term.
+* You can purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity.
++
+For example, you might purchase two licenses to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase four licenses to get up to 1.4 PB.
+
+== Supported configurations by license
+
+Cloud Volumes ONTAP is available in AWS as a single node system and as an HA pair.
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Supported EC2 instance types ^1^
+a|
+* m4.xlarge
+* m5.xlarge
+
+a|
+* m4.2xlarge
+* m5.2xlarge
+* r4.xlarge
+* r5.xlarge
+
+a|
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18xlarge
+* c5d.4xlarge ^2^
+* c5d.9xlarge ^2^
+* c5d.18xlarge ^2^
+* m4.4xlarge
+* m5.4xlarge
+* m5.16xlarge
+* m5d.8xlarge ^2^
+* m5d.12xlarge ^2^
+* r4.2xlarge
+* r5.2xlarge
+* r5.8xlarge
+* r5.12xlarge ^3^
+* r5d.2xlarge ^2^
+
+a|
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18xlarge
+* c5d.4xlarge ^2^
+* c5d.9xlarge ^2^
+* c5d.18xlarge ^2^
+* c5n.9xlarge
+* c5n.18xlarge
+* m4.xlarge
+* m4.2xlarge
+* m4.4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* m5.16xlarge
+* m5d.8xlarge ^2^
+* m5d.12xlarge ^2^
+* r4.xlarge
+* r4.2xlarge
+* r5.xlarge
+* r5.2xlarge
+* r5.8xlarge
+* r5.12xlarge ^3^
+* r5d.2xlarge ^2^
+
+| Supported disk types ^4^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
+
+| Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
+
+| Maximum system capacity
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^5^ | 368 TB per license ^5^
+
+|===
+
+Notes:
+
+. When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
+
+. These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/occm/concept_flash_cache.html[Learn more^].
+
+. The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs.
+
+. Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_98.html[storage limits].
+
+. For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+== Supported disk sizes
+
+In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
+
+[cols=4*,options="header"]
+|===
+
+| General Purpose SSDs
+| Provisioned IOPS SSDs
+| Throughput Optimized HDDs
+| Cold HDDs (single node only)
+
+a|
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+a|
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+a|
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+a|
+* 2 TB
+* 4 TB
+* 6 TB
+* 8 TB
+* 16 TB
+
+|===

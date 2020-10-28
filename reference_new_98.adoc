@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: reference_new_98.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.8
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
+
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
+
+
+
+== Upgrade notes
+
+* Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+* You can upgrade to Cloud Volumes ONTAP 9.8 from the 9.7 release. Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.7 systems to the 9.8 release.
++
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
+
+* Another upgrade option is to use the software image from the NetApp Support Site.
++
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-or-downgrading-cloud-volumes-ontap-by-using-an-http-or-ftp-server[Learn how to upgrade using the software image^].
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.

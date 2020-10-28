@@ -1,0 +1,283 @@
+---
+sidebar: sidebar
+permalink: reference_limits_aws_98.html
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs
+summary: Cloud Volumes ONTAP has storage configuration limits in AWS to provide reliable operations. For best performance, do not configure your system at the maximum values.
+---
+
+= Storage limits for Cloud Volumes ONTAP 9.8 in AWS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+
+== Maximum system capacity by license
+
+The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn't support exceeding this limit.
+
+For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to capacity and disk limits below for more details.
+
+[cols="25,75",width=55%,options="header"]
+|===
+| License
+| Maximum system capacity (disks + object storage)
+
+| Explore	| 2 TB (data tiering is not supported with Explore)
+| Standard | 10 TB
+| Premium | 368 TB
+| BYOL | 368 TB per license
+
+|===
+
+===== For HA, is the license capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+===== For an HA system in AWS, does mirrored data count against the capacity limit?
+
+No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. For example, if you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+
+== Disk and tiering limits by EC2 instance
+
+Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB. The sections below show disk and tiering limits by EC2 instance type because many EC2 instance types have different disk limits. Disk limits are also different between single node systems and HA pairs.
+
+The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+
+Disk limits are shown by instance for Premium and BYOL licenses only because disk limits can't be reached with Explore or Standard licenses.
+
+NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+
+=== Single node with a Premium license
+
+[cols="16,20,30,32",width=69%,options="header"]
+|===
+| Instance type
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| c4.4xlarge | 34 | 368 TB | 368 TB
+| c4.8xlarge | 34 | 368 TB | 368 TB
+| c5.9xlarge | 22 | 352 TB | 368 TB
+| c5.18xlarge | 22 | 352 TB | 368 TB
+| c5d.4xlarge | 22 | 352 TB | 368 TB
+| c5d.9xlarge | 22 | 352 TB | 368 TB
+| c5d.18xlarge | 22 | 352 TB | 368 TB
+| c5n.9xlarge | 22 | 352 TB | 368 TB
+| c5n.18xlarge | 22 | 352 TB | 368 TB
+| m4.4xlarge | 34 | 368 TB | 368 TB
+| m5.4xlarge | 22 | 352 TB | 368 TB
+| m5.16xlarge | 22 | 352 TB | 368 TB
+| m5d.8xlarge | 22 | 352 TB | 368 TB
+| m5d.12xlarge | 22 | 352 TB | 368 TB
+| r4.2xlarge | 34 | 368 TB | 368 TB
+| r5.2xlarge | 22 | 352 TB | 368 TB
+| r5.8xlarge | 22 | 352 TB | 368 TB
+| r5.12xlarge | 22 | 352 TB | 368 TB
+| r5d.2xlarge | 22 | 352 TB | 368 TB
+|===
+
+=== Single node with one or more BYOL licenses
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| Instance type
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+| c4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c4.8xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c5.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5d.4xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5d.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5d.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5n.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c5n.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| m4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| m4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| m4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| m5.xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| m5.2xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| m5.4xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| m5.16xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| m5d.8xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| m5d.12xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| r4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| r4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| r5.xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| r5.2xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| r5.8xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| r5.12xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| r5d.2xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+|===
+
+=== HA pairs with a Premium license
+
+[cols="16,20,30,32",width=69%,options="header"]
+|===
+| Instance type
+| Max disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| c4.4xlarge | 31 | 368 TB | 368 TB
+| c4.8xlarge | 31 | 368 TB | 368 TB
+| c5.9xlarge | 19 | 304 TB | 368 TB
+| c5.18xlarge | 19 | 304 TB | 368 TB
+| c5d.4xlarge | 19 | 304 TB | 368 TB
+| c5d.9xlarge | 19 | 304 TB | 368 TB
+| c5d.18xlarge | 19 | 304 TB | 368 TB
+| c5n.9xlarge | 19 | 304 TB | 368 TB
+| c5n.18xlarge | 19 | 304 TB | 368 TB
+| m4.4xlarge | 31 | 368 TB | 368 TB
+| m5.4xlarge | 19 | 304 TB | 368 TB
+| m5.16xlarge | 19 | 304 TB | 368 TB
+| m5d.8xlarge | 19 | 304 TB | 368 TB
+| m5d.12xlarge | 19 | 304 TB | 368 TB
+| r4.2xlarge | 31 | 368 TB | 368 TB
+| r5.2xlarge | 19 | 304 TB | 368 TB
+| r5.8xlarge | 19 | 304 TB | 368 TB
+| r5.12xlarge | 19 | 304 TB | 368 TB
+| r5d.2xlarge | 19 | 304 TB | 368 TB
+|===
+
+=== HA pairs with one or more BYOL licenses
+
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| Instance type
+| Max disks per node
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| c4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c4.8xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c5.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5d.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5n.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5n.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| m5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.16xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5d.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5d.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| r4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| r5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5d.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+|===
+
+== Aggregate limits
+
+Cloud Volumes ONTAP uses AWS volumes as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+[cols=2*,options="header,autowidth"]
+|===
+| Parameter
+| Limit
+
+| Maximum number of aggregates |
+Single node: Same as the disk limit
+HA pairs: 18 in a node ^1^
+| Maximum aggregate size | 96 TB of raw capacity ^2^
+| Disks per aggregate	| 1-6 ^3^
+| Maximum number of RAID groups per aggregate	| 1
+|===
+
+Notes:
+
+. It is not possible to create 19 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
+
+== Logical storage limits
+
+[cols="22,22,56",width=100%,options="header"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
+| *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
+(HA pair or single node) a|
+*C5, M5, and R5 instances with BYOL*
+The following number of storage VMs are supported with C5, M5, and R5 instance types when you bring your own license (BYOL):
+
+* 12 storage VMs with single node systems
+* 8 storage VMs with HA pairs
+
+NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
+
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
+
+*All other configurations*
+One data-serving storage VM and one destination storage VM used for disaster recovery are supported. ^2^
+
+A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+
+.2+| *Files*	| Maximum size | 16 TB
+| Maximum per volume |	Volume size dependent, up to 2 billion
+| *FlexClone volumes*	| Hierarchical clone depth ^3^ | 499
+.3+| *FlexVol volumes*	| Maximum per node |	500
+| Minimum size |	20 MB
+| Maximum size | Dependent on the size of the aggregate
+| *Qtrees* |	Maximum per FlexVol volume |	4,995
+| *Snapshot copies* |	Maximum per FlexVol volume |	1,023
+
+|===
+
+Notes:
+
+. For example, if you have 8 data-serving storage VMs on an HA pair, then you've reached the limit and can't create any additional storage VMs. The same is true for another HA pair that has 8 storage VMs configured for disaster recovery--you've reached the limit and can't create any additional storage VMs.
+
+. You can activate a destination storage VM for data access if there’s an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
++
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
+
+. Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
+
+== iSCSI storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| iSCSI storage
+| Parameter
+| Limit
+
+.4+| *LUNs*	| Maximum per node |	1,024
+| Maximum number of LUN maps |	1,024
+| Maximum size	| 16 TB
+| Maximum per volume	| 512
+| *igroups*	| Maximum per node | 256
+.2+| *Initiators*	| Maximum per node |	512
+| Maximum per igroup	| 128
+| *iSCSI sessions* |	Maximum per node | 1,024
+.2+| *LIFs*	| Maximum per port |	32
+| Maximum per portset	| 32
+| *Portsets* |	Maximum per node |	256
+
+|===
