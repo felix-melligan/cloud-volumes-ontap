@@ -200,10 +200,6 @@ This release addresses an issue with Cloud Volumes ONTAP node reboots from Azure
 +
 http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
 
-* Another upgrade option is to use the software image from the NetApp Support Site.
-+
-http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-or-downgrading-cloud-volumes-ontap-by-using-an-http-or-ftp-server[Learn how to upgrade using the software image^].
-
 * The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
 
 * Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.
