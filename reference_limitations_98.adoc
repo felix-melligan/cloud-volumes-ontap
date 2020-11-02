@@ -56,6 +56,7 @@ The following features are not supported with Cloud Volumes ONTAP:
 * Interface groups
 * Intranode LIF failover
 * MetroCluster
+* ONTAP S3
 * RAID4, RAID-DP, RAID-TEC (RAID0 is supported)
 * Service Processor
 * SnapLock Compliance mode (Enterprise mode is supported)
