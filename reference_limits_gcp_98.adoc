@@ -33,6 +33,14 @@ For the Premium and BYOL licenses, disk limits prevent you from reaching the 368
 
 |===
 
+===== For an HA pair, is the licensed capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+===== For an HA pair, does mirrored data count against the licensed capacity limit?
+
+No, it doesn't. Data in an HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure in Google Cloud. For example, if you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+
 == Disk and tiering limits
 
 The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.

@@ -17,6 +17,24 @@ Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.8 RC1 (5 Nov 2020)
+
+Cloud Volumes ONTAP 9.8 RC1 is now available in AWS, Azure, and Google Cloud Platform. In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.8^], this release of Cloud Volumes ONTAP includes the following:
+
+* <<High-availability pairs in Google Cloud>>
+
+=== High-availability (HA) pairs in Google Cloud
+
+Cloud Volumes ONTAP HA pairs are now available in Google Cloud.
+
+An HA pair provides enterprise reliability and continuous operations in case of failures in your cloud environment. Similar to Cloud Volumes ONTAP in AWS, an HA pair in Google Cloud includes two Cloud Volumes ONTAP nodes whose data is synchronously mirrored between each other, and a mediator instance that provides a communication channel to assist in storage takeover and giveback.
+
+View link:reference_configs_gcp_98.html[supported configurations] and link:reference_limits_gcp_98.html[storage limits].
+
+//Learn how to deploy an HA pair in Google Cloud.
+
+=== Maintenance event handling
+
 
 
 == Upgrade notes
@@ -26,10 +44,6 @@ Additional features and enhancements are also introduced in the latest versions 
 * You can upgrade to Cloud Volumes ONTAP 9.8 from the 9.7 release. Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.7 systems to the 9.8 release.
 +
 http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
-
-* Another upgrade option is to use the software image from the NetApp Support Site.
-+
-http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-or-downgrading-cloud-volumes-ontap-by-using-an-http-or-ftp-server[Learn how to upgrade using the software image^].
 
 * The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
 
