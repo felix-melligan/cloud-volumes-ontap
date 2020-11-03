@@ -22,10 +22,14 @@ Additional features and enhancements are also introduced in the latest versions 
 Cloud Volumes ONTAP 9.8 RC1 is now available in AWS, Azure, and Google Cloud Platform. In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.8^], this release of Cloud Volumes ONTAP includes the following:
 
 * <<High-availability pairs in Google Cloud>>
+* <<Support for 24 SVMs in AWS>>
+* <<High write speed with HA pairs in AWS and Azure>>
+* <<Fixes for Azure NIC detach events and maintenance events>>
+* <<Core disk for single node systems in AWS>>
 
-=== High-availability (HA) pairs in Google Cloud
+=== High-availability pairs in Google Cloud
 
-Cloud Volumes ONTAP HA pairs are now available in Google Cloud.
+Cloud Volumes ONTAP high-availability (HA) pairs are now available in Google Cloud.
 
 An HA pair provides enterprise reliability and continuous operations in case of failures in your cloud environment. Similar to Cloud Volumes ONTAP in AWS, an HA pair in Google Cloud includes two Cloud Volumes ONTAP nodes whose data is synchronously mirrored between each other, and a mediator instance that provides a communication channel to assist in storage takeover and giveback.
 
@@ -33,9 +37,21 @@ View link:reference_configs_gcp_98.html[supported configurations] and link:refer
 
 //Learn how to deploy an HA pair in Google Cloud.
 
-=== Maintenance event handling
+=== Support for 24 SVMs in AWS
 
+<description coming soon>
 
+=== High write speed with HA pairs in AWS and Azure
+
+<description coming soon>
+
+=== Fixes for Azure NIC detach events and maintenance events
+
+<description coming soon>
+
+=== Core disk for single node systems in AWS
+
+<description coming soon>
 
 == Upgrade notes
 
