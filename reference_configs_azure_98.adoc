@@ -116,16 +116,16 @@ a|
 * DS13_v2
 
 a|
-* DS5_v2
-* DS14_v2
-* DS15_v2
+* DS5_v2 ^1^
+* DS14_v2 ^1^
+* DS15_v2 ^1^
 
 a|
 * DS4_v2
-* DS5_v2
+* DS5_v2 ^1^
 * DS13_v2
-* DS14_v2
-* DS15_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
 
 | Supported disk types | Not supported 3+| Premium page blobs
 
@@ -137,6 +137,8 @@ a|
 |===
 
 Notes:
+
+. Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. High write speed is supported with all instance types when using a single node system. https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more about choosing a write speed^].
 
 . For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
