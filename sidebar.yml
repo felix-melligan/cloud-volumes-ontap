@@ -33,6 +33,8 @@ entries:
             url: /reference_limitations_azure_98.html
           - title: Limitations in GCP
             url: /reference_limitations_gcp_98.html
+      - title: Cloud provider integrations
+        url: reference_provider_integrations_98.html
   - title: 9.7 Release Notes
     entries:
       - title: What's new
