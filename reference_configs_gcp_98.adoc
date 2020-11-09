@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_configs_gcp_98.html
-keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes
-summary: Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes, HA, high availability, HA pairs
+summary: Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system or an HA pair. Two pricing options are available: pay as you go and Bring Your Own License (BYOL).
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.8 in GCP
@@ -38,6 +38,10 @@ For example, you might purchase two licenses to allocate up to 736 TB of capacit
 
 Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system or an HA pair.
 
+=== Single node systems
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in GCP.
+
 [cols=5*,cols="h,d,d,d,d",options="header"]
 |===
 |
@@ -64,6 +68,44 @@ a|
 Notes:
 
 . The custom machine type has 4 vCPUs and 16 GB of memory. For details about standard machine types, refer to https://cloud.google.com/compute/docs/machine-types#standard_machine_types[Google Cloud Documentation: Machine Types^].
+
+. Enhanced write performance is enabled when using SSDs.
+
+. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
++
+link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
+
+. For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+=== HA pairs
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in GCP.
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Supported machine types | Not supported | n1-standard-8  | n1-standard-32
+a|
+* n1-standard-8
+* n1-standard-32
+
+| Supported disk types ^1^ | Not supported 3+| Zonal persistent disks (SSD and standard)
+
+| Cold data tiering to object storage | Not supported 3+| Supported
+
+| Maximum system capacity
+(disks + object storage) | Not supported | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
+
+|===
+
+Notes:
 
 . Enhanced write performance is enabled when using SSDs.
 
