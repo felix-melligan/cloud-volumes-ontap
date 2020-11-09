@@ -43,15 +43,21 @@ View link:reference_configs_gcp_98.html[supported configurations] and link:refer
 
 === High write speed with HA pairs in AWS and Azure
 
-<description coming soon>
+Cloud Volumes ONTAP now supports high write speed with HA pairs in AWS and Azure when using a specific instance or VM type. High write speed is a good choice if fast write performance is required for your workload and you can withstand the risk of data loss in the event of an unplanned system outage.
+
+Before you choose a write speed, you should understand the differences between the normal and high settings and the risks and recommendations when using high write speed.
+
+https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more^].
 
 === Fixes for Azure NIC detach events and maintenance events
 
-<description coming soon>
+This release provides several improvements for how Cloud Volumes ONTAP handles Azure freeze events, Azure NIC detach events, and other Azure maintenance activities (for example, Virtual Function Revoke). Cloud Volumes ONTAP is more fault tolerant in this release and will handle Azure events more gracefully, with a reduced likelihood of service disruption or cluster degradation.
 
 === Core disk for single node systems in AWS
 
-<description coming soon>
+Cloud Manager now allocates a core disk to new Cloud Volumes ONTAP 9.8 single node systems when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
+
+The core disk is a General Purpose SSD with 540 GB.
 
 == Upgrade notes
 
