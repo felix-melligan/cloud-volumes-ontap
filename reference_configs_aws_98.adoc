@@ -120,7 +120,7 @@ Notes:
 
 . These instance types include local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/occm/concept_flash_cache.html[Learn more about Flash Cache^].
 
-. The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs.
+. The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs. This limitation affects newly deployed 9.8 HA pairs and single node systems or HA pairs upgraded from 9.7. The limitation does not affect newly deployed 9.8 single node systems.
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
