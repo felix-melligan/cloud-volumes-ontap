@@ -19,12 +19,14 @@ Additional features and enhancements are also introduced in the latest versions 
 
 == 9.8 RC1 (8 Nov 2020)
 
-Cloud Volumes ONTAP 9.8 RC1 is now available in AWS, Azure, and Google Cloud Platform. In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.8^], this release of Cloud Volumes ONTAP includes the following:
+Cloud Volumes ONTAP 9.8 RC1 is now available in AWS, Azure, and Google Cloud Platform. In Azure, 9.8 RC1 is available for upgrades only at this time.
+
+In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.8^], this release of Cloud Volumes ONTAP includes the following:
 
 * <<High-availability pairs in Google Cloud>>
-* <<Support for 24 SVMs in AWS>>
-* <<High write speed with HA pairs in AWS and Azure>>
 * <<Fixes for Azure NIC detach events and maintenance events>>
+* <<High write speed with HA pairs in AWS and Azure>>
+* <<Support for 24 storage VMs in AWS>>
 * <<Core disk for single node systems in AWS>>
 
 === High-availability pairs in Google Cloud
@@ -37,9 +39,9 @@ View link:reference_configs_gcp_98.html[supported configurations] and link:refer
 
 //Learn how to deploy an HA pair in Google Cloud.
 
-=== Support for 24 storage VMs in AWS
+=== Fixes for Azure NIC detach events and maintenance events
 
-Up to 24 storage VMs are now supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license (BYOL). link:reference_limits_aws_98.html[Learn more about storage VM limits].
+This release provides several improvements for how Cloud Volumes ONTAP handles Azure freeze events, Azure NIC detach events, and other Azure maintenance activities (for example, Virtual Function Revoke). Cloud Volumes ONTAP is more fault tolerant in this release and will handle Azure events more gracefully, with a reduced likelihood of service disruption or cluster degradation.
 
 === High write speed with HA pairs in AWS and Azure
 
@@ -49,9 +51,9 @@ Before you choose a write speed, you should understand the differences between t
 
 https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more^].
 
-=== Fixes for Azure NIC detach events and maintenance events
+=== Support for 24 storage VMs in AWS
 
-This release provides several improvements for how Cloud Volumes ONTAP handles Azure freeze events, Azure NIC detach events, and other Azure maintenance activities (for example, Virtual Function Revoke). Cloud Volumes ONTAP is more fault tolerant in this release and will handle Azure events more gracefully, with a reduced likelihood of service disruption or cluster degradation.
+Up to 24 storage VMs are now supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license (BYOL). link:reference_limits_aws_98.html[Learn more about storage VM limits].
 
 === Core disk for single node systems in AWS
 
