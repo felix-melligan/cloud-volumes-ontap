@@ -222,12 +222,9 @@ Notes:
 | *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
 (HA pair or single node) a|
 *C5, M5, and R5 instances with BYOL*
-The following number of storage VMs are supported with C5, M5, and R5 instance types when you bring your own license (BYOL):
+Up to 24 storage VMs are supported with Cloud Volumes ONTAP when you use a C5, M5, or R5 instance type and bring your own license (BYOL).
 
-* 12 storage VMs with single node systems
-* 8 storage VMs with HA pairs
-
-NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
+Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
 
 An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
@@ -236,7 +233,7 @@ Storage VMs that you configure for disaster recovery (DR) don't require an add-o
 *All other configurations*
 One data-serving storage VM and one destination storage VM used for disaster recovery are supported. ^2^
 
-A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
 
 .2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
@@ -251,7 +248,7 @@ A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node
 
 Notes:
 
-. For example, if you have 8 data-serving storage VMs on an HA pair, then you've reached the limit and can't create any additional storage VMs. The same is true for another HA pair that has 8 storage VMs configured for disaster recovery--you've reached the limit and can't create any additional storage VMs.
+. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
 
 . You can activate a destination storage VM for data access if there’s an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
 +

@@ -17,7 +17,7 @@ Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
-== 9.8 RC1 (5 Nov 2020)
+== 9.8 RC1 (8 Nov 2020)
 
 Cloud Volumes ONTAP 9.8 RC1 is now available in AWS, Azure, and Google Cloud Platform. In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.8^], this release of Cloud Volumes ONTAP includes the following:
 
@@ -37,9 +37,9 @@ View link:reference_configs_gcp_98.html[supported configurations] and link:refer
 
 //Learn how to deploy an HA pair in Google Cloud.
 
-=== Support for 24 SVMs in AWS
+=== Support for 24 storage VMs in AWS
 
-<description coming soon>
+Up to 24 storage VMs are now supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license (BYOL). link:reference_limits_aws_98.html[Learn more about storage VM limits].
 
 === High write speed with HA pairs in AWS and Azure
 
@@ -58,6 +58,8 @@ This release provides several improvements for how Cloud Volumes ONTAP handles A
 Cloud Manager now allocates a core disk to new Cloud Volumes ONTAP 9.8 single node systems when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
 
 The core disk is a General Purpose SSD with 540 GB.
+
+NOTE: With the addition of this core disk, one less data disk is now supported on single node systems that use these instance types. link:reference_limits_aws_98.html[Learn more about storage limits in AWS].
 
 == Upgrade notes
 
