@@ -1,6 +1,40 @@
 entries:
   - title: Cloud Volumes ONTAP Release Notes
     url: /index.html
+  - title: 9.8 Release Notes
+    entries:
+      - title: What's new
+        url: /reference_new_98.html
+      - title: Supported configurations
+        entries:
+          - title: AWS
+            url: /reference_configs_aws_98.html
+          - title: Azure
+            url: /reference_configs_azure_98.html
+          - title: GCP
+            url: /reference_configs_gcp_98.html
+      - title: Storage limits
+        entries:
+          - title: AWS
+            url: /reference_limits_aws_98.html
+          - title: Azure
+            url: /reference_limits_azure_98.html
+          - title: GCP
+            url: /reference_limits_gcp_98.html
+      - title: Known issues
+        url: /reference_issues_98.html
+      - title: Known limitations
+        entries:
+          - title: Common limitations
+            url: /reference_limitations_98.html
+          - title: Limitations in AWS
+            url: /reference_limitations_aws_98.html
+          - title: Limitations in Azure
+            url: /reference_limitations_azure_98.html
+          - title: Limitations in GCP
+            url: /reference_limitations_gcp_98.html
+      - title: Cloud provider integrations
+        url: reference_provider_integrations_98.html
   - title: 9.7 Release Notes
     entries:
       - title: What's new

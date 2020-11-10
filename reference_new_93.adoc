@@ -65,7 +65,7 @@ https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery E
 
 * Upgrades must be completed from Cloud Manager. You should not upgrade ONTAP Cloud by using System Manager or the CLI. Doing so can impact system stability.
 
-* You can upgrade to ONTAP Cloud 9.3 from ONTAP Cloud 9.1 or ONTAP Cloud 9.2.
+* You can upgrade to ONTAP Cloud 9.3 from ONTAP Cloud 9.2.
 
 * The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
 

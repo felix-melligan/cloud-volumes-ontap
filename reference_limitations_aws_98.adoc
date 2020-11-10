@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference_limitations_aws_97.html
+permalink: reference_limitations_aws_98.html
 keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s
 summary: These known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services.
 ---
 
-= Known limitations for Cloud Volumes ONTAP 9.7 in AWS
+= Known limitations for Cloud Volumes ONTAP 9.8 in AWS
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: These known limitations are specific to Cloud Volumes ONTAP in Amazon W
 :imagesdir: ./media/
 
 [.lead]
-The following known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services. Be sure to also review link:reference_limitations_97.html[Limitations for Cloud Volumes ONTAP 9.7 in all cloud providers].
+The following known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services. Be sure to also review link:reference_limitations_98.html[Limitations for Cloud Volumes ONTAP 9.8 in all cloud providers].
 
 == HA pairs not supported with AWS Outposts
 

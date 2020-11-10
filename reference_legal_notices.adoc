@@ -39,11 +39,13 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
+* link:media/notice_cloud_volumes_ontap_9.8.pdf[Notice for Cloud Volumes ONTAP 9.8^]
 * link:media/notice_cloud_volumes_ontap_9.7.pdf[Notice for Cloud Volumes ONTAP 9.7^]
 * link:media/notice_cloud_volumes_ontap_9.6.pdf[Notice for Cloud Volumes ONTAP 9.6^]
 * link:media/notice_cloud_volumes_ontap_9.5.pdf[Notice for Cloud Volumes ONTAP 9.5^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2846508[Notice for Cloud Volumes ONTAP 9.4^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2589386[Notice for ONTAP Cloud 9.3^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873871[Notice for ONTAP 9.8^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2860921[Notice for ONTAP 9.7^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2855145[Notice for ONTAP 9.6^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2850702[Notice for ONTAP 9.5^]
