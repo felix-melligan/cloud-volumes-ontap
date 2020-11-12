@@ -132,7 +132,7 @@ Notes:
 .2+| *Initiators*	| Maximum per node |	512
 | Maximum per igroup	| 128
 | *iSCSI sessions* |	Maximum per node | 1,024
-.2+| *LIFs*	| Maximum per port |	32
+.2+| *LIFs*	| Maximum per port |	1
 | Maximum per portset	| 32
 | *Portsets* |	Maximum per node |	256
 
