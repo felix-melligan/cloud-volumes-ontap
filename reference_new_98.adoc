@@ -17,6 +17,14 @@ Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.8 RC1 update (12 Nov 2020)
+
+Similar to single node systems, Cloud Manager now allocates a core disk to new 9.8 HA pair deployments in AWS when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
+
+The core disk is a General Purpose SSD with 540 GB.
+
+NOTE: With the addition of this core disk, one less data disk is now supported on systems that use these instance types. link:reference_limits_aws_98.html[Learn more about storage limits in AWS].
+
 == 9.8 RC1 (8 Nov 2020)
 
 Cloud Volumes ONTAP 9.8 RC1 is now available in AWS, Azure, and Google Cloud Platform. In Azure, 9.8 RC1 is available for upgrades only at this time.
@@ -67,7 +75,7 @@ https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add 
 
 === Core disk for single node systems in AWS
 
-Cloud Manager now allocates a core disk to new Cloud Volumes ONTAP 9.8 single node systems when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
+Cloud Manager now allocates a core disk to new 9.8 single node deployments in AWS when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
 
 The core disk is a General Purpose SSD with 540 GB.
 
