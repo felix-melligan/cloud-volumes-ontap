@@ -129,23 +129,23 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 | c4.4xlarge | 31 | 368 TB | 368 TB
 | c4.8xlarge | 31 | 368 TB | 368 TB
-| c5.9xlarge | 19 | 304 TB | 368 TB
-| c5.18xlarge | 19 | 304 TB | 368 TB
-| c5d.4xlarge | 19 | 304 TB | 368 TB
-| c5d.9xlarge | 19 | 304 TB | 368 TB
-| c5d.18xlarge | 19 | 304 TB | 368 TB
-| c5n.9xlarge | 19 | 304 TB | 368 TB
-| c5n.18xlarge | 19 | 304 TB | 368 TB
+| c5.9xlarge | 18 | 288 TB | 368 TB
+| c5.18xlarge | 18 | 288 TB | 368 TB
+| c5d.4xlarge | 18 | 288 TB | 368 TB
+| c5d.9xlarge | 18 | 288 TB | 368 TB
+| c5d.18xlarge | 18 | 288 TB | 368 TB
+| c5n.9xlarge | 18 | 288 TB | 368 TB
+| c5n.18xlarge | 18 | 288 TB | 368 TB
 | m4.4xlarge | 31 | 368 TB | 368 TB
-| m5.4xlarge | 19 | 304 TB | 368 TB
-| m5.16xlarge | 19 | 304 TB | 368 TB
-| m5d.8xlarge | 19 | 304 TB | 368 TB
-| m5d.12xlarge | 19 | 304 TB | 368 TB
+| m5.4xlarge | 18 | 288 TB | 368 TB
+| m5.16xlarge | 18 | 288 TB | 368 TB
+| m5d.8xlarge | 18 | 288 TB | 368 TB
+| m5d.12xlarge | 18 | 288 TB | 368 TB
 | r4.2xlarge | 31 | 368 TB | 368 TB
-| r5.2xlarge | 19 | 304 TB | 368 TB
-| r5.8xlarge | 19 | 304 TB | 368 TB
-| r5.12xlarge | 19 | 304 TB | 368 TB
-| r5d.2xlarge | 19 | 304 TB | 368 TB
+| r5.2xlarge | 18 | 288 TB | 368 TB
+| r5.8xlarge | 18 | 288 TB | 368 TB
+| r5.12xlarge | 18 | 288 TB | 368 TB
+| r5d.2xlarge | 18 | 288 TB | 368 TB
 |===
 
 === HA pairs with one or more BYOL licenses
@@ -161,29 +161,29 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 | c4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 | c4.8xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| c5.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5n.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5n.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5.9xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5.18xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5d.4xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5d.9xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5d.18xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5n.9xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5n.18xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
 | m4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 | m4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 | m4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| m5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5.16xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5d.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5d.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| m5.xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| m5.2xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| m5.4xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| m5.16xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| m5d.8xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| m5d.12xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
 | r4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 | r4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| r5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5d.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| r5.xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| r5.2xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| r5.8xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| r5.12xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| r5d.2xlarge | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
 |===
 
 == Aggregate limits
