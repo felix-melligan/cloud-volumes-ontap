@@ -70,7 +70,9 @@ Cloud Volumes ONTAP groups Google Cloud Platform disks into _aggregates_. Aggreg
 | Parameter
 | Limit
 
-| Maximum number of data aggregates per system (single node or HA pair) | 99 ^1^
+| Maximum number of data aggregates ^1^ a|
+* 99 for single node
+* 64 for an entire HA pair
 | Maximum aggregate size | 96 TB of raw capacity ^2^
 | Disks per aggregate	| 1-6 ^3^
 | Maximum number of RAID groups per aggregate	| 1
