@@ -45,7 +45,7 @@ An HA pair provides enterprise reliability and continuous operations in case of 
 
 View link:reference_configs_gcp_98.html[supported configurations] and link:reference_limits_gcp_98.html[storage limits].
 
-//Learn how to deploy an HA pair in Google Cloud.
+https://docs.netapp.com/us-en/occm/concept_ha_google_cloud.html[Learn more about HA pairs in Google Cloud^].
 
 === Fixes for Azure NIC detach events and maintenance events
 
