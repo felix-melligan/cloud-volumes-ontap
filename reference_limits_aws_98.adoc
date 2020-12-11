@@ -65,7 +65,6 @@ Note the following:
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 | 21 | 336 TB | 368 TB
-| m5d.8xlarge | 19 | 304 TB | 368 TB
 | c4, m4, and r4 | 34 | 368 TB | 368 TB
 |===
 
@@ -80,7 +79,6 @@ Note the following:
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 | c5, m5, and r5 | 21 | 336 TB | 368 TB | 336 TB | 368 TB x each license
-| m5d.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
 | c4, m4, and r4 | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 |===
 
@@ -94,7 +92,6 @@ Note the following:
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 | 18 | 288 TB | 368 TB
-| m5d.8xlarge | 16 | 256 TB | 368 TB
 | c4, m4, and r4 | 31 | 368 TB | 368 TB
 |===
 
@@ -110,7 +107,6 @@ Note the following:
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
 | c5, m5, and r5 | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
-| m5d.8xlarge | 16 | 256 TB | 368 TB | 256 TB | 368 TB x each license
 | c4, m4, and r4 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 |===
 
