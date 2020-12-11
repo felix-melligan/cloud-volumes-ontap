@@ -47,7 +47,7 @@ Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB
 
 Note the following:
 
-* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
+* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can upgrade a system to the 9.8 release when running on one of these instance types.
 
 * The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
@@ -64,8 +64,8 @@ Note the following:
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c5, m5, and r5 | 21 | 336 TB | 368 TB
-| c4, m4, and r4 | 34 | 368 TB | 368 TB
+| c5, m5, and r5 instances | 21 | 336 TB | 368 TB
+| c4, m4, and r4 instances | 34 | 368 TB | 368 TB
 |===
 
 === Single node with one or more BYOL licenses
@@ -78,8 +78,8 @@ Note the following:
 2+| Max system capacity with multiple licenses
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
-| c5, m5, and r5 | 21 | 336 TB | 368 TB | 336 TB | 368 TB x each license
-| c4, m4, and r4 | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c5, m5, and r5 instances | 21 | 336 TB | 368 TB | 336 TB | 368 TB x each license
+| c4, m4, and r4 instances | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 |===
 
 === HA pairs with a Premium license
@@ -91,8 +91,8 @@ Note the following:
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c5, m5, and r5 | 18 | 288 TB | 368 TB
-| c4, m4, and r4 | 31 | 368 TB | 368 TB
+| c5, m5, and r5 instances | 18 | 288 TB | 368 TB
+| c4, m4, and r4 instances | 31 | 368 TB | 368 TB
 |===
 
 === HA pairs with one or more BYOL licenses
@@ -106,8 +106,8 @@ Note the following:
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| c5, m5, and r5 | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
-| c4, m4, and r4 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c5, m5, and r5 instances | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c4, m4, and r4 instances | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 |===
 
 == Aggregate limits
@@ -129,7 +129,7 @@ HA pairs: 18 in a node ^1^
 
 Notes:
 
-. It is not possible to create 19 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
+. It's not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
