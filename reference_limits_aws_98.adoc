@@ -57,7 +57,7 @@ Note the following:
 
 === Single node with a Premium license
 
-[cols="16,20,30,32",width=69%,options="header"]
+[cols="18,18,32,32",width=100%,options="header"]
 |===
 | Instance family
 | Max disks per node
@@ -70,7 +70,7 @@ Note the following:
 
 === Single node with one or more BYOL licenses
 
-[cols="16,20,16,16,16,16",width=100%,options="header"]
+[cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
 | Instance family
 | Max disks per node
