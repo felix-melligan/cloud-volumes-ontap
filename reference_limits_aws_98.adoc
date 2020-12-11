@@ -43,13 +43,17 @@ No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nod
 
 == Disk and tiering limits by EC2 instance
 
-Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB. The sections below show disk and tiering limits by EC2 instance type because many EC2 instance types have different disk limits. Disk limits are also different between single node systems and HA pairs.
+Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB. The sections below show disk and tiering limits by EC2 instance family because many EC2 instance types have different disk limits. Disk limits are also different between single node systems and HA pairs.
 
-The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+Note the following:
 
-Disk limits are shown by instance for Premium and BYOL licenses only because disk limits can't be reached with Explore or Standard licenses.
+* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
-NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+* The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+
+* Limits are shown for Premium and BYOL licenses only because capacity limits can't be reached with Explore or Standard licenses.
+
+* You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
 === Single node with a Premium license
 
@@ -61,10 +65,8 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 | 21 | 336 TB | 368 TB
-| c4, m4, and r4 ^1^ | 34 | 368 TB | 368 TB
+| c4, m4, and r4 | 34 | 368 TB | 368 TB
 |===
-
-^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 === Single node with one or more BYOL licenses
 
@@ -77,10 +79,8 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 | c5, m5, and r5 | 21 | 336 TB | 368 TB | 336 TB | 368 TB x each license
-| c4, m4, and r4 ^1^ | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c4, m4, and r4 | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 |===
-
-^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 === HA pairs with a Premium license
 
@@ -92,10 +92,8 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 | 18 | 288 TB | 368 TB
-| c4, m4, and r4 ^1^ | 31 | 368 TB | 368 TB
+| c4, m4, and r4 | 31 | 368 TB | 368 TB
 |===
-
-^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 === HA pairs with one or more BYOL licenses
 
@@ -109,10 +107,8 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
 | c5, m5, and r5 | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
-| c4, m4, and r4 ^1^ | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c4, m4, and r4 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 |===
-
-^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 == Aggregate limits
 
