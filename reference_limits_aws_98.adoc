@@ -66,7 +66,7 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 === Single node with one or more BYOL licenses
 
-[cols="10,18,18,18,18,18",width=100%,options="header"]
+[cols="16,20,16,16,16,16",width=100%,options="header"]
 |===
 | Instance family
 | Max disks per node
@@ -93,7 +93,7 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 === HA pairs with one or more BYOL licenses
 
-[cols="10,18,18,18,18,18",width=100%,options="header"]
+[cols="16,20,16,16,16,16",width=100%,options="header"]
 |===
 | Instance family
 | Max disks per node
