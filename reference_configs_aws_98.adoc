@@ -48,37 +48,30 @@ Cloud Volumes ONTAP is available in AWS as a single node system and as an HA pai
 
 | Supported EC2 instance types ^1^
 a|
-* m4.xlarge
 * m5.xlarge
 
 a|
-* m4.2xlarge
 * m5.2xlarge ^2^
-* r4.xlarge
 * r5.xlarge
 
 a|
-* c4.4xlarge
-* c4.8xlarge
 * c5.9xlarge ^2^
 * c5.18xlarge ^2^
 * c5d.4xlarge ^2,^ ^3^
 * c5d.9xlarge ^2,^ ^3^
 * c5d.18xlarge ^2,^ ^3^
-* m4.4xlarge
+* c5n.9xlarge ^2^
 * m5.4xlarge ^2^
 * m5.16xlarge ^2^
 * m5d.8xlarge ^3^
 * m5d.12xlarge ^3^
-* r4.2xlarge
+* m5n.2xlarge ^2^
 * r5.2xlarge ^2^
 * r5.8xlarge ^2^
 * r5.12xlarge ^2,^ ^4^
 * r5d.2xlarge ^2,^ ^3^
 
 a|
-* c4.4xlarge
-* c4.8xlarge
 * c5.9xlarge ^2^
 * c5.18xlarge ^2^
 * c5d.4xlarge ^2,^ ^3^
@@ -86,17 +79,13 @@ a|
 * c5d.18xlarge ^2,^ ^3^
 * c5n.9xlarge ^2^
 * c5n.18xlarge ^2^
-* m4.xlarge
-* m4.2xlarge
-* m4.4xlarge
 * m5.xlarge
 * m5.2xlarge ^2^
 * m5.4xlarge ^2^
 * m5.16xlarge ^2^
 * m5d.8xlarge ^2,^ ^3^
 * m5d.12xlarge ^2,^ ^3^
-* r4.xlarge
-* r4.2xlarge
+* m5n.2xlarge ^2^
 * r5.xlarge
 * r5.2xlarge ^2^
 * r5.8xlarge ^2^
