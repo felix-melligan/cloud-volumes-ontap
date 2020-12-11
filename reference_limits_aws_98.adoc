@@ -61,8 +61,10 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 | 21 | 336 TB | 368 TB
-| c4, m4, and r4 | 34 | 368 TB | 368 TB
+| c4, m4, and r4 ^1^ | 34 | 368 TB | 368 TB
 |===
+
+^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 === Single node with one or more BYOL licenses
 
@@ -75,8 +77,10 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 | c5, m5, and r5 | 21 | 336 TB | 368 TB | 336 TB | 368 TB x each license
-| c4, m4, and r4 | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+| c4, m4, and r4 ^1^ | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 |===
+
+^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 === HA pairs with a Premium license
 
@@ -88,8 +92,10 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 | 18 | 288 TB | 368 TB
-| c4, m4, and r4 | 31 | 368 TB | 368 TB
+| c4, m4, and r4 ^1^ | 31 | 368 TB | 368 TB
 |===
+
+^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 === HA pairs with one or more BYOL licenses
 
@@ -103,8 +109,10 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
 | c5, m5, and r5 | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
-| c4, m4, and r4 | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+| c4, m4, and r4 ^1^ | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 |===
+
+^1^ c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can still upgrade a system to the 9.8 release when running on one of these instance types.
 
 == Aggregate limits
 

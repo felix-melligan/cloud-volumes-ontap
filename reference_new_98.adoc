@@ -17,6 +17,12 @@ Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Supported EC2 instances (11 Dec 2020)
+
+Starting with the 9.8 release, c4, m4, and r4 EC2 instance types are not supported with new Cloud Volumes ONTAP systems. Changing an existing 9.8 system to one of these instance types isn't supported either.
+
+If you have an existing Cloud Volumes ONTAP 9.7 system that's running on a c4, m4, or r4 instance type, you can still upgrade to the 9.8 release.
+
 == 9.8 RC1 update (12 Nov 2020)
 
 Similar to single node systems, Cloud Manager now allocates a core disk to new 9.8 HA pair deployments in AWS when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
