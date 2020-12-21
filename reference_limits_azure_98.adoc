@@ -71,7 +71,7 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 
 === Single node with one or more BYOL licenses
 
-NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 2 PB with DS5_v2.
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 1.95 PB with DS5_v2.
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
@@ -107,11 +107,12 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS13_v2 | 29 | 368 TB | 368 TB
 | DS14_v2 | 61 | 368 TB | 368 TB
 | DS15_v2 | 61 | 368 TB | 368 TB
+| E48s_v3 | 29 | 368 TB | 368 TB
 |===
 
 === HA pairs with one or more BYOL licenses
 
-NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 3 BYOL licenses to reach 1 PB with DS5_v2.
+NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 3 BYOL licenses to reach 976 TB with DS5_v2.
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
@@ -127,6 +128,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS13_v2 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 | DS14_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
 | DS15_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
+| E48s_v3 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 |===
 
 == Aggregate limits
