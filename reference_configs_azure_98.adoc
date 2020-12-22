@@ -119,6 +119,7 @@ a|
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+* E48s_v3 ^1^
 
 a|
 * DS4_v2
@@ -126,6 +127,7 @@ a|
 * DS13_v2
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+* E48s_v3 ^1^
 
 | Supported disk types | Not supported 3+| Premium page blobs
 

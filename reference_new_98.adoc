@@ -17,6 +17,10 @@ Cloud Volumes ONTAP 9.8 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== E48s_v3 now supported with HA pairs (21 Dec 2020)
+
+The E48s_v3 VM type is now supported with Cloud Volumes ONTAP HA pairs in Microsoft Azure.
+
 == Supported EC2 instances (11 Dec 2020)
 
 Starting with the 9.8 release, c4, m4, and r4 EC2 instance types are not supported with new Cloud Volumes ONTAP systems. Changing an existing 9.8 system to one of these instance types isn't supported either.
