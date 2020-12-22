@@ -50,11 +50,23 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Premium
 | BYOL
 
-| Supported machine types ^1^ | custom-4-16384 | n1-standard-8  | n1-standard-32
+| Supported machine types ^1^
+a|
+* custom-4-16384
+* n2-standard-4
+a|
+* n1-standard-8
+* n2-standard-8
+a|
+* n1-standard-32
+* n2-standard-32
 a|
 * custom-4-16384
 * n1-standard-8
 * n1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
 
 | Supported disk types ^2^ 4+| Zonal persistent disks (SSD and standard)
 
@@ -91,10 +103,19 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Premium
 | BYOL
 
-| Supported machine types | Not supported | n1-standard-8  | n1-standard-32
+| Supported machine types | Not supported a|
+* n1-standard-8
+* n2-standard-8
 a|
+* n1-standard-32
+* n2-standard-32
+a|
+* custom-4-16384
 * n1-standard-8
 * n1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
 
 | Supported disk types ^1^ | Not supported 3+| Zonal persistent disks (SSD and standard)
 
@@ -128,3 +149,4 @@ In GCP, an aggregate can contain up to 6 disks that are all the same type and si
 * 4 TB
 * 8 TB
 * 16 TB
+* 64 TB
