@@ -19,13 +19,7 @@ Additional features and enhancements are also introduced in the latest versions 
 
 == Changes introduced with Cloud Manager 3.9.2 (4 Jan 2021)
 
-The Cloud Manager 3.9.2 release includes several enhancements for Cloud Volumes ONTAP:
-
-* Support for 64 TB disks in Google Cloud Platform
-* Support for new machine types in Google Cloud Platform:
-** n2-standard-4 with the Explore license and with BYOL
-** n2-standard-8 with the Standard license and with BYOL
-** n2-standard-32 with the Premium license and with BYOL
+The Cloud Manager 3.9.2 release includes several enhancements for Cloud Volumes ONTAP, including support for AWS Outposts, larger disks in GCP, and more.
 
 Go to the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for more details about the 3.9.2 release.
 
