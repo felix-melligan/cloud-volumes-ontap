@@ -87,6 +87,8 @@ Notes:
 +
 link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
 
+. The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
+
 . For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
@@ -128,11 +130,15 @@ a|
 
 Notes:
 
+. The custom machine type has 4 vCPUs and 16 GB of memory. For details about standard machine types, refer to https://cloud.google.com/compute/docs/machine-types#standard_machine_types[Google Cloud Documentation: Machine Types^].
+
 . Enhanced write performance is enabled when using SSDs.
 
 . Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
 +
 link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
+
+. The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
 
 . For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
