@@ -53,7 +53,7 @@ The table below shows the maximum system capacity with disks alone, and with dis
 | Maximum data disks a|
 * 124 for single node systems
 * 123 per node for HA pairs
-| Maximum disk size | 16 TB
+| Maximum disk size | 64 TB
 | Maximum system capacity with disks alone | 256 TB
 | Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket
 a|
@@ -73,7 +73,7 @@ Cloud Volumes ONTAP groups Google Cloud Platform disks into _aggregates_. Aggreg
 | Maximum number of data aggregates ^1^ a|
 * 99 for single node
 * 64 for an entire HA pair
-| Maximum aggregate size | 96 TB of raw capacity ^2^
+| Maximum aggregate size | 256 TB of raw capacity ^2^
 | Disks per aggregate	| 1-6 ^3^
 | Maximum number of RAID groups per aggregate	| 1
 |===
