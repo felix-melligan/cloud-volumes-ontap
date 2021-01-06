@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_configs_aws_98.html
-keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth
 summary: Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
 ---
 
