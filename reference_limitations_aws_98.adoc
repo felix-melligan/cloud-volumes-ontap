@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_limitations_aws_98.html
-keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s
+keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s, aws outpost, outposts
 summary: These known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services.
 ---
 
@@ -15,9 +15,15 @@ summary: These known limitations are specific to Cloud Volumes ONTAP in Amazon W
 [.lead]
 The following known limitations are specific to Cloud Volumes ONTAP in Amazon Web Services. Be sure to also review link:reference_limitations_98.html[Limitations for Cloud Volumes ONTAP 9.8 in all cloud providers].
 
-== HA pairs not supported with AWS Outposts
+== AWS Outpost limitations
 
-Single node systems are supported with AWS Outposts but HA pairs aren't supported at this time.
+If you have an AWS Outpost, you can deploy Cloud Volumes ONTAP in that Outpost by selecting the Outpost VPC in the Working Environment wizard. The experience is the same as any other VPC that resides in AWS. Note that you will need to first deploy a Connector in your AWS Outpost.
+
+There are a few limitations to point out:
+
+* Only single node Cloud Volumes ONTAP systems are supported at this time
+* The EC2 instances that you can use with Cloud Volumes ONTAP are limited to what's available in your Outpost
+* Only General Purpose SSDs are supported at this time
 
 == Flash Cache limitations
 
