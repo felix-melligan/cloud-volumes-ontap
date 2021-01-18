@@ -150,7 +150,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.14+| *Premium and BYOL*
+.16+| *Premium and BYOL*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 
