@@ -172,15 +172,17 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | c5n.9xlarge | 36 | 96 | Not supported | 50 | 9,500 | Supported
 
-| m5d.12xlarge | 48 | 192 | Supported | 12 | 9,500 | Supported
-
-| r5.12xlarge ^3^ | 48 | 384 | Not supported | 10 | 9,500 | Supported
-
-| m5.16xlarge | 48 ^4^ | 256 | Not supported | 20 | 13,600 | Supported
-
 | c5.18xlarge | 48 ^4^ | 144 | Not supported | 25 | 19,000 | Supported
 
 | c5d.18xlarge | 48 ^4^ | 144 | Supported | 25 | 19,000 | Supported
+
+| m5d.12xlarge | 48 | 192 | Supported | 12 | 9,500 | Supported
+
+| c5n.18xlarge | 48 ^4^ | 192 | Not supported | 100 | 19,000 | Supported
+
+| m5.16xlarge | 48 ^4^ | 256 | Not supported | 20 | 13,600 | Supported
+
+| r5.12xlarge ^3^ | 48 | 384 | Not supported | 10 | 9,500 | Supported
 
 |===
 
