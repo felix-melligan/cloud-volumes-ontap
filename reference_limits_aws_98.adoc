@@ -135,13 +135,51 @@ Notes:
 
 . All disks in an aggregate must be the same size.
 
-== Logical storage limits
+== Storage VM limits
 
-[cols="22,22,56",width=100%,options="header"]
+Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license (BYOL). All other configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
+
+[cols=4*,options="header"]
 |===
-| Logical storage
-| Parameter
-| Limit
+| Configuration
+| Instance type
+| Private IPs remaining
+| Max storage VMs
+
+.+7| Single node
+| *.2xlarge | 9 | 9 or 4
+| *.4xlarge | 24 | 24 or 12
+| *.8xlarge | 24 | 24 or 12
+| *.9xlarge | 24 | 24 or 12
+| *.12xlarge | 24 | 24 or 12
+| *.16xlarge | 44 | 24 or 22
+| *.18xlarge | 44 | 24 or 22
+
+.+7| HA pair in single AZ
+| *.2xlarge | 10 | 10 or 5
+| *.4xlarge | 25 | 24 or 12
+| *.8xlarge | 25 | 24 or 12
+| *.9xlarge | 25 | 24 or 12
+| *.12xlarge | 25 | 24 or 12
+| *.16xlarge | 45 | 24 or 22
+| *.18xlarge | 45 | 24 or 22
+
+.+7| HA pair in multi AZs
+| *.2xlarge | 12 | 12
+| *.4xlarge | 27 | 24
+| *.8xlarge | 27 | 24
+| *.9xlarge | 27 | 24
+| *.12xlarge | 27 | 24
+| *.16xlarge | 47 | 24
+| *.18xlarge | 47 | 24
+
+|===
+
+Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
+
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
 
 | *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
 (HA pair or single node) a|
@@ -159,9 +197,24 @@ One data-serving storage VM and one destination storage VM used for disaster rec
 
 NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
 
+. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
+
+. You can activate a destination storage VM for data access if there’s an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
++
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
+
+== File and volume limits
+
+[cols="22,22,56",width=100%,options="header"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
 .2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
-| *FlexClone volumes*	| Hierarchical clone depth ^3^ | 499
+| *FlexClone volumes*	| Hierarchical clone depth ^1^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
 | Maximum size | Dependent on the size of the aggregate
@@ -169,15 +222,6 @@ NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or singl
 | *Snapshot copies* |	Maximum per FlexVol volume |	1,023
 
 |===
-
-Notes:
-
-. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
-
-. You can activate a destination storage VM for data access if there’s an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
-+
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 
