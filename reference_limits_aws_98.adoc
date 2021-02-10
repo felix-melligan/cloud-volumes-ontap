@@ -137,35 +137,24 @@ Notes:
 
 == Storage VM limits
 
-Up to 24 storage VMs are supported with Cloud Volumes ONTAP when you use a C5, M5, or R5 instance type and bring your own license (BYOL). Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
+Up to 24 storage VMs are supported with Cloud Volumes ONTAP when you use a C5, M5, or R5 instance type and bring your own license (BYOL). Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR). But the limit depends on the EC2 instance type that you use, which is detailed in the next section.
 
 All other configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
 
-An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
-
-Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
-
-NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
-
-. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
-
-. You can activate a destination storage VM for data access if there's an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
-+
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
+Storage VMs that you configure for disaster recovery (DR) count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
 
 === Storage VM limit by EC2 instance type
 
-When you create an additional storage VM, you need to allocate additional private IP addresses on port e0a. The table below identifies the number of private IP addresses that are available for port e0a after Cloud Volumes ONTAP has been deployed. The number of available IP addresses directly affects the maximum number of storage VMs for that configuration.
+When you create an additional storage VM, you need to allocate private IP addresses to port e0a. The table below identifies the number of private IP addresses that are available on port e0a after Cloud Volumes ONTAP has been deployed. The number of available IP addresses directly affects the maximum number of storage VMs for that configuration.
 
-You'll notice that two storage VM limits are listed for single node systems and for HA pairs in a single AZ. The first number is the max number of storage VMs if you _don't_ allocate a management LIF on each storage VM. The second number is the max number of storage VMs if you _do_ allocate a management LIF on each storage VM.
+In the table below, you'll notice that two storage VM limits are listed for single node systems and for HA pairs in a single AZ. The first number is the max number of storage VMs if you _don't_ allocate a management LIF on each storage VM. The second number is the max number of storage VMs if you _do_ allocate a management LIF on each storage VM.
 
 [cols=4*,options="header"]
 |===
 | Configuration
 | Instance type
-| Private IPs remaining
-| Max storage VMs
+| Private IPs remaining ^1^
+| Max number of storage VMs ^2^
 
 .7+| Single node
 | *.2xlarge | 9 | 10 or 5
@@ -195,6 +184,10 @@ You'll notice that two storage VM limits are listed for single node systems and 
 | *.18xlarge | 47 | 24
 
 |===
+
+. This number indicates how many _remaining_ private IP addresses are available on port e0a after Cloud Volumes ONTAP is deployed and set up. For example, a *.2xlarge system supports a maximum of 15 IP addresses per network interface. When an HA pair is deployed in a single AZ, 5 private IP addresses are allocated to port e0a. As a result, an HA pair that uses a *.2xlarge instance type has 10 private IP addresses available for additional storage VMs.  
+
+. The number listed in this column includes the initial storage VM that Cloud Manager creates by default. For example, if 24 is listed in this column, it means that you can create 23 additional storage VMs for a total of 24.
 
 == File and volume limits
 
