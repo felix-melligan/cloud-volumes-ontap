@@ -137,7 +137,28 @@ Notes:
 
 == Storage VM limits
 
-Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license (BYOL). All other configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
+Up to 24 storage VMs are supported with Cloud Volumes ONTAP when you use a C5, M5, or R5 instance type and bring your own license (BYOL). Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
+
+All other configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
+
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
+
+NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
+
+. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
+
+. You can activate a destination storage VM for data access if there's an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
++
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
+
+=== Storage VM limit by EC2 instance type
+
+When you create an additional storage VM, you need to allocate additional private IP addresses on port e0a. The table below identifies the number of private IP addresses that are available for port e0a after Cloud Volumes ONTAP has been deployed. The number of available IP addresses directly affects the maximum number of storage VMs for that configuration.
+
+You'll notice that two storage VM limits are listed for single node systems and for HA pairs in a single AZ. The first number is the max number of storage VMs if you _don't_ allocate a management LIF on each storage VM. The second number is the max number of storage VMs if you _do_ allocate a management LIF on each storage VM.
 
 [cols=4*,options="header"]
 |===
@@ -147,25 +168,25 @@ Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use 
 | Max storage VMs
 
 .7+| Single node
-| *.2xlarge | 9 | 9 or 4
-| *.4xlarge | 24 | 24 or 12
-| *.8xlarge | 24 | 24 or 12
-| *.9xlarge | 24 | 24 or 12
-| *.12xlarge | 24 | 24 or 12
-| *.16xlarge | 44 | 24 or 22
-| *.18xlarge | 44 | 24 or 22
+| *.2xlarge | 9 | 10 or 5
+| *.4xlarge | 24 | 24 or 13
+| *.8xlarge | 24 | 24 or 13
+| *.9xlarge | 24 | 24 or 13
+| *.12xlarge | 24 | 24 or 13
+| *.16xlarge | 44 | 24 or 23
+| *.18xlarge | 44 | 24 or 23
 
 .7+| HA pair in single AZ
-| *.2xlarge | 10 | 10 or 5
-| *.4xlarge | 25 | 24 or 12
-| *.8xlarge | 25 | 24 or 12
-| *.9xlarge | 25 | 24 or 12
-| *.12xlarge | 25 | 24 or 12
-| *.16xlarge | 45 | 24 or 22
-| *.18xlarge | 45 | 24 or 22
+| *.2xlarge | 10 | 11 or 6
+| *.4xlarge | 25 | 24 or 13
+| *.8xlarge | 25 | 24 or 13
+| *.9xlarge | 25 | 24 or 13
+| *.12xlarge | 25 | 24 or 13
+| *.16xlarge | 45 | 24 or 23
+| *.18xlarge | 45 | 24 or 23
 
 .7+| HA pair in multi AZs
-| *.2xlarge | 12 | 12
+| *.2xlarge | 12 | 13
 | *.4xlarge | 27 | 24
 | *.8xlarge | 27 | 24
 | *.9xlarge | 27 | 24
@@ -174,35 +195,6 @@ Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use 
 | *.18xlarge | 47 | 24
 
 |===
-
-Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
-
-An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
-
-Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
-
-| *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
-(HA pair or single node) a|
-*C5, M5, and R5 instances with BYOL*
-Up to 24 storage VMs are supported with Cloud Volumes ONTAP when you use a C5, M5, or R5 instance type and bring your own license (BYOL).
-
-Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
-
-An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
-
-Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
-
-*All other configurations*
-One data-serving storage VM and one destination storage VM used for disaster recovery are supported. ^2^
-
-NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
-
-. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
-
-. You can activate a destination storage VM for data access if there’s an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
-+
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
 
 == File and volume limits
 
