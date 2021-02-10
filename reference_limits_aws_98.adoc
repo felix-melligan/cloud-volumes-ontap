@@ -146,7 +146,7 @@ Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use 
 | Private IPs remaining
 | Max storage VMs
 
-.+7| Single node
+.7+| Single node
 | *.2xlarge | 9 | 9 or 4
 | *.4xlarge | 24 | 24 or 12
 | *.8xlarge | 24 | 24 or 12
@@ -155,7 +155,7 @@ Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use 
 | *.16xlarge | 44 | 24 or 22
 | *.18xlarge | 44 | 24 or 22
 
-.+7| HA pair in single AZ
+.7+| HA pair in single AZ
 | *.2xlarge | 10 | 10 or 5
 | *.4xlarge | 25 | 24 or 12
 | *.8xlarge | 25 | 24 or 12
@@ -164,7 +164,7 @@ Multiple storage VMs are supported with Cloud Volumes ONTAP in AWS when you use 
 | *.16xlarge | 45 | 24 or 22
 | *.18xlarge | 45 | 24 or 22
 
-.+7| HA pair in multi AZs
+.7+| HA pair in multi AZs
 | *.2xlarge | 12 | 12
 | *.4xlarge | 27 | 24
 | *.8xlarge | 27 | 24
