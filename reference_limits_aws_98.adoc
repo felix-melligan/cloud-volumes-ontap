@@ -139,7 +139,7 @@ Notes:
 
 ==== Limit for BYOL with C5, M5, or R5 instances
 
-Up to 24 storage VMs are supported with Cloud Volumes ONTAP BYOL when you use a C5, M5, or R5 instance type. But the limit can be lower, depending on the EC2 instance type that you use. The limits per instance are listed in the next section.
+Up to 24 storage VMs are supported with Cloud Volumes ONTAP BYOL when you use a C5, M5, or R5 instance type. But the limit can be lower, depending on the EC2 instance type that you use. The limits per instance are listed in the section below.
 
 An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
@@ -161,10 +161,10 @@ When you create an additional storage VM, you need to allocate private IP addres
 | Instance type
 | Max private IPs per interface
 | IPs remaining after deployment ^1^
-| Max storage VMs without mgmt LIF ^2,3^
-| Max storage VMs with mgmt LIF ^2,3^
+| Max storage VMs without a mgmt LIF ^2,3^
+| Max storage VMs with a mgmt LIF ^2,3^
 
-.7+| Single node
+.7+| *Single node*
 | *.2xlarge | 15 | 9 | 10 | 5
 | *.4xlarge | 30 | 24 | 24 | 12
 | *.8xlarge | 30 | 24 | 24 | 12
@@ -173,7 +173,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.16xlarge | 50 | 44 | 24 | 12
 | *.18xlarge | 50 | 44 | 24 | 12
 
-.7+| HA pair in single AZ
+.7+| *HA pair in single AZ*
 | *.2xlarge | 15 | 10 | 11 | 5
 | *.4xlarge | 30 | 25 | 24 | 12
 | *.8xlarge | 30 | 25 | 24 | 12
@@ -182,7 +182,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.16xlarge | 50 | 45 | 24 | 12
 | *.18xlarge | 50 | 45 | 24 | 12
 
-.7+| HA pair in multi AZs
+.7+| *HA pair in multi AZs*
 | *.2xlarge | 15 | 12 | 13 | 13
 | *.4xlarge | 30 | 27 | 24 | 24
 | *.8xlarge | 30 | 27 | 24 | 24
@@ -197,7 +197,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 
 . The number listed in these columns includes the initial storage VM that Cloud Manager creates by default. For example, if 24 is listed in this column, it means that you can create 23 additional storage VMs for a total of 24.
 
-. A management LIF for the storage VM is optional. Because it requires a private IP address, it will limit the number of additional storage VMs that you can create. The only exception is an HA pair in multiple AZs. In that case, the IP address for the management LIF is a _floating IP address_ so it doesn't count against the _private_ IP limit.
+. A management LIF for the storage VM is optional. Because it requires a private IP address, it will limit the number of additional storage VMs that you can create. The only exception is an HA pair in multiple AZs. In that case, the IP address for the management LIF is a _floating_ IP address so it doesn't count against the _private_ IP limit.
 
 == File and volume limits
 
