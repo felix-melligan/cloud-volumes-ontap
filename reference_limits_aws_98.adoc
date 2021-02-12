@@ -197,7 +197,9 @@ When you create an additional storage VM, you need to allocate private IP addres
 
 . The number listed in these columns includes the initial storage VM that Cloud Manager creates by default. For example, if 24 is listed in this column, it means that you can create 23 additional storage VMs for a total of 24.
 
-. A management LIF for the storage VM is optional. Because it requires a private IP address, it will limit the number of additional storage VMs that you can create. The only exception is an HA pair in multiple AZs. In that case, the IP address for the management LIF is a _floating_ IP address so it doesn't count against the _private_ IP limit.
+. A management LIF for the storage VM is optional. A management LIF provides a connection to management tools like SnapCenter.
++
+Because it requires a private IP address, it will limit the number of additional storage VMs that you can create. The only exception is an HA pair in multiple AZs. In that case, the IP address for the management LIF is a _floating_ IP address so it doesn't count against the _private_ IP limit.
 
 == File and volume limits
 
