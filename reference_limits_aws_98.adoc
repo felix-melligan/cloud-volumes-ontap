@@ -135,7 +135,73 @@ Notes:
 
 . All disks in an aggregate must be the same size.
 
-== Logical storage limits
+== Storage VM limits
+
+==== Limit for BYOL with C5, M5, or R5 instances
+
+Up to 24 storage VMs are supported with Cloud Volumes ONTAP BYOL when you use a C5, M5, or R5 instance type. But the limit can be lower, depending on the EC2 instance type that you use. The limits per instance are listed in the section below.
+
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
+
+https://docs.netapp.com/us-en/occm/task_managing_svms.html[Learn how to create additional storage VMs^].
+
+==== Limit for all other configurations
+
+All PAYGO configurations and all other BYOL configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
+
+==== Storage VM limit by EC2 instance type
+
+When you create an additional storage VM, you need to allocate private IP addresses to port e0a. The table below identifies the maximum number of private IPs per interface, as well as the number of IP addresses that are available on port e0a after Cloud Volumes ONTAP has been deployed. The number of available IP addresses directly affects the maximum number of storage VMs for that configuration.
+
+[cols=6*,options="header"]
+|===
+| Configuration
+| Instance type
+| Max private IPs per interface
+| IPs remaining after deployment ^1^
+| Max storage VMs without a mgmt LIF ^2,3^
+| Max storage VMs with a mgmt LIF ^2,3^
+
+.7+| *Single node*
+| *.2xlarge | 15 | 9 | 10 | 5
+| *.4xlarge | 30 | 24 | 24 | 12
+| *.8xlarge | 30 | 24 | 24 | 12
+| *.9xlarge | 30 | 24 | 24 | 12
+| *.12xlarge | 30 | 24 | 24 | 12
+| *.16xlarge | 50 | 44 | 24 | 12
+| *.18xlarge | 50 | 44 | 24 | 12
+
+.7+| *HA pair in single AZ*
+| *.2xlarge | 15 | 10 | 11 | 5
+| *.4xlarge | 30 | 25 | 24 | 12
+| *.8xlarge | 30 | 25 | 24 | 12
+| *.9xlarge | 30 | 25 | 24 | 12
+| *.12xlarge | 30 | 25 | 24 | 12
+| *.16xlarge | 50 | 45 | 24 | 12
+| *.18xlarge | 50 | 45 | 24 | 12
+
+.7+| *HA pair in multi AZs*
+| *.2xlarge | 15 | 12 | 13 | 13
+| *.4xlarge | 30 | 27 | 24 | 24
+| *.8xlarge | 30 | 27 | 24 | 24
+| *.9xlarge | 30 | 27 | 24 | 24
+| *.12xlarge | 30 | 27 | 24 | 24
+| *.16xlarge | 50 | 47 | 24 | 24
+| *.18xlarge | 50 | 47 | 24 | 24
+
+|===
+
+. This number indicates how many _remaining_ private IP addresses are available on port e0a after Cloud Volumes ONTAP is deployed and set up. For example, a *.2xlarge system supports a maximum of 15 IP addresses per network interface. When an HA pair is deployed in a single AZ, 5 private IP addresses are allocated to port e0a. As a result, an HA pair that uses a *.2xlarge instance type has 10 private IP addresses remaining for additional storage VMs.
+
+. The number listed in these columns includes the initial storage VM that Cloud Manager creates by default. For example, if 24 is listed in this column, it means that you can create 23 additional storage VMs for a total of 24.
+
+. A management LIF for the storage VM is optional. A management LIF provides a connection to management tools like SnapCenter.
++
+Because it requires a private IP address, it will limit the number of additional storage VMs that you can create. The only exception is an HA pair in multiple AZs. In that case, the IP address for the management LIF is a _floating_ IP address so it doesn't count against the _private_ IP limit.
+
+== File and volume limits
 
 [cols="22,22,56",width=100%,options="header"]
 |===
@@ -143,25 +209,9 @@ Notes:
 | Parameter
 | Limit
 
-| *Storage VMs (SVMs)*	| Maximum number for Cloud Volumes ONTAP
-(HA pair or single node) a|
-*C5, M5, and R5 instances with BYOL*
-Up to 24 storage VMs are supported with Cloud Volumes ONTAP when you use a C5, M5, or R5 instance type and bring your own license (BYOL).
-
-Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
-
-An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
-
-Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. ^1,2^
-
-*All other configurations*
-One data-serving storage VM and one destination storage VM used for disaster recovery are supported. ^2^
-
-NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or single node)
-
 .2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
-| *FlexClone volumes*	| Hierarchical clone depth ^3^ | 499
+| *FlexClone volumes*	| Hierarchical clone depth ^1^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
 | Maximum size | Dependent on the size of the aggregate
@@ -169,15 +219,6 @@ NOTE: A storage VM spans the entire Cloud Volumes ONTAP system (HA pair or singl
 | *Snapshot copies* |	Maximum per FlexVol volume |	1,023
 
 |===
-
-Notes:
-
-. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
-
-. You can activate a destination storage VM for data access if there’s an outage on the source storage VM. Cloud Manager doesn't provide any setup or orchestration support for storage VM disaster recovery. You must use System Manager or the CLI.
-+
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 
