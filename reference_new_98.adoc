@@ -79,19 +79,19 @@ Before you choose a write speed, you should understand the differences between t
 
 https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more^].
 
-=== Support for 24 storage VMs in AWS
+=== Support for up to 24 storage VMs in AWS
 
-Up to 24 storage VMs are now supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license (BYOL).
+Up to 24 storage VMs are now supported with Cloud Volumes ONTAP in AWS when you use a C5, M5, or R5 instance type and bring your own license. Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
 
-Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
+The limit can be lower, depending on the EC2 instance type that you use.
 
-An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit.
 
 link:reference_limits_aws_98.html[Learn more about storage VM limits].
 
-https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+link:task_managing_svms.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in AWS].
 
 === Core disk for single node systems in AWS
 
