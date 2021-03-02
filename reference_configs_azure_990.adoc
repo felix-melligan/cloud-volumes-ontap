@@ -1,0 +1,203 @@
+---
+sidebar: sidebar
+permalink: reference_configs_azure_990.html
+keywords: vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, disks, sizes
+summary: Cloud Volumes ONTAP is available in Azure as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
+---
+
+= Supported configurations for Cloud Volumes ONTAP 9.9.0 in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP is available in Azure as a single node system or an HA pair. Two pricing options are available: pay as you go and Bring Your Own License (BYOL).
+
+== Pay-as-you-go overview
+
+* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in Azure.
++
+There are no hourly software charges, but Azure infrastructure charges still apply (compute, storage, and networking).
+* Conversions from PAYGO to BYOL aren't currently supported.
+* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
++
+https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+
+== BYOL overview
+
+* Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
+* Support is included for the length of the subscription term.
+* You can purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity.
++
+For example, you might purchase two licenses to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase four licenses to get up to 1.4 PB.
+
+== Supported configurations by license
+
+Cloud Volumes ONTAP is available in Azure as a single-node system and as an HA pair.
+
+=== Single node systems
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in Azure:
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Supported virtual machine types | DS3_v2
+
+a|
+* DS4_v2
+* DS13_v2
+
+a|
+* DS5_v2
+* DS14_v2
+* DS15_v2
+* E32s_v3 ^1^
+* E48s_v3
+
+a|
+* DS3_v2
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* E32s_v3 ^1^
+* E48s_v3
+* L8s_v2 ^2^
+
+| Supported disk types ^3^ 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
+
+| Cold data tiering to Blob storage ^4^ | Not supported 3+| Supported
+
+| Maximum system capacity
+(disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license
+
+|===
+
+Notes:
+
+. This VM type uses an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
+
+. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/occm/concept_flash_cache.html[Learn more^].
+
+. Enhanced write performance is enabled when using SSDs, but not when using the DS3_v2 virtual machine type.
+
+. Data tiering is not supported with the DS3_v2 virtual machine type.
+
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+=== HA pairs
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure:
+
+[cols=5*,cols="h,d,d,d,d",options="header"]
+|===
+|
+| Explore
+| Standard
+| Premium
+| BYOL
+
+| Supported virtual machine types | Not supported
+
+a|
+* DS4_v2
+* DS13_v2
+
+a|
+* DS5_v2 ^1^
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E48s_v3 ^1^
+
+a|
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E48s_v3 ^1^
+
+| Supported disk types | Not supported 3+| Premium page blobs
+
+| Cold data tiering to Blob storage ^2^ | Not supported 3+| Supported
+
+| Maximum system capacity
+(disks + object storage) | Not supported | 10 TB | 368 TB | 368 TB per license
+
+|===
+
+Notes:
+
+. Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. High write speed is supported with all instance types when using a single node system. https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more about choosing a write speed^].
+
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+== Supported disk sizes
+
+In Azure, an aggregate can contain up to 12 disks that are all the same type and size.
+
+=== Single node systems
+
+Single node systems use Azure Managed Disks. The following disk sizes are supported:
+
+[cols=3*,options="header"]
+|===
+
+| Premium SSD
+| Standard SSD
+| Standard HDD
+
+a|
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+* 32 TB
+
+a|
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+* 32 TB
+
+a|
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+* 32 TB
+
+|===
+
+=== HA pairs
+
+HA pairs use Premium page blobs. The following disk sizes are supported:
+
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
