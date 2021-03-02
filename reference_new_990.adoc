@@ -19,7 +19,7 @@ Additional features and enhancements are also introduced in the latest versions 
 
 == Improved write performance
 
-This release includes improved write performance in all cloud providers and on all Cloud Volumes ONTAP configurations.
+This release includes improved write performance for Cloud Volumes ONTAP in all cloud providers and on all configurations.
 
 == Support for new EC2 instance types
 
@@ -31,9 +31,11 @@ Cloud Volumes ONTAP is now supported with the following Amazon EC2 instance type
 
 Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5a instances^] and https://aws.amazon.com/ec2/instance-types/c5/[C5a instances^].
 
+link:reference_configs_aws_990.html[View supported configurations in AWS].
+
 == Support for 24 storage VMs in Azure
 
-24 storage VMs are now supported with Cloud Volumes ONTAP in Azure when you bring your own license (BYOL). Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
+24 storage VMs are now supported with Cloud Volumes ONTAP in Azure when you bring your own license (BYOL).
 
 An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
