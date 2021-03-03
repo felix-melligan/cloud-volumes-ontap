@@ -58,10 +58,10 @@ Each license supports a different maximum system capacity. The maximum system ca
 (disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
 
 | Supported disk types 4+a|
-* General Purpose SSDs ^3^
-* Provisioned IOPS SSDs ^3^
-* Throughput Optimized HDDs
-* Cold HDDs (single node only)
+* General Purpose SSD (gp2) ^3^
+* Provisioned IOPS SSD (io1) ^3^
+* Throughput Optimized HDD (st1)
+* Cold HDD (sc1 - single node only)
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
