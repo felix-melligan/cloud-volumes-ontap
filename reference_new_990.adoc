@@ -47,7 +47,7 @@ link:task_managing_svms.html[Learn how to create data-serving storage VMs for Cl
 
 == Changes introduced with Cloud Manager 3.9.4
 
-The Cloud Manager 3.9.4 release includes a few enhancements for Cloud Volumes ONTAP, including enhancements to AWS KMS support and shared VPC support in Google Cloud.
+The Cloud Manager 3.9.4 release includes a few enhancements for the management of Cloud Volumes ONTAP, including enhancements to AWS KMS support and shared VPC support in Google Cloud.
 
 Go to the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for more details about the 3.9.4 release.
 
