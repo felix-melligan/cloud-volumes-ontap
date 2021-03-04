@@ -156,7 +156,25 @@ Notes:
 
 . All disks in an aggregate must be the same size.
 
-== Logical storage limits
+== Storage VM limits
+
+==== Limit for BYOL
+
+Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
+
+These are the tested limits. While it is theoretically possible to configure additional storage VMs, it's not supported.
+
+An add-on license is required for each additional _data-serving_ SVM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
+
+https://docs.netapp.com/us-en/occm/task_managing_svms.html[Learn how to create additional storage VMs^].
+
+==== Limit for PAYGO
+
+All PAYGO configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
+
+== File and volume limits
 
 [cols="22,22,56",width=100%,options="header"]
 |===
@@ -164,10 +182,6 @@ Notes:
 | Parameter
 | Limit
 
-| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP
-(HA pair or single node) | One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM. ^1^
-
-The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
 .2+| *Files*	| Maximum size | 16 TB
 | Maximum per volume |	Volume size dependent, up to 2 billion
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
