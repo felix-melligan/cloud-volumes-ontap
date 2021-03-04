@@ -18,10 +18,3 @@ The Release Notes for Cloud Volumes ONTAP provide release-specific information: 
 These release notes are specific to Cloud Volumes ONTAP. View the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] to identify new features, known problems, and limitations for ONTAP software in general.
 
 If you need documentation that describes how to deploy and manage Cloud Volumes ONTAP, then you should refer to link:https://docs.netapp.com/us-en/occm/[Cloud Manager documentation^].
-
-* link:reference_new_98.html[9.8 Release Notes]
-* link:reference_new_97.html[9.7 Release Notes]
-* link:reference_new_96.html[9.6 Release Notes]
-* link:reference_new_95.html[9.5 Release Notes]
-* link:reference_new_94.html[9.4 Release Notes]
-* link:reference_new_93.html[9.3 Release Notes]
