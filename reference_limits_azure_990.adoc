@@ -168,7 +168,7 @@ An add-on license is required for each additional _data-serving_ SVM beyond the 
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
 
-https://docs.netapp.com/us-en/occm/task_managing_svms.html[Learn how to create additional storage VMs^].
+https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create additional storage VMs^].
 
 ==== Limit for PAYGO
 

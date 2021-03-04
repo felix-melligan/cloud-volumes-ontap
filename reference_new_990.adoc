@@ -43,7 +43,7 @@ Storage VMs that you configure for disaster recovery (DR) don't require an add-o
 
 link:reference_limits_azure_990.html[Learn more about storage VM limits in Azure].
 
-link:task_managing_svms.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Azure].
+https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Azure].
 
 == Changes introduced with Cloud Manager 3.9.4
 
