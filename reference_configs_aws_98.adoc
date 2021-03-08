@@ -38,6 +38,8 @@ For example, you might purchase two licenses to allocate up to 736 TB of capacit
 
 Cloud Volumes ONTAP is available in AWS as a single node system and as a high-availability (HA) pair of nodes for fault tolerance and nondisruptive operations.
 
+Upgrading a single node system to an HA pair is not supported. If you want to switch between a single node system and an HA pair, then you need to deploy a new system and replicate data from the existing system to the new system.
+
 == Supported storage
 
 Cloud Volumes ONTAP supports several types of EBS disks, and S3 object storage for data tiering. The maximum storage capacity is determined by the license that you choose.
