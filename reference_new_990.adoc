@@ -1,0 +1,64 @@
+---
+sidebar: sidebar
+permalink: reference_new_990.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.9.0 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.9.0
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.9.0 includes several new features and enhancements.
+
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
+
+== Improved write performance
+
+This release includes improved write performance for Cloud Volumes ONTAP in all cloud providers and on all configurations.
+
+== Support for new EC2 instance types
+
+Cloud Volumes ONTAP is now supported with the following Amazon EC2 instance types:
+
+* m5a.2xlarge with Standard and BYOL
+* m5a.16xlarge with Premium and BYOL
+* c5a.12xlarge with Premium and BYOL
+
+Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5a instances^] and https://aws.amazon.com/ec2/instance-types/c5/[C5a instances^].
+
+link:reference_configs_aws_990.html[View supported configurations in AWS].
+
+== Support for 24 storage VMs in Azure
+
+24 storage VMs are now supported with Cloud Volumes ONTAP in Azure when you bring your own license (BYOL).
+
+An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
+
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit.
+
+link:reference_limits_azure_990.html#storage-vm-limits[Learn more about storage VM limits in Azure].
+
+https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Azure^].
+
+== Changes introduced with Cloud Manager 3.9.4
+
+The Cloud Manager 3.9.4 release includes a few enhancements for the management of Cloud Volumes ONTAP, including enhancements to AWS KMS support, shared VPC support in Google Cloud, and reduced IPs in Google Cloud.
+
+Go to the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for more details about the 3.9.4 release.
+
+== Upgrade notes
+
+* Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+* You can upgrade to Cloud Volumes ONTAP 9.9.0 from the 9.8 release. Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.8 systems to the 9.9.0 release.
++
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.

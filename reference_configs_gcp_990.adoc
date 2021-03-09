@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference_configs_gcp_98.html
+permalink: reference_configs_gcp_990.html
 keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes, HA, high availability, HA pairs
 summary: Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
 ---
 
-= Supported configurations for Cloud Volumes ONTAP 9.8 in GCP
+= Supported configurations for Cloud Volumes ONTAP 9.9.0 in GCP
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -87,7 +87,7 @@ Notes:
 
 . Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
 +
-link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
+link:reference_limits_gcp_990.html[Learn more about disk limits in GCP].
 
 . The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
 
@@ -138,7 +138,7 @@ Notes:
 
 . Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
 +
-link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
+link:reference_limits_gcp_990.html[Learn more about disk limits in GCP].
 
 . The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
 
