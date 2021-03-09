@@ -107,7 +107,7 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^5^ 4+| General Purpose SSDs, Provisioned IOPS SSDs, Throughput Optimized HDDs, and Cold HDDs (single node only)
+| Supported disk types ^5^ 4+| General Purpose SSD (gp2), Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
@@ -141,10 +141,10 @@ In AWS, an aggregate can contain up to 6 disks that are all the same type and si
 [cols=4*,options="header"]
 |===
 
-| General Purpose SSDs
-| Provisioned IOPS SSDs
-| Throughput Optimized HDDs
-| Cold HDDs (single node only)
+| General Purpose SSD (gp2)
+| Provisioned IOPS SSD (io1)
+| Throughput Optimized HDD (st1)
+| Cold HDD (sc1 - single node only)
 
 a|
 * 100 GB

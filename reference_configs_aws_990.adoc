@@ -82,10 +82,10 @@ In AWS, an aggregate can contain up to 6 disks that are all the same type and si
 [cols=4*,options="header"]
 |===
 
-| General Purpose SSDs
-| Provisioned IOPS SSDs
-| Throughput Optimized HDDs
-| Cold HDDs (single node only)
+| General Purpose SSD (gp2)
+| Provisioned IOPS SSD (io1)
+| Throughput Optimized HDD (st1)
+| Cold HDD (sc1 - single node only)
 
 a|
 * 100 GB
