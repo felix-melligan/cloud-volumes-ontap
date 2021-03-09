@@ -1,0 +1,144 @@
+---
+sidebar: sidebar
+permalink: reference_limits_gcp_990.html
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM
+summary: Cloud Volumes ONTAP has storage configuration limits in GCP to provide reliable operations. For best performance, do not configure your system at the maximum values.
+---
+
+= Storage limits for Cloud Volumes ONTAP 9.9.0 in GCP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP has storage configuration limits to provide reliable operations. For best performance, do not configure your system at the maximum values.
+
+== Maximum system capacity by license
+
+The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn't support exceeding this limit.
+
+For the Premium and BYOL licenses, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to the disk limits below for more details.
+
+[cols="25,75",width=55%,options="header"]
+|===
+| License
+| Maximum system capacity (disks + object storage)
+
+| Explore	| 2 TB (data tiering is not supported with Explore)
+| Standard | 10 TB
+| Premium | 368 TB
+| BYOL | 368 TB per license
+
+|===
+
+===== For an HA pair, is the licensed capacity limit per node or for the entire HA pair?
+
+The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
+
+===== For an HA pair, does mirrored data count against the licensed capacity limit?
+
+No, it doesn't. Data in an HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure in Google Cloud. For example, if you purchase an 8 TB disk on node A, Cloud Manager also allocates an 8 TB disk on node B that is used for mirrored data. While 16 TB of capacity was provisioned, only 8 TB counts against the license limit.
+
+== Disk and tiering limits
+
+The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+
+[cols="60,40",width=70%,options="header"]
+|===
+| Parameter
+| Limit
+
+| Maximum data disks a|
+* 124 for single node systems
+* 123 per node for HA pairs
+| Maximum disk size | 64 TB
+| Maximum system capacity with disks alone | 256 TB ^1^
+| Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket
+a|
+* Premium: 368 TB
+* BYOL: 368 TB per license
+|===
+
+^1^ This limit is defined by virtual machine limits in Google Cloud Platform.
+
+== Aggregate limits
+
+Cloud Volumes ONTAP groups Google Cloud Platform disks into _aggregates_. Aggregates provide storage to volumes.
+
+[cols=2*,width=55%,options="header,autowidth"]
+|===
+| Parameter
+| Limit
+
+| Maximum number of data aggregates ^1^ a|
+* 99 for single node
+* 64 for an entire HA pair
+| Maximum aggregate size | 256 TB of raw capacity ^2^
+| Disks per aggregate	| 1-6 ^3^
+| Maximum number of RAID groups per aggregate	| 1
+|===
+
+Notes:
+
+. The maximum number of data aggregates doesn't include the root aggregate.
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. All disks in an aggregate must be the same size.
+
+== Logical storage limits
+
+[cols="22,22,56",width=100%,options="header"]
+|===
+| Logical storage
+| Parameter
+| Limit
+
+| *Storage virtual machines (SVMs)*	| Maximum number for Cloud Volumes ONTAP
+(HA pair or single node) | One data-serving SVM and one destination SVM used for disaster recovery. You can activate the destination SVM for data access if there’s an outage on the source SVM. ^1^
+
+The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or single node).
+.2+| *Files*	| Maximum size | 16 TB
+| Maximum per volume |	Volume size dependent, up to 2 billion
+| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+.3+| *FlexVol volumes*	| Maximum per node |	500
+| Minimum size |	20 MB
+| Maximum size | Dependent on the size of the aggregate
+| *Qtrees* |	Maximum per FlexVol volume |	4,995
+| *Snapshot copies* |	Maximum per FlexVol volume |	1,023
+
+|===
+
+Notes:
+
+. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on an additional SVM. You must use System Manager or the CLI for SVM disaster recovery.
++
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
+
+. Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
+
+== iSCSI storage limits
+
+[cols=3*,options="header,autowidth"]
+|===
+| iSCSI storage
+| Parameter
+| Limit
+
+.4+| *LUNs*	| Maximum per node |	1,024
+| Maximum number of LUN maps |	1,024
+| Maximum size	| 16 TB
+| Maximum per volume	| 512
+| *igroups*	| Maximum per node | 256
+.2+| *Initiators*	| Maximum per node |	512
+| Maximum per igroup	| 128
+| *iSCSI sessions* |	Maximum per node | 1,024
+.2+| *LIFs*	| Maximum per port |	1
+| Maximum per portset	| 32
+| *Portsets* |	Maximum per node |	256
+
+|===
+990

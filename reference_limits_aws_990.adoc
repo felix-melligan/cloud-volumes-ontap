@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference_limits_aws_98.html
+permalink: reference_limits_aws_990.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs
 summary: Cloud Volumes ONTAP has storage configuration limits in AWS to provide reliable operations. For best performance, do not configure your system at the maximum values.
 ---
 
-= Storage limits for Cloud Volumes ONTAP 9.8 in AWS
+= Storage limits for Cloud Volumes ONTAP 9.9.0 in AWS
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -47,7 +47,7 @@ Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TB
 
 Note the following:
 
-* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.8 systems. However, we're still showing disk limits for these instance types because you can upgrade a system to the 9.8 release when running on one of these instance types.
+* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.9.0 systems. However, we're still showing disk limits for these instance types because you can upgrade a system to the 9.9.0 release when running on one of these instance types.
 
 * The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
@@ -147,7 +147,7 @@ An add-on license is required for each additional _data-serving_ storage VM beyo
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
 
-https://docs.netapp.com/us-en/occm/task_managing_svms.html[Learn how to create additional storage VMs^].
+https://docs.netapp.com/us-en/occm/task_managing_svms_aws.html[Learn how to create additional storage VMs^].
 
 ==== Limit for all other configurations
 

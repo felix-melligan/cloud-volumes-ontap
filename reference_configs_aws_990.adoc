@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference_configs_aws_98.html
+permalink: reference_configs_aws_990.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth
 summary: Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
 ---
 
-= Supported configurations for Cloud Volumes ONTAP 9.8 in AWS
+= Supported configurations for Cloud Volumes ONTAP 9.9.0 in AWS
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -71,7 +71,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 . For an HA pair, the capacity limit is for the entire HA pair. It's not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
 
-. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_98.html[storage limits].
+. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_990.html[storage limits].
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
@@ -146,13 +146,15 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | m5.xlarge | 4 | 16 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
-.2+| *Standard and BYOL*
+.3+| *Standard and BYOL*
 
 | r5.xlarge | 4 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
+| m5a.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 2,880 | Supported
+
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.16+| *Premium and BYOL*
+.18+| *Premium and BYOL*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 
@@ -174,6 +176,8 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | c5n.9xlarge | 36 | 96 | Not supported | 50 | 9,500 | Supported
 
+| c5a.18xlarge | 48 ^4^ | 96 | Not supported | 12 | 4,750 | Supported
+
 | c5.18xlarge | 48 ^4^ | 144 | Not supported | 25 | 19,000 | Supported
 
 | c5d.18xlarge | 48 ^4^ | 144 | Supported | 25 | 19,000 | Supported
@@ -181,6 +185,8 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | m5d.12xlarge | 48 | 192 | Supported | 12 | 9,500 | Supported
 
 | c5n.18xlarge | 48 ^4^ | 192 | Not supported | 100 | 19,000 | Supported
+
+| m5a.16xlarge | 48 ^4^ | 256 | Not supported | 12 | 9,500 | Supported
 
 | m5.16xlarge | 48 ^4^ | 256 | Not supported | 20 | 13,600 | Supported
 
