@@ -41,13 +41,13 @@ An add-on license is required for each additional _data-serving_ storage VM beyo
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit.
 
-link:reference_limits_azure_990.html[Learn more about storage VM limits in Azure].
+link:reference_limits_azure_990.html#storage-vm-limits[Learn more about storage VM limits in Azure].
 
-https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Azure].
+https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Azure^].
 
 == Changes introduced with Cloud Manager 3.9.4
 
-The Cloud Manager 3.9.4 release includes a few enhancements for the management of Cloud Volumes ONTAP, including enhancements to AWS KMS support and shared VPC support in Google Cloud.
+The Cloud Manager 3.9.4 release includes a few enhancements for the management of Cloud Volumes ONTAP, including enhancements to AWS KMS support, shared VPC support in Google Cloud, and reduced IPs in Google Cloud.
 
 Go to the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for more details about the 3.9.4 release.
 

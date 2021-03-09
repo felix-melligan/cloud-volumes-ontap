@@ -41,7 +41,7 @@ If you have an existing Cloud Volumes ONTAP 9.7 system that's running on a c4, m
 
 Similar to single node systems, Cloud Manager now allocates a core disk to new 9.8 HA pair deployments in AWS when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
 
-The core disk is a General Purpose SSD with 540 GB.
+The core disk is a General Purpose SSD (gp2) with 540 GB.
 
 NOTE: With the addition of this core disk, one less data disk is now supported on systems that use these instance types. link:reference_limits_aws_98.html[Learn more about storage limits in AWS].
 
@@ -97,7 +97,7 @@ https://docs.netapp.com/us-en/occm/task_managing_svms_aws.html[Learn how to crea
 
 Cloud Manager now allocates a core disk to new 9.8 single node deployments in AWS when you use a C5, M5, or R5 instance type. The core disk expands the ability to switch between supported instance types, enhances the system's ability to collect core files when issues occur, and provides the ability to support larger instance types in the future.
 
-The core disk is a General Purpose SSD with 540 GB.
+The core disk is a General Purpose SSD (gp2) with 540 GB.
 
 NOTE: With the addition of this core disk, one less data disk is now supported on single node systems that use these instance types. link:reference_limits_aws_98.html[Learn more about storage limits in AWS].
 
