@@ -107,12 +107,12 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^5^ 4+| General Purpose SSD (gp2), Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
+| Supported disk types ^5^ 4+| General Purpose SSD (gp2) ^6^, Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^6^ | 368 TB per license ^6^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^7^ | 368 TB per license ^7^
 
 |===
 
@@ -127,6 +127,8 @@ Notes:
 . The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs.
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. gp3 SSDs are not supported.
 
 . For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_97.html[storage limits].
 

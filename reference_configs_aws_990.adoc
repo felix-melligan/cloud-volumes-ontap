@@ -60,7 +60,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 (disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
 
 | Supported disk types 4+a|
-* General Purpose SSD (gp2) ^3^
+* General Purpose SSD (gp2) ^3,4^
 * Provisioned IOPS SSD (io1) ^3^
 * Throughput Optimized HDD (st1)
 * Cold HDD (sc1 - single node only)
@@ -74,6 +74,8 @@ Each license supports a different maximum system capacity. The maximum system ca
 . For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_990.html[storage limits].
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. gp3 SSDs are not supported.
 
 === Supported disk sizes
 
@@ -198,7 +200,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 . Cloud Volumes ONTAP supports high write speed with most instance types when using an HA pair. High write speed is supported with all instance types when using a single node system. https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more about choosing a write speed^].
 
-. The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs. This limitation affects newly deployed 9.8 HA pairs and single node systems or HA pairs upgraded from 9.7. The limitation does not affect newly deployed 9.8 single node systems.
+. The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs. This limitation affects newly deployed HA pairs and HA pairs upgraded from 9.8. The limitation does not affect newly deployed single node systems.
 
 . While these EC2 instance types support more than 48 vCPUs, Cloud Volumes ONTAP supports up to 48 vCPUs.
 

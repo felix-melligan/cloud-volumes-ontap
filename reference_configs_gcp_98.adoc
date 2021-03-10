@@ -107,7 +107,11 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Premium
 | BYOL
 
-| Supported machine types | Not supported a|
+| Supported machine types
+a|
+* custom-4-16384
+* n2-standard-4
+a|
 * n1-standard-8
 * n2-standard-8
 a|
@@ -121,12 +125,12 @@ a|
 * n2-standard-8
 * n2-standard-32
 
-| Supported disk types ^1^ | Not supported 3+| Zonal persistent disks (SSD and standard)
+| Supported disk types ^1^ 4+| Zonal persistent disks (SSD and standard)
 
 | Cold data tiering to object storage | Not supported 3+| Supported
 
 | Maximum system capacity
-(disks + object storage) | Not supported | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
 
 |===
 
