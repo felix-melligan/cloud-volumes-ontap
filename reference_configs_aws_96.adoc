@@ -76,7 +76,7 @@ a|
 * r5.2xlarge
 * r5d.2xlarge ^2^
 
-| Supported disk types ^4^ 4+| General Purpose SSD (gp2), Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
+| Supported disk types ^4^ 4+| General Purpose SSD (gp2) ^5^, Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
@@ -94,6 +94,8 @@ Notes:
 . c5d.18xlarge and m5d.8xlarge are supported starting with Cloud Volumes ONTAP 9.6 P3.
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. gp3 SSDs are not supported.
 
 . For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_96.html[storage limits].
 

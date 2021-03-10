@@ -60,7 +60,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 (disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
 
 | Supported disk types 4+a|
-* General Purpose SSD (gp2) ^3^
+* General Purpose SSD (gp2) ^3,4^
 * Provisioned IOPS SSD (io1) ^3^
 * Throughput Optimized HDD (st1)
 * Cold HDD (sc1 - single node only)
@@ -74,6 +74,8 @@ Each license supports a different maximum system capacity. The maximum system ca
 . For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_990.html[storage limits].
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+
+. gp3 SSDs are not supported.
 
 === Supported disk sizes
 
