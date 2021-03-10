@@ -176,7 +176,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | c5n.9xlarge | 36 | 96 | Not supported | 50 | 9,500 | Supported
 
-| c5a.18xlarge | 48 ^4^ | 96 | Not supported | 12 | 4,750 | Supported
+| c5a.12xlarge | 48 ^4^ | 96 | Not supported | 12 | 4,750 | Supported
 
 | c5.18xlarge | 48 ^4^ | 144 | Not supported | 25 | 19,000 | Supported
 
