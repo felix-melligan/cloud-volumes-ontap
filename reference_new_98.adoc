@@ -101,6 +101,10 @@ The core disk is a General Purpose SSD (gp2) with 540 GB.
 
 NOTE: With the addition of this core disk, one less data disk is now supported on single node systems that use these instance types. link:reference_limits_aws_98.html[Learn more about storage limits in AWS].
 
+== Required version of the Cloud Manager Connector
+
+The Cloud Manager Connector must be running version 3.9.0 or later to deploy new Cloud Volumes ONTAP 9.8 systems and to upgrade existing systems to version 9.8.
+
 == Upgrade notes
 
 * Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
