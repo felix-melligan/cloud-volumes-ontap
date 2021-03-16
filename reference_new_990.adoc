@@ -45,6 +45,10 @@ link:reference_limits_azure_990.html#storage-vm-limits[Learn more about storage 
 
 https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Azure^].
 
+== Required version of the Cloud Manager Connector
+
+The Cloud Manager Connector must be running version 3.9.4 or later to deploy new Cloud Volumes ONTAP 9.9.0 systems and to upgrade existing systems to 9.9.0.
+
 == Changes introduced with Cloud Manager 3.9.4
 
 The Cloud Manager 3.9.4 release includes a few enhancements for the management of Cloud Volumes ONTAP, including enhancements to AWS KMS support, shared VPC support in Google Cloud, and reduced IPs in Google Cloud.
