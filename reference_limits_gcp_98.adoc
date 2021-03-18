@@ -104,8 +104,8 @@ The one data-serving SVM spans the entire Cloud Volumes ONTAP system (HA pair or
 | Maximum per volume |	Volume size dependent, up to 2 billion
 | *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
-| Minimum size |	20 MB
-| Maximum size | Dependent on the size of the aggregate
+| Minimum size | 20 MB
+| Maximum size | 100 TB
 | *Qtrees* |	Maximum per FlexVol volume |	4,995
 | *Snapshot copies* |	Maximum per FlexVol volume |	1,023
 
