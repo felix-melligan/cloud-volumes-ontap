@@ -64,9 +64,11 @@ Note the following:
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c5, m5, and r5 instances | 21 | 336 TB | 368 TB
+| c5, m5, and r5 instances | 21 ^1^ | 336 TB | 368 TB
 | c4, m4, and r4 instances | 34 | 368 TB | 368 TB
 |===
+
+. 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
 === Single node with one or more BYOL licenses
 
@@ -78,9 +80,11 @@ Note the following:
 2+| Max system capacity with multiple licenses
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
-| c5, m5, and r5 instances | 21 | 336 TB | 368 TB | 336 TB | 368 TB x each license
+| c5, m5, and r5 instances | 21 ^1^ | 336 TB | 368 TB | 336 TB | 368 TB x each license
 | c4, m4, and r4 instances | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
 |===
+
+. 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
 === HA pairs with a Premium license
 
@@ -91,9 +95,11 @@ Note the following:
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c5, m5, and r5 instances | 18 | 288 TB | 368 TB
+| c5, m5, and r5 instances | 18 ^1^ | 288 TB | 368 TB
 | c4, m4, and r4 instances | 31 | 368 TB | 368 TB
 |===
+
+. 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
 === HA pairs with one or more BYOL licenses
 
@@ -106,9 +112,11 @@ Note the following:
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| c5, m5, and r5 instances | 18 | 288 TB | 368 TB | 288 TB | 368 TB x each license
+| c5, m5, and r5 instances | 18 ^1^ | 288 TB | 368 TB | 288 TB | 368 TB x each license
 | c4, m4, and r4 instances | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
 |===
+
+. 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
 == Aggregate limits
 
