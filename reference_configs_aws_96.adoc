@@ -78,7 +78,7 @@ a|
 
 | Supported disk types ^4^ 4+| General Purpose SSDs (gp2) ^5^, Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1)
 
-| Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
+| Cold data tiering to S3 | Not supported 3+| Supported
 
 | Maximum system capacity
 (disks + object storage) | 2 TB | 10 TB | 368 TB ^5^ | 368 TB per license ^5^
@@ -105,7 +105,7 @@ Notes:
 
 In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
 
-[cols=4*,options="header"]
+[cols=3*,options="header"]
 |===
 
 | General Purpose SSDs (gp2)

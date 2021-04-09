@@ -72,7 +72,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| DS3_v2 | 15 | 368 TB | Tiering not supported | 480 TB | Tiering not supported
+| DS3_v2 | 15 | 368 TB | 368 TB | 480 TB | 368 TB x each license
 | DS4_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license
 | DS5_v2 | 63 | 368 TB | 368 TB | 2 PB | 368 TB x each license
 | DS13_v2 | 31 | 368 TB | 368 TB | 992 TB | 368 TB x each license

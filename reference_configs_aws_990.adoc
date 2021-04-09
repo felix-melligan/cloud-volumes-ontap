@@ -64,7 +64,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 * Provisioned IOPS SSD (io1) ^3^
 * Throughput Optimized HDD (st1) ^4^
 
-| Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
+| Cold data tiering to S3 | Not supported 3+| Supported
 
 |===
 
@@ -80,10 +80,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
 
-[cols=4*,options="header"]
-|===
-
-[cols=4*,options="header"]
+[cols=3*,options="header"]
 |===
 
 | General Purpose SSDs (gp3 and gp2)

@@ -80,7 +80,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
 
-[cols=4*,options="header"]
+[cols=3*,options="header"]
 |===
 
 | General Purpose SSDs (gp3 and gp2)

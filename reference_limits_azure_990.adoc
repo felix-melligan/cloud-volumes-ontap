@@ -105,7 +105,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS5_v2 | 61 | 368 TB | 368 TB
 | DS14_v2 | 61 | 368 TB | 368 TB
 | DS15_v2 | 61 | 368 TB | 368 TB
-| E8s_v3 | 13 | 104 TB | 368 TB
+| E8s_v3 | 13 | 208 TB | 368 TB
 | E48s_v3 | 29 | 368 TB | 368 TB
 |===
 
@@ -127,7 +127,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS13_v2 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 | DS14_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
 | DS15_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
-| E8s_v3 | 13 | 104 TB | 368 TB | 104 TB | 368 TB x each license
+| E8s_v3 | 13 | 208 TB | 368 TB | 208 TB | 368 TB x each license
 | E48s_v3 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 |===
 
