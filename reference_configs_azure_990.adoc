@@ -52,18 +52,24 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Premium
 | BYOL
 
-| Supported virtual machine types | DS3_v2
+| Supported virtual machine types
+
+a|
+* DS3_v2
+* E4s_v3
 
 a|
 * DS4_v2
 * DS13_v2
+* E8s_v3
 
 a|
 * DS5_v2
 * DS14_v2
 * DS15_v2
 * E32s_v3 ^1^
-* E48s_v3
+* E48s_v3 ^1^
+* E64is_v3 ^1^
 
 a|
 * DS3_v2
@@ -72,8 +78,11 @@ a|
 * DS13_v2
 * DS14_v2
 * DS15_v2
+* E4s_v3
+* E8s_v3
 * E32s_v3 ^1^
-* E48s_v3
+* E48s_v3 ^1^
+* E64is_v3 ^1^
 * L8s_v2 ^2^
 
 | Supported disk types ^3^ 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
@@ -121,6 +130,7 @@ a|
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+* E8s_v3 ^1^
 * E48s_v3 ^1^
 
 a|
@@ -129,6 +139,7 @@ a|
 * DS13_v2
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+* E8s_v3 ^1^
 * E48s_v3 ^1^
 
 | Supported disk types | Not supported 3+| Premium page blobs

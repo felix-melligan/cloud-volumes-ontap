@@ -63,7 +63,8 @@ a|
 * DS14_v2
 * DS15_v2
 * E32s_v3 ^1^
-* E48s_v3
+* E48s_v3 ^1^
+* E64is_v3 ^1^
 
 a|
 * DS3_v2
@@ -73,7 +74,8 @@ a|
 * DS14_v2
 * DS15_v2
 * E32s_v3 ^1^
-* E48s_v3
+* E48s_v3 ^1^
+* E64is_v3 ^1^
 * L8s_v2 ^2^
 
 | Supported disk types ^3^ 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
