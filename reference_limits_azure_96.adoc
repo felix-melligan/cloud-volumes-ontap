@@ -54,10 +54,7 @@ Disk limits are shown by VM size for Premium and BYOL licenses only because disk
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS3_v2 | 15 | 368 TB | Tiering not supported
-| DS4_v2 | 31 | 368 TB | 368 TB
 | DS5_v2 | 63 | 368 TB | 368 TB
-| DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
 | DS15_v2 | 63 | 368 TB | 368 TB
 |===
@@ -92,9 +89,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS4_v2 | 31 | 368 TB | 368 TB
 | DS5_v2 | 63 | 368 TB | 368 TB
-| DS13_v2 | 31 | 368 TB | 368 TB
 | DS14_v2 | 63 | 368 TB | 368 TB
 | DS15_v2 | 63 | 368 TB | 368 TB
 |===
