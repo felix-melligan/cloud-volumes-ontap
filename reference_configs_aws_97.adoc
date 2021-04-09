@@ -107,12 +107,12 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^5^ 4+| General Purpose SSD (gp2) ^6^, Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
+| Supported disk types ^5^ 4+| General Purpose SSDs (gp2) ^6^, Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1) ^7^
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^7^ | 368 TB per license ^7^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^8^ | 368 TB per license ^8^
 
 |===
 
@@ -130,6 +130,8 @@ Notes:
 
 . gp3 SSDs are not supported.
 
+. Tiering data to object storage is not recommended when using Throughput Optimized HDDs (st1).
+
 . For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_97.html[storage limits].
 
 . For AWS region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
@@ -146,7 +148,6 @@ In AWS, an aggregate can contain up to 6 disks that are all the same type and si
 | General Purpose SSD (gp2)
 | Provisioned IOPS SSD (io1)
 | Throughput Optimized HDD (st1)
-| Cold HDD (sc1 - single node only)
 
 a|
 * 100 GB
@@ -171,13 +172,6 @@ a|
 a|
 * 500 GB
 * 1 TB
-* 2 TB
-* 4 TB
-* 6 TB
-* 8 TB
-* 16 TB
-
-a|
 * 2 TB
 * 4 TB
 * 6 TB

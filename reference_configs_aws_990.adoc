@@ -60,10 +60,9 @@ Each license supports a different maximum system capacity. The maximum system ca
 (disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^
 
 | Supported disk types 4+a|
-* General Purpose SSD (gp2) ^3,4^
+* General Purpose SSD (gp3 and gp2) ^3^
 * Provisioned IOPS SSD (io1) ^3^
-* Throughput Optimized HDD (st1)
-* Cold HDD (sc1 - single node only)
+* Throughput Optimized HDD (st1) ^4^
 
 | Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
 
@@ -75,7 +74,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. gp3 SSDs are not supported.
+. Tiering data to object storage is not recommended when using Throughput Optimized HDDs (st1).
 
 === Supported disk sizes
 
@@ -84,10 +83,12 @@ In AWS, an aggregate can contain up to 6 disks that are all the same type and si
 [cols=4*,options="header"]
 |===
 
-| General Purpose SSD (gp2)
-| Provisioned IOPS SSD (io1)
-| Throughput Optimized HDD (st1)
-| Cold HDD (sc1 - single node only)
+[cols=4*,options="header"]
+|===
+
+| General Purpose SSDs (gp3 and gp2)
+| Provisioned IOPS SSDs (io1)
+| Throughput Optimized HDDs (st1)
 
 a|
 * 100 GB
@@ -112,13 +113,6 @@ a|
 a|
 * 500 GB
 * 1 TB
-* 2 TB
-* 4 TB
-* 6 TB
-* 8 TB
-* 16 TB
-
-a|
 * 2 TB
 * 4 TB
 * 6 TB
