@@ -107,12 +107,12 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^5^ 4+| General Purpose SSDs (gp2) ^6^, Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1) ^7^
+| Supported disk types ^5^ 4+| General Purpose SSDs (gp3 and gp2), Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1) ^6^
 
 | Cold data tiering to S3 | Not supported 3+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^8^ | 368 TB per license ^8^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^7^ | 368 TB per license ^7^
 
 |===
 
@@ -127,8 +127,6 @@ Notes:
 . The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs.
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
-
-. gp3 SSDs are not supported.
 
 . Tiering data to object storage is not recommended when using Throughput Optimized HDDs (st1).
 
@@ -145,7 +143,7 @@ In AWS, an aggregate can contain up to 6 disks that are all the same type and si
 [cols=3*,options="header"]
 |===
 
-| General Purpose SSD (gp2)
+| General Purpose SSD (gp3 and gp2)
 | Provisioned IOPS SSD (io1)
 | Throughput Optimized HDD (st1)
 
