@@ -54,7 +54,7 @@ a|
 
 | Supported disk types ^1^ 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
-| Cold data tiering to Blob storage ^2^ | Not supported 3+| Supported
+| Cold data tiering to Blob storage | Not supported 3+| Supported
 
 | Maximum system capacity
 (disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license
@@ -64,8 +64,6 @@ a|
 Notes:
 
 . Enhanced write performance is enabled when using SSDs, but not when using the DS3_v2 virtual machine type.
-
-. Data tiering is not supported with the DS3_v2 virtual machine type.
 
 . For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 

@@ -17,7 +17,7 @@ Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. T
 
 == Pay-as-you-go overview
 
-* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* Offers Cloud Volumes ONTAP in three different licensing options: Explore, Standard, and Premium.
 * A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in AWS.
 ** There are no hourly software charges, but AWS infrastructure charges still apply (compute, storage, and networking).
 ** When the free trial ends, you'll be charged hourly according to the selected license, https://aws.amazon.com/marketplace/pp/B07QX2QLXX[as long as you subscribed^]. If you haven't subscribed, the system shuts down.
@@ -107,9 +107,9 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^5^ 4+| General Purpose SSD (gp2) ^6^, Provisioned IOPS SSD (io1), Throughput Optimized HDD (st1), and Cold HDD (sc1 - single node only)
+| Supported disk types ^5^ 4+| General Purpose SSDs (gp3 and gp2), Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1) ^6^
 
-| Cold data tiering to S3 | Not supported 3+| Supported, but not with Cold HDD disks
+| Cold data tiering to S3 | Not supported 3+| Supported
 
 | Maximum system capacity
 (disks + object storage) | 2 TB | 10 TB | 368 TB ^7^ | 368 TB per license ^7^
@@ -128,7 +128,7 @@ Notes:
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
-. gp3 SSDs are not supported.
+. Tiering data to object storage is not recommended when using Throughput Optimized HDDs (st1).
 
 . For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_97.html[storage limits].
 
@@ -140,13 +140,12 @@ Notes:
 
 In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
 
-[cols=4*,options="header"]
+[cols=3*,options="header"]
 |===
 
-| General Purpose SSD (gp2)
+| General Purpose SSD (gp3 and gp2)
 | Provisioned IOPS SSD (io1)
 | Throughput Optimized HDD (st1)
-| Cold HDD (sc1 - single node only)
 
 a|
 * 100 GB
@@ -171,13 +170,6 @@ a|
 a|
 * 500 GB
 * 1 TB
-* 2 TB
-* 4 TB
-* 6 TB
-* 8 TB
-* 16 TB
-
-a|
 * 2 TB
 * 4 TB
 * 6 TB

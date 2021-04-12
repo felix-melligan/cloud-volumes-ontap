@@ -58,15 +58,12 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS3_v2 | 13 | 368 TB | Tiering not supported
-| DS4_v2 | 29 | 368 TB | 368 TB
 | DS5_v2 | 61 | 368 TB | 368 TB
-| DS13_v2 | 29 | 368 TB | 368 TB
 | DS14_v2 | 61 | 368 TB | 368 TB
 | DS15_v2 | 61 | 368 TB | 368 TB
 | E32s_v3 | 29 | 368 TB | 368 TB
 | E48s_v3 | 29 | 368 TB | 368 TB
-| L8s_v2 | 13 | 368 TB | 368 TB
+| E64is_v3 | 29 | 368 TB | 368 TB
 |===
 
 === Single node with one or more BYOL licenses
@@ -82,14 +79,17 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| DS3_v2 | 13 | 368 TB | Tiering not supported | 416 TB | Tiering not supported
+| DS3_v2 | 13 | 368 TB | 368 TB | 416 TB | 368 TB x each license
 | DS4_v2 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | DS5_v2 | 61 | 368 TB | 368 TB | 1.95 PB | 368 TB x each license
 | DS13_v2 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | DS14_v2 | 61 | 368 TB | 368 TB | 1.95 PB | 368 TB x each license
 | DS15_v2 | 61 | 368 TB | 368 TB | 1.95 PB | 368 TB x each license
+| E4s_v3 | 5 | 160 TB | 368 TB | 160 TB | 368 TB x each license
+| E8s_v3 | 13 | 368 TB | 368 TB | 416 TB | 368 TB x each license
 | E32s_v3 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | E48s_v3 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
+| E64is_v3 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | L8s_v2 | 13 | 368 TB | 368 TB | 416 TB | 368 TB x each license
 |===
 
@@ -102,11 +102,10 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS4_v2 | 29 | 368 TB | 368 TB
 | DS5_v2 | 61 | 368 TB | 368 TB
-| DS13_v2 | 29 | 368 TB | 368 TB
 | DS14_v2 | 61 | 368 TB | 368 TB
 | DS15_v2 | 61 | 368 TB | 368 TB
+| E8s_v3 | 13 | 208 TB | 368 TB
 | E48s_v3 | 29 | 368 TB | 368 TB
 |===
 
@@ -128,6 +127,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS13_v2 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 | DS14_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
 | DS15_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
+| E8s_v3 | 13 | 208 TB | 368 TB | 208 TB | 368 TB x each license
 | E48s_v3 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 |===
 
@@ -160,7 +160,7 @@ Notes:
 
 ==== Limit for BYOL
 
-Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
+Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
 
 These are the tested limits. While it is theoretically possible to configure additional storage VMs, it's not supported.
 
