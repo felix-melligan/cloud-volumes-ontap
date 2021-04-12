@@ -17,7 +17,7 @@ Cloud Volumes ONTAP is available in Azure as a single node system or an HA pair.
 
 == Pay-as-you-go overview
 
-* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* Offers Cloud Volumes ONTAP in three different licensing options: Explore, Standard, and Premium.
 * A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in Azure.
 +
 There are no hourly software charges, but Azure infrastructure charges still apply (compute, storage, and networking).
