@@ -17,6 +17,30 @@ Cloud Volumes ONTAP 9.9.0 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== Latest updates (12 Apr 2021)
+
+A few updates have been made since Cloud Volumes ONTAP 9.9.0 was released.
+
+*AWS updates*
+
+* Cloud Volumes ONTAP now supports General Purpose SSD (gp3) disks, starting with the 9.7 release. gp3 disks are the lowest-cost SSDs that balance cost and performance for a broad range of workloads.
++
+https://docs.netapp.com/us-en/occm/task_planning_your_config.html#sizing-your-system-in-aws[Learn more about using gp3 disks with Cloud Volumes ONTAP^].
+
+* Cloud Volumes ONTAP no longer supports Cold HDD (sc1) disks.
+
+*Azure updates*
+
+* New E series VM types are supported:
+
+** E4s_v3 with single node systems using PAYGO Explore or BYOL
+** E8s_v3 with single node systems using PAYGO Standard or BYOL, and HA pairs using PAYGO Premium or BYOL
+** E64is_v3 with single node systems using PAYGO Premium or BYOL
+
+* Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR).
++
+The previous limit was 12 storage VMs used for DR.
+
 == Improved write performance
 
 This release includes improved write performance for Cloud Volumes ONTAP in all cloud providers and on all configurations.
