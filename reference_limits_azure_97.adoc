@@ -60,10 +60,7 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS3_v2 | 13 | 368 TB | Tiering not supported
-| DS4_v2 | 29 | 368 TB | 368 TB
 | DS5_v2 | 61 | 368 TB | 368 TB
-| DS13_v2 | 29 | 368 TB | 368 TB
 | DS14_v2 | 61 | 368 TB | 368 TB
 | DS15_v2 | 61 | 368 TB | 368 TB
 | E32s_v3 | 29 | 368 TB | 368 TB
@@ -84,7 +81,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| DS3_v2 | 13 | 368 TB | Tiering not supported | 416 TB | Tiering not supported
+| DS3_v2 | 13 | 368 TB | 368 TB | 416 TB | 368 TB x each license
 | DS4_v2 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | DS5_v2 | 61 | 368 TB | 368 TB | 1.95 PB | 368 TB x each license
 | DS13_v2 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
@@ -104,9 +101,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS4_v2 | 29 | 368 TB | 368 TB
 | DS5_v2 | 61 | 368 TB | 368 TB
-| DS13_v2 | 29 | 368 TB | 368 TB
 | DS14_v2 | 61 | 368 TB | 368 TB
 | DS15_v2 | 61 | 368 TB | 368 TB
 |===

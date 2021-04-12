@@ -141,4 +141,3 @@ Notes:
 | *Portsets* |	Maximum per node |	256
 
 |===
-990

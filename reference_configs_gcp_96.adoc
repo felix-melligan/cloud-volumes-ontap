@@ -17,7 +17,7 @@ Cloud Volumes ONTAP is available in Google Cloud Platform as a single node syste
 
 == Pay-as-you-go overview
 
-* Offers Cloud Volumes ONTAP in three different configurations: Explore, Standard, and Premium.
+* Offers Cloud Volumes ONTAP in three different licensing options: Explore, Standard, and Premium.
 * A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in GCP.
 ** There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
 ** When the free trial ends, you'll be charged hourly according to the selected license, https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager[as long as you subscribed^]. If you haven't subscribed, the system shuts down.
