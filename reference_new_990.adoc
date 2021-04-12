@@ -29,6 +29,8 @@ https://docs.netapp.com/us-en/occm/task_planning_your_config.html#sizing-your-sy
 
 * Cloud Volumes ONTAP no longer supports Cold HDD (sc1) disks.
 
+These EBS disk changes were introduced as part of Cloud Manager 3.9.5.
+
 *Azure updates*
 
 * New E series VM types are supported:
