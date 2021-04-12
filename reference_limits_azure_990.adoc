@@ -160,7 +160,7 @@ Notes:
 
 ==== Limit for BYOL
 
-Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
+Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
 
 These are the tested limits. While it is theoretically possible to configure additional storage VMs, it's not supported.
 
