@@ -39,7 +39,7 @@ https://docs.netapp.com/us-en/occm/task_planning_your_config.html#sizing-your-sy
 
 * Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR).
 +
-The previous limit was 12 storage VMs used for DR.
+The previous limit in Azure was 12 storage VMs used for DR.
 
 == Improved write performance
 
