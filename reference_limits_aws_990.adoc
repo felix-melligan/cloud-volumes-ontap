@@ -149,7 +149,7 @@ Notes:
 
 Up to 24 storage VMs are supported with Cloud Volumes ONTAP BYOL when you use a C5, M5, or R5 instance type. But the limit can be lower, depending on the EC2 instance type that you use. The limits per instance are listed in the section below.
 
-Of those 24 storage VMs, up to 12 can be configured for disaster recovery (DR).
+Those 24 storage VMs can serve data or be configured for disaster recovery (DR).
 
 An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
 
