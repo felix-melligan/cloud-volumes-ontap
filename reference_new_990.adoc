@@ -17,11 +17,11 @@ Cloud Volumes ONTAP 9.9.0 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
-== Latest updates (21 Apr 2021)
+== Latest update (21 Apr 2021)
 
 In AWS, you can now configure up to 24 storage VMs (SVMs) for disaster recovery (DR). The previous limit was 12 storage VMs used for DR.
 
-link:reference_limits_azure_990.html#storage-vm-limits[Learn more about storage VM limits].
+link:reference_limits_aws_990.html#storage-vm-limits[Learn more about storage VM limits].
 
 == Latest updates (12 Apr 2021)
 
