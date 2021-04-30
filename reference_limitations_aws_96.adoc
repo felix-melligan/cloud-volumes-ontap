@@ -27,11 +27,13 @@ You can choose no storage efficiency when creating a volume from Cloud Manager, 
 
 == False alarms reported by Amazon CloudWatch
 
-Cloud Volumes ONTAP does not release CPUs when idle, so Amazon CloudWatch can report a high CPU warning for the EC2 instance because it sees 100% usage. You can ignore this alarm. The ONTAP statistics command displays the true usage of the CPUs.
+Cloud Volumes ONTAP does not release CPUs when idle, so https://aws.amazon.com/cloudwatch/[Amazon CloudWatch^] can report a high CPU warning for the EC2 instance because it sees 100% usage. You can ignore this alarm. The ONTAP statistics command displays the true usage of the CPUs.
 
 == Cloud Volumes ONTAP HA pairs do not support immediate storage giveback
 
 After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.
+
+https://docs.netapp.com/us-en/occm/concept_ha.html#how-storage-works-in-an-ha-pair[Learn how storage works in a Cloud Volumes ONTAP HA pair running in AWS^].
 
 == Limitations in the AWS C2S environment
 
