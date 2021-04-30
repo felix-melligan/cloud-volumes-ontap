@@ -47,4 +47,4 @@ https://docs.netapp.com/us-en/occm/concept_ha.html#how-storage-works-in-an-ha-pa
 
 == Limitations in the AWS C2S environment
 
-See the https://docs.netapp.com/us-en/occm/media/c2s.pdf[Quick Start Guide for the AWS Commercial Cloud Services Environment^].
+https://docs.netapp.com/us-en/occm/task_getting_started_aws_c2s.html#limitations[View limitations for Cloud Volumes ONTAP in AWS C2S^].
