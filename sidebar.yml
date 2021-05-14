@@ -1,6 +1,40 @@
 entries:
   - title: Cloud Volumes ONTAP Release Notes
     url: /index.html
+  - title: 9.9.1 Release Notes
+    entries:
+      - title: What's new
+        url: /reference_new_991.html
+      - title: Supported configurations
+        entries:
+          - title: AWS
+            url: /reference_configs_aws_991.html
+          - title: Azure
+            url: /reference_configs_azure_991.html
+          - title: GCP
+            url: /reference_configs_gcp_991.html
+      - title: Storage limits
+        entries:
+          - title: AWS
+            url: /reference_limits_aws_991.html
+          - title: Azure
+            url: /reference_limits_azure_991.html
+          - title: GCP
+            url: /reference_limits_gcp_991.html
+      - title: Known issues
+        url: /reference_issues_991.html
+      - title: Known limitations
+        entries:
+          - title: Common limitations
+            url: /reference_limitations_991.html
+          - title: Limitations in AWS
+            url: /reference_limitations_aws_991.html
+          - title: Limitations in Azure
+            url: /reference_limitations_azure_991.html
+          - title: Limitations in GCP
+            url: /reference_limitations_gcp_991.html
+      - title: Cloud provider integrations
+        url: reference_provider_integrations_991.html
   - title: 9.9.0 Release Notes
     entries:
       - title: What's new
