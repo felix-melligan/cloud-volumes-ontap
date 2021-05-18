@@ -29,9 +29,7 @@ In addition to the features introduced with https://library.netapp.com/ecm/ecm_d
 
 === ONTAP S3 support in Azure
 
-You can now provide S3 object storage from Cloud Volumes ONTAP in Azure.
-
-Cloud Volumes ONTAP for Microsoft Azure supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
+You can now provide S3 object storage from Cloud Volumes ONTAP in Azure. Cloud Volumes ONTAP for Microsoft Azure supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
 
 Learn how to configure S3 object storage on Cloud Volumes ONTAP in Azure. <link coming soon>
 
