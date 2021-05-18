@@ -23,21 +23,31 @@ The Cloud Volumes ONTAP 9.9.1 Release Candidate is now available in AWS, Azure, 
 
 In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.9.1^], this release of Cloud Volumes ONTAP includes the following:
 
+* <<ONTAP S3 support in Azure>>
 * <<Enhanced performance in AWS with high write speed>>
-* <<feature 2>>
-* <<feature 3>>
+* <<io2 boot disk in AWS>>
+
+=== ONTAP S3 support in Azure
+
+You can now provide S3 object storage from Cloud Volumes ONTAP in Azure.
+
+Cloud Volumes ONTAP for Microsoft Azure supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
+
+Learn how to configure S3 object storage on Cloud Volumes ONTAP in Azure. <link coming soon>
+
+Note the following:
+
+* At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in AWS or in Google Cloud.
+* The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
+* Using ONTAP S3 as a remote or local FabricPool tier is not supported with Cloud Volumes ONTAP.
 
 === Enhanced performance in AWS with high write speed
 
 We have enhanced the throughput performance of Cloud Volumes ONTAP when https://docs.netapp.com/us-en/occm/concept_write_speed.html[high write speed^] is enabled on a supported instance type.
 
-=== io2 system disk in AWS
+=== io2 boot disk in AWS
 
-feature 2 description
-
-=== S3 protocol support in Azure
-
-feature 2 description
+In AWS, the boot disk for a new Cloud Volumes ONTAP system is now a provisioned IOPS SSD (io2) volume. An io1 volume was previously used.
 
 == Required version of the Cloud Manager Connector
 
