@@ -45,7 +45,7 @@ We have enhanced the throughput performance of Cloud Volumes ONTAP when https://
 
 === io2 boot disk in AWS
 
-In AWS, the boot disk for a new Cloud Volumes ONTAP system is now a provisioned IOPS SSD (io2) volume. An io1 volume was previously used.
+In AWS, the boot disk for a new Cloud Volumes ONTAP system is now a provisioned IOPS SSD (io2) volume. io2 volumes provide more reliability than io1 volumes, which were previously used for boot disks.
 
 == Required version of the Cloud Manager Connector
 
