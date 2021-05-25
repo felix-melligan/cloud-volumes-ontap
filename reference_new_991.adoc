@@ -31,13 +31,12 @@ In addition to the features introduced with https://library.netapp.com/ecm/ecm_d
 
 You can now provide S3 object storage from Cloud Volumes ONTAP in Azure. Cloud Volumes ONTAP for Microsoft Azure supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
 
-Learn how to configure S3 object storage on Cloud Volumes ONTAP in Azure. <link coming soon>
-
 Note the following:
 
-* At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in AWS or in Google Cloud.
 * The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
-* Using ONTAP S3 as a remote or local FabricPool tier is not supported with Cloud Volumes ONTAP.
+* At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in AWS or in Google Cloud.
+
+We plan to share additional details about using ONTAP S3 with Cloud Volumes ONTAP soon.
 
 === Enhanced performance in AWS with high write speed
 
@@ -55,7 +54,7 @@ The Cloud Manager Connector must be running version 3.9.6 or later to deploy new
 
 * Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
 
-* You can upgrade to Cloud Volumes ONTAP 9.9.1 from the 9.9.0 release. Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.9.0 systems to the 9.9.1 release.
+* You can upgrade to Cloud Volumes ONTAP 9.9.1 from the 9.9.0 release and from the 9.8 release. Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.9.0 and 9.8 systems to the 9.9.1 release.
 +
 http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
 
