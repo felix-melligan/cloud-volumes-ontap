@@ -1,0 +1,63 @@
+---
+sidebar: sidebar
+permalink: reference_new_991.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.9.1 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.9.1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.9.1 includes several new features and enhancements.
+
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
+
+== 9.9.1 Release Candidate (24 May 2021)
+
+The Cloud Volumes ONTAP 9.9.1 Release Candidate is now available in AWS, Azure, and Google Cloud Platform.
+
+In addition to the features introduced with https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP 9.9.1^], this release of Cloud Volumes ONTAP includes the following:
+
+* <<ONTAP S3 support in Azure>>
+* <<Enhanced performance in AWS with high write speed>>
+* <<io2 boot disk in AWS>>
+
+=== ONTAP S3 support in Azure
+
+You can now provide S3 object storage from Cloud Volumes ONTAP in Azure. Cloud Volumes ONTAP for Microsoft Azure supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
+
+Note the following:
+
+* The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
+* At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in AWS or in Google Cloud.
+
+We plan to share additional details about using ONTAP S3 with Cloud Volumes ONTAP soon.
+
+=== Enhanced performance in AWS with high write speed
+
+We have enhanced the throughput performance of Cloud Volumes ONTAP when https://docs.netapp.com/us-en/occm/concept_write_speed.html[high write speed^] is enabled on a supported instance type.
+
+=== io2 boot disk in AWS
+
+In AWS, the boot disk for a new Cloud Volumes ONTAP system is now a provisioned IOPS SSD (io2) volume. io2 volumes provide more reliability than io1 volumes, which were previously used for boot disks.
+
+== Required version of the Cloud Manager Connector
+
+The Cloud Manager Connector must be running version 3.9.6 or later to deploy new Cloud Volumes ONTAP 9.9.1 systems and to upgrade existing systems to 9.9.1.
+
+== Upgrade notes
+
+* Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+* You can upgrade to Cloud Volumes ONTAP 9.9.1 from the 9.9.0 release and from the 9.8 release. Cloud Manager will prompt you to upgrade your existing Cloud Volumes ONTAP 9.9.0 and 9.8 systems to the 9.9.1 release.
++
+http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud-volumes-ontap-from-cloud-manager-notifications[Learn how to upgrade when Cloud Manager notifies you^].
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.
