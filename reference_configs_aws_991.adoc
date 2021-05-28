@@ -19,6 +19,7 @@ A few licensing options are available for Cloud Volumes ONTAP. Each of these lic
 
 You can pay for Cloud Volumes ONTAP in AWS using any of the following options:
 
+[horizontal]
 PAYGO:: Pay-as-you-go by the hour through an AWS Marketplace subscription
 BYOL:: Bring your own license purchased from NetApp
 Professional package:: Pay per TiB with an annual contract through an AWS Marketplace subscription
@@ -33,9 +34,9 @@ Professional package:: Pay per TiB with an annual contract through an AWS Market
 +
 Cloud Manager prompts you to subscribe to the AWS Marketplace when you create a Cloud Volumes ONTAP system.
 * Conversions to another licensing option isn't supported.
-* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
-+
-https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
+* Basic technical support is offered, but you must https://docs.netapp.com/us-en/occm/task_registering.html[register and activate the NetApp serial number associated with your system^].
+
+https://aws.amazon.com/marketplace/pp/prodview-eap6ybxwk5ycg[View pricing information on the AWS Marketplace].
 
 === BYOL
 
@@ -54,6 +55,8 @@ For example, you might purchase two licenses to allocate up to 736 TB of capacit
 Cloud Manager prompts you to subscribe to the AWS Marketplace when you create a Cloud Volumes ONTAP system.
 * Support is included for the length of the subscription term.
 * Conversions to another licensing option isn't supported.
+
+https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[View pricing information on the AWS Marketplace^].
 
 == Supported number of nodes
 
@@ -157,17 +160,11 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | EBS bandwidth (Mbps)
 | High write speed ^2^
 
-a|
-* PAYGO Explore
-* BYOL
-* Professional package
+| *Explore, BYOL, and Professional*
 
 | m5.xlarge | 4 | 16 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
-.3+a|
-* PAYGO Standard
-* BYOL
-* Professional package
+.3| *Standard, BYOL, and Professional*
 
 | r5.xlarge | 4 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
@@ -175,10 +172,7 @@ a|
 
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.18+a|
-* PAYGO Premium
-* BYOL
-* Professional package
+.18+| *Premium, BYOL, and Professional*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 
