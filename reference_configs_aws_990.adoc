@@ -70,7 +70,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 . For an HA pair, the capacity limit is for the entire HA pair. It's not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
 
-. For some HA configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_990.html[storage limits].
+. For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_990.html[storage limits].
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
