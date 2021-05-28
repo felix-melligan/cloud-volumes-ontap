@@ -19,10 +19,9 @@ A few licensing options are available for Cloud Volumes ONTAP. Each of these lic
 
 You can pay for Cloud Volumes ONTAP in AWS using any of the following options:
 
-[horizontal]
-PAYGO:: Pay-as-you-go by the hour through an AWS Marketplace subscription
-BYOL:: Bring your own license purchased from NetApp
-Professional package:: Pay per TiB with an annual contract through an AWS Marketplace subscription
+* *PAYGO*: Pay-as-you-go by the hour through an AWS Marketplace subscription
+* *BYOL*: Bring your own license purchased from NetApp
+* *Professional package*: Pay per TiB with an annual contract through an AWS Marketplace subscription
 
 === PAYGO
 
@@ -164,7 +163,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | m5.xlarge | 4 | 16 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
-.3| *Standard, BYOL, and Professional*
+.3+| *Standard, BYOL, and Professional*
 
 | r5.xlarge | 4 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
