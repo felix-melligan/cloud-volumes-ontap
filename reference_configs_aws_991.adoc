@@ -42,12 +42,10 @@ https://aws.amazon.com/marketplace/pp/prodview-eap6ybxwk5ycg[View pricing inform
 * Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
 * Support is included for the length of the subscription term.
 * Conversions to another licensing option isn't supported.
-* A system license is required for each BYOL system and provides up to 368 TB of capacity.
+* A system license is required for each BYOL system and provides up to 368 TB of capacity through EBS disks and tiering to S3 object storage. <<Supported storage in AWS,Learn more about storage support>>.
 * You can purchase extra capacity licenses to allocate more than 368 TB of capacity.
 +
 For example, you might purchase an extra capacity license to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase three licenses to get up to 1.4 PB.
-+
-<<Supported storage in AWS,Learn more about capacity limits>>.
 
 === Professional package
 
@@ -57,7 +55,7 @@ For example, you might purchase an extra capacity license to allocate up to 736 
 Cloud Manager prompts you to subscribe to the AWS Marketplace when you create a Cloud Volumes ONTAP system.
 * Support is included for the length of the subscription term.
 * Conversions to another licensing option isn't supported.
-* Provides up to 2 PB of capacity. <<Supported storage in AWS,Learn more about capacity limits>>.
+* Provides up to 2 PB of capacity through EBS disks and tiering to S3 object storage. <<Supported storage in AWS,Learn more about storage support>>.
 
 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[View pricing information on the AWS Marketplace^].
 
@@ -69,7 +67,7 @@ Upgrading a single node system to an HA pair is not supported. If you want to sw
 
 == Supported storage in AWS
 
-Cloud Volumes ONTAP supports several types of EBS disks, and S3 object storage for data tiering. The maximum storage capacity is determined by the license that you choose.
+Cloud Volumes ONTAP supports several types of EBS disks and S3 object storage for data tiering. The maximum storage capacity is determined by the license that you choose.
 
 === Storage support by license
 
