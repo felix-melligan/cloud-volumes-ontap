@@ -42,9 +42,12 @@ https://aws.amazon.com/marketplace/pp/prodview-eap6ybxwk5ycg[View pricing inform
 * Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
 * Support is included for the length of the subscription term.
 * Conversions to another licensing option isn't supported.
-* You can purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity.
+* A system license is required for each BYOL system and provides up to 368 TB of capacity.
+* You can purchase extra capacity licenses to allocate more than 368 TB of capacity.
 +
-For example, you might purchase two licenses to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase four licenses to get up to 1.4 PB.
+For example, you might purchase an extra capacity license to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase three licenses to get up to 1.4 PB.
++
+<<Supported storage in AWS,Learn more about capacity limits>>.
 
 === Professional package
 
@@ -54,6 +57,7 @@ For example, you might purchase two licenses to allocate up to 736 TB of capacit
 Cloud Manager prompts you to subscribe to the AWS Marketplace when you create a Cloud Volumes ONTAP system.
 * Support is included for the length of the subscription term.
 * Conversions to another licensing option isn't supported.
+* Provides up to 2 PB of capacity. <<Supported storage in AWS,Learn more about capacity limits>>.
 
 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[View pricing information on the AWS Marketplace^].
 
@@ -94,7 +98,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 . For an HA pair, the capacity limit is for the entire HA pair. It's not per node. For example, if you use the Premium license, you can have up to 368 TB of capacity between both nodes.
 
-. For some configurations, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. In those cases, you can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_991.html[storage limits].
+. For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_991.html[storage limits].
 
 . Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
 
