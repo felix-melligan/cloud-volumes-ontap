@@ -36,7 +36,7 @@ Note the following:
 * The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
 * At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in AWS or in Google Cloud.
 
-We plan to share additional details about using ONTAP S3 with Cloud Volumes ONTAP soon.
+Using the CLI is the best practice to configure S3 client access from Cloud Volumes ONTAP. For details, refer to the http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html[S3 Configuration Power Guide^].
 
 === Enhanced performance in AWS with high write speed
 
