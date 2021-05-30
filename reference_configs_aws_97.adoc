@@ -26,6 +26,7 @@ You can pay for Cloud Volumes ONTAP in AWS using any of the following options:
 === PAYGO
 
 * Requires a subscription from the AWS Marketplace for pay-as-you-go pricing at an hourly rate.
+*	You can charge multiple Cloud Volumes ONTAP systems against this contract.
 * Offers Cloud Volumes ONTAP in three different licensing options: Explore, Standard, and Premium. Each of these licenses provide support for different amounts of storage and compute.
 * A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in AWS.
 ** There are no hourly software charges, but AWS infrastructure charges still apply (compute, storage, and networking).
