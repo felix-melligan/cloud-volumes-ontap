@@ -17,6 +17,12 @@ Cloud Volumes ONTAP 9.9.1 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.9.1 update (3 June 2021)
+
+The recent Cloud Manager 3.9.7 release introduced support for a new Professional Package that enables you to bundle Cloud Volumes ONTAP and Cloud Backup Service by using an annual contract from the AWS Marketplace.
+
+link:reference_configs_aws_991.html[Learn more about this licensing option.]
+
 == 9.9.1 Release Candidate (24 May 2021)
 
 The Cloud Volumes ONTAP 9.9.1 Release Candidate is now available in AWS, Azure, and Google Cloud Platform.
@@ -35,6 +41,7 @@ Note the following:
 
 * The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
 * At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in AWS or in Google Cloud.
+* Cloud Manager doesn't provide any management capabilities for the ONTAP S3 feature.
 
 Using the CLI is the best practice to configure S3 client access from Cloud Volumes ONTAP. For details, refer to the http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html[S3 Configuration Power Guide^].
 
