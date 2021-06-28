@@ -32,7 +32,9 @@ For some configurations, disk limits prevent you from reaching the capacity limi
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
 | BYOL | 368 TB per license
-| Professional package | 2 PB
+| Capacity-based licensing ^1^ | 2 PB
+
+. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 |===
 
@@ -89,7 +91,7 @@ Note the following:
 
 . 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== Single node with the Professional package
+=== Single node with capacity-based licensing
 
 [cols="18,18,32,32",width=100%,options="header"]
 |===
@@ -136,7 +138,7 @@ Note the following:
 
 . 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== HA pairs with the Professional package
+=== HA pairs with capacity-based licensing
 
 [cols="18,18,32,32",width=100%,options="header"]
 |===
