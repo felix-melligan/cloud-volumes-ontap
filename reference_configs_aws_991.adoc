@@ -19,7 +19,7 @@ Several licensing options are available for Cloud Volumes ONTAP. Each option ena
 
 You can pay for Cloud Volumes ONTAP in AWS using any of the following options.
 
-[cols=4*,options="header"]
+[cols="22,40,16,22",width=100%,options="header"]
 |===
 | License
 | Highlights
@@ -35,38 +35,24 @@ a|
 * Premium: 368 TB
 
 a|
-*Capacity-based licensing*
+Capacity-based license:
 Professional package a|
-* Pay per TiB of capacity for multiple Cloud Volumes ONTAP systems
+* Pay per TiB of capacity for one or more Cloud Volumes ONTAP systems
 * Available through an annual contract from the AWS Marketplace or by bringing your own license (BYOL) purchased from NetApp
 * Provides licensing for both Cloud Volumes ONTAP and Cloud Backup Service | Included | 2 PB
 
 a|
-*Capacity-based licensing:*
-Professional package a|
-* Pay per TiB of capacity for multiple Cloud Volumes ONTAP systems
-* Available through an annual contract from the AWS Marketplace or by bringing your own license (BYOL) purchased from NetApp
-* Provides licensing for both Cloud Volumes ONTAP and Cloud Backup Service | Included | 2 PB
-
-a|
-Professional package
-*Capacity-based licensing* a|
-* Pay per TiB of capacity for multiple Cloud Volumes ONTAP systems
-* Available through an annual contract from the AWS Marketplace or by bringing your own license (BYOL) purchased from NetApp
-* Provides licensing for both Cloud Volumes ONTAP and Cloud Backup Service | Included | 2 PB
-
-a|
-*Capacity-based licensing*
+Capacity-based license:
 Essential package a|
-* Pay per TiB of capacity for multiple Cloud Volumes ONTAP systems
+* Pay per TiB of capacity for one or more Cloud Volumes ONTAP systems
 * Available by bringing your own license (BYOL) purchased from NetApp
 * Provides a la carte licensing for Cloud Volumes ONTAP (file storage, block storage, or disaster recovery) and your choice of add-on services | Included | 2 PB
 
 a|
-*Capacity-based licensing*
-Freemium a|
+Capacity-based license:
+Freemium package a|
 * Use all Cloud Volumes ONTAP features free of charge from NetApp (cloud provider charges still apply)
-* You can have up to 10 Freemium systems | Not included | 500 GB
+* You can have up to 10 Freemium systems in your account | Not included | 500 GB
 
 | Node-based license a|
 * The previous generation BYOL for Cloud Volumes ONTAP
