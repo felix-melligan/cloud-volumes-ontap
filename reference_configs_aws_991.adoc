@@ -85,7 +85,7 @@ Cloud Manager aggregates the capacity of all data volumes for every Cloud Volume
 
 Capacity-based licensing is available in the form of a _package_. You can choose from the following packages: Freemium, Essential, and Professional.
 
-NOTE: For each package (other than Freemium), there is a minimum allocated capacity charge of 4 TB. Any Cloud Volumes ONTAP instance that has less than 4 TB of allocated capacity will be charged as 4 TB.
+NOTE: For each package (other than Freemium), there is a minimum allocated capacity charge of 4 TB. Any Cloud Volumes ONTAP instance that has less than 4 TB of allocated capacity will be charged at a rate of 4 TB.
 
 Freemium package::
 
