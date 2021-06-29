@@ -1,5 +1,5 @@
 ---
-sidebar: sidebar
+sidebar: sidebar2
 permalink: google_cloud.html
 keywords:
 summary: The following guides can help you get started with Cloud Volumes ONTAP in Google Cloud to meet your specific use case.
