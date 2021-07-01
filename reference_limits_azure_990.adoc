@@ -66,6 +66,7 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | E32s_v3 | 29 | 368 TB | 368 TB
 | E48s_v3 | 29 | 368 TB | 368 TB
 | E64is_v3 | 29 | 368 TB | 368 TB
+| E80ids_v4 | 29 | 368 TB | 368 TB
 |===
 
 === Single node with one or more BYOL licenses
@@ -92,6 +93,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | E32s_v3 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | E48s_v3 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | E64is_v3 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
+| E80ids_v4 | 29 | 368 TB | 368 TB | 928 TB | 368 TB x each license
 | L8s_v2 | 13 | 368 TB | 368 TB | 416 TB | 368 TB x each license
 |===
 
@@ -109,6 +111,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS15_v2 | 61 | 368 TB | 368 TB
 | E8s_v3 | 13 | 208 TB | 368 TB
 | E48s_v3 | 29 | 368 TB | 368 TB
+| E80ids_v4 | 29 | 368 TB | 368 TB
 |===
 
 === HA pairs with one or more BYOL licenses
@@ -131,6 +134,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS15_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
 | E8s_v3 | 13 | 208 TB | 368 TB | 208 TB | 368 TB x each license
 | E48s_v3 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
+| E80ids_v4 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 |===
 
 == Aggregate limits

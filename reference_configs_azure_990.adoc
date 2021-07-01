@@ -70,6 +70,7 @@ a|
 * E32s_v3 ^1^
 * E48s_v3 ^1^
 * E64is_v3 ^1^
+* E80ids_v4 ^2^
 
 a|
 * DS3_v2
@@ -83,7 +84,8 @@ a|
 * E32s_v3 ^1^
 * E48s_v3 ^1^
 * E64is_v3 ^1^
-* L8s_v2 ^2^
+* E80ids_v4 ^2^
+* L8s_v2 ^3^
 
 | Supported disk types ^3^ 4+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
@@ -97,6 +99,8 @@ a|
 Notes:
 
 . This VM type uses an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
+
+. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
 . This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/occm/concept_flash_cache.html[Learn more^].
 
@@ -130,6 +134,7 @@ a|
 * DS15_v2 ^1^
 * E8s_v3 ^1^
 * E48s_v3 ^1^
+* E80ids_v4 ^2^
 
 a|
 * DS4_v2
@@ -139,6 +144,7 @@ a|
 * DS15_v2 ^1^
 * E8s_v3 ^1^
 * E48s_v3 ^1^
+* E80ids_v4 ^2^
 
 | Supported disk types | Not supported 3+| Premium page blobs
 
@@ -152,6 +158,8 @@ a|
 Notes:
 
 . Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. High write speed is supported with all instance types when using a single node system. https://docs.netapp.com/us-en/occm/concept_write_speed.html[Learn more about choosing a write speed^].
+
+. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
 . For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
