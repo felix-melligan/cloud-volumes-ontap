@@ -54,7 +54,6 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 
 | Supported machine types ^1^
 a|
-* custom-4-16384
 * n2-standard-4
 a|
 * n1-standard-8
@@ -63,7 +62,6 @@ a|
 * n1-standard-32
 * n2-standard-32
 a|
-* custom-4-16384
 * n1-standard-8
 * n1-standard-32
 * n2-standard-4
@@ -81,7 +79,9 @@ a|
 
 Notes:
 
-. The custom machine type has 4 vCPUs and 16 GB of memory. For details about standard machine types, refer to https://cloud.google.com/compute/docs/machine-types#standard_machine_types[Google Cloud Documentation: Machine Types^].
+. The custom-4-16384 machine type is no longer supported with new Cloud Volumes ONTAP systems.
++
+If you have an existing system running on this machine type, you can keep using it, but we recommend switching to the n2-standard-4 machine type.
 
 . Enhanced write performance is enabled when using SSDs.
 
@@ -109,7 +109,6 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 
 | Supported machine types ^1^
 a|
-* custom-4-16384
 * n2-standard-4
 a|
 * n1-standard-8
@@ -118,7 +117,6 @@ a|
 * n1-standard-32
 * n2-standard-32
 a|
-* custom-4-16384
 * n1-standard-8
 * n1-standard-32
 * n2-standard-4
@@ -136,7 +134,9 @@ a|
 
 Notes:
 
-. The custom machine type has 4 vCPUs and 16 GB of memory. For details about standard machine types, refer to https://cloud.google.com/compute/docs/machine-types#standard_machine_types[Google Cloud Documentation: Machine Types^].
+. The custom-4-16384 machine type is no longer supported with new Cloud Volumes ONTAP systems.
++
+If you have an existing system running on this machine type, you can keep using it, but we recommend switching to the n2-standard-4 machine type.
 
 . Enhanced write performance is enabled when using SSDs.
 
