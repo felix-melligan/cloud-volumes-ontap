@@ -17,7 +17,9 @@ Cloud Volumes ONTAP 9.9.1 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
-== 9.9.1 update (7 July 2021)
+== 9.9.1 update (6 July 2021)
+
+The following changes were introduced alongside the Cloud Manager 3.9.8 release.
 
 * New charging methods are available for Cloud Volumes ONTAP.
 +
