@@ -15,25 +15,6 @@ summary: Cloud Volumes ONTAP is available in Google Cloud Platform as a single n
 [.lead]
 Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system or an HA pair. Two pricing options are available: pay as you go and Bring Your Own License (BYOL).
 
-== Pay-as-you-go overview
-
-* Offers Cloud Volumes ONTAP in three different licensing options: Explore, Standard, and Premium.
-* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in GCP.
-** There are no hourly software charges, but GCP infrastructure charges still apply (compute, storage, and networking).
-** When the free trial ends, you'll be charged hourly according to the selected license, https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager[as long as you subscribed^]. If you haven't subscribed, the system shuts down.
-* Conversions from PAYGO to BYOL aren't currently supported.
-* Basic technical support is offered, but you must register and activate the NetApp serial number associated with your system.
-+
-https://docs.netapp.com/us-en/occm/task_registering.html[Register pay-as-you-go systems in Cloud Manager^]
-
-== BYOL overview
-
-* Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
-* Support is included for the length of the subscription term.
-* You can purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity.
-+
-For example, you might purchase two licenses to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase four licenses to get up to 1.4 PB.
-
 == Supported configurations by license
 
 Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system and as a high-availability (HA) pair of nodes for fault tolerance and nondisruptive operations.
