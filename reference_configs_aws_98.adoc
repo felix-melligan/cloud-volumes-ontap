@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_configs_aws_98.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth
-summary: Cloud Volumes ONTAP is available in AWS as a single node system or an HA pair. Two pricing options are available, pay as you go and Bring Your Own License (BYOL).
+summary: Several Cloud Volumes ONTAP configurations are supported in AWS.
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.8 in AWS
@@ -13,7 +13,7 @@ summary: Cloud Volumes ONTAP is available in AWS as a single node system or an H
 :imagesdir: ./media/
 
 [.lead]
-Two pricing options are available for Cloud Volumes ONTAP: pay as you go and Bring Your Own License (BYOL). For PAYGO, you can choose between Explore, Standard, and Premium. Each of these licensing options enables you to choose a configuration that meets your needs.
+Several Cloud Volumes ONTAP configurations are supported in AWS.
 
 == Supported number of nodes
 

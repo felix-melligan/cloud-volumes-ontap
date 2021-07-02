@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_configs_aws_991.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth, professional package
-summary: A few licensing options are available for Cloud Volumes ONTAP. Each of these licensing options enables you to choose a configuration that meets your needs.
+summary: Several Cloud Volumes ONTAP configurations are supported in AWS.
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.9.1 in AWS
@@ -13,7 +13,7 @@ summary: A few licensing options are available for Cloud Volumes ONTAP. Each of 
 :imagesdir: ./media/
 
 [.lead]
-Several licensing options are available for Cloud Volumes ONTAP. Each option enables you to choose a configuration that meets your needs.
+Several Cloud Volumes ONTAP configurations are supported in AWS.
 
 == Supported number of nodes
 
