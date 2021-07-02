@@ -25,13 +25,14 @@ Upgrading a single node system to an HA pair is not supported. If you want to sw
 
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in GCP.
 
-[cols=5*,cols="h,d,d,d,d",options="header"]
+[cols=6*,cols="h,d,d,d,d,d",options="header"]
 |===
 |
-| Explore
-| Standard
-| Premium
-| BYOL
+| PAYGO Explore
+| PAYGO Standard
+| PAYGO Premium
+| Node-based license
+| Capacity-based license
 
 | Supported machine types ^1^
 a|
@@ -42,19 +43,19 @@ a|
 a|
 * n1-standard-32
 * n2-standard-32
-a|
+2+a|
 * n1-standard-8
 * n1-standard-32
 * n2-standard-4
 * n2-standard-8
 * n2-standard-32
 
-| Supported disk types ^2^ 4+| Zonal persistent disks (SSD and standard)
+| Supported disk types ^2^ 5+| Zonal persistent disks (SSD and standard)
 
-| Cold data tiering to object storage | Not supported 3+| Supported
+| Cold data tiering to object storage | Not supported 4+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^ | 2 PB
 
 |===
 
@@ -80,13 +81,14 @@ link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
 
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in GCP.
 
-[cols=5*,cols="h,d,d,d,d",options="header"]
+[cols=6*,cols="h,d,d,d,d,d",options="header"]
 |===
 |
-| Explore
-| Standard
-| Premium
-| BYOL
+| PAYGO Explore
+| PAYGO Standard
+| PAYGO Premium
+| Node-based license
+| Capacity-based license
 
 | Supported machine types ^1^
 a|
@@ -97,19 +99,19 @@ a|
 a|
 * n1-standard-32
 * n2-standard-32
-a|
+2+a|
 * n1-standard-8
 * n1-standard-32
 * n2-standard-4
 * n2-standard-8
 * n2-standard-32
 
-| Supported disk types ^2^ 4+| Zonal persistent disks (SSD and standard)
+| Supported disk types ^2^ 5+| Zonal persistent disks (SSD and standard)
 
-| Cold data tiering to object storage | Not supported 3+| Supported
+| Cold data tiering to object storage | Not supported 4+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^ | 2 PB
 
 |===
 

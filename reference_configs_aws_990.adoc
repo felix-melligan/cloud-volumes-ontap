@@ -35,8 +35,8 @@ Each license supports a different maximum system capacity. The maximum system ca
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
-| BYOL
-| Professional package
+| Node-based license
+| Capacity-based license
 
 | Maximum system capacity
 (disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^ | 2 PB ^2^
@@ -117,11 +117,11 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | EBS bandwidth (Mbps)
 | High write speed ^2^
 
-| *Explore and BYOL*
+| *PAYGO Explore, node-based license, or capacity-based license*
 
 | m5.xlarge | 4 | 16 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
-.3+| *Standard and BYOL*
+.3+| *PAYGO Standard, node-based license, or capacity-based license*
 
 | r5.xlarge | 4 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
@@ -129,7 +129,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.18+| *Premium and BYOL*
+.18+| *PAYGO Premium, node-based license, or capacity-based license*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 

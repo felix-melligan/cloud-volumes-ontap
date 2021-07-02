@@ -27,8 +27,8 @@ Upgrading a single node system to an HA pair is not supported. If you want to sw
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
-| BYOL
-| Professional package
+| Node-based license
+| Capacity-based license
 
 | Supported EC2 instance types ^1^
 a|

@@ -19,26 +19,27 @@ Several Cloud Volumes ONTAP configurations are supported in GCP.
 
 Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system.
 
-[cols=5*,cols="h,d,d,d,d",options="header"]
+[cols=6*,cols="h,d,d,d,d,d",options="header"]
 |===
 |
-| Explore
-| Standard
-| Premium
-| BYOL
+| PAYGO Explore
+| PAYGO Standard
+| PAYGO Premium
+| Node-based license
+| Capacity-based license
 
 | Supported machine types ^1^ | custom-4-16384 | n1-standard-8  | n1-standard-32
-a|
+2+a|
 * custom-4-16384
 * n1-standard-8
 * n1-standard-32
 
-| Supported disk types ^2^ 4+| Zonal persistent disks (SSD and standard)
+| Supported disk types ^2^ 5+| Zonal persistent disks (SSD and standard)
 
-| Cold data tiering to object storage | Not supported 3+| Supported
+| Cold data tiering to object storage | Not supported 4+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^ | 2 PB
 
 |===
 
