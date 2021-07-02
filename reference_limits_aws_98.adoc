@@ -29,10 +29,12 @@ For some HA configurations, disk limits prevent you from reaching the capacity l
 | PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
-| BYOL | 368 TB per license
-| Professional package | 2 PB
+| Node-based license | 368 TB per license
+| Capacity-based license ^1^ | 2 PB
 
 |===
+
+. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 ===== For HA, is the license capacity limit per node or for the entire HA pair?
 
@@ -52,9 +54,7 @@ Note the following:
 
 * The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
-* Limits are shown for PAYGO Premium, BYOL, and the Professional package. Capacity limits can't be reached with PAYGO Explore or Standard.
-
-* You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+* You can now purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
 === Single node with a Premium license
 
@@ -71,7 +71,7 @@ Note the following:
 
 . 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== Single node with one or more BYOL licenses
+=== Single node with one or more node-based licenses
 
 [cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
@@ -87,7 +87,7 @@ Note the following:
 
 . 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== Single node with the Professional package
+=== Single node with capacity-based licensing
 
 [cols="18,18,32,32",width=100%,options="header"]
 |===
@@ -117,7 +117,7 @@ Note the following:
 
 . 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== HA pairs with one or more BYOL licenses
+=== HA pairs with one or more node-based licenses
 
 [cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
@@ -134,7 +134,7 @@ Note the following:
 
 . 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== HA pairs with the Professional package
+=== HA pairs with capacity-based licensing
 
 [cols="18,18,32,32",width=100%,options="header"]
 |===

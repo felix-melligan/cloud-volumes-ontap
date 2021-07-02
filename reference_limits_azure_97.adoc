@@ -19,17 +19,20 @@ Cloud Volumes ONTAP has storage configuration limits to provide reliable operati
 
 The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn't support exceeding this limit.
 
-[cols="25,75",width=55%,options="header"]
+[cols="25,75",width=65%,options="header"]
 |===
 | License
 | Maximum system capacity (disks + object storage)
 
-| Explore	| 2 TB (data tiering is not supported with Explore)
-| Standard | 10 TB
-| Premium | 368 TB
-| BYOL | 368 TB per license
+| PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
+| PAYGO Standard | 10 TB
+| PAYGO Premium | 368 TB
+| Node-based license | 368 TB per license
+| Capacity-based license ^1^ | 2 PB
 
 |===
+
+. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 ===== For HA, is the license capacity limit per node or for the entire HA pair?
 

@@ -23,17 +23,20 @@ NetApp doesn't support exceeding the system capacity limit. If you reach the lic
 
 For the Premium and BYOL licenses, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to the disk limits below for more details.
 
-[cols="25,75",width=55%,options="header"]
+[cols="25,75",width=65%,options="header"]
 |===
 | License
 | Maximum system capacity (disks + object storage)
 
-| Explore	| 2 TB (data tiering is not supported with Explore)
-| Standard | 10 TB
-| Premium | 368 TB
-| BYOL | 368 TB per license
+| PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
+| PAYGO Standard | 10 TB
+| PAYGO Premium | 368 TB
+| Node-based license | 368 TB per license
+| Capacity-based license ^1^ | 2 PB
 
 |===
+
+. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 ===== For an HA pair, is the licensed capacity limit per node or for the entire HA pair?
 
@@ -60,7 +63,8 @@ The table below shows the maximum system capacity with disks alone, and with dis
 | Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket
 a|
 * Premium: 368 TB
-* BYOL: 368 TB per license
+* Node-based license: 368 TB per license
+* Capacity-based license: 2 PB
 |===
 
 ^1^ This limit is defined by virtual machine limits in Google Cloud Platform.
