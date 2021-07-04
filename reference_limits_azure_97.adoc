@@ -27,8 +27,8 @@ The maximum system capacity for a Cloud Volumes ONTAP system is determined by it
 | PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
-| Node-based license | 368 TB per license
-| Capacity-based license ^1^ | 2 PB
+| Node-based BYOL | 368 TB per license
+| Capacity-based BYOL ^1^ | 2 PB
 
 |===
 

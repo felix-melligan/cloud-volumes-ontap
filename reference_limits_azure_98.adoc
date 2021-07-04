@@ -27,8 +27,8 @@ The maximum system capacity for a Cloud Volumes ONTAP system is determined by it
 | PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
-| Node-based license | 368 TB per license
-| Capacity-based license ^1^ | 2 PB
+| Node-based BYOL | 368 TB per license
+| Capacity-based BYOL ^1^ | 2 PB
 
 |===
 
@@ -44,13 +44,11 @@ The disk limits below are specific to disks that contain user data. The limits d
 
 The tables below show the maximum system capacity by VM size with disks alone, and with disks and cold data tiering to object storage.
 
-Disk limits are shown by VM size for Premium and BYOL licenses only because disk limits can’t be reached with Explore or Standard licenses due to system capacity limits.
-
 * Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
 
 * HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
 
-NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+NOTE: You can purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
 === Single node with a Premium license
 
