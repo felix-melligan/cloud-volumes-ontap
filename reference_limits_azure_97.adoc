@@ -46,15 +46,13 @@ NOTE: The number of data disks listed in the tables below are as 9.7 P5. In prev
 
 The tables below show the maximum system capacity by VM size with disks alone, and with disks and cold data tiering to object storage.
 
-Disk limits are shown by VM size for Premium and BYOL licenses only because disk limits can’t be reached with Explore or Standard licenses due to system capacity limits.
-
 * Single node systems can use Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks, with up to 32 TB per disk. The number of supported disks varies by VM size.
 
 * HA systems use Premium page blobs as disks, with up to 8 TB per page blob. The number of supported disks varies by VM size.
 
-NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+NOTE: You can purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by http://docs.netapp.com/occm/us-en/concept_data_tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/occm/task_managing_licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
-=== Single node with a Premium license
+=== PAYGO Premium with single node
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -72,7 +70,58 @@ NOTE: You can now purchase multiple licenses for a Cloud Volumes ONTAP BYOL syst
 | E80ids_v4 | 29 | 368 TB | 368 TB
 |===
 
-=== Single node with one or more BYOL licenses
+=== PAYGO Premium with an HA pair
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS5_v2 | 61 | 368 TB | 2 PB
+| DS14_v2 | 61 | 368 TB | 2 PB
+| DS15_v2 | 61 | 368 TB | 2 PB
+| E80ids_v4 | 29 | 368 TB | 2 PB
+|===
+
+=== Capacity-based BYOL with single node
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS3_v2 | 13 | 416 TB | 2 PB
+| DS4_v2 | 29 | 928 TB | 2 PB
+| DS5_v2 | 61 | 1.95 TB | 2 PB
+| DS13_v2 | 29 | 928 TB | 2 PB
+| DS14_v2 | 61 | 1.95 TB | 2 PB
+| DS15_v2 | 61 | 1.95 TB | 2 PB
+| E32s_v3 | 29 | 928 TB | 2 PB
+| E48s_v3 | 29 | 928 TB | 2 PB
+| E80ids_v4 | 29 | 928 TB | 2 PB
+| L8s_v2 | 13 | 416 TB | 2 PB
+|===
+
+=== Capacity-based BYOL with an HA pair
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS5_v2 | 61 | 1.95 TB | 2 PB
+| DS14_v2 | 61 | 1.95 TB | 2 PB
+| DS15_v2 | 61 | 1.95 TB | 2 PB
+| E80ids_v4 | 29 | 928 TB | 2 PB
+|===
+
+=== Node-based BYOL with single node
 
 NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 2 PB with DS5_v2.
 
@@ -97,22 +146,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | L8s_v2 | 13 | 368 TB | 368 TB | 416 TB | 368 TB x each license
 |===
 
-=== HA pairs with a Premium license
-
-[cols="14,20,31,33",width=68%,options="header"]
-|===
-| VM size
-| Max data disks per node
-| Max system capacity with disks alone
-| Max system capacity with disks and data tiering
-
-| DS5_v2 | 61 | 368 TB | 368 TB
-| DS14_v2 | 61 | 368 TB | 368 TB
-| DS15_v2 | 61 | 368 TB | 368 TB
-| E80ids_v4 | 29 | 368 TB | 368 TB
-|===
-
-=== HA pairs with one or more BYOL licenses
+=== Node-based BYOL with an HA pair
 
 NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 3 BYOL licenses to reach 1 PB with DS5_v2.
 
@@ -143,9 +177,10 @@ Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates
 | Limit
 
 | Maximum number of aggregates | Same as the disk limit
-| Maximum aggregate size |
-352 TB of raw capacity for single node ^1,^ ^2^
-96 TB of raw capacity for HA pairs ^1^
+| Maximum aggregate size ^1^ |
+384 TB of raw capacity for single node with BYOL ^2^
+352 TB of raw capacity for single node with PAYGO
+96 TB of raw capacity for HA pairs
 | Disks per aggregate	| 1-12 ^3^
 | Maximum number of RAID groups per aggregate	| 1
 |===
@@ -154,7 +189,7 @@ Notes:
 
 . The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
 
-. The 352 TB limit is supported starting with 9.6 P3. Releases prior to 9.6 P3 support up to 200 TB of raw capacity in an aggregate on a single node system.
+. If using node-based licensing, two BYOL licenses are required to reach 384 TB.
 
 . All disks in an aggregate must be the same size.
 
