@@ -96,13 +96,19 @@ NOTE: You can purchase multiple node-based licenses for a Cloud Volumes ONTAP BY
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| DS5_v2 | 61 | 1.95 PB | 2 PB
-| DS14_v2 | 61 | 1.95 PB | 2 PB
-| DS15_v2 | 61 | 1.95 PB | 2 PB
+| DS3_v2 | 13 | 416 TB | 2 PB
+| DS4_v2 | 29 | 928 TB | 2 PB
+| DS5_v2 | 61 | 1.95 TB | 2 PB
+| DS13_v2 | 29 | 928 TB | 2 PB
+| DS14_v2 | 61 | 1.95 TB | 2 PB
+| DS15_v2 | 61 | 1.95 TB | 2 PB
+| E4s_v3 | 5 | 160 TB | 2 PB
+| E8s_v3 | 13 | 416 TB | 2 PB
 | E32s_v3 | 29 | 928 TB | 2 PB
 | E48s_v3 | 29 | 928 TB | 2 PB
 | E64is_v3 | 29 | 928 TB | 2 PB
 | E80ids_v4 | 29 | 928 TB | 2 PB
+| L8s_v2 | 13 | 416 TB | 2 PB
 |===
 
 === Capacity-based BYOL with an HA pair
@@ -114,7 +120,9 @@ NOTE: You can purchase multiple node-based licenses for a Cloud Volumes ONTAP BY
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
+| DS4_v2 | 29 | 464 TB | 2 PB
 | DS5_v2 | 61 | 976 TB | 2 PB
+| DS13_v2 | 29 | 464 TB | 2 PB
 | DS14_v2 | 61 | 976 TB | 2 PB
 | DS15_v2 | 61 | 976 TB | 2 PB
 | E8s_v3 | 13 | 208 TB | 2 PB
