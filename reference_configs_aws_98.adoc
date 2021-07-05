@@ -117,17 +117,17 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | EBS bandwidth (Mbps)
 | High write speed ^2^
 
-| *PAYGO Explore, node-based license, or capacity-based license*
+| *Explore or any other license*
 
 | m5.xlarge | 4 | 16 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
-.2+| *PAYGO Standard, node-based licensing, or capacity-based licensing*
+.2+| *Standard or any other license*
 
 | r5.xlarge | 4 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.16+| *PAYGO Premium, node-based licensing, or capacity-based licensing*
+.16+| *Premium or any other license*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 

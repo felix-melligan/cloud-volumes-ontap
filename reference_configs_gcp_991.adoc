@@ -106,7 +106,7 @@ a|
 * n2-standard-8
 * n2-standard-32
 
-| Supported disk types ^2^ 5+| Zonal persistent disks (SSD and standard)
+| Supported disk types ^2^ 5+| Zonal persistent disks (SSD, balanced, and standard)
 
 | Cold data tiering to object storage | Not supported 4+| Supported
 
