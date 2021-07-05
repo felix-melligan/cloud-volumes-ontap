@@ -131,7 +131,7 @@ a|
 
 | Supported disk types | Not supported 4+| Premium page blobs
 
-| Cold data tiering to Blob storage ^2^ | Not supported 4+| Supported
+| Cold data tiering to Blob storage | Not supported 4+| Supported
 
 | Maximum system capacity
 (disks + object storage) | Not supported | 10 TB | 368 TB | 368 TB per license | 2 PB
