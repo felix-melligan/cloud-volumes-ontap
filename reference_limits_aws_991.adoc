@@ -215,6 +215,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.12xlarge | 30 | 24 | 24 | 12
 | *.16xlarge | 50 | 44 | 24 | 12
 | *.18xlarge | 50 | 44 | 24 | 12
+| *.24xlarge | 50 | 44 | 24 | 12
 
 .7+| *HA pair in single AZ*
 | *.2xlarge | 15 | 10 | 11 | 5
@@ -224,6 +225,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.12xlarge | 30 | 25 | 24 | 12
 | *.16xlarge | 50 | 45 | 24 | 12
 | *.18xlarge | 50 | 45 | 24 | 12
+| *.24xlarge | 50 | 44 | 24 | 12
 
 .7+| *HA pair in multi AZs*
 | *.2xlarge | 15 | 12 | 13 | 13
@@ -233,6 +235,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.12xlarge | 30 | 27 | 24 | 24
 | *.16xlarge | 50 | 47 | 24 | 24
 | *.18xlarge | 50 | 47 | 24 | 24
+| *.24xlarge | 50 | 44 | 24 | 12
 
 |===
 
