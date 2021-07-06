@@ -207,7 +207,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | Max storage VMs without a mgmt LIF ^2,3^
 | Max storage VMs with a mgmt LIF ^2,3^
 
-.7+| *Single node*
+.8+| *Single node*
 | *.2xlarge | 15 | 9 | 10 | 5
 | *.4xlarge | 30 | 24 | 24 | 12
 | *.8xlarge | 30 | 24 | 24 | 12
@@ -217,7 +217,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.18xlarge | 50 | 44 | 24 | 12
 | *.24xlarge | 50 | 44 | 24 | 12
 
-.7+| *HA pair in single AZ*
+.8+| *HA pair in single AZ*
 | *.2xlarge | 15 | 10 | 11 | 5
 | *.4xlarge | 30 | 25 | 24 | 12
 | *.8xlarge | 30 | 25 | 24 | 12
@@ -227,7 +227,7 @@ When you create an additional storage VM, you need to allocate private IP addres
 | *.18xlarge | 50 | 45 | 24 | 12
 | *.24xlarge | 50 | 44 | 24 | 12
 
-.7+| *HA pair in multi AZs*
+.8+| *HA pair in multi AZs*
 | *.2xlarge | 15 | 12 | 13 | 13
 | *.4xlarge | 30 | 27 | 24 | 24
 | *.8xlarge | 30 | 27 | 24 | 24
