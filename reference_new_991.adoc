@@ -90,3 +90,9 @@ http://docs.netapp.com/us-en/occm/task_updating_ontap_cloud.html#upgrading-cloud
 * The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
 
 * Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.
+
+=== c4, m4, and r4 instance types
+
+Starting with the 9.8 release, c4, m4, and r4 instance types aren't supported with new Cloud Volumes ONTAP systems. If you have an existing Cloud Volumes ONTAP system that's running on a c4, m4, or r4 instance type, you can still upgrade to this release.
+
+We recommend changing to an instance type in the c5, m5, or r5 instance family.
