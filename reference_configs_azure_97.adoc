@@ -162,7 +162,7 @@ a|
 * DS15_v2
 * E80ids_v4 ^1^
 
-| Supported disk types 6+| Premium page blobs
+| Supported disk types 5+| Premium page blobs
 
 |===
 

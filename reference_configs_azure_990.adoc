@@ -183,7 +183,7 @@ a|
 * E48s_v3 ^1^
 * E80ids_v4 ^2^
 
-| Supported disk types 6+| Premium page blobs
+| Supported disk types 5+| Premium page blobs
 
 |===
 
