@@ -28,49 +28,61 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 [cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
+| Freemium
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
 | Node-based license
 | Capacity-based license
-| Freemium
-
-| Supported machine types ^1^
-a|
-* n2-standard-4
-a|
-* n1-standard-8
-* n2-standard-8
-a|
-* n1-standard-32
-* n2-standard-32
-3+a|
-* n1-standard-8
-* n1-standard-32
-* n2-standard-4
-* n2-standard-8
-* n2-standard-32
-
-| Supported disk types ^2^ 6+| Zonal persistent disks (SSD, balanced, and standard)
-
-| Cold data tiering to object storage | Not supported 5+| Supported
 
 | Maximum system capacity
-(disks + object storage) ^3^ | 2 TB | 10 TB | 368 TB | 368 TB per license | 2 PB | 500 GB
+(disks + object storage) ^1^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 368 TB per license | 2 PB
+
+| Supported machine types ^3^
+a|
+* n1-standard-8
+* n1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
+a|
+* n2-standard-4
+a|
+* n1-standard-8
+* n2-standard-8
+a|
+* n1-standard-32
+* n2-standard-32
+a|
+* n1-standard-8
+* n1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
+a|
+* n1-standard-8
+* n1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
+
+| Supported disk types ^4^ 6+| Zonal persistent disks (SSD, balanced, and standard)
 
 |===
 
 Notes:
+
+. Disk limits might prevent you from reaching the maximum system capacity limit by using disks alone. You can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
++
+link:reference_limits_gcp_991.html[Learn more about disk limits in GCP].
+
+. Data tiering to Google Cloud Storage isn't supported with PAYGO Explore.
 
 . The custom-4-16384 machine type is no longer supported with new Cloud Volumes ONTAP systems.
 +
 If you have an existing system running on this machine type, you can keep using it, but we recommend switching to the n2-standard-4 machine type.
 
 . Enhanced write performance is enabled when using SSDs.
-
-. Disk limits might prevent you from reaching the maximum system capacity limit by using disks alone. You can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
-+
-link:reference_limits_gcp_991.html[Learn more about disk limits in GCP].
 
 . The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
 
