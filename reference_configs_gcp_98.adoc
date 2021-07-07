@@ -21,10 +21,6 @@ Cloud Volumes ONTAP is available in Google Cloud Platform as a single node syste
 
 Upgrading a single node system to an HA pair is not supported. If you want to switch between a single node system and an HA pair, then you need to deploy a new system and replicate data from the existing system to the new system.
 
-=== Single node systems
-
-You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in GCP.
-
 [cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
@@ -83,74 +79,6 @@ link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
 If you have an existing system running on this machine type, you can keep using it, but we recommend switching to the n2-standard-4 machine type.
 
 . Enhanced write performance is enabled when using SSDs.
-
-. The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
-
-. For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
-
-. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
-
-=== HA pairs
-
-You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in GCP.
-
-[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
-|===
-|
-| Freemium
-| PAYGO Explore
-| PAYGO Standard
-| PAYGO Premium
-| Node-based license
-| Capacity-based license
-
-| Maximum system capacity
-(disks + object storage) ^1^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 368 TB per license | 2 PB
-
-| Supported machine types ^3^
-
-a|
-* n1-standard-8
-* n1-standard-32
-* n2-standard-4
-* n2-standard-8
-* n2-standard-32
-a|
-* n2-standard-4
-a|
-* n1-standard-8
-* n2-standard-8
-a|
-* n1-standard-32
-* n2-standard-32
-a|
-* n1-standard-8
-* n1-standard-32
-* n2-standard-4
-* n2-standard-8
-* n2-standard-32
-a|
-* n1-standard-8
-* n1-standard-32
-* n2-standard-4
-* n2-standard-8
-* n2-standard-32
-
-| Supported disk types ^4^ 6+| Zonal persistent disks (SSD and standard)
-
-|===
-
-Notes:
-
-. Disk limits can prevent you from reaching the maximum system capacity limit by using disks alone. You can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
-+
-link:reference_limits_gcp_98.html[Learn more about disk limits in GCP].
-
-. Data tiering to Google Cloud Storage isn't supported with PAYGO Explore.
-
-. The custom-4-16384 machine type is no longer supported with new Cloud Volumes ONTAP systems.
-+
-If you have an existing system running on this machine type, you can keep using it, but we recommend switching to the n2-standard-4 machine type.
 
 . The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
 
