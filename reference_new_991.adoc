@@ -17,13 +17,13 @@ Cloud Volumes ONTAP 9.9.1 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
-== 9.9.1 update (6 July 2021)
+== 9.9.1 update (7 July 2021)
 
 The following changes were introduced with the Cloud Manager 3.9.8 release.
 
 * New charging methods are available for Cloud Volumes ONTAP.
 
-** *Capacity-based BYOL*: A capacity-based license enables you to pay for Cloud Volumes ONTAP per TiB of capacity. The license is associated with your NetApp account and enables you to create as multiple Cloud Volumes ONTAP systems, as long as enough capacity is available through your license. Capacity-based licensing is available in the form of a package, either _Essential_ or _Professional_.
+** *Capacity-based BYOL*: A capacity-based license enables you to pay for Cloud Volumes ONTAP per TiB of capacity. The license is associated with your NetApp account and enables you to create multiple Cloud Volumes ONTAP systems, as long as enough capacity is available through your license. Capacity-based licensing is available in the form of a package, either _Essential_ or _Professional_.
 
 ** *Freemium offering*: Freemium enables you to use all Cloud Volumes ONTAP features free of charge from NetApp (cloud provider charges still apply). You're limited to 500 GB of allocated capacity per system and there’s no support contract. You can have up to 10 Freemium systems.
 +
