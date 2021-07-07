@@ -68,10 +68,10 @@ a|
 * DS5_v2
 * DS14_v2
 * DS15_v2
-* E32s_v3 ^1^
-* E48s_v3 ^1^
-* E64is_v3 ^1^
-* E80ids_v4 ^2^
+* E32s_v3 ^2^
+* E48s_v3 ^2^
+* E64is_v3 ^2^
+* E80ids_v4 ^3^
 
 a|
 * DS3_v2
@@ -82,11 +82,11 @@ a|
 * DS15_v2
 * E4s_v3
 * E8s_v3
-* E32s_v3 ^1^
-* E48s_v3 ^1^
-* E64is_v3 ^1^
-* E80ids_v4 ^2^
-* L8s_v2 ^3^
+* E32s_v3 ^2^
+* E48s_v3 ^2^
+* E64is_v3 ^2^
+* E80ids_v4 ^3^
+* L8s_v2 ^4^
 
 a|
 * DS3_v2
@@ -97,11 +97,11 @@ a|
 * DS15_v2
 * E4s_v3
 * E8s_v3
-* E32s_v3 ^1^
-* E48s_v3 ^1^
-* E64is_v3 ^1^
-* E80ids_v4 ^2^
-* L8s_v2 ^3^
+* E32s_v3 ^2^
+* E48s_v3 ^2^
+* E64is_v3 ^2^
+* E80ids_v4 ^3^
+* L8s_v2 ^4^
 
 | Supported disk types ^5^ 6+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
