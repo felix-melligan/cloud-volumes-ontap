@@ -63,7 +63,7 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-2+a|
+3+a|
 * c4.4xlarge
 * c4.8xlarge
 * c5.9xlarge
