@@ -130,22 +130,6 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | E80ids_v4 | 29 | 368 TB | 368 TB
 |===
 
-=== HA pairs with capacity-based licensing
-
-[cols="14,20,31,33",width=68%,options="header"]
-|===
-| VM size
-| Max data disks per node
-| Max system capacity with disks alone
-| Max system capacity with disks and data tiering
-
-| DS5_v2 | 61 | 976 TB | 2 PB
-| DS14_v2 | 61 | 976 TB | 2 PB
-| DS15_v2 | 61 | 976 TB | 2 PB
-| E48s_v3 | 29 | 464 TB | 2 PB
-| E80ids_v4 | 29 | 464 TB | 2 PB
-|===
-
 === HA pairs with node-based licensing
 
 NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 3 BYOL licenses to reach 976 TB with DS5_v2.
@@ -166,6 +150,22 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | DS15_v2 | 61 | 368 TB | 368 TB | 976 TB | 368 TB x each license
 | E48s_v3 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
 | E80ids_v4 | 29 | 368 TB | 368 TB | 464 TB | 368 TB x each license
+|===
+
+=== HA pairs with capacity-based licensing
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks per node
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| DS5_v2 | 61 | 976 TB | 2 PB
+| DS14_v2 | 61 | 976 TB | 2 PB
+| DS15_v2 | 61 | 976 TB | 2 PB
+| E48s_v3 | 29 | 464 TB | 2 PB
+| E80ids_v4 | 29 | 464 TB | 2 PB
 |===
 
 == Aggregate limits
