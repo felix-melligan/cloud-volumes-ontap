@@ -26,15 +26,14 @@ For some HA configurations, disk limits prevent you from reaching the capacity l
 | License
 | Maximum system capacity (disks + object storage)
 
+| Freemium | 500 GB
 | PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
-| Node-based BYOL | 368 TB per license
-| Capacity-based BYOL ^1^ | 2 PB
+| Node-based license | 368 TB per license
+| Capacity-based license | 2 PB
 
 |===
-
-. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 ===== For HA, is the license capacity limit per node or for the entire HA pair?
 
@@ -54,69 +53,32 @@ NOTE: You can now purchase multiple node-based licenses for a Cloud Volumes ONTA
 
 === Single node with a Premium license
 
-[cols="16,20,30,32",width=69%,options="header"]
+[cols="18,18,32,32",width=100%,options="header"]
 |===
-| Instance type
+| Instance family
 | Max disks per node
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c4.4xlarge | 34 | 368 TB | 368 TB
-| c4.8xlarge | 34 | 368 TB | 368 TB
-| c5.9xlarge | 22 | 352 TB | 368 TB
-| c5.18xlarge | 22 | 352 TB | 368 TB
-| c5d.4xlarge | 22 | 352 TB | 368 TB
-| c5d.9xlarge | 22 | 352 TB | 368 TB
-| c5d.18xlarge | 22 | 352 TB | 368 TB
-| c5n.9xlarge | 22 | 352 TB | 368 TB
-| c5n.18xlarge | 22 | 352 TB | 368 TB
-| m4.4xlarge | 34 | 368 TB | 368 TB
-| m5.4xlarge | 22 | 352 TB | 368 TB
-| m5.16xlarge | 22 | 352 TB | 368 TB
-| m5d.8xlarge | 22 | 352 TB | 368 TB
-| m5d.12xlarge | 22 | 352 TB | 368 TB
-| r4.2xlarge | 34 | 368 TB | 368 TB
-| r5.2xlarge | 22 | 352 TB | 368 TB
-| r5.8xlarge | 22 | 352 TB | 368 TB
-| r5.12xlarge | 22 | 352 TB | 368 TB
-| r5d.2xlarge | 22 | 352 TB | 368 TB
+| c5, m5, and r5 instances | 22 | 352 TB | 368 TB
+| c4, m4, and r4 instances | 34  | 368 TB | 368 TB
+
 |===
 
-=== Single node with one or more node-based licenses
+=== Single node with node-based licensing
 
-[cols="10,18,18,18,18,18",width=100%,options="header"]
+[cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
-| Instance type
+| Instance family
 | Max disks per node
 2+| Max system capacity with one license
 2+| Max system capacity with multiple licenses
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
-| c4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| c4.8xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| c5.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| c5.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| c5d.4xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| c5d.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| c5d.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| c5n.9xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| c5n.18xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| m4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| m4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| m4.4xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| m5.xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| m5.2xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| m5.4xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| m5.16xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| m5d.8xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| m5d.12xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| r4.xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| r4.2xlarge | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
-| r5.xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| r5.2xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| r5.8xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| r5.12xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
-| r5d.2xlarge | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+
+| c5, m5, and r5 instances | 22 | 352 TB | 368 TB | 352 TB | 368 TB x each license
+| c4, m4, and r4 instances | 34 | 368 TB | 368 TB | 544 TB | 368 TB x each license
+
 |===
 
 === Single node with capacity-based licensing
@@ -134,70 +96,32 @@ NOTE: You can now purchase multiple node-based licenses for a Cloud Volumes ONTA
 
 === HA pairs with a Premium license
 
-[cols="16,20,30,32",width=69%,options="header"]
+[cols="18,18,32,32",width=100%,options="header"]
 |===
-| Instance type
+| Instance family
 | Max disks per node
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c4.4xlarge | 31 | 368 TB | 368 TB
-| c4.8xlarge | 31 | 368 TB | 368 TB
-| c5.9xlarge | 19 | 304 TB | 368 TB
-| c5.18xlarge | 19 | 304 TB | 368 TB
-| c5d.4xlarge | 19 | 304 TB | 368 TB
-| c5d.9xlarge | 19 | 304 TB | 368 TB
-| c5d.18xlarge | 19 | 304 TB | 368 TB
-| c5n.9xlarge | 19 | 304 TB | 368 TB
-| c5n.18xlarge | 19 | 304 TB | 368 TB
-| m4.4xlarge | 31 | 368 TB | 368 TB
-| m5.4xlarge | 19 | 304 TB | 368 TB
-| m5.16xlarge | 19 | 304 TB | 368 TB
-| m5d.8xlarge | 19 | 304 TB | 368 TB
-| m5d.12xlarge | 19 | 304 TB | 368 TB
-| r4.2xlarge | 31 | 368 TB | 368 TB
-| r5.2xlarge | 19 | 304 TB | 368 TB
-| r5.8xlarge | 19 | 304 TB | 368 TB
-| r5.12xlarge | 19 | 304 TB | 368 TB
-| r5d.2xlarge | 19 | 304 TB | 368 TB
+| c5, m5, and r5 instances | 19 | 304 TB | 368 TB
+| c4, m4, and r4 instances | 31 | 368 TB | 368 TB
+
 |===
 
-=== HA pairs with one or more node-based licenses
+=== HA pairs with node-based licensing
 
-[cols="10,18,18,18,18,18",width=100%,options="header"]
+[cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
-| Instance type
+| Instance family
 | Max disks per node
 2+| Max system capacity with one license
 2+| Max system capacity with multiple licenses
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| c4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| c4.8xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| c5.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5d.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5n.9xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| c5n.18xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| m4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| m4.4xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| m5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5.4xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5.16xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5d.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| m5d.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r4.xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| r4.2xlarge | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
-| r5.xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5.8xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5.12xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
-| r5d.2xlarge | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c5, m5, and r5 instances | 19 | 304 TB | 368 TB | 304 TB | 368 TB x each license
+| c4, m4, and r4 instances | 31 | 368 TB | 368 TB | 496 TB | 368 TB x each license
+
 |===
 
 === HA pairs with capacity-based licensing

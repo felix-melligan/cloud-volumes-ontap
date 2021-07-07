@@ -19,22 +19,21 @@ Cloud Volumes ONTAP has storage configuration limits to provide reliable operati
 
 The maximum system capacity for a Cloud Volumes ONTAP system is determined by its license. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn't support exceeding this limit.
 
-For the Premium and BYOL licenses, disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to the disk limits below for more details.
+For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. You can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. Refer to the disk limits below for more details.
 
 [cols="25,75",width=65%,options="header"]
 |===
 | License
 | Maximum system capacity (disks + object storage)
 
+| Freemium | 500 GB
 | PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
-| Node-based BYOL | 368 TB per license
-| Capacity-based BYOL ^1^ | 2 PB
+| Node-based license | 368 TB per license
+| Capacity-based license | 2 PB
 
 |===
-
-. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 ===== For an HA pair, is the licensed capacity limit per node or for the entire HA pair?
 
@@ -59,10 +58,7 @@ The table below shows the maximum system capacity with disks alone, and with dis
 | Maximum disk size | 64 TB
 | Maximum system capacity with disks alone | 256 TB ^1^
 | Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket
-a|
-* Premium: 368 TB
-* Node-based license: 368 TB per license
-* Capacity-based license: 2 PB
+| Depends on the license. See the table above.
 |===
 
 ^1^ This limit is defined by virtual machine limits in Google Cloud Platform.

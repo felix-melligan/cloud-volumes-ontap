@@ -21,7 +21,7 @@ Cloud Volumes ONTAP is available in AWS as a single node system and as a high-av
 
 Upgrading a single node system to an HA pair is not supported. If you want to switch between a single node system and an HA pair, then you need to deploy a new system and replicate data from the existing system to the new system.
 
-[cols=5*,cols="h,d,d,d,d",options="header"]
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
 | PAYGO Explore
@@ -29,6 +29,7 @@ Upgrading a single node system to an HA pair is not supported. If you want to sw
 | PAYGO Premium
 | Node-based license
 | Capacity-based license
+| Freemium
 
 | Supported EC2 instance types ^1^
 a|
@@ -62,7 +63,7 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-.2+a|
+2+a|
 * c4.4xlarge
 * c4.8xlarge
 * c5.9xlarge
@@ -89,12 +90,12 @@ a|
 * r5.12xlarge ^4^
 * r5d.2xlarge ^2^
 
-| Supported disk types ^5^ 5+| General Purpose SSDs (gp3 and gp2), Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1) ^6^
+| Supported disk types ^5^ 7+| General Purpose SSDs (gp3 and gp2), Provisioned IOPS SSDs (io1), and Throughput Optimized HDDs (st1) ^6^
 
-| Cold data tiering to S3 | Not supported 4+| Supported
+| Cold data tiering to S3 | Not supported 5+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^7^ | 368 TB per license ^7^ | 2 PB ^7^
+(disks + object storage) | 2 TB | 10 TB | 368 TB ^7^ | 368 TB per license ^7^ | 2 PB ^7^ | 500 GB
 
 |===
 

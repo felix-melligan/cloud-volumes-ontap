@@ -29,9 +29,10 @@ Cloud Volumes ONTAP supports several types of EBS disks, and S3 object storage f
 
 Each license supports a different maximum system capacity. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn’t support exceeding this limit.
 
-[cols=6*,cols="h,d,d,d,d,d",options="header"]
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
+| Freemium
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
@@ -39,14 +40,14 @@ Each license supports a different maximum system capacity. The maximum system ca
 | Capacity-based license
 
 | Maximum system capacity
-(disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^ | 2 PB ^2^
+(disks + object storage) ^1^ | 500 GB | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^ | 2 PB ^2^
 
-| Supported disk types 5+a|
+| Supported disk types 6+a|
 * General Purpose SSD (gp3 and gp2) ^3^
 * Provisioned IOPS SSD (io1) ^3^
 * Throughput Optimized HDD (st1) ^4^
 
-| Cold data tiering to S3 | Not supported 4+| Supported
+| Cold data tiering to S3 | Supported | Not supported 4+| Supported
 
 |===
 
@@ -54,7 +55,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 . For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_990.html[storage limits].
 
-. Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+. Enhanced write performance is enabled when using SSDs with all Cloud Volumes ONTAP configurations, except for PAYGO Explore.
 
 . Tiering data to object storage is not recommended when using Throughput Optimized HDDs (st1).
 

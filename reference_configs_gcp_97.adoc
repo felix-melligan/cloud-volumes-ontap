@@ -19,7 +19,7 @@ Several Cloud Volumes ONTAP configurations are supported in GCP.
 
 Cloud Volumes ONTAP is available in Google Cloud Platform as a single node system.
 
-[cols=6*,cols="h,d,d,d,d,d",options="header"]
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
 | PAYGO Explore
@@ -27,19 +27,20 @@ Cloud Volumes ONTAP is available in Google Cloud Platform as a single node syste
 | PAYGO Premium
 | Node-based license
 | Capacity-based license
+| Freemium
 
 | Supported machine types ^1^ | custom-4-16384 | n1-standard-8  | n1-standard-32
-2+a|
+3+a|
 * custom-4-16384
 * n1-standard-8
 * n1-standard-32
 
-| Supported disk types ^2^ 5+| Zonal persistent disks (SSD and standard)
+| Supported disk types ^2^ 6+| Zonal persistent disks (SSD and standard)
 
-| Cold data tiering to object storage | Not supported 4+| Supported
+| Cold data tiering to object storage | Not supported 5+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB ^3^ | 368 TB per license ^3^ | 2 PB
+(disks + object storage) ^3^ | 2 TB | 10 TB | 368 TB | 368 TB per license | 2 PB | 500 GB
 
 |===
 
@@ -49,7 +50,7 @@ Notes:
 
 . Enhanced write performance is enabled when using SSDs.
 
-. Disk limits prevent you from reaching the 368 TB capacity limit by using disks alone. You can reach the 368 TB capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
+. Disk limits might prevent you from reaching the maximum system capacity limit by using disks alone. You can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^].
 +
 link:reference_limits_gcp_97.html[Learn more about disk limits in GCP].
 

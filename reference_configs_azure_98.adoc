@@ -25,7 +25,7 @@ Upgrading a single node system to an HA pair is not supported. If you want to sw
 
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in Azure:
 
-[cols=6*,cols="h,d,d,d,d,d",options="header"]
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
 | PAYGO Explore
@@ -33,6 +33,7 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | PAYGO Premium
 | Node-based license
 | Capacity-based license
+| Freemium
 
 | Supported virtual machine types | DS3_v2
 
@@ -49,7 +50,7 @@ a|
 * E64is_v3 ^1^
 * E80ids_v4 ^2^
 
-2+a|
+3+a|
 * DS3_v2
 * DS4_v2
 * DS5_v2
@@ -62,12 +63,12 @@ a|
 * E80ids_v4 ^2^
 * L8s_v2 ^3^
 
-| Supported disk types ^4^ 5+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
+| Supported disk types ^4^ 6+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
-| Cold data tiering to Blob storage | Not supported 4+| Supported
+| Cold data tiering to Blob storage | Not supported 5+| Supported
 
 | Maximum system capacity
-(disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license | 2 PB
+(disks + object storage) | 2 TB | 10 TB | 368 TB | 368 TB per license | 2 PB | 500 GB
 
 |===
 
@@ -89,7 +90,7 @@ Notes:
 
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure:
 
-[cols=6*,cols="h,d,d,d,d,d",options="header"]
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
 | PAYGO Explore
@@ -97,6 +98,7 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | PAYGO Premium
 | Node-based license
 | Capacity-based license
+| Freemium
 
 | Supported virtual machine types | Not supported
 
@@ -111,7 +113,7 @@ a|
 * E48s_v3 ^1^
 * E80ids_v4 ^2^
 
-2+a|
+3+a|
 * DS4_v2
 * DS5_v2 ^1^
 * DS13_v2
@@ -120,12 +122,12 @@ a|
 * E48s_v3 ^1^
 * E80ids_v4 ^2^
 
-| Supported disk types | Not supported 4+| Premium page blobs
+| Supported disk types | Not supported 5+| Premium page blobs
 
-| Cold data tiering to Blob storage | Not supported 4+| Supported
+| Cold data tiering to Blob storage | Not supported 5+| Supported
 
 | Maximum system capacity
-(disks + object storage) | Not supported | 10 TB | 368 TB | 368 TB per license | 2 PB
+(disks + object storage) | Not supported | 10 TB | 368 TB | 368 TB per license | 2 PB | 500 GB
 
 |===
 

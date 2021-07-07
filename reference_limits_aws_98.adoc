@@ -26,15 +26,14 @@ For some HA configurations, disk limits prevent you from reaching the capacity l
 | License
 | Maximum system capacity (disks + object storage)
 
+| Freemium | 500 GB
 | PAYGO Explore	| 2 TB (data tiering is not supported with Explore)
 | PAYGO Standard | 10 TB
 | PAYGO Premium | 368 TB
-| Node-based BYOL | 368 TB per license
-| Capacity-based BYOL ^1^ | 2 PB
+| Node-based license | 368 TB per license
+| Capacity-based license | 2 PB
 
 |===
-
-. When using the Freemium package, Cloud Volumes ONTAP is limited to 500 GB.
 
 ===== For HA, is the license capacity limit per node or for the entire HA pair?
 
@@ -71,7 +70,7 @@ Note the following:
 
 . 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== Single node with one or more node-based licenses
+=== Single node with node-based licensing
 
 [cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
@@ -96,11 +95,8 @@ Note the following:
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c5, m5, and r5 instances | 21 ^1^ | 336 TB | 2 PB
-| c4, m4, and r4 instances | 34 | 544 TB | 2 PB
+| c5, m5, and r5 instances | 21 | 336 TB | 2 PB
 |===
-
-. 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
 === HA pairs with a Premium license
 
@@ -117,7 +113,7 @@ Note the following:
 
 . 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
-=== HA pairs with one or more node-based licenses
+=== HA pairs with node-based licensing
 
 [cols="18,18,16,16,16,16",width=100%,options="header"]
 |===
@@ -143,11 +139,8 @@ Note the following:
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| c5, m5, and r5 instances | 18 ^1^ | 288 TB | 2 PB
-| c4, m4, and r4 instances | 31 | 496 TB | 2 PB
+| c5, m5, and r5 instances | 18 | 288 TB | 2 PB
 |===
-
-. 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
 
 == Aggregate limits
 
