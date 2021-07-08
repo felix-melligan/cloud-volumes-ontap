@@ -5,6 +5,8 @@ entries:
     entries:
       - title: What's new
         url: /reference_new_991.html
+      - title: Licensing overview
+        url: /concept_licensing_991.html
       - title: Supported configurations
         entries:
           - title: AWS
@@ -39,6 +41,8 @@ entries:
     entries:
       - title: What's new
         url: /reference_new_990.html
+      - title: Licensing overview
+        url: /concept_licensing_990.html
       - title: Supported configurations
         entries:
           - title: AWS
@@ -73,6 +77,8 @@ entries:
     entries:
       - title: What's new
         url: /reference_new_98.html
+      - title: Licensing overview
+        url: /concept_licensing_98.html
       - title: Supported configurations
         entries:
           - title: AWS
@@ -107,6 +113,8 @@ entries:
     entries:
       - title: What's new
         url: /reference_new_97.html
+      - title: Licensing overview
+        url: /concept_licensing_97.html
       - title: Supported configurations
         entries:
           - title: AWS
