@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_configs_aws_991.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth, professional package
-summary: A few licensing options are available for Cloud Volumes ONTAP. Each of these licensing options enables you to choose a configuration that meets your needs.
+summary: Several Cloud Volumes ONTAP configurations are supported in AWS.
 ---
 
 = Supported configurations for Cloud Volumes ONTAP 9.9.1 in AWS
@@ -13,52 +13,7 @@ summary: A few licensing options are available for Cloud Volumes ONTAP. Each of 
 :imagesdir: ./media/
 
 [.lead]
-A few licensing options are available for Cloud Volumes ONTAP. Each of these licensing options enables you to choose a configuration that meets your needs.
-
-== Licensing overview
-
-You can pay for Cloud Volumes ONTAP in AWS using any of the following options:
-
-* *PAYGO*: Pay-as-you-go by the hour through an AWS Marketplace subscription
-* *BYOL*: Bring your own license purchased from NetApp
-* *Professional package*: Pay per TiB with an annual contract through an AWS Marketplace subscription
-
-=== PAYGO
-
-* Requires a subscription from the AWS Marketplace for pay-as-you-go pricing at an hourly rate.
-* Offers Cloud Volumes ONTAP in three different licensing options: Explore, Standard, and Premium. Each of these licenses provide support for different amounts of storage and compute.
-* A 30-day free trial is available for the first Cloud Volumes ONTAP system that you deploy in AWS.
-** There are no hourly software charges, but AWS infrastructure charges still apply (compute, storage, and networking).
-** When the free trial ends, you'll be charged hourly according to the selected license, as long as you subscribed. If you haven't subscribed, the system shuts down.
-+
-Cloud Manager prompts you to subscribe to the AWS Marketplace when you create a Cloud Volumes ONTAP system.
-* Conversions to another licensing option isn't supported.
-* Basic technical support is offered, but you must https://docs.netapp.com/us-en/occm/task_registering.html[register and activate the NetApp serial number associated with your system^].
-
-https://aws.amazon.com/marketplace/pp/prodview-eap6ybxwk5ycg[View pricing information on the AWS Marketplace].
-
-=== BYOL
-
-* Single node or HA license with term-based subscription options like 12 months, 24 months, and more.
-* Support is included for the length of the subscription term.
-* Conversions to another licensing option isn't supported.
-* A system license is required for each BYOL system and provides up to 368 TB of capacity through EBS disks and tiering to S3 object storage. <<Supported storage,Learn more about storage support>>.
-* You can purchase extra capacity licenses to allocate more than 368 TB of capacity.
-+
-For example, you might purchase an extra capacity license to allocate up to 736 TB of capacity to Cloud Volumes ONTAP. Or you could purchase three licenses to get up to 1.4 PB.
-
-=== Professional package
-
-* Provides licensing for both Cloud Volumes ONTAP and Cloud Backup Service.
-*	You can charge multiple Cloud Volumes ONTAP systems against this contract.
-* Requires a subscription from the AWS Marketplace as an annual contract for 12 months, 24 months, or 36 months.
-+
-Cloud Manager prompts you to subscribe to the AWS Marketplace when you create a Cloud Volumes ONTAP system.
-* Support is included for the length of the subscription term.
-* Conversions to another licensing option isn't supported.
-* Provides up to 2 PB of capacity through EBS disks and tiering to S3 object storage. <<Supported storage,Learn more about storage support>>.
-
-https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[View pricing information on the AWS Marketplace^].
+Several Cloud Volumes ONTAP configurations are supported in AWS.
 
 == Supported number of nodes
 
@@ -68,30 +23,31 @@ Upgrading a single node system to an HA pair is not supported. If you want to sw
 
 == Supported storage
 
-Cloud Volumes ONTAP supports several types of EBS disks and S3 object storage for data tiering. The maximum storage capacity is determined by the license that you choose.
+Cloud Volumes ONTAP supports several types of EBS disks, and S3 object storage for data tiering. The maximum storage capacity is determined by the license that you choose.
 
 === Storage support by license
 
 Each license supports a different maximum system capacity. The maximum system capacity includes disk-based storage plus object storage used for data tiering. NetApp doesn’t support exceeding this limit.
 
-[cols=6*,cols="h,d,d,d,d,d",options="header"]
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
 |===
 |
+| Freemium
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
-| BYOL
-| Professional package
+| Node-based license
+| Capacity-based license
 
 | Maximum system capacity
-(disks + object storage) ^1^ | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^ | 2 PB ^2^
+(disks + object storage) ^1^ | 500 GB | 2 TB | 10 TB | 368 TB ^2^ | 368 TB per license ^2^ | 2 PB ^2^
 
-| Supported disk types 5+a|
+| Supported disk types 6+a|
 * General Purpose SSD (gp3 and gp2) ^3^
 * Provisioned IOPS SSD (io1) ^3^
 * Throughput Optimized HDD (st1) ^4^
 
-| Cold data tiering to S3 | Not supported 4+| Supported
+| Cold data tiering to S3 | Supported | Not supported 4+| Supported
 
 |===
 
@@ -99,7 +55,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 . For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by https://docs.netapp.com/us-en/occm/concept_data_tiering.html[tiering inactive data to object storage^]. For information about disk limits, refer to link:reference_limits_aws_991.html[storage limits].
 
-. Enhanced write performance is enabled when using SSDs with Cloud Volumes ONTAP Standard, Premium, and BYOL.
+. Enhanced write performance is enabled when using SSDs with all Cloud Volumes ONTAP configurations, except for PAYGO Explore.
 
 . Tiering data to object storage is not recommended when using Throughput Optimized HDDs (st1).
 
@@ -162,11 +118,11 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | EBS bandwidth (Mbps)
 | High write speed ^2^
 
-| *Explore, BYOL, or Professional*
+| *Explore or any other license*
 
 | m5.xlarge | 4 | 16 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
-.3+| *Standard, BYOL, or Professional*
+.3+| *Standard or any other license*
 
 | r5.xlarge | 4 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported (single node only)
 
@@ -174,7 +130,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.18+| *Premium, BYOL, or Professional*
+.19+| *Premium or any other license*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 
@@ -211,6 +167,8 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | m5.16xlarge | 48 ^4^ | 256 | Not supported | 20 | 13,600 | Supported
 
 | r5.12xlarge ^3^ | 48 | 384 | Not supported | 10 | 9,500 | Supported
+
+| m5dn.24xlarge | 48 ^4^ | 384 | Supported | 100 | 19,000 | Supported
 
 |===
 
