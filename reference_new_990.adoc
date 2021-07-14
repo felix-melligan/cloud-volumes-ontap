@@ -45,13 +45,17 @@ https://docs.netapp.com/us-en/occm/task_planning_your_config.html#sizing-your-sy
 
 * Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR).
 +
-The previous limit in Azure was 12 storage VMs used for DR.
+The previous limit in the 9.9.0 release was 12 storage VMs used for DR in Azure.
 
-== Improved write performance
+== 9.9.0 GA (9 Mar 2021)
+
+The 9.9.0 GA release is available in AWS, Azure, and Google Cloud Platform. The release includes the following new features and enhancements.
+
+=== Improved write performance
 
 This release includes improved write performance for Cloud Volumes ONTAP in all cloud providers and on all configurations.
 
-== Support for new EC2 instance types
+=== Support for new EC2 instance types
 
 Cloud Volumes ONTAP is now supported with the following Amazon EC2 instance types:
 
@@ -63,9 +67,9 @@ Learn more about https://aws.amazon.com/ec2/instance-types/m5/[M5a instances^] a
 
 link:reference_configs_aws_990.html[View supported configurations in AWS].
 
-== Support for 24 storage VMs in Azure
+=== Support for 24 storage VMs in Azure
 
-24 storage VMs are now supported with Cloud Volumes ONTAP in Azure when you bring your own license (BYOL).
+24 storage VMs are now supported with Cloud Volumes ONTAP in Azure when you bring your own license (BYOL). This includes up to 12 storage VMs used for DR.
 
 An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain an SVM add-on license.
 
