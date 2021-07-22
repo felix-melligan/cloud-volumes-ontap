@@ -208,17 +208,23 @@ Notes:
 
 == Storage VM limits
 
-==== Limit for BYOL
+=== Limit for capacity-based licensing and node-based BYOL
 
-Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
+Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP when using capacity-based licensing or node-based BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
 
 These are the tested limits. While it is theoretically possible to configure additional storage VMs, it's not supported.
 
-An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
+https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create additional storage VMs^].
+
+==== Multiple storage VMs with capacity-based licensing
+
+There are no extra licensing costs for additional storage VMs, but there is a 4 TB minimum capacity charge per storage VM. For example, if you create two storage VMs and each has 2 TB of provisioned capacity, you'll be charged a total of 8 TB.
+
+==== Multiple storage VMs with node-based BYOL
+
+For a node-based BYOL, an add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
 
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
-
-https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create additional storage VMs^].
 
 ==== Limit for PAYGO
 
