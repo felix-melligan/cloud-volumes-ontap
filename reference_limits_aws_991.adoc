@@ -173,13 +173,13 @@ Notes:
 
 https://docs.netapp.com/us-en/occm/task_managing_svms_aws.html[Learn how to create additional storage VMs^].
 
-[cols=3*,cols="h,d,d",options="header"]
+[cols=3*,options="header"]
 |===
 | License type
 | Instance family
 | Storage VM limit
 
-.2+| PAYGO | c4, m4, or r4 a|
+.2+| *PAYGO* | c4, m4, or r4 a|
 * 1 storage VM for serving data
 * 1 storage VM for disaster recovery
 
@@ -187,19 +187,19 @@ https://docs.netapp.com/us-en/occm/task_managing_svms_aws.html[Learn how to crea
 * 1 storage VM for serving data
 * 1 storage VM for disaster recovery
 
-.2+| Freemium | c4, m4, or r4 a|
-* 1 storage VM for serving data
-* 1 storage VM for disaster recovery
+.2+| *Freemium* | c4, m4, or r4 a|
+1 storage VM for serving data
+
+1 storage VM for disaster recovery
 | c5, m5, or r5 a| 24 storage VMs ^1,2^
 
-.2+| Capacity-based license ^3^ | c4, m4, or r4 a|
-* 1 storage VM for serving data
-* 1 storage VM for disaster recovery
+.2+| *Capacity-based license* ^3^ | c4, m4, or r4 a|
+1 storage VM for serving data and 1 storage VM for disaster recovery
 | c5, m5, or r5 a| 24 storage VMs ^1,2^
 
-.2+| Node-based BYOL ^4^ | c4, m4, or r4 a|
-* 1 storage VM for serving data
-* 1 storage VM for disaster recovery
+.2+| *Node-based BYOL* ^4^ | c4, m4, or r4 a|
+1 storage VM for serving data
+1 storage VM for disaster recovery
 | c5, m5, or r5 a| 24 storage VMs ^1,2^
 
 |===
