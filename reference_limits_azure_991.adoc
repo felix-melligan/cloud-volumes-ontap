@@ -208,27 +208,41 @@ Notes:
 
 == Storage VM limits
 
-=== Limit for capacity-based licensing and node-based BYOL
-
-Up to 24 storage VMs (SVMs) are supported with Cloud Volumes ONTAP when using capacity-based licensing or node-based BYOL. Those 24 storage VMs can serve data or be configured for disaster recovery (DR). Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
+Some configurations enable you to create additional storage VMs (SVMs) for Cloud Volumes ONTAP.
 
 These are the tested limits. While it is theoretically possible to configure additional storage VMs, it's not supported.
 
 https://docs.netapp.com/us-en/occm/task_managing_svms_azure.html[Learn how to create additional storage VMs^].
 
-==== Multiple storage VMs with capacity-based licensing
+[cols=2*,options="header,autowidth"]
+|===
+| License type
+| Storage VM limit
 
-There are no extra licensing costs for additional storage VMs, but there is a 4 TB minimum capacity charge per storage VM. For example, if you create two storage VMs and each has 2 TB of provisioned capacity, you'll be charged a total of 8 TB.
+| *PAYGO* a|
+* 1 storage VM for serving data
+* 1 storage VM for disaster recovery
 
-==== Multiple storage VMs with node-based BYOL
+| *Freemium* a|
+24 storage VMs total ^1,2^
 
-For a node-based BYOL, an add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
+| *Capacity-based license* ^3^ a|
+24 storage VMs total ^1,2^
 
+| *Node-based BYOL* ^4^ a|
+24 storage VMs total ^1,2^
+
+|===
+
+. These 24 storage VMs can serve data or be configured for disaster recovery (DR).
+
+. Each storage VM can have up to three LIFs where two are data LIFs and one is an SVM management LIF.
+
+. For capacity-based licensing, there are no extra licensing costs for additional storage VMs, but there is a 4 TB minimum capacity charge per storage VM. For example, if you create two storage VMs and each has 2 TB of provisioned capacity, you'll be charged a total of 8 TB.
+
+. For node-based BYOL, an add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
++
 Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
-
-=== Limit for PAYGO
-
-All PAYGO configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
 
 == File and volume limits
 

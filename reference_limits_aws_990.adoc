@@ -171,23 +171,55 @@ Notes:
 
 == Storage VM limits
 
-==== Limit for BYOL with C5, M5, or R5 instances
-
-Up to 24 storage VMs are supported with Cloud Volumes ONTAP BYOL when you use a C5, M5, or R5 instance type. But the limit can be lower, depending on the EC2 instance type that you use. The limits per instance are listed in the section below.
-
-Those 24 storage VMs can serve data or be configured for disaster recovery (DR).
-
-An add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
-
-Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
+Some configurations enable you to create additional storage VMs (SVMs) for Cloud Volumes ONTAP.
 
 https://docs.netapp.com/us-en/occm/task_managing_svms_aws.html[Learn how to create additional storage VMs^].
 
-==== Limit for all other configurations
+[cols="26,26,48",width=100%,options="header"]
+|===
+| License type
+| Instance family
+| Storage VM limit
 
-All PAYGO configurations and all other BYOL configurations support one data-serving storage VM and one destination storage VM used for disaster recovery.
+.2+| *PAYGO* | c4, m4, and r4 a|
+* 1 storage VM for serving data
+* 1 storage VM for disaster recovery
 
-==== Storage VM limit by EC2 instance type
+| c5, m5, and r5 a|
+* 1 storage VM for serving data
+* 1 storage VM for disaster recovery
+
+.2+| *Freemium* | c4, m4, and r4 a|
+* 1 storage VM for serving data
+* 1 storage VM for disaster recovery
+| c5, m5, and r5 a|
+* 24 storage VMs total ^1,2^
+
+.2+| *Capacity-based license* ^3^ | c4, m4, and r4 a|
+* 1 storage VM for serving data
+* 1 storage VM for disaster recovery
+| c5, m5, and r5 a|
+* 24 storage VMs total ^1,2^
+
+.2+| *Node-based BYOL* ^4^ | c4, m4, and r4 a|
+* 1 storage VM for serving data
+* 1 storage VM for disaster recovery
+| c5, m5, and r5 a|
+* 24 storage VMs total ^1,2^
+
+|===
+
+. The limit can be lower, depending on the EC2 instance type that you use. The limits per instance are listed in the section below.
+
+. These 24 storage VMs can serve data or be configured for disaster recovery (DR).
+
+. For capacity-based licensing, there are no extra licensing costs for additional storage VMs, but there is a 4 TB minimum capacity charge per storage VM. For example, if you create two storage VMs and each has 2 TB of provisioned capacity, you'll be charged a total of 8 TB.
+
+. For node-based BYOL, an add-on license is required for each additional _data-serving_ storage VM beyond the first storage VM that comes with Cloud Volumes ONTAP by default. Contact your account team to obtain a storage VM add-on license.
++
+Storage VMs that you configure for disaster recovery (DR) don't require an add-on license (they are free of charge), but they do count against the storage VM limit. For example, if you have 12 data-serving storage VMs and 12 storage VMs configured for disaster recovery, then you've reached the limit and can't create any additional storage VMs.
+
+=== Storage VM limit by EC2 instance type
 
 When you create an additional storage VM, you need to allocate private IP addresses to port e0a. The table below identifies the maximum number of private IPs per interface, as well as the number of IP addresses that are available on port e0a after Cloud Volumes ONTAP has been deployed. The number of available IP addresses directly affects the maximum number of storage VMs for that configuration.
 
