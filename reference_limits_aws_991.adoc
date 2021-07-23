@@ -171,9 +171,11 @@ Notes:
 
 == Storage VM limits
 
+Some configurations enable you to create additional storage VMs (SVMs) for Cloud Volumes ONTAP.
+
 https://docs.netapp.com/us-en/occm/task_managing_svms_aws.html[Learn how to create additional storage VMs^].
 
-[cols=3*,options="header,autowidth"]
+[cols="22,22,56",width=100%,options="header"]
 |===
 | License type
 | Instance family
@@ -217,6 +219,8 @@ Storage VMs that you configure for disaster recovery (DR) don't require an add-o
 === Storage VM limit by EC2 instance type
 
 When you create an additional storage VM, you need to allocate private IP addresses to port e0a. The table below identifies the maximum number of private IPs per interface, as well as the number of IP addresses that are available on port e0a after Cloud Volumes ONTAP has been deployed. The number of available IP addresses directly affects the maximum number of storage VMs for that configuration.
+
+The instances listed below are for the c5, m5, and r5 instance families.
 
 [cols=6*,options="header"]
 |===
