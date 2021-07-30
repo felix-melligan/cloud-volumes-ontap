@@ -17,6 +17,12 @@ Cloud Volumes ONTAP 9.9.1 includes several new features and enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/occm/reference_new_occm.html[Cloud Manager Release Notes^] for details.
 
+== 9.9.1 GA (21 July 2021)
+
+The General Availability (GA) release of Cloud Volumes ONTAP 9.9.1 is now available. The GA release includes bug fixes.
+
+Cloud Manager will prompt you to upgrade existing systems that are running any of the following versions: 9.9.1 Release Candidate, 9.9.0, or 9.8.
+
 == 9.9.1 update (7 July 2021)
 
 The following changes were introduced with the Cloud Manager 3.9.8 release.
