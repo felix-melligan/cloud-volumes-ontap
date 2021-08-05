@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_limitations_gcp_991.html
-keywords: limitations, google cloud platform, gcp
+keywords: limitations, google cloud platform, gcp, psc, private service connect
 summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
@@ -13,4 +13,10 @@ summary: Known limitations identify platforms, devices, or functions that are no
 :imagesdir: ./media/
 
 [.lead]
-There are no known limitations specific to Cloud Volumes ONTAP in Google Cloud Platform. See the link:reference_limitations_991.html[Limitations for Cloud Volumes ONTAP 9.9.1 in all cloud providers].
+The following known limitations are specific to Cloud Volumes ONTAP in Google Cloud Platform. Be sure to also review link:reference_limitations_991.html[Limitations for Cloud Volumes ONTAP 9.9.1 in all cloud providers].
+
+== Google Private Service Connect limitations
+
+If you leverage https://cloud.google.com/vpc/docs/private-service-connect[Google Private Service Connect^] within the VPC that you are deploying Cloud Volumes ONTAP into, you will need to implement DNS records that forward traffic to the required https://docs.netapp.com/us-en/occm/task_creating_connectors_gcp.html#enabling-google-cloud-apis[Cloud Manager API Endpoints^].
+
+Using FabricPools/Tiering from Cloud Volumes ONTAP into Google Cloud Storage buckets is not currently supported with Private Service Connect.
